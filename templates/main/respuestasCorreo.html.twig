@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Respuestas Correo{% endblock %}
+
+{% block body %}
+    {% for respuesta in message.respuestas %}
+        <div>
+            {{ respuesta.texto }}
+            {{ respuesta.fecha|date("Y-m-d") }}
+            {{ respuesta.autor }}
+        </div>
+    {% endfor %}
+
+    <button><a href="/respuesta/new/{{ message.id }}">Responder</a></button>
+    {% if message.reportado == true %}
+        <button onClick="eliminar({{ message.id }}, {{message.vehiculo}});">Eliminar</button>
+    {% endif %}
+    {% if message.oculto == false %}
+        <button onClick="comprar({{ message.id }}, {{message.vehiculo}});">Comprar</button>
+    {% endif %}
+
+    <script>
+        function eliminar(message, vehicle) {
+
+            var datos = {
+                'mensaje':message,
+                'vehiculo':vehicle
+            };
+
+            function fail(data) {
+                alert("Error de AJAX: " + data);
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/eliminarMensajeVehiculo",
+                data: datos,
+                success: function(data) {
+                    if(data == "1") {
+                        alert("Mensaje y vehículo eliminados correctamente debido a que se ha comprobado el reporte.");
+                    }
+                },
+                error: fail
+            });
+        }
+
+        function comprar(message, vehicle) {
+
+            var datos = {
+                'mensaje':message,
+                'vehiculo':vehicle
+            };
+
+            function fail(data) {
+                alert("Error de AJAX: " + data);
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/comprarVehiculo",
+                data: datos,
+                success: function(data) {
+                    if(data == "1") {
+                        alert("Vehiculo comprado correctamente y mensajes ocultados junto al buscador.");
+                        window.location.reload();
+                    }
+                },
+                error: fail
+            });
+        }
+    </script>
+
+{% endblock %}

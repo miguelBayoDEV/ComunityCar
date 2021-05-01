@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Correos{% endblock %}
+
+{% block body %}
+    {% if is_granted("ROLE_USER") %}
+        <h1>Mensajes recebidos:</h1>
+        {% for messageRecibido in messagesRecibidos %}
+            {% if messageRecibido.oculto != true %}
+                {% if messageRecibido.status !=true %}
+                    &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaEnvio|date("Y-m-d") }}
+                    <button><a href="/respuesta/{{ messageRecibido.id }}">Ver mensaje</a></button>
+                    <br/>
+                {% else %}
+                    &#x1f4ed;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaLectura|date("Y-m-d") }}
+                    <button><a href="/respuesta/{{ messageRecibido.id }}">Ver mensaje</a></button>
+                    <br/>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+
+        <h1>Mensajes enviados:</h1>
+        {% for messageEnviado in messagesEnviados %}
+            {% if messageEnviado.oculto != true %}
+                {% if messageEnviado.status !=true%}
+                    &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaEnvio|date("Y-m-d") }}
+                    <button><a href="/respuesta/{{ messageEnviado.id }}">Ver mensaje</a></button>
+                    <br/>
+                {% else %}
+                    &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaLectura|date("Y-m-d") }}
+                    <button><a href="/respuesta/{{ messageEnviado.id }}">Ver mensaje</a></button>
+                    <br/>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

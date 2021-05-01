@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Exportar usuarios{% endblock %}
+
+{% block body %}
+    <h1>Usuarios:</h1>
+    <ol>
+        {% for user in users %}
+            {% if user.email != "root@gmail.com" %}
+                <li>{{ user.email }}</li>
+            {% endif %}
+        {% endfor %}
+    </ol>
+    <button class="btn btn-primary" onClick="exportarCorreos();">Exportar correos</button>
+    <h1>Mensajes reportados:</h1>
+    <ol>
+        {% for mensajeReportado in mensajesReportados %}
+            <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date("Y-m-d") }}</li>
+        {% endfor %}
+    </ol>
+    <button class="btn btn-primary" onClick="exportarMensajesReportados();">Exportar mensajes reportados</button>
+
+    <h1>Vehículos reportados:</h1>
+    <ol>
+        {% for vehiculoReportado in vehiculosReportados %}
+            <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>
+        {% endfor %}
+    </ol>
+    <button class="btn btn-primary" onClick="exportarVehiculosReportados();">Exportar vehiculos reportados</button>
+
+    <script>
+        function exportarCorreos() {
+
+            function fail(data) {
+                alert("Exportar correos fallido.");
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/exportarUsuarios",
+                success: function(data)  { 
+                    var blob = new Blob([data]); 
+                    var link = document.createElement('a'); 
+                    link.href = window.URL.createObjectURL(blob); 
+                    link.download = "correos.csv"; 
+                    link.click(); 
+                },
+                error: fail
+            });
+        }
+
+        function exportarMensajesReportados() {
+
+            function fail(data) {
+                alert("Exportar correos fallido.");
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/exportarMensajesReportados",
+                success: function(data)  { 
+                    var blob = new Blob([data]); 
+                    var link = document.createElement('a'); 
+                    link.href = window.URL.createObjectURL(blob); 
+                    link.download = "correos.csv"; 
+                    link.click(); 
+                },
+                error: fail
+            });
+        }
+
+        function exportarVehiculosReportados() {
+
+            function fail(data) {
+                alert("Exportar correos fallido.");
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/exportarVehiculosReportados",
+                success: function(data)  { 
+                    var blob = new Blob([data]); 
+                    var link = document.createElement('a'); 
+                    link.href = window.URL.createObjectURL(blob); 
+                    link.download = "correos.csv"; 
+                    link.click(); 
+                },
+                error: fail
+            });
+        }
+    </script>
+{% endblock %}
