@@ -30,7 +30,7 @@ return [
     'exportarMensajesReportados' => [[], ['_controller' => 'App\\Controller\\MainController::exportarMensajesReportados'], [], [['text', '/exportarMensajesReportados']], [], []],
     'exportarVehiculosReportados' => [[], ['_controller' => 'App\\Controller\\MainController::exportarVehiculosReportados'], [], [['text', '/exportarVehiculosReportados']], [], []],
     'message_index' => [[], ['_controller' => 'App\\Controller\\MessageController::index'], [], [['text', '/message/']], [], []],
-    'message_new' => [['receptor', 'emisor', 'id'], ['_controller' => 'App\\Controller\\MessageController::new'], [], [['variable', '', '[^/]++', 'id', true], ['text', '&'], ['variable', '', '[^/]+', 'emisor', true], ['text', '&'], ['variable', '/', '[^/]+', 'receptor', true], ['text', '/message/new']], [], []],
+    'message_new' => [['receptor', 'emisor', 'id', 'vehiculo'], ['_controller' => 'App\\Controller\\MessageController::new'], [], [['variable', '', '[^/]++', 'vehiculo', true], ['text', '&'], ['variable', '', '[^/]+', 'id', true], ['text', '&'], ['variable', '', '[^/]+', 'emisor', true], ['text', '&'], ['variable', '/', '[^/]+', 'receptor', true], ['text', '/message/new']], [], []],
     'message_show' => [['id'], ['_controller' => 'App\\Controller\\MessageController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/message']], [], []],
     'message_edit' => [['id'], ['_controller' => 'App\\Controller\\MessageController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/message']], [], []],
     'message_delete' => [['id'], ['_controller' => 'App\\Controller\\MessageController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/message']], [], []],

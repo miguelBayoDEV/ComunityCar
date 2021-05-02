@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Message;
+use App\Entity\Vehiculo;
 use App\Entity\User;
 use App\Form\MessageType;
 use App\Repository\MessageRepository;
@@ -31,9 +32,9 @@ class MessageController extends AbstractController
     }
 
     /**
-     * @Route("/new/{receptor}&{emisor}&{id}", name="message_new", methods={"GET","POST"})
+     * @Route("/new/{receptor}&{emisor}&{id}&{vehiculo}", name="message_new", methods={"GET","POST"})
      */
-    public function new(Request $request, $receptor, $emisor, $id): Response
+    public function new(Request $request, $receptor, $emisor, $id, $vehiculo): Response
     {
         $message = new Message();
         $form = $this->createForm(MessageType::class, $message);
@@ -56,6 +57,7 @@ class MessageController extends AbstractController
             $message->setVehiculo($id);
             $message->setUser($emisor);
             $message->setOculto(false);
+            $message->setVehiculoMessage($this->getDoctrine()->getRepository(Vehiculo::class)->find($vehiculo));
             $entityManager->persist($message);
             $entityManager->flush();
 

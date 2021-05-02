@@ -222,7 +222,7 @@ class MainController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
         $mensaje->setOculto(true);
-        $vehiculo->setOculto(true);
+        $vehiculo->setEliminado(true);
         $em->flush();
 
               

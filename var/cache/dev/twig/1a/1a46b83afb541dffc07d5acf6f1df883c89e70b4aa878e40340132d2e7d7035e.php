@@ -139,7 +139,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         foreach ($context['_seq'] as $context["_key"] => $context["vehicle"]) {
             // line 25
             echo "        ";
-            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "oculto", [], "any", false, false, false, 25), false)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "venta", [], "any", false, false, false, 25), true)))) {
+            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "eliminado", [], "any", false, false, false, 25), false)) || ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "oculto", [], "any", false, false, false, 25), false)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "venta", [], "any", false, false, false, 25), true))))) {
                 // line 26
                 echo "            <div class=\"vehicles\">
                 Marca: ";
@@ -160,7 +160,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                 echo "
                 <button><a href=\"";
                 // line 31
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 31), "id", [], "any", false, false, false, 31), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 31, $this->source); })()), "id", [], "any", false, false, false, 31), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 31)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 31), "id", [], "any", false, false, false, 31), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 31, $this->source); })()), "id", [], "any", false, false, false, 31), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 31), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 31)]), "html", null, true);
                 echo "\">Enviar mensaje</a></button>
             </div>
         ";
@@ -220,13 +220,13 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     {# Mostrar vehículos #}
     {% for vehicle in vehicles %}
-        {% if vehicle.oculto == false and vehicle.venta == true %}
+        {% if vehicle.eliminado == false or vehicle.oculto == false and vehicle.venta == true %}
             <div class=\"vehicles\">
                 Marca: {{ vehicle.marca }}
                 Modelo: {{ vehicle.modelo }}
                 {{ vehicle.propietario.email }}
                 {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}
-                <button><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id}) }}\">Enviar mensaje</a></button>
+                <button><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}\">Enviar mensaje</a></button>
             </div>
         {% endif %}
     {% endfor %}

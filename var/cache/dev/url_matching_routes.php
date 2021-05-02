@@ -57,30 +57,30 @@ return [
                     .')'
                 .')'
                 .'|/message/(?'
-                    .'|new/([^/]+)&([^/]+)&([^/]++)(*:209)'
+                    .'|new/([^/]+)&([^/]+)&([^/]+)&([^/]++)(*:217)'
                     .'|([^/]++)(?'
-                        .'|(*:228)'
-                        .'|/edit(*:241)'
-                        .'|(*:249)'
+                        .'|(*:236)'
+                        .'|/edit(*:249)'
+                        .'|(*:257)'
                     .')'
                 .')'
                 .'|/respuesta/(?'
-                    .'|new/([^/]++)(*:285)'
+                    .'|new/([^/]++)(*:293)'
                     .'|([^/]++)(?'
-                        .'|(*:304)'
-                        .'|/edit(*:317)'
-                        .'|(*:325)'
+                        .'|(*:312)'
+                        .'|/edit(*:325)'
+                        .'|(*:333)'
                     .')'
                 .')'
                 .'|/user/([^/]++)(?'
-                    .'|(*:352)'
-                    .'|/edit(*:365)'
-                    .'|(*:373)'
+                    .'|(*:360)'
+                    .'|/edit(*:373)'
+                    .'|(*:381)'
                 .')'
                 .'|/vehiculo/([^/]++)(?'
-                    .'|(*:403)'
-                    .'|/edit(*:416)'
-                    .'|(*:424)'
+                    .'|(*:411)'
+                    .'|/edit(*:424)'
+                    .'|(*:432)'
                 .')'
             .')/?$}sDu',
     ],
@@ -92,20 +92,20 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        209 => [[['_route' => 'message_new', '_controller' => 'App\\Controller\\MessageController::new'], ['receptor', 'emisor', 'id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        228 => [[['_route' => 'message_show', '_controller' => 'App\\Controller\\MessageController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        241 => [[['_route' => 'message_edit', '_controller' => 'App\\Controller\\MessageController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        249 => [[['_route' => 'message_delete', '_controller' => 'App\\Controller\\MessageController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        285 => [[['_route' => 'respuesta_new', '_controller' => 'App\\Controller\\RespuestaController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        304 => [[['_route' => 'respuesta_show', '_controller' => 'App\\Controller\\RespuestaController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        317 => [[['_route' => 'respuesta_edit', '_controller' => 'App\\Controller\\RespuestaController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        325 => [[['_route' => 'respuesta_delete', '_controller' => 'App\\Controller\\RespuestaController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        352 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        365 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        373 => [[['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        403 => [[['_route' => 'vehiculo_show', '_controller' => 'App\\Controller\\VehiculoController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        416 => [[['_route' => 'vehiculo_edit', '_controller' => 'App\\Controller\\VehiculoController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        424 => [
+        217 => [[['_route' => 'message_new', '_controller' => 'App\\Controller\\MessageController::new'], ['receptor', 'emisor', 'id', 'vehiculo'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        236 => [[['_route' => 'message_show', '_controller' => 'App\\Controller\\MessageController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        249 => [[['_route' => 'message_edit', '_controller' => 'App\\Controller\\MessageController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        257 => [[['_route' => 'message_delete', '_controller' => 'App\\Controller\\MessageController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        293 => [[['_route' => 'respuesta_new', '_controller' => 'App\\Controller\\RespuestaController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        312 => [[['_route' => 'respuesta_show', '_controller' => 'App\\Controller\\RespuestaController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        325 => [[['_route' => 'respuesta_edit', '_controller' => 'App\\Controller\\RespuestaController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        333 => [[['_route' => 'respuesta_delete', '_controller' => 'App\\Controller\\RespuestaController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        360 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        373 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        381 => [[['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        411 => [[['_route' => 'vehiculo_show', '_controller' => 'App\\Controller\\VehiculoController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        424 => [[['_route' => 'vehiculo_edit', '_controller' => 'App\\Controller\\VehiculoController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        432 => [
             [['_route' => 'vehiculo_delete', '_controller' => 'App\\Controller\\VehiculoController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

@@ -22,13 +22,13 @@
 
     {# Mostrar vehículos #}
     {% for vehicle in vehicles %}
-        {% if vehicle.oculto == false and vehicle.venta == true %}
+        {% if vehicle.eliminado == false or vehicle.oculto == false and vehicle.venta == true %}
             <div class="vehicles">
                 Marca: {{ vehicle.marca }}
                 Modelo: {{ vehicle.modelo }}
                 {{ vehicle.propietario.email }}
                 {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}
-                <button><a href="{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id}) }}">Enviar mensaje</a></button>
+                <button><a href="{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}">Enviar mensaje</a></button>
             </div>
         {% endif %}
     {% endfor %}

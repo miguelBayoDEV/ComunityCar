@@ -74,6 +74,11 @@ class Message
      */
     private $oculto;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Vehiculo::class, inversedBy="messages")
+     */
+    private $vehiculoMessage;
+
     public function __construct()
     {
         $this->respuestas = new ArrayCollection();
@@ -230,6 +235,18 @@ class Message
     public function setOculto(bool $oculto): self
     {
         $this->oculto = $oculto;
+
+        return $this;
+    }
+
+    public function getVehiculoMessage(): ?Vehiculo
+    {
+        return $this->vehiculoMessage;
+    }
+
+    public function setVehiculoMessage(?Vehiculo $vehiculoMessage): self
+    {
+        $this->vehiculoMessage = $vehiculoMessage;
 
         return $this;
     }
