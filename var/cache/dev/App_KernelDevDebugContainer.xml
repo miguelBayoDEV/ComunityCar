@@ -472,6 +472,11 @@
       <argument type="collection">
         <argument key="debug">true</argument>
       </argument>
+      <argument type="service">
+        <service class="void">
+          <factory class="Symfony\Component\HttpFoundation\Request" method="enableHttpMethodParameterOverride"/>
+        </service>
+      </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
       <argument>/home/bayo/proyectos/ComunityCar/var/cache/dev/http_cache</argument>
@@ -3506,6 +3511,14 @@
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
+        <argument>/home/bayo/proyectos/ComunityCar/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
+        <argument>DoctrineMigrations</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/bayo/proyectos/ComunityCar/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
+        <argument>!DoctrineMigrations</argument>
+      </call>
+      <call method="addPath">
         <argument>/home/bayo/proyectos/ComunityCar/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
@@ -4444,16 +4457,26 @@
     </service>
     <service id="doctrine.migrations.dependency_factory" class="Doctrine\Migrations\DependencyFactory">
       <argument type="service" id="doctrine.migrations.configuration_loader"/>
-      <argument type="service" id="doctrine.migrations.em_loader"/>
+      <argument type="service" id="doctrine.migrations.entity_manager_registry_loader"/>
       <argument type="service" id="monolog.logger" on-invalid="null"/>
+      <call method="setDefinition">
+        <argument>Doctrine\Migrations\Version\MigrationFactory</argument>
+        <argument type="service" id="doctrine.migrations.container_aware_migrations_factory"/>
+      </call>
       <factory class="Doctrine\Migrations\DependencyFactory" method="fromEntityManager"/>
     </service>
     <service id="doctrine.migrations.configuration_loader" class="Doctrine\Migrations\Configuration\Migration\ExistingConfiguration">
       <argument type="service" id="doctrine.migrations.configuration"/>
     </service>
     <service id="doctrine.migrations.connection_loader" class="Doctrine\Migrations\Configuration\Connection\ExistingConnection"/>
-    <service id="doctrine.migrations.em_loader" class="Doctrine\Migrations\Configuration\EntityManager\ExistingEntityManager">
-      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+    <service id="doctrine.migrations.em_loader" class="Doctrine\Migrations\Configuration\EntityManager\ExistingEntityManager"/>
+    <service id="doctrine.migrations.entity_manager_registry_loader" class="Doctrine\Migrations\Configuration\EntityManager\ManagerRegistryEntityManager">
+      <argument type="service" id="doctrine"/>
+      <factory class="Doctrine\Migrations\Configuration\EntityManager\ManagerRegistryEntityManager" method="withSimpleDefault"/>
+    </service>
+    <service id="doctrine.migrations.connection_registry_loader" class="Doctrine\Migrations\Configuration\Connection\ConnectionRegistryConnection">
+      <argument type="service" id="doctrine"/>
+      <factory class="Doctrine\Migrations\Configuration\Connection\ConnectionRegistryConnection" method="withSimpleDefault"/>
     </service>
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
       <call method="addMigrationsDirectory">
@@ -4469,6 +4492,10 @@
       <call method="setMetadataStorageConfiguration">
         <argument type="service" id="doctrine.migrations.storage.table_storage"/>
       </call>
+    </service>
+    <service id="doctrine.migrations.container_aware_migrations_factory" class="Doctrine\Bundle\MigrationsBundle\MigrationsFactory\ContainerAwareMigrationFactory">
+      <argument type="service" id="doctrine.migrations.container_aware_migrations_factory.inner"/>
+      <argument type="service" id="service_container"/>
     </service>
     <service id="doctrine_migrations.diff_command" class="Doctrine\Migrations\Tools\Console\Command\DiffCommand">
       <tag name="console.command" command="doctrine:migrations:diff"/>
@@ -6185,6 +6212,9 @@
         </argument>
       </call>
     </service>
+    <service id="doctrine.migrations.container_aware_migrations_factory.inner" class="Doctrine\Migrations\Version\MigrationFactory">
+      <factory service="doctrine.migrations.dependency_factory" method="getMigrationFactory"/>
+    </service>
     <service id="debug.security.access.decision_manager.inner" class="Symfony\Component\Security\Core\Authorization\AccessDecisionManager">
       <argument type="iterator">
         <argument type="service" id="debug.security.voter.security.access.authenticated_voter"/>
@@ -6651,6 +6681,7 @@
     <service id="serializer.mapping.class_metadata_factory" alias="serializer.mapping.cache_class_metadata_factory"/>
     <service id="twig.error_renderer.html.inner" alias="error_handler.error_renderer.html"/>
     <service id="var_dumper.cli_dumper" alias="var_dumper.contextualized_cli_dumper"/>
+    <service id="doctrine.migrations.migrations_factory" alias="doctrine.migrations.container_aware_migrations_factory"/>
     <service id="security.access.decision_manager" alias="debug.security.access.decision_manager"/>
     <service id="argument_resolver.request_attribute" alias="debug.argument_resolver.request_attribute"/>
     <service id="argument_resolver.request" alias="debug.argument_resolver.request"/>

@@ -73,7 +73,7 @@ class __TwigTemplate_fc250c7ab55d54c830331f66ed588e944310670a004a6293c6eebd5458e
             echo "        <style>
             ";
             // line 6
-            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("_profiler_exception_css", ["token" => (isset($context["token"]) || array_key_exists("token", $context) ? $context["token"] : (function () { throw new RuntimeError('Variable "token" does not exist.', 6, $this->source); })())]));
+            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("web_profiler.controller.exception_panel::stylesheet", ["token" => (isset($context["token"]) || array_key_exists("token", $context) ? $context["token"] : (function () { throw new RuntimeError('Variable "token" does not exist.', 6, $this->source); })())]));
             echo "
             ";
             // line 7
@@ -160,7 +160,7 @@ class __TwigTemplate_fc250c7ab55d54c830331f66ed588e944310670a004a6293c6eebd5458e
             echo "        <div class=\"sf-reset\">
             ";
             // line 34
-            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("_profiler_exception", ["token" => (isset($context["token"]) || array_key_exists("token", $context) ? $context["token"] : (function () { throw new RuntimeError('Variable "token" does not exist.', 34, $this->source); })())]));
+            echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("web_profiler.controller.exception_panel::body", ["token" => (isset($context["token"]) || array_key_exists("token", $context) ? $context["token"] : (function () { throw new RuntimeError('Variable "token" does not exist.', 34, $this->source); })())]));
             echo "
         </div>
     ";
@@ -195,7 +195,7 @@ class __TwigTemplate_fc250c7ab55d54c830331f66ed588e944310670a004a6293c6eebd5458e
 {% block head %}
     {% if collector.hasexception %}
         <style>
-            {{ render(path('_profiler_exception_css', { token: token })) }}
+            {{ render(controller('web_profiler.controller.exception_panel::stylesheet', { token: token })) }}
             {{ include('@WebProfiler/Collector/exception.css.twig') }}
         </style>
     {% endif %}
@@ -223,7 +223,7 @@ class __TwigTemplate_fc250c7ab55d54c830331f66ed588e944310670a004a6293c6eebd5458e
         </div>
     {% else %}
         <div class=\"sf-reset\">
-            {{ render(path('_profiler_exception', { token: token })) }}
+            {{ render(controller('web_profiler.controller.exception_panel::body', { token: token })) }}
         </div>
     {% endif %}
 {% endblock %}

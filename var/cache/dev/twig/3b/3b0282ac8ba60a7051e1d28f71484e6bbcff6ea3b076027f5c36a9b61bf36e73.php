@@ -113,7 +113,7 @@ class __TwigTemplate_ef7d6a8859fc781678adbb3462ddc90e5065722a9e92da4c6d4fe76caee
 
                         ";
         // line 111
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("_profiler_search_bar", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["request"]) || array_key_exists("request", $context) ? $context["request"] : (function () { throw new RuntimeError('Variable "request" does not exist.', 111, $this->source); })()), "query", [], "any", false, false, false, 111), "all", [], "any", false, false, false, 111)));
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("web_profiler.controller.profiler::searchBarAction", twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["request"]) || array_key_exists("request", $context) ? $context["request"] : (function () { throw new RuntimeError('Variable "request" does not exist.', 111, $this->source); })()), "query", [], "any", false, false, false, 111), "all", [], "any", false, false, false, 111)));
         echo "
                     </div>
                 </div>
@@ -599,7 +599,7 @@ class __TwigTemplate_ef7d6a8859fc781678adbb3462ddc90e5065722a9e92da4c6d4fe76caee
                             {{ include('@WebProfiler/Icon/search.svg') }} <span class=\"hidden-small\">Search</span>
                         </a>
 
-                        {{ render(path('_profiler_search_bar', request.query.all)) }}
+                        {{ render(controller('web_profiler.controller.profiler::searchBarAction', request.query.all)) }}
                     </div>
                 </div>
 

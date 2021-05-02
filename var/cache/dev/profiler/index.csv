@@ -1766,3 +1766,5 @@ b64ce7,127.0.0.1,GET,http://localhost:8000/perfil,1619879420,,200
 71ddb7,127.0.0.1,GET,http://localhost:8000/vehiculo/new,1619879439,,200
 fa8203,127.0.0.1,GET,http://localhost:8000/logout,1619879463,,302
 0c24c0,127.0.0.1,GET,http://localhost:8000/login,1619879463,,200
+d9b911,127.0.0.1,GET,http://localhost:8000/,1619962499,,302
+b77426,127.0.0.1,GET,http://localhost:8000/login,1619962499,,200

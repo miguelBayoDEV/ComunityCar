@@ -113,7 +113,7 @@ class __TwigTemplate_b3e175aa4fa432919c0e31dfe40d3bf74f0282203563f563abbb16357a3
 
         // line 13
         echo "    ";
-        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("_profiler_router", ["token" => (isset($context["token"]) || array_key_exists("token", $context) ? $context["token"] : (function () { throw new RuntimeError('Variable "token" does not exist.', 13, $this->source); })())]));
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("web_profiler.controller.router::panelAction", ["token" => (isset($context["token"]) || array_key_exists("token", $context) ? $context["token"] : (function () { throw new RuntimeError('Variable "token" does not exist.', 13, $this->source); })())]));
         echo "
 ";
         
@@ -153,7 +153,7 @@ class __TwigTemplate_b3e175aa4fa432919c0e31dfe40d3bf74f0282203563f563abbb16357a3
 {% endblock %}
 
 {% block panel %}
-    {{ render(path('_profiler_router', { token: token })) }}
+    {{ render(controller('web_profiler.controller.router::panelAction', { token: token })) }}
 {% endblock %}
 ", "@WebProfiler/Collector/router.html.twig", "/home/bayo/proyectos/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
     }
