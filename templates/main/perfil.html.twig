@@ -82,7 +82,7 @@
 
     <h1>Lista de vehículos mios:</h1>
     {% for vehiculo in user.vehiculos %}
-        {% if vehiculo.oculto == false %}
+        {% if vehiculo.eliminado == true %}
             <div class="vehicles">
                 Marca: {{ vehiculo.marca }}
                 <br/>
@@ -101,7 +101,7 @@
 
     <h1>Lista de vehículos en venta:</h1>
     {% for vehiculo in user.vehiculos %}
-        {% if vehiculo.venta == true %}
+        {% if vehiculo.venta == true and vehiculo.eliminado == false %}
             <div class="vehicles">
                 Marca: {{ vehiculo.marca }}
                 <br/>

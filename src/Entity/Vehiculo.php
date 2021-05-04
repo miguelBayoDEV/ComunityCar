@@ -60,11 +60,6 @@ class Vehiculo
     private $precio;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $oculto;
-
-    /**
      * @ORM\OneToMany(targetEntity=Message::class, mappedBy="vehiculoMessage")
      */
     private $messages;
@@ -171,18 +166,6 @@ class Vehiculo
     public function setPrecio(int $precio): self
     {
         $this->precio = $precio;
-
-        return $this;
-    }
-
-    public function getOculto(): ?bool
-    {
-        return $this->oculto;
-    }
-
-    public function setOculto(bool $oculto): self
-    {
-        $this->oculto = $oculto;
 
         return $this;
     }

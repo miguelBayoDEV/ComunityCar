@@ -40,11 +40,6 @@ class Message
     private $fechaEnvio;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $status;
-
-    /**
      * @ORM\Column(type="datetime")
      */
     private $fechaLectura;
@@ -65,11 +60,6 @@ class Message
     private $reportado;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    private $vehiculo;
-
-    /**
      * @ORM\Column(type="boolean")
      */
     private $oculto;
@@ -78,6 +68,11 @@ class Message
      * @ORM\ManyToOne(targetEntity=Vehiculo::class, inversedBy="messages")
      */
     private $vehiculoMessage;
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $visto;
 
     public function __construct()
     {
@@ -133,18 +128,6 @@ class Message
     public function setFechaEnvio(\DateTimeInterface $fechaEnvio): self
     {
         $this->fechaEnvio = $fechaEnvio;
-
-        return $this;
-    }
-
-    public function getStatus(): ?bool
-    {
-        return $this->status;
-    }
-
-    public function setStatus(bool $status): self
-    {
-        $this->status = $status;
 
         return $this;
     }
@@ -215,18 +198,6 @@ class Message
         return $this;
     }
 
-    public function getVehiculo(): ?int
-    {
-        return $this->vehiculo;
-    }
-
-    public function setVehiculo(int $vehiculo): self
-    {
-        $this->vehiculo = $vehiculo;
-
-        return $this;
-    }
-
     public function getOculto(): ?bool
     {
         return $this->oculto;
@@ -247,6 +218,18 @@ class Message
     public function setVehiculoMessage(?Vehiculo $vehiculoMessage): self
     {
         $this->vehiculoMessage = $vehiculoMessage;
+
+        return $this;
+    }
+
+    public function getVisto(): ?bool
+    {
+        return $this->visto;
+    }
+
+    public function setVisto(bool $visto): self
+    {
+        $this->visto = $visto;
 
         return $this;
     }

@@ -28,11 +28,6 @@ class Respuesta
     private $fecha;
 
     /**
-     * @ORM\Column(type="boolean")
-     */
-    private $status;
-
-    /**
      * @ORM\ManyToOne(targetEntity=Message::class, inversedBy="respuestas")
      */
     private $message;
@@ -67,18 +62,6 @@ class Respuesta
     public function setFecha(\DateTimeInterface $fecha): self
     {
         $this->fecha = $fecha;
-
-        return $this;
-    }
-
-    public function getStatus(): ?bool
-    {
-        return $this->status;
-    }
-
-    public function setStatus(bool $status): self
-    {
-        $this->status = $status;
 
         return $this;
     }

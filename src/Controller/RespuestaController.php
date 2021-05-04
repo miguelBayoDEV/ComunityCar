@@ -40,12 +40,13 @@ class RespuestaController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
 
             // Modificar valores de respuesta:
-            $respuestum->setStatus(true);
             $message = $this->getDoctrine()->getRepository(Message::class)->find($id);
+            // No me funciona mirarlo
+            $message->setVisto(false);
+            $entityManager->persist($message);
             $respuestum->setMessage($message);
             $respuestum->setFecha(new \DateTime());
             $respuestum->setAutor($this->getUser()->getEmail());
-
             $entityManager->persist($respuestum);
             $entityManager->flush();
 
@@ -64,6 +65,15 @@ class RespuestaController extends AbstractController
     public function show(Respuesta $respuestum, $id): Response
     {
         $message = $this->getDoctrine()->getRepository(Message::class)->find($id);
+
+        // Comprobar si el mensaje está leido o no
+        $entityManager = $this->getDoctrine()->getManager();
+        if($message->getVisto() == false) {
+            $message->setVisto(true);
+        }
+        $entityManager->persist($message);
+        $entityManager->flush();
+
         return $this->render('main/respuestasCorreo.html.twig', [
             'message' => $message
         ]);

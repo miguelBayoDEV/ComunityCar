@@ -7,7 +7,7 @@
         <h1>Mensajes recebidos:</h1>
         {% for messageRecibido in messagesRecibidos %}
             {% if messageRecibido.oculto != true %}
-                {% if messageRecibido.status !=true %}
+                {% if messageRecibido.visto == false %}
                     &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaEnvio|date("Y-m-d") }}
                     <button><a href="/respuesta/{{ messageRecibido.id }}">Ver mensaje</a></button>
                     <br/>
@@ -22,7 +22,7 @@
         <h1>Mensajes enviados:</h1>
         {% for messageEnviado in messagesEnviados %}
             {% if messageEnviado.oculto != true %}
-                {% if messageEnviado.status !=true%}
+                {% if messageEnviado.visto == false %}
                     &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaEnvio|date("Y-m-d") }}
                     <button><a href="/respuesta/{{ messageEnviado.id }}">Ver mensaje</a></button>
                     <br/>

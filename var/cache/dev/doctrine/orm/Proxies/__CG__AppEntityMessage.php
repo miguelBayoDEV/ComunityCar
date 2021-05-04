@@ -66,10 +66,10 @@ class Message extends \App\Entity\Message implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'texto', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'emisor', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'receptor', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'fechaEnvio', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'status', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'fechaLectura', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'respuestas', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'reportado', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'vehiculo', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'oculto'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'texto', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'emisor', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'receptor', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'fechaEnvio', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'fechaLectura', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'respuestas', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'reportado', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'oculto', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'vehiculoMessage', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'visto'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'texto', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'emisor', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'receptor', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'fechaEnvio', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'status', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'fechaLectura', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'respuestas', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'reportado', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'vehiculo', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'oculto'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'texto', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'emisor', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'receptor', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'fechaEnvio', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'fechaLectura', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'user', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'respuestas', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'reportado', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'oculto', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'vehiculoMessage', '' . "\0" . 'App\\Entity\\Message' . "\0" . 'visto'];
     }
 
     /**
@@ -282,28 +282,6 @@ class Message extends \App\Entity\Message implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getStatus(): ?bool
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getStatus', []);
-
-        return parent::getStatus();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setStatus(bool $status): \App\Entity\Message
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setStatus', [$status]);
-
-        return parent::setStatus($status);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getFechaLectura(): ?\DateTimeInterface
     {
 
@@ -403,28 +381,6 @@ class Message extends \App\Entity\Message implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getVehiculo(): ?int
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVehiculo', []);
-
-        return parent::getVehiculo();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setVehiculo(int $vehiculo): \App\Entity\Message
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVehiculo', [$vehiculo]);
-
-        return parent::setVehiculo($vehiculo);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
     public function getOculto(): ?bool
     {
 
@@ -442,6 +398,50 @@ class Message extends \App\Entity\Message implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setOculto', [$oculto]);
 
         return parent::setOculto($oculto);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVehiculoMessage(): ?\App\Entity\Vehiculo
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVehiculoMessage', []);
+
+        return parent::getVehiculoMessage();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVehiculoMessage(?\App\Entity\Vehiculo $vehiculoMessage): \App\Entity\Message
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVehiculoMessage', [$vehiculoMessage]);
+
+        return parent::setVehiculoMessage($vehiculoMessage);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getVisto(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getVisto', []);
+
+        return parent::getVisto();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setVisto(bool $visto): \App\Entity\Message
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setVisto', [$visto]);
+
+        return parent::setVisto($visto);
     }
 
 }

@@ -1,3 +1,4 @@
-Marca: Seat - Modelo: Ibiza - Fecha última modificación: 2021-04-06 09:16:55 - Descripción: null - Precio: null - Propietario: .j@gmail.com
-Marca: Toyota - Modelo: Corolla - Fecha última modificación: 2021-04-26 21:22:20 - Descripción: null - Precio: null - Propietario: .prueba1@gmail.com
-Marca: Seat - Modelo: Leon - Fecha última modificación: 2021-04-06 09:15:53 - Descripción: null - Precio: null - Propietario: .j@gmail.com
+Marca,Modelo,Fecha última modificación,Descripción,Precio,Propietario,
+Toyota,Corolla,2021-04-26 21:22:20,null,null,prueba1@gmail.com,
+otro,otro,2021-04-28 18:50:25,otro,654,m@gmail.com,
+Toyota,Corolla,2021-04-26 21:22:20,null,null,prueba1@gmail.com,

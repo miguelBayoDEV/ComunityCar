@@ -42,7 +42,6 @@ class VehiculoController extends AbstractController
             $vehiculo->setPropietario($this->getUser());
             $vehiculo->setEliminado(false);
             $vehiculo->setVenta(true);
-            $vehiculo->setOculto(false);
             $entityManager->persist($vehiculo);
             $entityManager->flush();
 

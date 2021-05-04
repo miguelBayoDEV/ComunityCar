@@ -52,11 +52,10 @@ class MessageController extends AbstractController
             $message->setReceptor($receptor->getId());
             $message->setFechaEnvio(new \DateTime());
             $message->setFechaLectura(new \DateTime());
-            $message->setStatus(false);
             $message->setReportado(false);
-            $message->setVehiculo($id);
             $message->setUser($emisor);
             $message->setOculto(false);
+            $message->setLeido(false);
             $message->setVehiculoMessage($this->getDoctrine()->getRepository(Vehiculo::class)->find($vehiculo));
             $entityManager->persist($message);
             $entityManager->flush();

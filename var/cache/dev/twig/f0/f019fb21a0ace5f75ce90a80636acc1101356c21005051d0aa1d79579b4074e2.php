@@ -99,7 +99,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                 if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "oculto", [], "any", false, false, false, 9), true))) {
                     // line 10
                     echo "                ";
-                    if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "status", [], "any", false, false, false, 10), true))) {
+                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "visto", [], "any", false, false, false, 10), false))) {
                         // line 11
                         echo "                    &#x1f4ec;&#xfe0e; ";
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "texto", [], "any", false, false, false, 11), "html", null, true);
@@ -152,7 +152,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                 if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "oculto", [], "any", false, false, false, 24), true))) {
                     // line 25
                     echo "                ";
-                    if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "status", [], "any", false, false, false, 25), true))) {
+                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "visto", [], "any", false, false, false, 25), false))) {
                         // line 26
                         echo "                    &#x1f4ec;&#xfe0e; ";
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "texto", [], "any", false, false, false, 26), "html", null, true);
@@ -229,7 +229,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
         <h1>Mensajes recebidos:</h1>
         {% for messageRecibido in messagesRecibidos %}
             {% if messageRecibido.oculto != true %}
-                {% if messageRecibido.status !=true %}
+                {% if messageRecibido.visto == false %}
                     &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaEnvio|date(\"Y-m-d\") }}
                     <button><a href=\"/respuesta/{{ messageRecibido.id }}\">Ver mensaje</a></button>
                     <br/>
@@ -244,7 +244,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
         <h1>Mensajes enviados:</h1>
         {% for messageEnviado in messagesEnviados %}
             {% if messageEnviado.oculto != true %}
-                {% if messageEnviado.status !=true%}
+                {% if messageEnviado.visto == false %}
                     &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaEnvio|date(\"Y-m-d\") }}
                     <button><a href=\"/respuesta/{{ messageEnviado.id }}\">Ver mensaje</a></button>
                     <br/>

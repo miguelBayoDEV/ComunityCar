@@ -37,19 +37,36 @@ class MainController extends AbstractController
         $marcas = array();
         $modelos = array();
         foreach($vehicles as $vehicle) {
-            array_push($marcas, $vehicle->getMarca());
-            array_push($modelos, $vehicle->getModelo());
+            if($vehicle->getEliminado() == false && $vehicle->getVenta() == true) {
+                array_push($marcas, $vehicle->getMarca());
+                array_push($modelos, $vehicle->getModelo());
+            }
         }
         $marcas = array_unique($marcas);
 
         $modelos = array_unique($modelos);
 
+        // Paginación
+        $v = array();
+        foreach($vehicles as $vehicle) {
+            if($vehicle->getEliminado() == false && $vehicle->getVenta() == true) {
+                array_push($v, $vehicle);
+            }
+        }
+
+        // Coger solo los primeros 10 coches
+        $v10 = array_slice($v, 0, 10);
+        
+
+        $total = round(count($v) / 10);
+
         return $this->render('main/buscador.html.twig', [
             'controller_name' => 'MainController',
-            'vehicles' => $vehicles,
+            'vehicles' => $v10,
             'marcas' => $marcas,
             'modelos' => $modelos,
-            'user' => $user
+            'user' => $user,
+            'contadorTotal' => $total
         ]);
     }
 
@@ -70,19 +87,90 @@ class MainController extends AbstractController
         $marcas = array();
         $modelos = array();
         foreach($vehicles as $vehicle) {
-            array_push($marcas, $vehicle->getMarca());
-            array_push($modelos, $vehicle->getModelo());
+            if($vehicle->getEliminado() == false) {
+                array_push($marcas, $vehicle->getMarca());
+                array_push($modelos, $vehicle->getModelo());
+            }else if($vehicle->getOculto() != true) {
+                array_push($marcas, $vehicle->getMarca());
+                array_push($modelos, $vehicle->getModelo());
+            }
         }
         $marcas = array_unique($marcas);
 
         $modelos = array_unique($modelos);
+
+        // Paginación
+        $v = array();
+        foreach($vehiclesFiltro as $vehicle) {
+            if($vehicle->getEliminado() != true || $vehicle->getOculto() != true) {
+                array_push($v, $vehicle);
+            }
+        }
+        $total = round(count($v) / 10);
 
         return $this->render('main/buscador.html.twig', [
             'controller_name' => 'MainController',
             'vehicles' => $vehiclesFiltro,
             'marcas' => $marcas,
             'modelos' => $modelos,
-            'user' => $user
+            'user' => $user,
+            'contadorTotal' => $total
+        ]);
+    }
+
+    /**
+     * @Route("/page/{contador}", name="page")
+     * @IsGranted("ROLE_USER")
+     */
+    public function page($contador): Response
+    {
+        // Usuario logueado
+        $user = $this->getUser();
+
+        $vehicles = $this->getDoctrine()->getRepository(Vehiculo::class)->findAll();
+        // Arrays de marcas y modelos
+        $marcas = array();
+        $modelos = array();
+        foreach($vehicles as $vehicle) {
+            if($vehicle->getEliminado() == false) {
+                array_push($marcas, $vehicle->getMarca());
+                array_push($modelos, $vehicle->getModelo());
+            }else if($vehicle->getOculto() != true) {
+                array_push($marcas, $vehicle->getMarca());
+                array_push($modelos, $vehicle->getModelo());
+            }
+        }
+        $marcas = array_unique($marcas);
+
+        $modelos = array_unique($modelos);
+
+        // Paginación
+        $v = array();
+        foreach($vehicles as $vehicle) {
+            if($vehicle->getEliminado() != true || $vehicle->getOculto() != true) {
+                array_push($v, $vehicle);
+            }
+        }
+        $total = round(count($v) / 10);
+
+        // Condicionales de paginación
+        if($contador == "first") {
+
+        }else if($contador == "last") {
+
+        }else if($contador == "before") {
+            
+        }else if($contador == "after") {
+            
+        }
+
+        return $this->render('main/buscador.html.twig', [
+            'controller_name' => 'MainController',
+            'vehicles' => $vehicles,
+            'marcas' => $marcas,
+            'modelos' => $modelos,
+            'user' => $user,
+            'contadorTotal' => $total
         ]);
     }
 
@@ -212,7 +300,7 @@ class MainController extends AbstractController
     
     /**
      * @Route("/eliminarMensajeVehiculo", name="eliminarMensajeVehiculo")
-     * @IsGranted("ROLE_USER")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function eliminarMensajeVehiculo(Request $request): Response
     {
@@ -223,6 +311,23 @@ class MainController extends AbstractController
         $em = $this->getDoctrine()->getManager();
         $mensaje->setOculto(true);
         $vehiculo->setEliminado(true);
+        $em->flush();
+
+              
+        return new Response($resultado);
+    }
+
+    /**
+     * @Route("/reportarMensajeVehiculo", name="reportarMensajeVehiculo")
+     * @IsGranted("ROLE_USER")
+     */
+    public function reportarMensajeVehiculo(Request $request): Response
+    {
+        $mensaje = $this->getDoctrine()->getRepository(Message::class)->find($request->query->get('mensaje'));
+        $resultado = "1";
+
+        $em = $this->getDoctrine()->getManager();
+        $mensaje->setReportado(true);
         $em->flush();
 
               
@@ -311,7 +416,7 @@ class MainController extends AbstractController
                 array_push($mensajes_reportados, $mensaje);
             }
 
-            $vehiculo_id = $mensaje->getVehiculo();
+            $vehiculo_id = $mensaje->getVehiculoMessage()->getId();
             $vehiculo = $this->getDoctrine()->getRepository(Vehiculo::class)->find($vehiculo_id);
 
             if($mensaje->getReportado() == true && $mensaje->getOculto() == true) {
@@ -334,62 +439,66 @@ class MainController extends AbstractController
     {
         $users = $this->getDoctrine()->getRepository(User::class)->findAll();
         $correos = [];
+
+        // Valores predeterminados
+        $valores = "Email,Password,,,Nombre,Primer apellido,Segundo apellido,Nick,Localidad,Provincia,Teléfono móvil,";
+        array_push($correos, $valores);
+        
         foreach($users as $user) {
             $datos = "";
-
             // Comprobar si los datos son nulos o no
             if($user->getEmail() != null) {
-                $datos .= "Email: ".$user->getEmail();
+                $datos .= $user->getEmail().",";
             }else {
-                $datos .= "Email: null";
+                $datos .= "null,";
             }
             
             if($user->getPassword() != null) {
-                $datos .= " - Password: ".$user->getPassword();
+                $datos .= $user->getPassword().",";
             }else {
-                $datos .= " - Password: null";
+                $datos .= "null,";
             }
 
             if($user->getNombre() != null) {
-                $datos .= " - Nombre: ".$user->getNombre();
+                $datos .= $user->getNombre().",";
             }else {
-                $datos .= " - Nombre: null";
+                $datos .= "null,";
             }
 
             if($user->getPrimerApellido() != null) {
-                $datos .= " - PrimerApellido: .".$user->getPrimerApellido();
+                $datos .= $user->getPrimerApellido().",";
             }else {
-                $datos .= " - PrimerApellido: null";
+                $datos .= "null,";
             }
 
             if($user->getSegundoApellido() != null) {
-                $datos .= " - SegundoApellido: ".$user->getSegundoApellido();
+                $datos .= $user->getSegundoApellido().",";
             }else {
-                $datos .= " - SegundoApellido: null";
+                $datos .= "null,";
             }
 
             if($user->getNick() != null) {
-                $datos .= " - Nick: ".$user->getNick();
+                $datos .= $user->getNick().",";
             }else {
-                $datos .= " - Nick: null";
+                $datos .= "null,";
             }
 
             if($user->getLocalidad() != null) {
-                $datos .= " - Localidad: ".$user->getLocalidad();
+                $datos .= $user->getLocalidad().",";
             }else {
-                $datos .= " - Localidad: null";
+                $datos .= "null,";
             }
 
             if($user->getProvincia() != null) {
-                $datos .= " - Provincia: ".$user->getProvincia();
+                $datos .= $user->getProvincia().",";
             }else {
-                $datos .= " - Provincia: null";
+                $datos .= "null,";
             }
 
             if($user->getTelefonoMovil() != null) {
-                $datos .= " - Teléfono Móvil: ".$user->getTelefonoMovil();
+                $datos .= $user->getTelefonoMovil().",";
             }else {
-                $datos .= " - Teléfono Móvil: null";
+                $datos .= "null,";
             }
 
             array_push($correos, $datos);
@@ -426,55 +535,70 @@ class MainController extends AbstractController
         }
 
         $correos = [];
+
+        // Valores predeterminados
+        $valores = "Texto,Fecha envío,Emisor,Receptor,Respuestas,";
+        array_push($correos, $valores);
+
         foreach($mensajes_reportados as $mensaje_reportado) {
             $datos = "";
 
             // Comprobar si los datos son nulos o no
             if($mensaje_reportado->getTexto() != null) {
-                $datos .= "Texto: ".$mensaje_reportado->getTexto();
+                $datos .= $mensaje_reportado->getTexto().",";
             }else {
-                $datos .= "Texto: null";
+                $datos .= "null,";
             }
             
             if($mensaje_reportado->getFechaEnvio() != null) {
-                $datos .= " - Fecha envío: ".$mensaje_reportado->getFechaEnvio()->format('Y-m-d H:i:s');
+                $datos .= $mensaje_reportado->getFechaEnvio()->format('Y-m-d H:i:s').",";
             }else {
-                $datos .= " - Fecha envío: null";
-            }
-
-            foreach($mensaje_reportado->getRespuestas() as $respuesta) {
-                if($respuesta->getTexto() != null) {
-                    $datos .= " - Texto: ".$respuesta->getTexto();
-                }else {
-                    $datos .= " - Texto: null";
-                }
-
-                if($respuesta->getFecha() != null) {
-                    $datos .= " - Fecha: ".$respuesta->getFecha()->format('Y-m-d H:i:s');
-                }else {
-                    $datos .= " - Fecha: null";
-                }
-
-                if($respuesta->getAutor() != null) {
-                    $datos .= " - Autor: ".$respuesta->getAutor();
-                }else {
-                    $datos .= " - Autor: null";
-                }
+                $datos .= "null,";
             }
 
             if($mensaje_reportado->getEmisor() != null) {
                 $emisor = $this->getDoctrine()->getRepository(User::class)->find($mensaje_reportado->getEmisor());
-                $datos .= " - Emisor: .".$emisor->getEmail();
+                $datos .= $emisor->getEmail().",";
             }else {
-                $datos .= " - Emisor: null";
+                $datos .= "null,";
             }
 
             if($mensaje_reportado->getReceptor() != null) {
                 $receptor = $this->getDoctrine()->getRepository(User::class)->find($mensaje_reportado->getReceptor());
-                $datos .= " - Receptor: .".$receptor->getEmail();
+                $datos .= $receptor->getEmail().",";
             }else {
-                $datos .= " - Receptor: null";
+                $datos .= "null,";
             }
+
+            // String para coger todas las respuestas:
+            $r = "";
+            foreach($mensaje_reportado->getRespuestas() as $respuesta) {
+
+                if($respuesta->getId() != null) {
+                    $r .= $respuesta->getId()." - ";
+                }else {
+                    $r .= "null,";
+                }
+                
+                if($respuesta->getTexto() != null) {
+                    $r .= $respuesta->getTexto()." (";
+                }else {
+                    $r .= "null,";
+                }
+
+                if($respuesta->getFecha() != null) {
+                    $r .= $respuesta->getFecha()->format('Y-m-d H:i:s')." - ";
+                }else {
+                    $r .= "null,";
+                }
+
+                if($respuesta->getAutor() != null) {
+                    $r .= $respuesta->getAutor().") | ";
+                }else {
+                    $r .= "null,";
+                }
+            }
+            $datos .= $r;
 
             array_push($correos, $datos);
         }
@@ -505,58 +629,63 @@ class MainController extends AbstractController
         $vehiculos_reportados = array();
 
         foreach($mensajes as $mensaje) {
+
             if($mensaje->getReportado() == true) {
                 array_push($mensajes_reportados, $mensaje);
             }
 
-            $vehiculo_id = $mensaje->getVehiculo();
+            $vehiculo_id = $mensaje->getVehiculoMessage()->getId();
             $vehiculo = $this->getDoctrine()->getRepository(Vehiculo::class)->find($vehiculo_id);
 
             if($mensaje->getReportado() == true && $mensaje->getOculto() == true) {
                 array_push($vehiculos_reportados, $vehiculo);
             }
+
         }
 
         $correos = [];
+        $valores = "Marca,Modelo,Fecha última modificación,Descripción,Precio,Propietario,";
+        array_push($correos, $valores);
+
         foreach($vehiculos_reportados as $vehiculo_reportado) {
             $datos = "";
 
             // Comprobar si los datos son nulos o no
             if($vehiculo_reportado->getMarca() != null) {
-                $datos .= "Marca: ".$vehiculo_reportado->getMarca();
+                $datos .= $vehiculo_reportado->getMarca().",";
             }else {
-                $datos .= "Marca: null";
+                $datos .= "null,";
             }
             
             if($vehiculo_reportado->getModelo() != null) {
-                $datos .= " - Modelo: ".$vehiculo_reportado->getModelo();
+                $datos .= $vehiculo_reportado->getModelo().",";
             }else {
-                $datos .= " - Modelo: null";
+                $datos .= "null,";
             }
 
             if($vehiculo_reportado->getFechaModificacion() != null) {
-                $datos .= " - Fecha última modificación: ".$vehiculo_reportado->getFechaModificacion()->format('Y-m-d H:i:s');
+                $datos .= $vehiculo_reportado->getFechaModificacion()->format('Y-m-d H:i:s').",";
             }else {
-                $datos .= " - Fecha última modificación: null";
+                $datos .= "null,";
             }
 
             if($vehiculo_reportado->getDescripcion() != null) {
-                $datos .= " - Descripción: .".$vehiculo_reportado->getDescripcion();
+                $datos .= $vehiculo_reportado->getDescripcion().",";
             }else {
-                $datos .= " - Descripción: null";
+                $datos .= "null,";
             }
 
             if($vehiculo_reportado->getPrecio() != null) {
-                $datos .= " - Precio: ".$vehiculo_reportado->getPrecio();
+                $datos .= $vehiculo_reportado->getPrecio().",";
             }else {
-                $datos .= " - Precio: null";
+                $datos .= "null,";
             }
 
             if($vehiculo_reportado->getPropietario() != null) {
                 $propietario = $this->getDoctrine()->getRepository(User::class)->find($vehiculo_reportado->getPropietario());
-                $datos .= " - Propietario: .".$propietario->getEmail();
+                $datos .= $propietario->getEmail().",";
             }else {
-                $datos .= " - Propietario: null";
+                $datos .= "null,";
             }
 
             array_push($correos, $datos);

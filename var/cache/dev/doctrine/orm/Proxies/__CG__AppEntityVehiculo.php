@@ -66,10 +66,10 @@ class Vehiculo extends \App\Entity\Vehiculo implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'modelo', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'marca', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'fechaModificacion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'propietario', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'eliminado', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'venta', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'descripcion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'precio', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'oculto', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'messages'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'modelo', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'marca', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'fechaModificacion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'propietario', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'eliminado', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'venta', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'descripcion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'precio', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'messages'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'modelo', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'marca', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'fechaModificacion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'propietario', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'eliminado', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'venta', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'descripcion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'precio', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'oculto', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'messages'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'modelo', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'marca', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'fechaModificacion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'propietario', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'eliminado', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'venta', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'descripcion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'precio', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'messages'];
     }
 
     /**
@@ -365,28 +365,6 @@ class Vehiculo extends \App\Entity\Vehiculo implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPrecio', [$precio]);
 
         return parent::setPrecio($precio);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getOculto(): ?bool
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getOculto', []);
-
-        return parent::getOculto();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setOculto(bool $oculto): \App\Entity\Vehiculo
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setOculto', [$oculto]);
-
-        return parent::setOculto($oculto);
     }
 
     /**

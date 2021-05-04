@@ -63,72 +63,110 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         // line 17
         $this->displayBlock('javascripts', $context, $blocks);
         // line 26
-        echo "    </head>
+        echo "
+        <style type=\"text/css\">
+            aside.anime {
+                border: 2px solid black;
+                width: 15%;
+                height: 600px;
+                margin: 2%;
+                position: fixed;
+                background-image: url(\"/comunes/anime/img/carretera.png\");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            aside.anime > img {
+                position: fixed;
+                top: 500px;
+                right: 200px;
+                width: 100px;
+                height: 170px;
+            }
+        </style>
+    </head>
     <body>
         <div class=\"d-flex flex-column h-100\" id=\"container\">
-            ";
-        // line 29
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 29)->display($context);
-        // line 30
-        echo "            ";
+            <div class=\"row\">
+                <div class=\"col-12\">
+                    ";
+        // line 52
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 52)->display($context);
+        // line 53
+        echo "                </div>
+            </div>
+            <div class=\"row\">
+                <div class=\"col-9\">
+                    ";
+        // line 57
         $this->displayBlock('body', $context, $blocks);
-        // line 31
-        echo "            <footer class=\"footer mt-auto text-center text-white-50 bg-dark\">
-                <div class=\"container\">
-                    <div class=\"row\">
-                        <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
-                            <ul class=\"adress\">
-                                <span>Adress</span>
-                                <li>
-                                    <p>Lorem ipsum dolor sit amet, vero omnis vocibus</p>
-                                </li>
-                                <li>
-                                    <p>+90 1234 56789</p>
-                                </li>
-                                <li>
-                                    <p>info@gmail.com</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
-                            <ul class=\"contact\">
-                                <span>Contact</span>
-                                <li>
-                                    <a href=\"/main\">Home</a>
-                                </li>
-                                <li>
-                                    <a href=\"#\">About</a>
-                                </li>
-                                <li>
-                                    <a href=\"#\">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
-                            <ul class=\"social\">
-                                <span>Social Media Networks</span>
-                                <li>
-                                        <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x\"></i></a>
-                                </li>
-                                <li>
-                                        <a href=\"https://www.instagram.com/\"><i class=\"fa fa-instagram fa-2x\"></i></a>
-                                </li>
-                                <li>
-                                        <a href=\"https://twitter.com/?lang=es\"><i class=\"fa fa-twitter fa-2x\"></i></a>
-                                </li>
-                                <li>
-                                        <a href=\"https://www.pinterest.es/\"><i class=\"fa fa-pinterest fa-2x\"></i></a>
-                                </li>
-                                <li>
-                                        <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x\"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+        // line 58
+        echo "                </div>
+                <div class=\"col-3\">
+                    <aside class=\"anime\">
+                        <img src=\"/comunes/anime/img/coche.png\" />
+                    </aside>
                 </div>
-            </footer>
+            </div>
+            <div class=\"row\">
+                <div class=\"col-12\">
+                    <footer class=\"footer mt-auto text-center text-white-50 bg-dark\">
+                        <div class=\"container\">
+                            <div class=\"row\">
+                                <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
+                                    <ul class=\"adress\">
+                                        <span>Adress</span>
+                                        <li>
+                                            <p>Lorem ipsum dolor sit amet, vero omnis vocibus</p>
+                                        </li>
+                                        <li>
+                                            <p>+90 1234 56789</p>
+                                        </li>
+                                        <li>
+                                            <p>info@gmail.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
 
+                                <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
+                                    <ul class=\"contact\">
+                                        <span>Contact</span>
+                                        <li>
+                                            <a href=\"/main\">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href=\"#\">About</a>
+                                        </li>
+                                        <li>
+                                            <a href=\"#\">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
+                                    <ul class=\"social\">
+                                        <span>Social Media Networks</span>
+                                        <li>
+                                                <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x\"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href=\"https://www.instagram.com/\"><i class=\"fa fa-instagram fa-2x\"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href=\"https://twitter.com/?lang=es\"><i class=\"fa fa-twitter fa-2x\"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href=\"https://www.pinterest.es/\"><i class=\"fa fa-pinterest fa-2x\"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x\"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
             <script>
 
                 function comprobarAncho(){
@@ -231,7 +269,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 30
+    // line 57
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -261,7 +299,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  235 => 30,  218 => 18,  208 => 17,  192 => 9,  182 => 8,  163 => 6,  76 => 31,  73 => 30,  71 => 29,  66 => 26,  64 => 17,  61 => 16,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  273 => 57,  256 => 18,  246 => 17,  230 => 9,  220 => 8,  201 => 6,  104 => 58,  102 => 57,  96 => 53,  94 => 52,  66 => 26,  64 => 17,  61 => 16,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -291,67 +329,104 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
             <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
         {% endblock %}
+
+        <style type=\"text/css\">
+            aside.anime {
+                border: 2px solid black;
+                width: 15%;
+                height: 600px;
+                margin: 2%;
+                position: fixed;
+                background-image: url(\"/comunes/anime/img/carretera.png\");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            aside.anime > img {
+                position: fixed;
+                top: 500px;
+                right: 200px;
+                width: 100px;
+                height: 170px;
+            }
+        </style>
     </head>
     <body>
         <div class=\"d-flex flex-column h-100\" id=\"container\">
-            {% include 'navbar/navbar.html.twig' %}
-            {% block body %}{% endblock %}
-            <footer class=\"footer mt-auto text-center text-white-50 bg-dark\">
-                <div class=\"container\">
-                    <div class=\"row\">
-                        <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
-                            <ul class=\"adress\">
-                                <span>Adress</span>
-                                <li>
-                                    <p>Lorem ipsum dolor sit amet, vero omnis vocibus</p>
-                                </li>
-                                <li>
-                                    <p>+90 1234 56789</p>
-                                </li>
-                                <li>
-                                    <p>info@gmail.com</p>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
-                            <ul class=\"contact\">
-                                <span>Contact</span>
-                                <li>
-                                    <a href=\"/main\">Home</a>
-                                </li>
-                                <li>
-                                    <a href=\"#\">About</a>
-                                </li>
-                                <li>
-                                    <a href=\"#\">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
-                            <ul class=\"social\">
-                                <span>Social Media Networks</span>
-                                <li>
-                                        <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x\"></i></a>
-                                </li>
-                                <li>
-                                        <a href=\"https://www.instagram.com/\"><i class=\"fa fa-instagram fa-2x\"></i></a>
-                                </li>
-                                <li>
-                                        <a href=\"https://twitter.com/?lang=es\"><i class=\"fa fa-twitter fa-2x\"></i></a>
-                                </li>
-                                <li>
-                                        <a href=\"https://www.pinterest.es/\"><i class=\"fa fa-pinterest fa-2x\"></i></a>
-                                </li>
-                                <li>
-                                        <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x\"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class=\"row\">
+                <div class=\"col-12\">
+                    {% include 'navbar/navbar.html.twig' %}
                 </div>
-            </footer>
+            </div>
+            <div class=\"row\">
+                <div class=\"col-9\">
+                    {% block body %}{% endblock %}
+                </div>
+                <div class=\"col-3\">
+                    <aside class=\"anime\">
+                        <img src=\"/comunes/anime/img/coche.png\" />
+                    </aside>
+                </div>
+            </div>
+            <div class=\"row\">
+                <div class=\"col-12\">
+                    <footer class=\"footer mt-auto text-center text-white-50 bg-dark\">
+                        <div class=\"container\">
+                            <div class=\"row\">
+                                <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
+                                    <ul class=\"adress\">
+                                        <span>Adress</span>
+                                        <li>
+                                            <p>Lorem ipsum dolor sit amet, vero omnis vocibus</p>
+                                        </li>
+                                        <li>
+                                            <p>+90 1234 56789</p>
+                                        </li>
+                                        <li>
+                                            <p>info@gmail.com</p>
+                                        </li>
+                                    </ul>
+                                </div>
 
+                                <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
+                                    <ul class=\"contact\">
+                                        <span>Contact</span>
+                                        <li>
+                                            <a href=\"/main\">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href=\"#\">About</a>
+                                        </li>
+                                        <li>
+                                            <a href=\"#\">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
+                                    <ul class=\"social\">
+                                        <span>Social Media Networks</span>
+                                        <li>
+                                                <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x\"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href=\"https://www.instagram.com/\"><i class=\"fa fa-instagram fa-2x\"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href=\"https://twitter.com/?lang=es\"><i class=\"fa fa-twitter fa-2x\"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href=\"https://www.pinterest.es/\"><i class=\"fa fa-pinterest fa-2x\"></i></a>
+                                        </li>
+                                        <li>
+                                                <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x\"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
             <script>
 
                 function comprobarAncho(){

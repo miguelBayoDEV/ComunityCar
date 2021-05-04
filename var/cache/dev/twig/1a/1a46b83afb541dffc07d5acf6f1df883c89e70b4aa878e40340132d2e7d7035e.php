@@ -139,7 +139,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         foreach ($context['_seq'] as $context["_key"] => $context["vehicle"]) {
             // line 25
             echo "        ";
-            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "eliminado", [], "any", false, false, false, 25), false)) || ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "oculto", [], "any", false, false, false, 25), false)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "venta", [], "any", false, false, false, 25), true))))) {
+            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "eliminado", [], "any", false, false, false, 25), false)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "venta", [], "any", false, false, false, 25), true)))) {
                 // line 26
                 echo "            <div class=\"vehicles\">
                 Marca: ";
@@ -171,6 +171,34 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehicle'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 35
+        echo "
+    ";
+        // line 37
+        echo "    <div class=\"page\">
+        <button><a href=\"/page/first\">Primero</a></button>
+        <button><a href=\"/page/before\">Anterior</a></button>
+        ";
+        // line 40
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 40, $this->source); })())));
+        foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
+            // line 41
+            echo "            <button><a href=\"/page/";
+            echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, ($context["contador"] + 1), "html", null, true);
+            echo "</a></button>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contador'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 43
+        echo "        <button><a href=\"/page/after\">Posterior</a></button>
+        <button><a href=\"/page/last\">Último</a></button>
+    </div>
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -191,7 +219,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     public function getDebugInfo()
     {
-        return array (  169 => 34,  163 => 31,  159 => 30,  155 => 29,  151 => 28,  147 => 27,  144 => 26,  141 => 25,  136 => 24,  130 => 19,  119 => 17,  115 => 16,  110 => 13,  99 => 11,  95 => 10,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  198 => 43,  187 => 41,  183 => 40,  178 => 37,  175 => 35,  169 => 34,  163 => 31,  159 => 30,  155 => 29,  151 => 28,  147 => 27,  144 => 26,  141 => 25,  136 => 24,  130 => 19,  119 => 17,  115 => 16,  110 => 13,  99 => 11,  95 => 10,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -220,7 +248,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     {# Mostrar vehículos #}
     {% for vehicle in vehicles %}
-        {% if vehicle.eliminado == false or vehicle.oculto == false and vehicle.venta == true %}
+        {% if vehicle.eliminado == false and vehicle.venta == true %}
             <div class=\"vehicles\">
                 Marca: {{ vehicle.marca }}
                 Modelo: {{ vehicle.modelo }}
@@ -230,6 +258,17 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
             </div>
         {% endif %}
     {% endfor %}
+
+    {# Paginación #}
+    <div class=\"page\">
+        <button><a href=\"/page/first\">Primero</a></button>
+        <button><a href=\"/page/before\">Anterior</a></button>
+        {% for contador in 0 .. contadorTotal %}
+            <button><a href=\"/page/{{contador}}\">{{ contador + 1 }}</a></button>
+        {% endfor %}
+        <button><a href=\"/page/after\">Posterior</a></button>
+        <button><a href=\"/page/last\">Último</a></button>
+    </div>
 {% endblock %}
 ", "main/buscador.html.twig", "/home/bayo/proyectos/ComunityCar/templates/main/buscador.html.twig");
     }

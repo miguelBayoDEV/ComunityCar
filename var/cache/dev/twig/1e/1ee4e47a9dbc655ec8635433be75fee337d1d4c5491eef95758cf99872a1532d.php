@@ -117,12 +117,12 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
         echo "\">Responder</a></button>
     ";
         // line 15
-        if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 15, $this->source); })()), "reportado", [], "any", false, false, false, 15), true))) {
+        if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 15, $this->source); })()), "reportado", [], "any", false, false, false, 15), true)) && $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
             // line 16
             echo "        <button onClick=\"eliminar(";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16), "html", null, true);
             echo ", ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 16, $this->source); })()), "vehiculo", [], "any", false, false, false, 16), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 16, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 16), "id", [], "any", false, false, false, 16), "html", null, true);
             echo ");\">Eliminar</button>
     ";
         }
@@ -133,13 +133,36 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             echo "        <button onClick=\"comprar(";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 19, $this->source); })()), "id", [], "any", false, false, false, 19), "html", null, true);
             echo ", ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 19, $this->source); })()), "vehiculo", [], "any", false, false, false, 19), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 19, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 19), "id", [], "any", false, false, false, 19), "html", null, true);
             echo ");\">Comprar</button>
+        <button onClick=\"reportar(";
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 20, $this->source); })()), "id", [], "any", false, false, false, 20), "html", null, true);
+            echo ");\">Reportar</button>
     ";
         }
-        // line 21
+        // line 22
         echo "
     <script>
+        function reportar(message) {
+
+            function fail(data) {
+                alert(\"Error de AJAX: \" + data);
+            }
+
+            \$.ajax({
+                type: \"GET\",
+                url: \"/reportarMensajeVehiculo\",
+                data: {'mensaje':message},
+                success: function(data) {
+                    if(data == \"1\") {
+                        alert(\"Mensaje reportado correctamente.\");
+                    }
+                },
+                error: fail
+            });
+        }
+
         function eliminar(message, vehicle) {
 
             var datos = {
@@ -211,7 +234,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
 
     public function getDebugInfo()
     {
-        return array (  141 => 21,  133 => 19,  130 => 18,  122 => 16,  120 => 15,  116 => 14,  113 => 13,  104 => 10,  100 => 9,  96 => 8,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  145 => 22,  140 => 20,  133 => 19,  130 => 18,  122 => 16,  120 => 15,  116 => 14,  113 => 13,  104 => 10,  100 => 9,  96 => 8,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -230,14 +253,34 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
     {% endfor %}
 
     <button><a href=\"/respuesta/new/{{ message.id }}\">Responder</a></button>
-    {% if message.reportado == true %}
-        <button onClick=\"eliminar({{ message.id }}, {{message.vehiculo}});\">Eliminar</button>
+    {% if message.reportado == true and is_granted(\"ROLE_ADMIN\") %}
+        <button onClick=\"eliminar({{ message.id }}, {{message.vehiculoMessage.id}});\">Eliminar</button>
     {% endif %}
     {% if message.oculto == false %}
-        <button onClick=\"comprar({{ message.id }}, {{message.vehiculo}});\">Comprar</button>
+        <button onClick=\"comprar({{ message.id }}, {{message.vehiculoMessage.id}});\">Comprar</button>
+        <button onClick=\"reportar({{ message.id }});\">Reportar</button>
     {% endif %}
 
     <script>
+        function reportar(message) {
+
+            function fail(data) {
+                alert(\"Error de AJAX: \" + data);
+            }
+
+            \$.ajax({
+                type: \"GET\",
+                url: \"/reportarMensajeVehiculo\",
+                data: {'mensaje':message},
+                success: function(data) {
+                    if(data == \"1\") {
+                        alert(\"Mensaje reportado correctamente.\");
+                    }
+                },
+                error: fail
+            });
+        }
+
         function eliminar(message, vehicle) {
 
             var datos = {

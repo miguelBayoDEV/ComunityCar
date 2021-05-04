@@ -22,7 +22,7 @@
 
     {# Mostrar vehículos #}
     {% for vehicle in vehicles %}
-        {% if vehicle.eliminado == false or vehicle.oculto == false and vehicle.venta == true %}
+        {% if vehicle.eliminado == false and vehicle.venta == true %}
             <div class="vehicles">
                 Marca: {{ vehicle.marca }}
                 Modelo: {{ vehicle.modelo }}
@@ -32,4 +32,15 @@
             </div>
         {% endif %}
     {% endfor %}
+
+    {# Paginación #}
+    <div class="page">
+        <button><a href="/page/first">Primero</a></button>
+        <button><a href="/page/before">Anterior</a></button>
+        {% for contador in 0 .. contadorTotal %}
+            <button><a href="/page/{{contador}}">{{ contador + 1 }}</a></button>
+        {% endfor %}
+        <button><a href="/page/after">Posterior</a></button>
+        <button><a href="/page/last">Último</a></button>
+    </div>
 {% endblock %}

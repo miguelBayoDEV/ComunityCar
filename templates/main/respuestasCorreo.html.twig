@@ -12,14 +12,34 @@
     {% endfor %}
 
     <button><a href="/respuesta/new/{{ message.id }}">Responder</a></button>
-    {% if message.reportado == true %}
-        <button onClick="eliminar({{ message.id }}, {{message.vehiculo}});">Eliminar</button>
+    {% if message.reportado == true and is_granted("ROLE_ADMIN") %}
+        <button onClick="eliminar({{ message.id }}, {{message.vehiculoMessage.id}});">Eliminar</button>
     {% endif %}
     {% if message.oculto == false %}
-        <button onClick="comprar({{ message.id }}, {{message.vehiculo}});">Comprar</button>
+        <button onClick="comprar({{ message.id }}, {{message.vehiculoMessage.id}});">Comprar</button>
+        <button onClick="reportar({{ message.id }});">Reportar</button>
     {% endif %}
 
     <script>
+        function reportar(message) {
+
+            function fail(data) {
+                alert("Error de AJAX: " + data);
+            }
+
+            $.ajax({
+                type: "GET",
+                url: "/reportarMensajeVehiculo",
+                data: {'mensaje':message},
+                success: function(data) {
+                    if(data == "1") {
+                        alert("Mensaje reportado correctamente.");
+                    }
+                },
+                error: fail
+            });
+        }
+
         function eliminar(message, vehicle) {
 
             var datos = {

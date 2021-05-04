@@ -250,7 +250,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
         foreach ($context['_seq'] as $context["_key"] => $context["vehiculo"]) {
             // line 85
             echo "        ";
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "oculto", [], "any", false, false, false, 85), false))) {
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "eliminado", [], "any", false, false, false, 85), true))) {
                 // line 86
                 echo "            <div class=\"vehicles\">
                 Marca: ";
@@ -302,7 +302,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
         foreach ($context['_seq'] as $context["_key"] => $context["vehiculo"]) {
             // line 104
             echo "        ";
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "venta", [], "any", false, false, false, 104), true))) {
+            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "venta", [], "any", false, false, false, 104), true)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "eliminado", [], "any", false, false, false, 104), false)))) {
                 // line 105
                 echo "            <div class=\"vehicles\">
                 Marca: ";
@@ -553,7 +553,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
 
     <h1>Lista de vehículos mios:</h1>
     {% for vehiculo in user.vehiculos %}
-        {% if vehiculo.oculto == false %}
+        {% if vehiculo.eliminado == true %}
             <div class=\"vehicles\">
                 Marca: {{ vehiculo.marca }}
                 <br/>
@@ -572,7 +572,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
 
     <h1>Lista de vehículos en venta:</h1>
     {% for vehiculo in user.vehiculos %}
-        {% if vehiculo.venta == true %}
+        {% if vehiculo.venta == true and vehiculo.eliminado == false %}
             <div class=\"vehicles\">
                 Marca: {{ vehiculo.marca }}
                 <br/>
