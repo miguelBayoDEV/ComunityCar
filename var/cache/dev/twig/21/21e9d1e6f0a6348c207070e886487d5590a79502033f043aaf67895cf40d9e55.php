@@ -57,18 +57,22 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         ";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 16
+        // line 21
         echo "
         ";
-        // line 17
+        // line 22
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 26
+        // line 31
         echo "
         <style type=\"text/css\">
+            div#container {
+                height: 100%;
+            }
+
             aside.anime {
                 border: 2px solid black;
                 width: 15%;
-                height: 600px;
+                height: 580px;
                 margin: 2%;
                 position: fixed;
                 background-image: url(\"/comunes/anime/img/carretera.png\");
@@ -81,7 +85,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 top: 500px;
                 right: 200px;
                 width: 100px;
-                height: 170px;
+                height: 150px;
             }
         </style>
     </head>
@@ -90,21 +94,21 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             <div class=\"row\">
                 <div class=\"col-12\">
                     ";
-        // line 52
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 52)->display($context);
-        // line 53
+        // line 61
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 61)->display($context);
+        // line 62
         echo "                </div>
             </div>
-            <div class=\"row\">
+            <div class=\"row\" id=\"container\">
                 <div class=\"col-9\">
                     ";
-        // line 57
+        // line 66
         $this->displayBlock('body', $context, $blocks);
-        // line 58
+        // line 67
         echo "                </div>
                 <div class=\"col-3\">
                     <aside class=\"anime\">
-                        <img src=\"/comunes/anime/img/coche.png\" />
+                        <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
                     </aside>
                 </div>
             </div>
@@ -167,25 +171,36 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                     </footer>
                 </div>
             </div>
-            <script>
-
-                function comprobarAncho(){
-                    var altoContenido=window.innerHeight-50;
-                    if(altoContenido<900){
-                        \$('footer').css(\"position\",\"relative\");
-                    }else{
-                        \$('footer').css(\"position\",\"fixed\");
-                    }
-                }
-
-                comprobarAncho();    
-
-                \$(window).resize(function() {
-                    comprobarAncho();
-                });
-
-            </script>
         </div>
+        <script>
+
+            function comprobarAncho(){
+                var altoContenido=window.innerHeight-50;
+                if(altoContenido>600){
+                    \$('footer').css(\"position\",\"relative\");
+                }else{
+                    \$('footer').css(\"position\",\"fixed\");
+                }
+            }
+
+            comprobarAncho();    
+
+            \$(window).resize(function() {
+                comprobarAncho();
+            });
+
+            // Animación del coche
+            \$(\"#carAnime\").click(function() {
+                \$(this).animate({
+                    top:'100px',
+                }, 3000);
+                
+                \$(this).animate({
+                    top:'500px'
+                }, 1);
+            });
+
+        </script>
     </body>
 </html>
 ";
@@ -228,7 +243,19 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
         // line 9
         echo "            <!-- Enlace CSS Bootstrap4 -->
-            <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
+            ";
+        // line 10
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 11
+            echo "                <link href=\"/comunes/css/admin.css\" rel=\"stylesheet\">
+            ";
+        } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
+            // line 13
+            echo "                <link href=\"/comunes/css/user.css\" rel=\"stylesheet\">
+            ";
+        }
+        // line 15
+        echo "            <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
             <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
@@ -242,7 +269,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 17
+    // line 22
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -252,7 +279,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 18
+        // line 23
         echo "            <!-- Enlace a CDN JQuery -->
             <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
 
@@ -269,7 +296,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 57
+    // line 66
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -299,7 +326,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  273 => 57,  256 => 18,  246 => 17,  230 => 9,  220 => 8,  201 => 6,  104 => 58,  102 => 57,  96 => 53,  94 => 52,  66 => 26,  64 => 17,  61 => 16,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  300 => 66,  283 => 23,  273 => 22,  258 => 15,  254 => 13,  250 => 11,  248 => 10,  245 => 9,  235 => 8,  216 => 6,  108 => 67,  106 => 66,  100 => 62,  98 => 61,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -313,6 +340,11 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
         {% block stylesheets %}
             <!-- Enlace CSS Bootstrap4 -->
+            {% if is_granted(\"ROLE_ADMIN\") %}
+                <link href=\"/comunes/css/admin.css\" rel=\"stylesheet\">
+            {% elseif is_granted(\"ROLE_USER\") %}
+                <link href=\"/comunes/css/user.css\" rel=\"stylesheet\">
+            {% endif %}
             <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
@@ -331,10 +363,14 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         {% endblock %}
 
         <style type=\"text/css\">
+            div#container {
+                height: 100%;
+            }
+
             aside.anime {
                 border: 2px solid black;
                 width: 15%;
-                height: 600px;
+                height: 580px;
                 margin: 2%;
                 position: fixed;
                 background-image: url(\"/comunes/anime/img/carretera.png\");
@@ -347,7 +383,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 top: 500px;
                 right: 200px;
                 width: 100px;
-                height: 170px;
+                height: 150px;
             }
         </style>
     </head>
@@ -358,13 +394,13 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                     {% include 'navbar/navbar.html.twig' %}
                 </div>
             </div>
-            <div class=\"row\">
+            <div class=\"row\" id=\"container\">
                 <div class=\"col-9\">
                     {% block body %}{% endblock %}
                 </div>
                 <div class=\"col-3\">
                     <aside class=\"anime\">
-                        <img src=\"/comunes/anime/img/coche.png\" />
+                        <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
                     </aside>
                 </div>
             </div>
@@ -427,25 +463,36 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                     </footer>
                 </div>
             </div>
-            <script>
-
-                function comprobarAncho(){
-                    var altoContenido=window.innerHeight-50;
-                    if(altoContenido<900){
-                        \$('footer').css(\"position\",\"relative\");
-                    }else{
-                        \$('footer').css(\"position\",\"fixed\");
-                    }
-                }
-
-                comprobarAncho();    
-
-                \$(window).resize(function() {
-                    comprobarAncho();
-                });
-
-            </script>
         </div>
+        <script>
+
+            function comprobarAncho(){
+                var altoContenido=window.innerHeight-50;
+                if(altoContenido>600){
+                    \$('footer').css(\"position\",\"relative\");
+                }else{
+                    \$('footer').css(\"position\",\"fixed\");
+                }
+            }
+
+            comprobarAncho();    
+
+            \$(window).resize(function() {
+                comprobarAncho();
+            });
+
+            // Animación del coche
+            \$(\"#carAnime\").click(function() {
+                \$(this).animate({
+                    top:'100px',
+                }, 3000);
+                
+                \$(this).animate({
+                    top:'500px'
+                }, 1);
+            });
+
+        </script>
     </body>
 </html>
 ", "base.html.twig", "/home/bayo/proyectos/ComunityCar/templates/base.html.twig");

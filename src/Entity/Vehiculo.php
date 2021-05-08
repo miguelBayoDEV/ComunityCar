@@ -64,6 +64,11 @@ class Vehiculo
      */
     private $messages;
 
+    /**
+     * @ORM\Column(type="json")
+     */
+    private $images = [];
+
     public function __construct()
     {
         $this->messages = new ArrayCollection();
@@ -199,4 +204,18 @@ class Vehiculo
 
         return $this;
     }
+
+    public function getImages(): ?array
+    {
+        return $this->images;
+    }
+
+    public function setImages(array $images): self
+    {
+        $this->images = $images;
+
+        return $this;
+    }
+
+
 }

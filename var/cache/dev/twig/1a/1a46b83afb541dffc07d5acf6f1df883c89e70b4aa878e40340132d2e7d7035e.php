@@ -158,32 +158,47 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                 // line 30
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 30), "Y-m-d H:i:s"), "html", null, true);
                 echo "
-                <button><a href=\"";
-                // line 31
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 31), "id", [], "any", false, false, false, 31), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 31, $this->source); })()), "id", [], "any", false, false, false, 31), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 31), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 31)]), "html", null, true);
+                Fotos:
+                <br/>
+                ";
+                // line 33
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 33));
+                foreach ($context['_seq'] as $context["_key"] => $context["foto"]) {
+                    // line 34
+                    echo "                    <img src=\"/img/";
+                    echo twig_escape_filter($this->env, $context["foto"], "html", null, true);
+                    echo "\" />
+                ";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['foto'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 36
+                echo "                <button><a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 36, $this->source); })()), "id", [], "any", false, false, false, 36), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 36), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 36)]), "html", null, true);
                 echo "\">Enviar mensaje</a></button>
             </div>
         ";
             }
-            // line 34
+            // line 39
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehicle'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 35
+        // line 40
         echo "
     ";
-        // line 37
+        // line 42
         echo "    <div class=\"page\">
-        <button><a href=\"/page/first\">Primero</a></button>
-        <button><a href=\"/page/before\">Anterior</a></button>
+        <button><a href=\"/page/first\"><<</a></button>
         ";
-        // line 40
+        // line 44
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 40, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 44, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
-            // line 41
+            // line 45
             echo "            <button><a href=\"/page/";
             echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
             echo "\">";
@@ -194,9 +209,8 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
-        echo "        <button><a href=\"/page/after\">Posterior</a></button>
-        <button><a href=\"/page/last\">Último</a></button>
+        // line 47
+        echo "        <button><a href=\"/page/last\">>></a></button>
     </div>
 ";
         
@@ -219,7 +233,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     public function getDebugInfo()
     {
-        return array (  198 => 43,  187 => 41,  183 => 40,  178 => 37,  175 => 35,  169 => 34,  163 => 31,  159 => 30,  155 => 29,  151 => 28,  147 => 27,  144 => 26,  141 => 25,  136 => 24,  130 => 19,  119 => 17,  115 => 16,  110 => 13,  99 => 11,  95 => 10,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  213 => 47,  202 => 45,  198 => 44,  194 => 42,  191 => 40,  185 => 39,  178 => 36,  169 => 34,  165 => 33,  159 => 30,  155 => 29,  151 => 28,  147 => 27,  144 => 26,  141 => 25,  136 => 24,  130 => 19,  119 => 17,  115 => 16,  110 => 13,  99 => 11,  95 => 10,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -254,6 +268,11 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                 Modelo: {{ vehicle.modelo }}
                 {{ vehicle.propietario.email }}
                 {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}
+                Fotos:
+                <br/>
+                {% for foto in vehicle.images %}
+                    <img src=\"/img/{{ foto }}\" />
+                {% endfor %}
                 <button><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}\">Enviar mensaje</a></button>
             </div>
         {% endif %}
@@ -261,13 +280,11 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     {# Paginación #}
     <div class=\"page\">
-        <button><a href=\"/page/first\">Primero</a></button>
-        <button><a href=\"/page/before\">Anterior</a></button>
+        <button><a href=\"/page/first\"><<</a></button>
         {% for contador in 0 .. contadorTotal %}
             <button><a href=\"/page/{{contador}}\">{{ contador + 1 }}</a></button>
         {% endfor %}
-        <button><a href=\"/page/after\">Posterior</a></button>
-        <button><a href=\"/page/last\">Último</a></button>
+        <button><a href=\"/page/last\">>></a></button>
     </div>
 {% endblock %}
 ", "main/buscador.html.twig", "/home/bayo/proyectos/ComunityCar/templates/main/buscador.html.twig");

@@ -5667,7 +5667,7 @@
         <argument key="vehiculo" type="service" id=".errored..service_locator.gZKJew7.App\Entity\Vehiculo"/>
       </argument>
     </service>
-    <service id=".service_locator.eOZkY47" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.zR.feZC" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\MainController::perfil" type="service" id=".service_locator.fZXk27d"/>
@@ -5688,6 +5688,7 @@
         <argument key="App\Controller\VehiculoController::delete" type="service" id=".service_locator.gZKJew7"/>
         <argument key="App\Controller\VehiculoController::edit" type="service" id=".service_locator.gZKJew7"/>
         <argument key="App\Controller\VehiculoController::index" type="service" id=".service_locator.NOBMpdG"/>
+        <argument key="App\Controller\VehiculoController::new" type="service" id=".service_locator.fZXk27d"/>
         <argument key="App\Controller\VehiculoController::show" type="service" id=".service_locator.gZKJew7"/>
         <argument key="App\Kernel::loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="App\Kernel::registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
@@ -5713,6 +5714,7 @@
         <argument key="App\Controller\VehiculoController:delete" type="service" id=".service_locator.gZKJew7"/>
         <argument key="App\Controller\VehiculoController:edit" type="service" id=".service_locator.gZKJew7"/>
         <argument key="App\Controller\VehiculoController:index" type="service" id=".service_locator.NOBMpdG"/>
+        <argument key="App\Controller\VehiculoController:new" type="service" id=".service_locator.fZXk27d"/>
         <argument key="App\Controller\VehiculoController:show" type="service" id=".service_locator.gZKJew7"/>
         <argument key="kernel:loadRoutes" type="service" id=".service_locator.KfbR3DY"/>
         <argument key="kernel:registerContainerConfiguration" type="service" id=".service_locator.KfbR3DY"/>
@@ -6232,12 +6234,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.eOZkY47"/>
+      <argument type="service" id=".service_locator.zR.feZC"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.eOZkY47"/>
+      <argument type="service" id=".service_locator.zR.feZC"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface">
       <argument type="collection"/>
@@ -6657,7 +6659,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.Kbr2i2X" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.eOZkY47"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.zR.feZC"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

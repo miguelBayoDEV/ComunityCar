@@ -66,10 +66,10 @@ class Vehiculo extends \App\Entity\Vehiculo implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'modelo', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'marca', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'fechaModificacion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'propietario', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'eliminado', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'venta', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'descripcion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'precio', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'messages'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'modelo', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'marca', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'fechaModificacion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'propietario', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'eliminado', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'venta', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'descripcion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'precio', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'messages', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'images'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'modelo', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'marca', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'fechaModificacion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'propietario', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'eliminado', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'venta', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'descripcion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'precio', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'messages'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'modelo', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'marca', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'fechaModificacion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'propietario', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'eliminado', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'venta', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'descripcion', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'precio', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'messages', '' . "\0" . 'App\\Entity\\Vehiculo' . "\0" . 'images'];
     }
 
     /**
@@ -398,6 +398,28 @@ class Vehiculo extends \App\Entity\Vehiculo implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeMessage', [$message]);
 
         return parent::removeMessage($message);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getImages(): ?array
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImages', []);
+
+        return parent::getImages();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setImages(array $images): \App\Entity\Vehiculo
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImages', [$images]);
+
+        return parent::setImages($images);
     }
 
 }

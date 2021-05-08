@@ -90,9 +90,6 @@ class MainController extends AbstractController
             if($vehicle->getEliminado() == false) {
                 array_push($marcas, $vehicle->getMarca());
                 array_push($modelos, $vehicle->getModelo());
-            }else if($vehicle->getOculto() != true) {
-                array_push($marcas, $vehicle->getMarca());
-                array_push($modelos, $vehicle->getModelo());
             }
         }
         $marcas = array_unique($marcas);
@@ -102,15 +99,19 @@ class MainController extends AbstractController
         // Paginación
         $v = array();
         foreach($vehiclesFiltro as $vehicle) {
-            if($vehicle->getEliminado() != true || $vehicle->getOculto() != true) {
+            if($vehicle->getEliminado() == false && $vehicle->getVenta() == true) {
                 array_push($v, $vehicle);
             }
         }
+
+        // Coger solo los primeros 10 coches
+        $v10 = array_slice($v, 0, 10);
+
         $total = round(count($v) / 10);
 
         return $this->render('main/buscador.html.twig', [
             'controller_name' => 'MainController',
-            'vehicles' => $vehiclesFiltro,
+            'vehicles' => $v10,
             'marcas' => $marcas,
             'modelos' => $modelos,
             'user' => $user,
@@ -135,9 +136,6 @@ class MainController extends AbstractController
             if($vehicle->getEliminado() == false) {
                 array_push($marcas, $vehicle->getMarca());
                 array_push($modelos, $vehicle->getModelo());
-            }else if($vehicle->getOculto() != true) {
-                array_push($marcas, $vehicle->getMarca());
-                array_push($modelos, $vehicle->getModelo());
             }
         }
         $marcas = array_unique($marcas);
@@ -147,26 +145,59 @@ class MainController extends AbstractController
         // Paginación
         $v = array();
         foreach($vehicles as $vehicle) {
-            if($vehicle->getEliminado() != true || $vehicle->getOculto() != true) {
+            if($vehicle->getEliminado() == false && $vehicle->getVenta() == true) {
                 array_push($v, $vehicle);
             }
         }
+
+        // Vehículos a enseñar
+        $v10 = array();
+
         $total = round(count($v) / 10);
 
         // Condicionales de paginación
         if($contador == "first") {
-
+            $v10 = array_slice($v, 0, 10);
         }else if($contador == "last") {
-
-        }else if($contador == "before") {
+            if(count($v)/10 == 0) {
+                $limite = count($v);
+                $v10 = array_slice($v, $limite-10, $limite);
+            }else {
+                $limite = count($v);
+                $convertir = strval($limite);
+                $penultimo = strlen($convertir)-1;
+                $ultimo = strlen($convertir);
+                $lastNumber = substr($convertir, $penultimo, $ultimo);
+                if($lastNumber == "1") {
+                    $limite = count($v)-1;
+                }else if($lastNumber == "2") {
+                    $limite = count($v)-2;
+                }else if($lastNumber == "3") {
+                    $limite = count($v)-3; 
+                }else if($lastNumber == "4") {
+                    $limite = count($v)-4;
+                }else if($lastNumber == "5") {
+                    $limite = count($v)-5;
+                }else if($lastNumber == "6") {
+                    $limite = count($v)-6;
+                }else if($lastNumber == "7") {
+                    $limite = count($v)-7;
+                }else if($lastNumber == "8") {
+                    $limite = count($v)-8;
+                }else if($lastNumber == "9") {
+                    $limite = count($v)-9;
+                }
+                $v10 = array_slice($v, $limite, $limite+10);
+            }
             
-        }else if($contador == "after") {
-            
+        }else {
+            $limite = $contador*10;
+            $v10 = array_slice($v, $limite, $limite+10);
         }
 
         return $this->render('main/buscador.html.twig', [
             'controller_name' => 'MainController',
-            'vehicles' => $vehicles,
+            'vehicles' => $v10,
             'marcas' => $marcas,
             'modelos' => $modelos,
             'user' => $user,
@@ -263,6 +294,7 @@ class MainController extends AbstractController
             $condicion = "error";
         }
 
+        $em->persist($user);
         $em->flush();
 
               

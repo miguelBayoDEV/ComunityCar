@@ -11,6 +11,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\String\Slugger\SluggerInterface;
+
 /**
  * @Route("/vehiculo")
  */
@@ -29,7 +33,7 @@ class VehiculoController extends AbstractController
     /**
      * @Route("/new", name="vehiculo_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, SluggerInterface $slugger): Response
     {
         $vehiculo = new Vehiculo();
         $form = $this->createForm(VehiculoType::class, $vehiculo);
@@ -42,6 +46,47 @@ class VehiculoController extends AbstractController
             $vehiculo->setPropietario($this->getUser());
             $vehiculo->setEliminado(false);
             $vehiculo->setVenta(true);
+
+            // Conseguir nombre email sin @gmail.com
+            $nombreEmail = $this->getUser()->getEmail();
+            $porciones = explode("@", $nombreEmail);
+            $nombre = $porciones[0];
+
+            // Código cargar imagen
+            /** @var UploadedFile $img */
+            $imgs = $form->get('images')->getData();
+
+            // this condition is needed because the 'brochure' field is not required
+            // so the PDF file must be processed only when a file is uploaded
+            if ($imgs) {
+                $final = array();
+                foreach($imgs as $img) {
+                    $originalFilename = pathinfo($img->getClientOriginalName(), PATHINFO_FILENAME);
+                    // this is needed to safely include the file name as part of the URL
+                    $safeFilename = $slugger->slug($originalFilename);
+                    $newFilename = $safeFilename.'.'.$img->guessExtension();
+
+                    // Move the file to the directory where img are stored
+                    try {
+                        $img->move(
+                            'img/',
+                            $newFilename
+                        );
+                    } catch (FileException $e) {
+                        throw $e;
+                    }
+
+                    // Comprobar si $newFilename es nulo
+                    if($newFilename != null || $newFilename != "undefined" || $newFilename != true || $newFilename != false) {
+                        array_push($final, $newFilename);
+                    }
+                }
+
+                // updates the 'img' property to store the PDF file name
+                // instead of its contents
+                $vehiculo->setImages($final);
+            }
+
             $entityManager->persist($vehiculo);
             $entityManager->flush();
 

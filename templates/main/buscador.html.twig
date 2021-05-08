@@ -28,6 +28,11 @@
                 Modelo: {{ vehicle.modelo }}
                 {{ vehicle.propietario.email }}
                 {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}
+                Fotos:
+                <br/>
+                {% for foto in vehicle.images %}
+                    <img src="/img/{{ foto }}" />
+                {% endfor %}
                 <button><a href="{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}">Enviar mensaje</a></button>
             </div>
         {% endif %}
@@ -35,12 +40,10 @@
 
     {# Paginación #}
     <div class="page">
-        <button><a href="/page/first">Primero</a></button>
-        <button><a href="/page/before">Anterior</a></button>
+        <button><a href="/page/first"><<</a></button>
         {% for contador in 0 .. contadorTotal %}
             <button><a href="/page/{{contador}}">{{ contador + 1 }}</a></button>
         {% endfor %}
-        <button><a href="/page/after">Posterior</a></button>
-        <button><a href="/page/last">Último</a></button>
+        <button><a href="/page/last">>></a></button>
     </div>
 {% endblock %}

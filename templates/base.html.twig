@@ -7,6 +7,11 @@
 
         {% block stylesheets %}
             <!-- Enlace CSS Bootstrap4 -->
+            {% if is_granted("ROLE_ADMIN") %}
+                <link href="/comunes/css/admin.css" rel="stylesheet">
+            {% elseif is_granted("ROLE_USER") %}
+                <link href="/comunes/css/user.css" rel="stylesheet">
+            {% endif %}
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
             <link href="/comunes/footer/css/footer.css" rel="stylesheet">
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -25,10 +30,14 @@
         {% endblock %}
 
         <style type="text/css">
+            div#container {
+                height: 100%;
+            }
+
             aside.anime {
                 border: 2px solid black;
                 width: 15%;
-                height: 600px;
+                height: 580px;
                 margin: 2%;
                 position: fixed;
                 background-image: url("/comunes/anime/img/carretera.png");
@@ -41,7 +50,7 @@
                 top: 500px;
                 right: 200px;
                 width: 100px;
-                height: 170px;
+                height: 150px;
             }
         </style>
     </head>
@@ -52,13 +61,13 @@
                     {% include 'navbar/navbar.html.twig' %}
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="container">
                 <div class="col-9">
                     {% block body %}{% endblock %}
                 </div>
                 <div class="col-3">
                     <aside class="anime">
-                        <img src="/comunes/anime/img/coche.png" />
+                        <img id="carAnime" src="/comunes/anime/img/coche.png" />
                     </aside>
                 </div>
             </div>
@@ -121,24 +130,35 @@
                     </footer>
                 </div>
             </div>
-            <script>
-
-                function comprobarAncho(){
-                    var altoContenido=window.innerHeight-50;
-                    if(altoContenido<900){
-                        $('footer').css("position","relative");
-                    }else{
-                        $('footer').css("position","fixed");
-                    }
-                }
-
-                comprobarAncho();    
-
-                $(window).resize(function() {
-                    comprobarAncho();
-                });
-
-            </script>
         </div>
+        <script>
+
+            function comprobarAncho(){
+                var altoContenido=window.innerHeight-50;
+                if(altoContenido>600){
+                    $('footer').css("position","relative");
+                }else{
+                    $('footer').css("position","fixed");
+                }
+            }
+
+            comprobarAncho();    
+
+            $(window).resize(function() {
+                comprobarAncho();
+            });
+
+            // Animación del coche
+            $("#carAnime").click(function() {
+                $(this).animate({
+                    top:'100px',
+                }, 3000);
+                
+                $(this).animate({
+                    top:'500px'
+                }, 1);
+            });
+
+        </script>
     </body>
 </html>

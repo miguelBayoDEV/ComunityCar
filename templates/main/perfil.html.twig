@@ -3,6 +3,10 @@
 {% block title %}Perfil{% endblock %}
 
 {% block body %}
+
+    {# Añadir nuevo vehículo para vender #}
+    <button><a href="/vehiculo/new">Introducir vehículo a vender</a></button>
+
     <h1 id="datosPersonales">Datos personales:</h1>
 
     <div id="avatar">
@@ -82,7 +86,7 @@
 
     <h1>Lista de vehículos mios:</h1>
     {% for vehiculo in user.vehiculos %}
-        {% if vehiculo.eliminado == true %}
+        {% if vehiculo.eliminado != true %}
             <div class="vehicles">
                 Marca: {{ vehiculo.marca }}
                 <br/>
@@ -115,9 +119,6 @@
             </div>
         {% endif %}
     {% endfor %}
-
-    {# Añadir nuevo vehículo para vender #}
-    <button><a href="/vehiculo/new">Introducir vehículo a vender</a></button>
 
     <script>
         function modificar(id) {
