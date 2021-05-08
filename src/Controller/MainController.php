@@ -316,6 +316,27 @@ class MainController extends AbstractController
             'messagesEnviados' => $messagesEnviados
         ]);
     }
+    
+    /**
+     * @Route("/messageVisto/{id}", name="messageVisto")
+     * @IsGranted("ROLE_USER")
+     */
+    public function messageVisto($id): Response
+    {
+        $message = $this->getDoctrine()->getRepository(Message::class)->find($id);
+
+        // Comprobar si el mensaje está leido o no
+        $entityManager = $this->getDoctrine()->getManager();
+        if($message->getVisto() == false) {
+            $message->setVisto(true);
+        }
+        $entityManager->persist($message);
+        $entityManager->flush();
+
+        return $this->render('main/respuestasCorreo.html.twig', [
+            'message' => $message
+        ]);
+    }
 
     /**
      * @Route("/messagesReportados", name="messagesReportados")

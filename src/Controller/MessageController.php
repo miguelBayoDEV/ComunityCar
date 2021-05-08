@@ -74,23 +74,9 @@ class MessageController extends AbstractController
      */
     public function show(Message $message, $id): Response
     {
-
-        // Modificar mensaje a leido:
-        $entityManager = $this->getDoctrine()->getManager();
-
-        $m = $this->getDoctrine()->getRepository(Message::class)->find($id);
-        
-        if($m->getStatus() == false) {
-            $m->setStatus(true);
-            $m->setFechaLectura(new \DateTime());
-        }
-
-
-        $entityManager->persist($m);
-        $entityManager->flush();
-
-        return $this->render('main/mensajesReportados.html.twig', [
-            'message' => $m,
+        $message = $this->getDoctrine()->getRepository(Message::class)->find($id);
+        return $this->render('main/respuestasCorreo.html.twig', [
+            'message' => $message
         ]);
     }
 

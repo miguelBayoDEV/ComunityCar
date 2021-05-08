@@ -21,6 +21,7 @@ return [
     'perfil' => [[], ['_controller' => 'App\\Controller\\MainController::perfil'], [], [['text', '/perfil']], [], []],
     'modificar' => [[], ['_controller' => 'App\\Controller\\MainController::modificar'], [], [['text', '/modificar']], [], []],
     'message' => [[], ['_controller' => 'App\\Controller\\MainController::message'], [], [['text', '/message']], [], []],
+    'messageVisto' => [['id'], ['_controller' => 'App\\Controller\\MainController::messageVisto'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/messageVisto']], [], []],
     'messagesReportados' => [[], ['_controller' => 'App\\Controller\\MainController::messagesReportados'], [], [['text', '/messagesReportados']], [], []],
     'eliminarMensajeVehiculo' => [[], ['_controller' => 'App\\Controller\\MainController::eliminarMensajeVehiculo'], [], [['text', '/eliminarMensajeVehiculo']], [], []],
     'reportarMensajeVehiculo' => [[], ['_controller' => 'App\\Controller\\MainController::reportarMensajeVehiculo'], [], [['text', '/reportarMensajeVehiculo']], [], []],

@@ -9,11 +9,11 @@
             {% if messageRecibido.oculto != true %}
                 {% if messageRecibido.visto == false %}
                     &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaEnvio|date("Y-m-d") }}
-                    <button><a href="/respuesta/{{ messageRecibido.id }}">Ver mensaje</a></button>
+                    <button><a href="/messageVisto/{{ messageRecibido.id }}">Ver mensaje</a></button>
                     <br/>
                 {% else %}
                     &#x1f4ed;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaLectura|date("Y-m-d") }}
-                    <button><a href="/respuesta/{{ messageRecibido.id }}">Ver mensaje</a></button>
+                    <button><a href="/messageVisto/{{ messageRecibido.id }}">Ver mensaje</a></button>
                     <br/>
                 {% endif %}
             {% endif %}
@@ -24,11 +24,11 @@
             {% if messageEnviado.oculto != true %}
                 {% if messageEnviado.visto == false %}
                     &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaEnvio|date("Y-m-d") }}
-                    <button><a href="/respuesta/{{ messageEnviado.id }}">Ver mensaje</a></button>
+                    <button><a href="/messageVisto/{{ messageEnviado.id }}">Ver mensaje</a></button>
                     <br/>
                 {% else %}
                     &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaLectura|date("Y-m-d") }}
-                    <button><a href="/respuesta/{{ messageEnviado.id }}">Ver mensaje</a></button>
+                    <button><a href="/messageVisto/{{ messageEnviado.id }}">Ver mensaje</a></button>
                     <br/>
                 {% endif %}
             {% endif %}

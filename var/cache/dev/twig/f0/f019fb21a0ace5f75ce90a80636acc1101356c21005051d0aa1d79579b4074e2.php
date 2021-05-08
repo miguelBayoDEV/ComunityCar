@@ -108,7 +108,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                         echo " - ";
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "fechaEnvio", [], "any", false, false, false, 11), "Y-m-d"), "html", null, true);
                         echo "
-                    <button><a href=\"/respuesta/";
+                    <button><a href=\"/messageVisto/";
                         // line 12
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "id", [], "any", false, false, false, 12), "html", null, true);
                         echo "\">Ver mensaje</a></button>
@@ -123,7 +123,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                         echo " - ";
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "fechaLectura", [], "any", false, false, false, 15), "Y-m-d"), "html", null, true);
                         echo "
-                    <button><a href=\"/respuesta/";
+                    <button><a href=\"/messageVisto/";
                         // line 16
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "id", [], "any", false, false, false, 16), "html", null, true);
                         echo "\">Ver mensaje</a></button>
@@ -161,7 +161,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                         echo " - ";
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "fechaEnvio", [], "any", false, false, false, 26), "Y-m-d"), "html", null, true);
                         echo "
-                    <button><a href=\"/respuesta/";
+                    <button><a href=\"/messageVisto/";
                         // line 27
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "id", [], "any", false, false, false, 27), "html", null, true);
                         echo "\">Ver mensaje</a></button>
@@ -176,7 +176,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                         echo " - ";
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "fechaLectura", [], "any", false, false, false, 30), "Y-m-d"), "html", null, true);
                         echo "
-                    <button><a href=\"/respuesta/";
+                    <button><a href=\"/messageVisto/";
                         // line 31
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "id", [], "any", false, false, false, 31), "html", null, true);
                         echo "\">Ver mensaje</a></button>
@@ -231,11 +231,11 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
             {% if messageRecibido.oculto != true %}
                 {% if messageRecibido.visto == false %}
                     &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaEnvio|date(\"Y-m-d\") }}
-                    <button><a href=\"/respuesta/{{ messageRecibido.id }}\">Ver mensaje</a></button>
+                    <button><a href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
                     <br/>
                 {% else %}
                     &#x1f4ed;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaLectura|date(\"Y-m-d\") }}
-                    <button><a href=\"/respuesta/{{ messageRecibido.id }}\">Ver mensaje</a></button>
+                    <button><a href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
                     <br/>
                 {% endif %}
             {% endif %}
@@ -246,11 +246,11 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
             {% if messageEnviado.oculto != true %}
                 {% if messageEnviado.visto == false %}
                     &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaEnvio|date(\"Y-m-d\") }}
-                    <button><a href=\"/respuesta/{{ messageEnviado.id }}\">Ver mensaje</a></button>
+                    <button><a href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
                     <br/>
                 {% else %}
                     &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaLectura|date(\"Y-m-d\") }}
-                    <button><a href=\"/respuesta/{{ messageEnviado.id }}\">Ver mensaje</a></button>
+                    <button><a href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
                     <br/>
                 {% endif %}
             {% endif %}
