@@ -45,7 +45,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
         // line 1
         echo "<!DOCTYPE html>
-<html>
+<html lang=\"es\">
     <head>
         <meta charset=\"UTF-8\"/>
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>
@@ -57,119 +57,171 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         ";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 21
+        // line 22
         echo "
         ";
-        // line 22
+        // line 23
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 31
+        // line 32
         echo "
         <style type=\"text/css\">
-            div#container {
-                height: 100%;
+
+            hr {
+                background-color: white;
+            }
+
+            a.marca {
+                font-size: 2vw;
+            }
+
+            a.barraInferior {
+                font-size: 1.2vw;
+                color: #a311d6;
+            }
+
+            a.barra:hover {
+                font-size: 1.3vw;
+            }
+
+            a.barraInferior:hover {
+                font-size: 1.5vw;
+                color: #a311d6;
+            }
+
+            ul.adress span, ul.contact span, ul.social span {
+                color: #a311d6;
+                font-size: 1.1vw;
+            }
+
+            .sinpadding [class*=\"col-\"] {
+                padding: 0;
+            }
+
+            div.anime {
+                height: 100vh;
+                width: 100%;
             }
 
             aside.anime {
+                position: relative;
                 border: 2px solid black;
-                width: 15%;
-                height: 580px;
-                margin: 2%;
-                position: fixed;
+                width: 45vw;
+                height: 50vh;
+                margin-top: 2%;
                 background-image: url(\"/comunes/anime/img/carretera.png\");
                 background-repeat: no-repeat;
                 background-size: cover;
             }
 
             aside.anime > img {
-                position: fixed;
-                top: 500px;
-                right: 200px;
-                width: 100px;
-                height: 150px;
+                position: absolute;
+                top: 30vh;
+                right: 68vh;
+                width: 10vw;
+                height: 10vh;
+            }
+
+            .cabecera {
+                background: linear-gradient(#161381, #130f9e);
             }
         </style>
     </head>
-    <body>
-        <div class=\"d-flex flex-column h-100\" id=\"container\">
-            <div class=\"row\">
-                <div class=\"col-12\">
-                    ";
-        // line 61
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 61)->display($context);
-        // line 62
-        echo "                </div>
+    <body class=\"container-fluid\">
+        <div class=\"row cabecera sinpadding\" id=\"cabeceraHidden\">
+            <div class=\"col-lg-6 col-md-10 col-sm-12 col-xs-12\">
+                <header class=\"m-4 ml-5\">
+                    <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
+                        <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
+                        <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
+                    </video>
+                    <img id=\"volumen\" src=\"/comunes/header/sonido.png\" data-toggle=\"tooltip\" title=\"Estado del sonido\" />
+                    <audio loop=\"true\" autoplay=\"true\" id=\"sonido\">
+                        <source src=\"/comunes/header/carrera.mp3\"  type=\"audio/mp3\">
+                        <source src=\"/comunes/header/carrera.ogg\"  type=\"audio/ogg\">
+                        <source src=\"/comunes/header/carrera.wav\"  type=\"audio/wav\">
+                        Este es un elemento de audio no soportado por tu navegador, prueba con otro.
+                    </audio>
+                </header>
             </div>
-            <div class=\"row\" id=\"container\">
-                <div class=\"col-9\">
-                    ";
-        // line 66
+            <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\" id=\"animeHidden\">
+                <aside class=\"anime\">
+                    <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
+                </aside>
+            </div>
+        </div>
+        <div class=\"row sinpadding\">
+            <div class=\"col-12\">
+                ";
+        // line 120
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 120)->display($context);
+        // line 121
+        echo "            </div>
+        </div>
+        <div class=\"row\">
+            <div class=\"col-12\" id=\"main\">
+                ";
+        // line 125
         $this->displayBlock('body', $context, $blocks);
-        // line 67
-        echo "                </div>
-                <div class=\"col-3\">
-                    <aside class=\"anime\">
-                        <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
-                    </aside>
-                </div>
-            </div>
-            <div class=\"row\">
-                <div class=\"col-12\">
-                    <footer class=\"footer mt-auto text-center text-white-50 bg-dark\">
-                        <div class=\"container\">
-                            <div class=\"row\">
-                                <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
-                                    <ul class=\"adress\">
-                                        <span>Adress</span>
-                                        <li>
-                                            <p>Lorem ipsum dolor sit amet, vero omnis vocibus</p>
-                                        </li>
-                                        <li>
-                                            <p>+90 1234 56789</p>
-                                        </li>
-                                        <li>
-                                            <p>info@gmail.com</p>
-                                        </li>
-                                    </ul>
-                                </div>
+        // line 126
+        echo "            </div>
+        </div>
+        <div class=\"row pie sinpadding\">
+            <div class=\"col-12\">
+                <footer class=\"footer mt-auto text-center text-white-50 bg-dark\">
+                    <div class=\"container\">
+                        <div class=\"row mt-5\">
+                            <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
+                                <ul class=\"adress\">
+                                    <span>Made by:</span>
+                                    <li>
+                                        <p>Miguel Ángel Puerta Bayo</p>
+                                    </li>
+                                    <li>
+                                        <p>2º DAW</p>
+                                    </li>
+                                    <li>
+                                        <img src=\"/comunes/footer/img/copyright.png\" width=\"7%\" height=\"7%\" />
+                                    </li>
+                                </ul>
+                            </div>
 
-                                <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
-                                    <ul class=\"contact\">
-                                        <span>Contact</span>
-                                        <li>
-                                            <a href=\"/main\">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href=\"#\">About</a>
-                                        </li>
-                                        <li>
-                                            <a href=\"#\">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
-                                    <ul class=\"social\">
-                                        <span>Social Media Networks</span>
-                                        <li>
-                                                <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x\"></i></a>
-                                        </li>
-                                        <li>
-                                                <a href=\"https://www.instagram.com/\"><i class=\"fa fa-instagram fa-2x\"></i></a>
-                                        </li>
-                                        <li>
-                                                <a href=\"https://twitter.com/?lang=es\"><i class=\"fa fa-twitter fa-2x\"></i></a>
-                                        </li>
-                                        <li>
-                                                <a href=\"https://www.pinterest.es/\"><i class=\"fa fa-pinterest fa-2x\"></i></a>
-                                        </li>
-                                        <li>
-                                                <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x\"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
+                                <ul class=\"contact\">
+                                    <span>Contact</span>
+                                    <li>
+                                        <p>miguelpuerta@gmail.com</p>
+                                    </li>
+                                    <li>
+                                        <hr />
+                                    </li>
+                                    <li>
+                                        <a href=\"/perfil\" id=\"perfil\">Mi perfil</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
+                                <ul class=\"social\">
+                                    <span>Social Media Networks</span>
+                                    <li>
+                                            <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x hover\"></i></a>
+                                    </li>
+                                    <li>
+                                            <a href=\"https://www.instagram.com/\"><i class=\"fa fa-instagram fa-2x hover\"></i></a>
+                                    </li>
+                                    <li>
+                                            <a href=\"https://twitter.com/?lang=es\"><i class=\"fa fa-twitter fa-2x hover\"></i></a>
+                                    </li>
+                                    <li>
+                                            <a href=\"https://www.pinterest.es/\"><i class=\"fa fa-pinterest fa-2x hover\"></i></a>
+                                    </li>
+                                    <li>
+                                            <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x hover\"></i></a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </footer>
-                </div>
+                    </div>
+                </footer>
             </div>
         </div>
         <script>
@@ -192,12 +244,55 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             // Animación del coche
             \$(\"#carAnime\").click(function() {
                 \$(this).animate({
-                    top:'100px',
-                }, 3000);
+                    right:'1vh',
+                }, 2700);
                 
                 \$(this).animate({
-                    top:'500px'
+                    right:'68vh'
                 }, 1);
+            });
+
+            // Sonido
+            \$('[data-toggle=\"tooltip\"]').tooltip();
+
+            \$(\"#volumen\").click(function() {
+                var video = document.querySelector(\"#sonido\");
+
+                if(video.muted == true) {
+                    video.muted = false;
+                    \$(this).attr(\"src\", \"/comunes/header/sonido.png\");
+                    \$(this).attr(\"title\", \"Volumen\");
+                }else {
+                    video.muted = true;
+                    \$(this).attr(\"src\", \"/comunes/header/muted.png\");
+                    \$(this).attr(\"title\", \"Muted\");
+                }
+            });
+
+            // Efecto x2 de enlace mi perfil
+            \$(\"#perfil\").hover(function() {
+                \$(this).css({
+                    fontSize: \"2.2vw\",
+                    color: \"#28eec7\"
+                });
+            }, function() {
+                \$(this).css({
+                    fontSize: \"0.8vw\",
+                    color: \"#ffffff\"
+                });
+            });
+
+            // Efecto iconos
+            \$(\".hover\").hover(function() {
+                \$(this).css({
+                    transform: \"scale(2)\",
+                    color: \"#d1f67b\"
+                });
+            }, function() {
+                \$(this).css({
+                    transform: \"scale(1)\",
+                    color: \"#cdcccc\"
+                });
             });
 
         </script>
@@ -257,6 +352,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         // line 15
         echo "            <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
+            <link href=\"/comunes/main.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
             <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
             <link rel=\"shortcut icon\" href=\"#\" />
@@ -269,7 +365,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 22
+    // line 23
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -279,7 +375,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 23
+        // line 24
         echo "            <!-- Enlace a CDN JQuery -->
             <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
 
@@ -296,7 +392,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 66
+    // line 125
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -326,13 +422,13 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  300 => 66,  283 => 23,  273 => 22,  258 => 15,  254 => 13,  250 => 11,  248 => 10,  245 => 9,  235 => 8,  216 => 6,  108 => 67,  106 => 66,  100 => 62,  98 => 61,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  396 => 125,  379 => 24,  369 => 23,  353 => 15,  349 => 13,  345 => 11,  343 => 10,  340 => 9,  330 => 8,  311 => 6,  166 => 126,  164 => 125,  158 => 121,  156 => 120,  66 => 32,  64 => 23,  61 => 22,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
-<html>
+<html lang=\"es\">
     <head>
         <meta charset=\"UTF-8\"/>
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>
@@ -347,6 +443,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             {% endif %}
             <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
+            <link href=\"/comunes/main.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
             <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
             <link rel=\"shortcut icon\" href=\"#\" />
@@ -363,105 +460,157 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         {% endblock %}
 
         <style type=\"text/css\">
-            div#container {
-                height: 100%;
+
+            hr {
+                background-color: white;
+            }
+
+            a.marca {
+                font-size: 2vw;
+            }
+
+            a.barraInferior {
+                font-size: 1.2vw;
+                color: #a311d6;
+            }
+
+            a.barra:hover {
+                font-size: 1.3vw;
+            }
+
+            a.barraInferior:hover {
+                font-size: 1.5vw;
+                color: #a311d6;
+            }
+
+            ul.adress span, ul.contact span, ul.social span {
+                color: #a311d6;
+                font-size: 1.1vw;
+            }
+
+            .sinpadding [class*=\"col-\"] {
+                padding: 0;
+            }
+
+            div.anime {
+                height: 100vh;
+                width: 100%;
             }
 
             aside.anime {
+                position: relative;
                 border: 2px solid black;
-                width: 15%;
-                height: 580px;
-                margin: 2%;
-                position: fixed;
+                width: 45vw;
+                height: 50vh;
+                margin-top: 2%;
                 background-image: url(\"/comunes/anime/img/carretera.png\");
                 background-repeat: no-repeat;
                 background-size: cover;
             }
 
             aside.anime > img {
-                position: fixed;
-                top: 500px;
-                right: 200px;
-                width: 100px;
-                height: 150px;
+                position: absolute;
+                top: 30vh;
+                right: 68vh;
+                width: 10vw;
+                height: 10vh;
+            }
+
+            .cabecera {
+                background: linear-gradient(#161381, #130f9e);
             }
         </style>
     </head>
-    <body>
-        <div class=\"d-flex flex-column h-100\" id=\"container\">
-            <div class=\"row\">
-                <div class=\"col-12\">
-                    {% include 'navbar/navbar.html.twig' %}
-                </div>
+    <body class=\"container-fluid\">
+        <div class=\"row cabecera sinpadding\" id=\"cabeceraHidden\">
+            <div class=\"col-lg-6 col-md-10 col-sm-12 col-xs-12\">
+                <header class=\"m-4 ml-5\">
+                    <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
+                        <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
+                        <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
+                    </video>
+                    <img id=\"volumen\" src=\"/comunes/header/sonido.png\" data-toggle=\"tooltip\" title=\"Estado del sonido\" />
+                    <audio loop=\"true\" autoplay=\"true\" id=\"sonido\">
+                        <source src=\"/comunes/header/carrera.mp3\"  type=\"audio/mp3\">
+                        <source src=\"/comunes/header/carrera.ogg\"  type=\"audio/ogg\">
+                        <source src=\"/comunes/header/carrera.wav\"  type=\"audio/wav\">
+                        Este es un elemento de audio no soportado por tu navegador, prueba con otro.
+                    </audio>
+                </header>
             </div>
-            <div class=\"row\" id=\"container\">
-                <div class=\"col-9\">
-                    {% block body %}{% endblock %}
-                </div>
-                <div class=\"col-3\">
-                    <aside class=\"anime\">
-                        <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
-                    </aside>
-                </div>
+            <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\" id=\"animeHidden\">
+                <aside class=\"anime\">
+                    <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
+                </aside>
             </div>
-            <div class=\"row\">
-                <div class=\"col-12\">
-                    <footer class=\"footer mt-auto text-center text-white-50 bg-dark\">
-                        <div class=\"container\">
-                            <div class=\"row\">
-                                <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
-                                    <ul class=\"adress\">
-                                        <span>Adress</span>
-                                        <li>
-                                            <p>Lorem ipsum dolor sit amet, vero omnis vocibus</p>
-                                        </li>
-                                        <li>
-                                            <p>+90 1234 56789</p>
-                                        </li>
-                                        <li>
-                                            <p>info@gmail.com</p>
-                                        </li>
-                                    </ul>
-                                </div>
+        </div>
+        <div class=\"row sinpadding\">
+            <div class=\"col-12\">
+                {% include 'navbar/navbar.html.twig' %}
+            </div>
+        </div>
+        <div class=\"row\">
+            <div class=\"col-12\" id=\"main\">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+        <div class=\"row pie sinpadding\">
+            <div class=\"col-12\">
+                <footer class=\"footer mt-auto text-center text-white-50 bg-dark\">
+                    <div class=\"container\">
+                        <div class=\"row mt-5\">
+                            <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
+                                <ul class=\"adress\">
+                                    <span>Made by:</span>
+                                    <li>
+                                        <p>Miguel Ángel Puerta Bayo</p>
+                                    </li>
+                                    <li>
+                                        <p>2º DAW</p>
+                                    </li>
+                                    <li>
+                                        <img src=\"/comunes/footer/img/copyright.png\" width=\"7%\" height=\"7%\" />
+                                    </li>
+                                </ul>
+                            </div>
 
-                                <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
-                                    <ul class=\"contact\">
-                                        <span>Contact</span>
-                                        <li>
-                                            <a href=\"/main\">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href=\"#\">About</a>
-                                        </li>
-                                        <li>
-                                            <a href=\"#\">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
-                                    <ul class=\"social\">
-                                        <span>Social Media Networks</span>
-                                        <li>
-                                                <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x\"></i></a>
-                                        </li>
-                                        <li>
-                                                <a href=\"https://www.instagram.com/\"><i class=\"fa fa-instagram fa-2x\"></i></a>
-                                        </li>
-                                        <li>
-                                                <a href=\"https://twitter.com/?lang=es\"><i class=\"fa fa-twitter fa-2x\"></i></a>
-                                        </li>
-                                        <li>
-                                                <a href=\"https://www.pinterest.es/\"><i class=\"fa fa-pinterest fa-2x\"></i></a>
-                                        </li>
-                                        <li>
-                                                <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x\"></i></a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
+                                <ul class=\"contact\">
+                                    <span>Contact</span>
+                                    <li>
+                                        <p>miguelpuerta@gmail.com</p>
+                                    </li>
+                                    <li>
+                                        <hr />
+                                    </li>
+                                    <li>
+                                        <a href=\"/perfil\" id=\"perfil\">Mi perfil</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
+                                <ul class=\"social\">
+                                    <span>Social Media Networks</span>
+                                    <li>
+                                            <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x hover\"></i></a>
+                                    </li>
+                                    <li>
+                                            <a href=\"https://www.instagram.com/\"><i class=\"fa fa-instagram fa-2x hover\"></i></a>
+                                    </li>
+                                    <li>
+                                            <a href=\"https://twitter.com/?lang=es\"><i class=\"fa fa-twitter fa-2x hover\"></i></a>
+                                    </li>
+                                    <li>
+                                            <a href=\"https://www.pinterest.es/\"><i class=\"fa fa-pinterest fa-2x hover\"></i></a>
+                                    </li>
+                                    <li>
+                                            <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x hover\"></i></a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </footer>
-                </div>
+                    </div>
+                </footer>
             </div>
         </div>
         <script>
@@ -484,12 +633,55 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             // Animación del coche
             \$(\"#carAnime\").click(function() {
                 \$(this).animate({
-                    top:'100px',
-                }, 3000);
+                    right:'1vh',
+                }, 2700);
                 
                 \$(this).animate({
-                    top:'500px'
+                    right:'68vh'
                 }, 1);
+            });
+
+            // Sonido
+            \$('[data-toggle=\"tooltip\"]').tooltip();
+
+            \$(\"#volumen\").click(function() {
+                var video = document.querySelector(\"#sonido\");
+
+                if(video.muted == true) {
+                    video.muted = false;
+                    \$(this).attr(\"src\", \"/comunes/header/sonido.png\");
+                    \$(this).attr(\"title\", \"Volumen\");
+                }else {
+                    video.muted = true;
+                    \$(this).attr(\"src\", \"/comunes/header/muted.png\");
+                    \$(this).attr(\"title\", \"Muted\");
+                }
+            });
+
+            // Efecto x2 de enlace mi perfil
+            \$(\"#perfil\").hover(function() {
+                \$(this).css({
+                    fontSize: \"2.2vw\",
+                    color: \"#28eec7\"
+                });
+            }, function() {
+                \$(this).css({
+                    fontSize: \"0.8vw\",
+                    color: \"#ffffff\"
+                });
+            });
+
+            // Efecto iconos
+            \$(\".hover\").hover(function() {
+                \$(this).css({
+                    transform: \"scale(2)\",
+                    color: \"#d1f67b\"
+                });
+            }, function() {
+                \$(this).css({
+                    transform: \"scale(1)\",
+                    color: \"#cdcccc\"
+                });
             });
 
         </script>

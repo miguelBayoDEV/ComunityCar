@@ -12,6 +12,9 @@
 
         <!--Custom styles-->
         <link rel="stylesheet" type="text/css" href="/comunes/login/css/login.css">
+
+        <!-- Enlace a CDN JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
@@ -20,9 +23,9 @@
                     <div class="card-header">
                         <h3>Sign In</h3>
                         <div class="d-flex justify-content-end social_icon">
-                            <span><i class="fab fa-facebook-square"></i></span>
-                            <span><i class="fab fa-google-plus-square"></i></span>
-                            <span><i class="fab fa-twitter-square"></i></span>
+                            <span><a href="https://es-es.facebook.com/"><i class="fab fa-facebook-square"></i></a></span>
+                            <span><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="fab fa-google-plus-square"></i></a></span>
+                            <span><a href="https://twitter.com/?lang=es"><i class="fab fa-twitter-square"></i></a></span>
                         </div>
                     </div>
                     <div class="card-body">
@@ -34,13 +37,13 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="email" name="email" value="{{ last_username }}" class="form-control" placeholder="email">
+                                <input type="email" name="email" value="{{ last_username }}" class="form-control" placeholder="email" id="email">
                             </div>
                             <div class="input-group form-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" name="password" class="form-control" placeholder="password">
+                                <input type="password" name="password" class="form-control" placeholder="password" id="password">
                             </div>
                             {# <div class="row align-items-center remember">
                                 <input type="checkbox" name="_remember_me">Remember Me
@@ -52,6 +55,10 @@
                                 <input type="submit" value="Login" class="btn float-right login_btn">
                             </div>
                         </form>
+
+                        <div class="ml-3 d-flex justify-content-start">
+                            <button class="btn float-right login_btn" id="check">Check</button>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">
@@ -64,6 +71,40 @@
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+            $("#check").click(function(ev) {
+                // Variable comprobar para mensaje de correcta o incorrecta comprobación
+                var comprobar = true;
+
+                // Usuario
+                var user = $("#email").val();
+                if(user.length == 0 || user == null) {
+					alert("No has escrito nada en el campo Email.");
+                    comprobar = false;
+				}else if(user.indexOf('@', 0) == -1 || user.indexOf('.', 0) == -1) {
+                    alert('El email introducido no es correcto.');
+                    comprobar = false;
+                }
+
+                // Contraseña
+				var password = $("#password").val();
+				if(password.length == 0 || password == null) {
+					alert("No has escrito nada en el campo Password.");
+                    comprobar = false;
+				}else if(password.length < 6 && password.length != 0) {
+					alert("Contraseña demasiado corta.");
+					comprobar = false;
+				}else if(password.length > 32) {
+					alert("Contraseña demasiado larga.");
+					comprobar = false;
+				}
+
+				if(comprobar == true) {
+					alert("Puedes proceder a registrarte debido a que los datos introducidos son correctos.");
+				}
+            });
+        </script>
     </body>
 </html>
 

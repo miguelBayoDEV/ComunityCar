@@ -1,35 +1,53 @@
-<nav class="nav nav-masthead justify-content-center float-md-end bg-dark" id="navbar">
-	
-	{% if is_granted("ROLE_ADMIN") %}
-		<a class="nav-link active" aria-current="page" href="/">Buscador</a>
-		<a class="nav-link" href="/messagesReportados">Mensajes reportados</a>
-		<a class="nav-link" href="/usuarios">Exportar usuarios</a>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				Admin - {{ app.user.email }}
-			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="/perfil">Perfil</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="/login">Login</a>
-				<a class="dropdown-item" href="/register">Register</a>
-				<a class="dropdown-item" href="/logout">Logout</a>
-			</div>
-		</li>
-	{% elseif is_granted("ROLE_USER") %}
-		<a class="nav-link active" aria-current="page" href="/">Buscador</a>
-		<a class="nav-link" href="/message">Mensajes</a>
-		<li class="nav-item dropdown">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				{{ app.user.email }}
-			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="/perfil">Perfil</a>
-				<div class="dropdown-divider"></div>
-				<a class="dropdown-item" href="/login">Login</a>
-				<a class="dropdown-item" href="/register">Register</a>
-				<a class="dropdown-item" href="/logout">Logout</a>
-			</div>
-		</li>
-	{% endif %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand marca text-info" href="#">Comunity Car</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones" aria-controls="opciones" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse ml-5" id="opciones">
+    <ul class="navbar-nav mr-auto">
+      {% if is_granted("ROLE_ADMIN") %}
+			<li class="navbar-item">
+				<a class="nav-link active barra" aria-current="page" href="/">Buscador</a>
+			</li>
+			<li class="navbar-item">
+				<a class="nav-link barra" href="/messagesReportados">Mensajes reportados</a>
+			</li>
+			<li class="navbar-item">
+				<a class="nav-link barra" href="/usuarios">Exportar usuarios</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle barra" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Admin - {{ app.user.email }}
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item barraInferior" href="/perfil">Perfil</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item barraInferior" href="/login">Login</a>
+					<a class="dropdown-item barraInferior" href="/register">Register</a>
+					<a class="dropdown-item barraInferior" href="/logout">Logout</a>
+				</div>
+			</li>
+		{% elseif is_granted("ROLE_USER") %}
+			<li class="navbar-item">
+				<a class="nav-link active barra" aria-current="page" href="/">Buscador</a>
+			</li>	
+			<li class="navbar-item">
+				<a class="nav-link barra" href="/message">Mensajes</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle barra" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{ app.user.email }}
+				</a>
+				<div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item barraInferior" href="/perfil">Perfil</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item barraInferior" href="/login">Login</a>
+					<a class="dropdown-item barraInferior" href="/register">Register</a>
+					<a class="dropdown-item barraInferior" href="/logout">Logout</a>
+				</div>
+			</li>
+		{% endif %}
+    </ul>
+  </div>
 </nav>
