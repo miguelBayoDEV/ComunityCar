@@ -93,7 +93,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
             // line 8
             echo "        ";
-            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "reportado", [], "any", false, false, false, 8), true)) && (0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "oculto", [], "any", false, false, false, 8), true)))) {
+            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "reportado", [], "any", false, false, false, 8), true)) && (0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "visto", [], "any", false, false, false, 8), true)))) {
                 // line 9
                 echo "            &#x1f6a9;&#xfe0e; ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "texto", [], "any", false, false, false, 9), "html", null, true);
@@ -147,7 +147,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
 {% block body %}
     <h1>Mensajes reportados:</h1>
     {% for message in messages %}
-        {% if  message.reportado == true and message.oculto != true %}
+        {% if  message.reportado == true and message.visto != true %}
             &#x1f6a9;&#xfe0e; {{ message.texto }} - Emisor: {{ message.user.email }} - {{ message.fechaEnvio|date(\"Y-m-d\") }}
             <button><a href=\"/respuesta/{{ message.id }}\">Ver mensaje</a></button>
             <br/>

@@ -296,8 +296,7 @@ class MainController extends AbstractController
 
         $em->persist($user);
         $em->flush();
-
-              
+          
         return new Response($condicion);
     }
     
@@ -416,7 +415,7 @@ class MainController extends AbstractController
      */
     public function eliminarVehiculoBuscador(Request $request): Response
     {
-        $mensajes = $this->getDoctrine()->getRepository(Message::class)->findBy(array('vehiculo' => $request->query->get('id_vehiculo')));
+        $mensajes = $this->getDoctrine()->getRepository(Message::class)->findBy(array('vehiculoMessage' => $request->query->get('id_vehiculo')));
         $vehiculo = $this->getDoctrine()->getRepository(Vehiculo::class)->find($request->query->get('id_vehiculo'));
         $resultado = "1";
 
@@ -424,7 +423,7 @@ class MainController extends AbstractController
         foreach($mensajes as $mensaje) {
             $mensaje->setOculto(true);
         }
-        $vehiculo->setOculto(true);
+        $vehiculo->setVenta(false);
         $em->flush();
 
               
@@ -437,7 +436,7 @@ class MainController extends AbstractController
      */
     public function addVehiculoBuscador(Request $request): Response
     {
-        $mensajes = $this->getDoctrine()->getRepository(Message::class)->findBy(array('vehiculo' => $request->query->get('id_vehiculo')));
+        $mensajes = $this->getDoctrine()->getRepository(Message::class)->findBy(array('vehiculoMessage' => $request->query->get('id_vehiculo')));
         $vehiculo = $this->getDoctrine()->getRepository(Vehiculo::class)->find($request->query->get('id_vehiculo'));
         $resultado = "1";
 
@@ -445,10 +444,8 @@ class MainController extends AbstractController
         foreach($mensajes as $mensaje) {
             $mensaje->setOculto(false);
         }
-        $vehiculo->setOculto(false);
         $vehiculo->setVenta(true);
         $em->flush();
-
               
         return new Response($resultado);
     }

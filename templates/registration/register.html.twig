@@ -24,15 +24,12 @@
             <div class="d-flex justify-content-center h-100">
                 <div class="card">
                     <div class="card-header pb-0">
-                        <h3>Sign Up</h3>
-                        <div class="d-flex justify-content-end social_icon">
+                        <h3>Registro</h3>
+                        {# <div class="d-flex justify-content-end social_icon">
                             <span><a href="https://es-es.facebook.com/"><i class="fab fa-facebook-square"></i></a></span>
                             <span><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="fab fa-google-plus-square"></i></a></span>
                             <span><a href="https://twitter.com/?lang=es"><i class="fab fa-twitter-square"></i></a></span>
-                        </div>
-                        <div class="d-flex justify-content-center links">
-                            Have an account?<a href="/login">Sign In</a>
-                        </div>
+                        </div> #}
                     </div>
                     <div class="card-body pb-0">
                         {{ form_start(registrationForm) }}
@@ -53,19 +50,24 @@
                             <div class="text-white text-white">
                                 {{ form_row(registrationForm.agreeTerms) }}
                             </div>
-                            <div class="form-group mt-4">
+                            <div class="form-group">
                                 <input type="submit" value="Register" class="btn float-right login_btn">
                             </div>
                         {{ form_end(registrationForm) }}
-                        <div class="ml-3 d-flex justify-content-start">
+                        {# <div class="ml-3 d-flex justify-content-start">
                             <button class="btn float-right login_btn" id="check">Check</button>
+                        </div> #}
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center links">
+                            ¿Tienes cuenta?<a href="/login">Login</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script type="text/javascript">
+        {# <script type="text/javascript">
             $("#check").click(function(ev) {
                 // Variable comprobar para mensaje de correcta o incorrecta comprobación
                 var comprobar = true;
@@ -104,7 +106,7 @@
 					alert("Puedes proceder a registrarte debido a que los datos introducidos son correctos.");
 				}
             });
-        </script>
+        </script> #}
     </body>
 </html>
 

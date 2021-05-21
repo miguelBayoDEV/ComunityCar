@@ -56,7 +56,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         <link rel=\"stylesheet\" type=\"text/css\" href=\"/comunes/login/css/login.css\">
 
         <!-- Enlace a CDN JQuery -->
-            <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
     </head>
     <body>
         ";
@@ -78,27 +78,21 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
             <div class=\"d-flex justify-content-center h-100\">
                 <div class=\"card\">
                     <div class=\"card-header pb-0\">
-                        <h3>Sign Up</h3>
-                        <div class=\"d-flex justify-content-end social_icon\">
-                            <span><a href=\"https://es-es.facebook.com/\"><i class=\"fab fa-facebook-square\"></i></a></span>
-                            <span><a href=\"https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin\"><i class=\"fab fa-google-plus-square\"></i></a></span>
-                            <span><a href=\"https://twitter.com/?lang=es\"><i class=\"fab fa-twitter-square\"></i></a></span>
-                        </div>
-                        <div class=\"d-flex justify-content-center links\">
-                            Have an account?<a href=\"/login\">Sign In</a>
-                        </div>
-                    </div>
+                        <h3>Registro</h3>
+                        ";
+        // line 33
+        echo "                    </div>
                     <div class=\"card-body pb-0\">
                         ";
-        // line 38
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 38, $this->source); })()), 'form_start');
+        // line 35
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 35, $this->source); })()), 'form_start');
         echo "
                             <div class=\"input-group form-group\">
                                 <div class=\"input-group-prepend text-white\">
                                     <span class=\"input-group-text\"><i class=\"fas fa-user\"></i></span>
                                     ";
-        // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 42, $this->source); })()), "email", [], "any", false, false, false, 42), 'row');
+        // line 39
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 39, $this->source); })()), "email", [], "any", false, false, false, 39), 'row');
         echo "
                                 </div>
                             </div>
@@ -106,74 +100,40 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
                                 <div class=\"input-group-prepend text-white\">
                                     <span class=\"input-group-text\"><i class=\"fas fa-key\"></i></span>
                                     ";
-        // line 48
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 48, $this->source); })()), "plainPassword", [], "any", false, false, false, 48), 'row', ["label" => "Password"]);
-        // line 50
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 45, $this->source); })()), "plainPassword", [], "any", false, false, false, 45), 'row', ["label" => "Password"]);
+        // line 47
         echo "
                                 </div>
                             </div>
                             <div class=\"text-white text-white\">
                                 ";
-        // line 54
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 54, $this->source); })()), "agreeTerms", [], "any", false, false, false, 54), 'row');
+        // line 51
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 51, $this->source); })()), "agreeTerms", [], "any", false, false, false, 51), 'row');
         echo "
                             </div>
-                            <div class=\"form-group mt-4\">
+                            <div class=\"form-group\">
                                 <input type=\"submit\" value=\"Register\" class=\"btn float-right login_btn\">
                             </div>
                         ";
-        // line 59
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 59, $this->source); })()), 'form_end');
+        // line 56
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 56, $this->source); })()), 'form_end');
         echo "
-                        <div class=\"ml-3 d-flex justify-content-start\">
-                            <button class=\"btn float-right login_btn\" id=\"check\">Check</button>
+                        ";
+        // line 60
+        echo "                    </div>
+                    <div class=\"card-footer\">
+                        <div class=\"d-flex justify-content-center links\">
+                            ¿Tienes cuenta?<a href=\"/login\">Login</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script type=\"text/javascript\">
-            \$(\"#check\").click(function(ev) {
-                // Variable comprobar para mensaje de correcta o incorrecta comprobación
-                var comprobar = true;
-
-                // Usuario
-                var user = \$(\"#registration_form_email\").val();
-                if(user.length == 0 || user == null) {
-\t\t\t\t\talert(\"No has escrito nada en el campo Email.\");
-                    comprobar = false;
-\t\t\t\t}else if(user.indexOf('@', 0) == -1 || user.indexOf('.', 0) == -1) {
-                    alert('El email introducido no es correcto.');
-                    comprobar = false;
-                }
-
-                // Contraseña
-\t\t\t\tvar password = \$(\"#registration_form_plainPassword\").val();
-\t\t\t\tif(password.length == 0 || password == null) {
-\t\t\t\t\talert(\"No has escrito nada en el campo Password.\");
-                    comprobar = false;
-\t\t\t\t}else if(password.length < 6 && password.length != 0) {
-\t\t\t\t\talert(\"Contraseña demasiado corta.\");
-\t\t\t\t\tcomprobar = false;
-\t\t\t\t}else if(password.length > 32) {
-\t\t\t\t\talert(\"Contraseña demasiado larga.\");
-\t\t\t\t\tcomprobar = false;
-\t\t\t\t}
-
-                // CheckBox
-                var checkbox = \$('#registration_form_agreeTerms').prop('checked');
-                if(!checkbox) {
-                    alert(\"No has seleccionado el campo checkbox del acuerdo a los términos. Es obligatorio.\");
-\t\t\t\t\tcomprobar = false;
-                }
-
-\t\t\t\tif(comprobar == true) {
-\t\t\t\t\talert(\"Puedes proceder a registrarte debido a que los datos introducidos son correctos.\");
-\t\t\t\t}
-            });
-        </script>
-    </body>
+        ";
+        // line 110
+        echo "    </body>
 </html>
 
 ";
@@ -197,7 +157,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
 
     public function getDebugInfo()
     {
-        return array (  126 => 59,  118 => 54,  112 => 50,  110 => 48,  101 => 42,  94 => 38,  77 => 23,  68 => 21,  64 => 20,  43 => 1,);
+        return array (  136 => 110,  124 => 60,  120 => 56,  112 => 51,  106 => 47,  104 => 45,  95 => 39,  88 => 35,  84 => 33,  77 => 23,  68 => 21,  64 => 20,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -218,7 +178,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         <link rel=\"stylesheet\" type=\"text/css\" href=\"/comunes/login/css/login.css\">
 
         <!-- Enlace a CDN JQuery -->
-            <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+        <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
     </head>
     <body>
         {% for flashError in app.flashes('verify_email_error') %}
@@ -228,15 +188,12 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
             <div class=\"d-flex justify-content-center h-100\">
                 <div class=\"card\">
                     <div class=\"card-header pb-0\">
-                        <h3>Sign Up</h3>
-                        <div class=\"d-flex justify-content-end social_icon\">
+                        <h3>Registro</h3>
+                        {# <div class=\"d-flex justify-content-end social_icon\">
                             <span><a href=\"https://es-es.facebook.com/\"><i class=\"fab fa-facebook-square\"></i></a></span>
                             <span><a href=\"https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin\"><i class=\"fab fa-google-plus-square\"></i></a></span>
                             <span><a href=\"https://twitter.com/?lang=es\"><i class=\"fab fa-twitter-square\"></i></a></span>
-                        </div>
-                        <div class=\"d-flex justify-content-center links\">
-                            Have an account?<a href=\"/login\">Sign In</a>
-                        </div>
+                        </div> #}
                     </div>
                     <div class=\"card-body pb-0\">
                         {{ form_start(registrationForm) }}
@@ -257,19 +214,24 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
                             <div class=\"text-white text-white\">
                                 {{ form_row(registrationForm.agreeTerms) }}
                             </div>
-                            <div class=\"form-group mt-4\">
+                            <div class=\"form-group\">
                                 <input type=\"submit\" value=\"Register\" class=\"btn float-right login_btn\">
                             </div>
                         {{ form_end(registrationForm) }}
-                        <div class=\"ml-3 d-flex justify-content-start\">
+                        {# <div class=\"ml-3 d-flex justify-content-start\">
                             <button class=\"btn float-right login_btn\" id=\"check\">Check</button>
+                        </div> #}
+                    </div>
+                    <div class=\"card-footer\">
+                        <div class=\"d-flex justify-content-center links\">
+                            ¿Tienes cuenta?<a href=\"/login\">Login</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <script type=\"text/javascript\">
+        {# <script type=\"text/javascript\">
             \$(\"#check\").click(function(ev) {
                 // Variable comprobar para mensaje de correcta o incorrecta comprobación
                 var comprobar = true;
@@ -308,7 +270,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
 \t\t\t\t\talert(\"Puedes proceder a registrarte debido a que los datos introducidos son correctos.\");
 \t\t\t\t}
             });
-        </script>
+        </script> #}
     </body>
 </html>
 

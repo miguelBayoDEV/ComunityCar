@@ -71,26 +71,26 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             }
 
             a.marca {
-                font-size: 2vw;
+                font-size: 30px;
             }
 
             a.barraInferior {
-                font-size: 1.2vw;
+                font-size: 10px;
                 color: #a311d6;
             }
 
             a.barra:hover {
-                font-size: 1.3vw;
+                font-size: 15px;
             }
 
             a.barraInferior:hover {
-                font-size: 1.5vw;
+                font-size: 14px;
                 color: #a311d6;
             }
 
             ul.adress span, ul.contact span, ul.social span {
                 color: #a311d6;
-                font-size: 1.1vw;
+                font-size: 14px;
             }
 
             .sinpadding [class*=\"col-\"] {
@@ -172,7 +172,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                         <div class=\"row mt-5\">
                             <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
                                 <ul class=\"adress\">
-                                    <span>Made by:</span>
+                                    <span>Realizado por:</span>
                                     <li>
                                         <p>Miguel Ángel Puerta Bayo</p>
                                     </li>
@@ -187,7 +187,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
                             <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
                                 <ul class=\"contact\">
-                                    <span>Contact</span>
+                                    <span>Contacto:</span>
                                     <li>
                                         <p>miguelpuerta@gmail.com</p>
                                     </li>
@@ -201,7 +201,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                             </div>
                             <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
                                 <ul class=\"social\">
-                                    <span>Social Media Networks</span>
+                                    <span>Redes sociales:</span>
                                     <li>
                                             <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x hover\"></i></a>
                                     </li>
@@ -466,26 +466,26 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             }
 
             a.marca {
-                font-size: 2vw;
+                font-size: 30px;
             }
 
             a.barraInferior {
-                font-size: 1.2vw;
+                font-size: 10px;
                 color: #a311d6;
             }
 
             a.barra:hover {
-                font-size: 1.3vw;
+                font-size: 15px;
             }
 
             a.barraInferior:hover {
-                font-size: 1.5vw;
+                font-size: 14px;
                 color: #a311d6;
             }
 
             ul.adress span, ul.contact span, ul.social span {
                 color: #a311d6;
-                font-size: 1.1vw;
+                font-size: 14px;
             }
 
             .sinpadding [class*=\"col-\"] {
@@ -561,7 +561,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                         <div class=\"row mt-5\">
                             <div class=\"col-lg-5 col-md-5 col-sm-4 col-xs-12\">
                                 <ul class=\"adress\">
-                                    <span>Made by:</span>
+                                    <span>Realizado por:</span>
                                     <li>
                                         <p>Miguel Ángel Puerta Bayo</p>
                                     </li>
@@ -576,7 +576,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
                             <div class=\"col-lg-4 col-md-4 col-sm-4 col-xs-12\">
                                 <ul class=\"contact\">
-                                    <span>Contact</span>
+                                    <span>Contacto:</span>
                                     <li>
                                         <p>miguelpuerta@gmail.com</p>
                                     </li>
@@ -590,7 +590,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                             </div>
                             <div class=\"col-lg-3 col-md-3 col-sm-4 col-xs-12\">
                                 <ul class=\"social\">
-                                    <span>Social Media Networks</span>
+                                    <span>Redes sociales:</span>
                                     <li>
                                             <a href=\"https://es-es.facebook.com/\"><i class=\"fa fa-facebook fa-2x hover\"></i></a>
                                     </li>

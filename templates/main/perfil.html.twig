@@ -22,64 +22,71 @@
     </div>
 
     <div id="nombreDiv">
+        <label for="nombre">Nombre:</label>
         {% if user.nombre != null or user.nombre != "" %}
-            <input type="text" id="nombre" name="nombre" value="{{ user.nombre }}" />
+            <input type="text" id="nombre" name="nombre" value="{{ user.nombre }}" id="nombre" />
         {% else %}
-            <input type="text" id="nombre" name="nombre" value="" placeholder="Campo nombre sin rellenar" />
+            <input type="text" id="nombre" name="nombre" value="" placeholder="Rellenar nombre" id="nombre" />
         {% endif %}
         <button onClick="modificar('nombre')">Modificar</button>
     </div>
 
     <div id="primerApellidoDiv">
+        <label for="primerApellido">Primer apellido:</label>
         {% if user.primerApellido != null or user.primerApellido != "" %}
-            <input type="text" id="primerApellido" name="primerApellido" value="{{ user.primerApellido }}" />
+            <input type="text" id="primerApellido" name="primerApellido" value="{{ user.primerApellido }}" id="primerApellido" />
         {% else %}
-            <input type="text" id="primerApellido" name="primerApellido" value="" placeholder="Campo primer apellido sin rellenar" />
+            <input type="text" id="primerApellido" name="primerApellido" value="" placeholder="Rellenar primer apellido" id="primerApellido" />
         {% endif %}
         <button onClick="modificar('primerApellido')">Modificar</button>
     </div>
 
     <div id="segundoApellidoDiv">
+        <label for="segundoApellido">Segundo apellido:</label>
         {% if user.segundoApellido != null or user.segundoApellido != "" %}
-            <input type="text" id="segundoApellido" name="segundoApellido" value="{{ user.segundoApellido }}" />
+            <input type="text" id="segundoApellido" name="segundoApellido" value="{{ user.segundoApellido }}" id="segundoApellido" />
         {% else %}
-            <input type="text" id="segundoApellido" name="segundoApellido" value="" placeholder="Campo segundo apellido sin rellenar" />
+            <input type="text" id="segundoApellido" name="segundoApellido" value="" placeholder="Rellenar segundo apellido" id="segundoApellido" />
         {% endif %}
         <button onClick="modificar('segundoApellido')">Modificar</button>
     </div>
 
     <div id="nickDiv">
+        <label for="nick">Nick:</label>
         {% if user.nick != null or user.nick != "" %}
-            <input type="text" id="nick" name="nick" value="{{ user.nick }}" />
+            <input type="text" id="nick" name="nick" value="{{ user.nick }}" id="nick" />
         {% else %}
-            <input type="text" id="nick" name="nick" value="" placeholder="Campo nick sin rellenar" />
+            <input type="text" id="nick" name="nick" value="" placeholder="Rellenar nick" id="nick" />
         {% endif %}
         <button onClick="modificar('nick')">Modificar</button>
     </div>
 
     <div id="localidadDiv">
+        <label for="localidad">Localidad:</label>
         {% if user.localidad != null or user.localidad != "" %}
-            <input type="text" id="localidad" name="localidad" value="{{ user.localidad }}" />
+            <input type="text" id="localidad" name="localidad" value="{{ user.localidad }}" id="localidad" />
         {% else %}
-            <input type="text" id="localidad" name="localidad" value="" placeholder="Campo localidad sin rellenar" />
+            <input type="text" id="localidad" name="localidad" value="" placeholder="Rellenar localidad" id="localidad" />
         {% endif %}
         <button onClick="modificar('localidad')">Modificar</button>
     </div>
 
     <div id="provinciaDiv">
+        <label for="provincia">Provincia:</label>
         {% if user.provincia != null or user.provincia != "" %}
-            <input type="text" id="provincia" name="provincia" value="{{ user.provincia }}" />
+            <input type="text" id="provincia" name="provincia" value="{{ user.provincia }}" id="provincia" />
         {% else %}
-            <input type="text" id="provincia" name="provincia" value="" placeholder="Campo provincia sin rellenar" />
+            <input type="text" id="provincia" name="provincia" value="" placeholder="Rellenar provincia" id="provincia" />
         {% endif %}
         <button onClick="modificar('provincia')">Modificar</button>
     </div>
 
     <div id="telefonoMovilDiv">
+        <label for="telefonoMovil">Teléfono móvil:</label>
         {% if user.telefonoMovil != null or user.telefonoMovil != "" %}
-            <input type="number" id="telefonoMovil" name="telefonoMovil" value="{{ user.telefonoMovil }}" />
+            <input type="tel" id="telefonoMovil" name="telefonoMovil" value="{{ user.telefonoMovil }}" pattern="[0-9]{9}" id="telefonoMovil" />
         {% else %}
-            <input type="number" id="telefonoMovil" name="telefonoMovil" value="" placeholder="Campo teléfono móvil sin rellenar" />
+            <input type="tel" id="telefonoMovil" name="telefonoMovil" value="" placeholder="123456789" pattern="[0-9]{9}" id="telefonoMovil" />
         {% endif %}
         <button onClick="modificar('telefonoMovil')">Modificar</button>
     </div>
@@ -123,8 +130,72 @@
     <script>
         function modificar(id) {
 
+            // Validar dato antes de enviar al servidor
+            var comprobar = true;
+            var dato = $("#"+id).val();
+            if(id == "nombre") {
+                if(dato.length == 0 && dato == "" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert("El nombre introducido es incorrecto.");
+                    window.location.reload();
+                    if(dato != null) {
+                        $("#nombre").prop('value', "{{user.nombre}}");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == "primerApellido") {
+                if(dato.length == 0 && dato == "" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert("El primer apellido introducido es incorrecto.");
+                    window.location.reload();
+                    if(dato != null) {
+                        $("#primerApellido").prop('value', "{{user.primerApellido}}");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == "segundoApellido") {
+                if(dato.length == 0 && dato == "" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert("El segundo apellido introducido es incorrecto.");
+                    if(dato != null) {
+                        $("#segundoApellido").prop('value', "{{user.segundoApellido}}");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == "nick") {
+                if(dato.length == 0 && dato == "" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert("El nick introducido es incorrecto.");
+                    window.location.reload();
+                    if(dato != null) {
+                        $("#nick").prop('value', "{{user.nick}}");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == "localidad") {
+                if(dato.length == 0 && dato == "" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert("El localidad introducida es incorrecto.");
+                    if(dato != null) {
+                        $("#localidad").prop('value', "{{user.localidad}}");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == "provincia") {
+                if(dato.length == 0 && dato == "" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert("El provincia introducida es incorrecto.");
+                    if(dato != null) {
+                        $("#provincia").prop('value', "{{user.provincia}}");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == "telefonoMovil") {
+                if(dato.length == 0 && dato == "" || dato == null || dato == undefined || isNaN(dato) == true) {
+                    alert("El teléfono móvil introducido es incorrecto.");
+                    if(dato != null) {
+                        $("#telefonoMovil").prop('value', "{{user.telefonoMovil}}");
+                    }
+                    comprobar = false;
+                }
+            }
+
             var datos = {
-                'dato':$("#"+id).val(),
+                'dato':dato,
                 'condicion':id
             };
 
@@ -132,31 +203,17 @@
                 alert("Error de AJAX: " + data);
             }
 
-            $.ajax({
-                type: "GET",
-                url: "/modificar",
-                data: datos,
-                success: function(data) {
-                    if(data == "error") {
-                        alert("Error");
-                    }else if(data == "nombre") {
-                        $("#nombreDiv").val('{{user.nombre}}');
-                    }else if(data == "primerApellido") {
-                        $("#primerApellidoDiv").val('{{user.primerApellido}}');
-                    }else if(data == "segundoApellido") {
-                        $("#segundoApellidoDiv").val('{{user.segundoApellido}}');
-                    }else if(data == "nick") {
-                        $("#nickDiv").val('{{user.nick}}');
-                    }else if(data == "localidad") {
-                        $("#localidadDiv").val('{{user.localidad}}');
-                    }else if(data == "provincia") {
-                        $("#provinciaDiv").val('{{user.provincia}}');
-                    }else if(data == "telefonoMovil") {
-                        $("#telefonoMovilDiv").val('{{user.telefonoMovil}}');
-                    }
-                },
-                error: fail
-            });
+            if(comprobar == true) {
+                $.ajax({
+                    type: "GET",
+                    url: "/modificar",
+                    data: datos,
+                    success: function(data) {
+                        window.location.reload();
+                    },
+                    error: fail
+                });
+            }
         }
 
         function eliminarBuscador(id) {

@@ -122,234 +122,326 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
     </div>
 
     <div id=\"nombreDiv\">
+        <label for=\"nombre\">Nombre:</label>
         ";
-        // line 25
-        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 25, $this->source); })()), "nombre", [], "any", false, false, false, 25), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 25, $this->source); })()), "nombre", [], "any", false, false, false, 25), "")))) {
-            // line 26
+        // line 26
+        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 26, $this->source); })()), "nombre", [], "any", false, false, false, 26), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 26, $this->source); })()), "nombre", [], "any", false, false, false, 26), "")))) {
+            // line 27
             echo "            <input type=\"text\" id=\"nombre\" name=\"nombre\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 26, $this->source); })()), "nombre", [], "any", false, false, false, 26), "html", null, true);
-            echo "\" />
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 27, $this->source); })()), "nombre", [], "any", false, false, false, 27), "html", null, true);
+            echo "\" id=\"nombre\" />
         ";
         } else {
-            // line 28
-            echo "            <input type=\"text\" id=\"nombre\" name=\"nombre\" value=\"\" placeholder=\"Campo nombre sin rellenar\" />
+            // line 29
+            echo "            <input type=\"text\" id=\"nombre\" name=\"nombre\" value=\"\" placeholder=\"Rellenar nombre\" id=\"nombre\" />
         ";
         }
-        // line 30
+        // line 31
         echo "        <button onClick=\"modificar('nombre')\">Modificar</button>
     </div>
 
     <div id=\"primerApellidoDiv\">
+        <label for=\"primerApellido\">Primer apellido:</label>
         ";
-        // line 34
-        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 34, $this->source); })()), "primerApellido", [], "any", false, false, false, 34), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 34, $this->source); })()), "primerApellido", [], "any", false, false, false, 34), "")))) {
-            // line 35
+        // line 36
+        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 36, $this->source); })()), "primerApellido", [], "any", false, false, false, 36), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 36, $this->source); })()), "primerApellido", [], "any", false, false, false, 36), "")))) {
+            // line 37
             echo "            <input type=\"text\" id=\"primerApellido\" name=\"primerApellido\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 35, $this->source); })()), "primerApellido", [], "any", false, false, false, 35), "html", null, true);
-            echo "\" />
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "primerApellido", [], "any", false, false, false, 37), "html", null, true);
+            echo "\" id=\"primerApellido\" />
         ";
         } else {
-            // line 37
-            echo "            <input type=\"text\" id=\"primerApellido\" name=\"primerApellido\" value=\"\" placeholder=\"Campo primer apellido sin rellenar\" />
+            // line 39
+            echo "            <input type=\"text\" id=\"primerApellido\" name=\"primerApellido\" value=\"\" placeholder=\"Rellenar primer apellido\" id=\"primerApellido\" />
         ";
         }
-        // line 39
+        // line 41
         echo "        <button onClick=\"modificar('primerApellido')\">Modificar</button>
     </div>
 
     <div id=\"segundoApellidoDiv\">
+        <label for=\"segundoApellido\">Segundo apellido:</label>
         ";
-        // line 43
-        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 43, $this->source); })()), "segundoApellido", [], "any", false, false, false, 43), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 43, $this->source); })()), "segundoApellido", [], "any", false, false, false, 43), "")))) {
-            // line 44
+        // line 46
+        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 46, $this->source); })()), "segundoApellido", [], "any", false, false, false, 46), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 46, $this->source); })()), "segundoApellido", [], "any", false, false, false, 46), "")))) {
+            // line 47
             echo "            <input type=\"text\" id=\"segundoApellido\" name=\"segundoApellido\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 44, $this->source); })()), "segundoApellido", [], "any", false, false, false, 44), "html", null, true);
-            echo "\" />
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 47, $this->source); })()), "segundoApellido", [], "any", false, false, false, 47), "html", null, true);
+            echo "\" id=\"segundoApellido\" />
         ";
         } else {
-            // line 46
-            echo "            <input type=\"text\" id=\"segundoApellido\" name=\"segundoApellido\" value=\"\" placeholder=\"Campo segundo apellido sin rellenar\" />
+            // line 49
+            echo "            <input type=\"text\" id=\"segundoApellido\" name=\"segundoApellido\" value=\"\" placeholder=\"Rellenar segundo apellido\" id=\"segundoApellido\" />
         ";
         }
-        // line 48
+        // line 51
         echo "        <button onClick=\"modificar('segundoApellido')\">Modificar</button>
     </div>
 
     <div id=\"nickDiv\">
+        <label for=\"nick\">Nick:</label>
         ";
-        // line 52
-        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 52, $this->source); })()), "nick", [], "any", false, false, false, 52), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 52, $this->source); })()), "nick", [], "any", false, false, false, 52), "")))) {
-            // line 53
+        // line 56
+        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 56, $this->source); })()), "nick", [], "any", false, false, false, 56), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 56, $this->source); })()), "nick", [], "any", false, false, false, 56), "")))) {
+            // line 57
             echo "            <input type=\"text\" id=\"nick\" name=\"nick\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 53, $this->source); })()), "nick", [], "any", false, false, false, 53), "html", null, true);
-            echo "\" />
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 57, $this->source); })()), "nick", [], "any", false, false, false, 57), "html", null, true);
+            echo "\" id=\"nick\" />
         ";
         } else {
-            // line 55
-            echo "            <input type=\"text\" id=\"nick\" name=\"nick\" value=\"\" placeholder=\"Campo nick sin rellenar\" />
+            // line 59
+            echo "            <input type=\"text\" id=\"nick\" name=\"nick\" value=\"\" placeholder=\"Rellenar nick\" id=\"nick\" />
         ";
         }
-        // line 57
+        // line 61
         echo "        <button onClick=\"modificar('nick')\">Modificar</button>
     </div>
 
     <div id=\"localidadDiv\">
+        <label for=\"localidad\">Localidad:</label>
         ";
-        // line 61
-        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 61, $this->source); })()), "localidad", [], "any", false, false, false, 61), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 61, $this->source); })()), "localidad", [], "any", false, false, false, 61), "")))) {
-            // line 62
+        // line 66
+        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 66, $this->source); })()), "localidad", [], "any", false, false, false, 66), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 66, $this->source); })()), "localidad", [], "any", false, false, false, 66), "")))) {
+            // line 67
             echo "            <input type=\"text\" id=\"localidad\" name=\"localidad\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 62, $this->source); })()), "localidad", [], "any", false, false, false, 62), "html", null, true);
-            echo "\" />
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 67, $this->source); })()), "localidad", [], "any", false, false, false, 67), "html", null, true);
+            echo "\" id=\"localidad\" />
         ";
         } else {
-            // line 64
-            echo "            <input type=\"text\" id=\"localidad\" name=\"localidad\" value=\"\" placeholder=\"Campo localidad sin rellenar\" />
+            // line 69
+            echo "            <input type=\"text\" id=\"localidad\" name=\"localidad\" value=\"\" placeholder=\"Rellenar localidad\" id=\"localidad\" />
         ";
         }
-        // line 66
+        // line 71
         echo "        <button onClick=\"modificar('localidad')\">Modificar</button>
     </div>
 
     <div id=\"provinciaDiv\">
+        <label for=\"provincia\">Provincia:</label>
         ";
-        // line 70
-        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 70, $this->source); })()), "provincia", [], "any", false, false, false, 70), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 70, $this->source); })()), "provincia", [], "any", false, false, false, 70), "")))) {
-            // line 71
+        // line 76
+        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 76, $this->source); })()), "provincia", [], "any", false, false, false, 76), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 76, $this->source); })()), "provincia", [], "any", false, false, false, 76), "")))) {
+            // line 77
             echo "            <input type=\"text\" id=\"provincia\" name=\"provincia\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 71, $this->source); })()), "provincia", [], "any", false, false, false, 71), "html", null, true);
-            echo "\" />
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 77, $this->source); })()), "provincia", [], "any", false, false, false, 77), "html", null, true);
+            echo "\" id=\"provincia\" />
         ";
         } else {
-            // line 73
-            echo "            <input type=\"text\" id=\"provincia\" name=\"provincia\" value=\"\" placeholder=\"Campo provincia sin rellenar\" />
+            // line 79
+            echo "            <input type=\"text\" id=\"provincia\" name=\"provincia\" value=\"\" placeholder=\"Rellenar provincia\" id=\"provincia\" />
         ";
         }
-        // line 75
+        // line 81
         echo "        <button onClick=\"modificar('provincia')\">Modificar</button>
     </div>
 
     <div id=\"telefonoMovilDiv\">
+        <label for=\"telefonoMovil\">Teléfono móvil:</label>
         ";
-        // line 79
-        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 79, $this->source); })()), "telefonoMovil", [], "any", false, false, false, 79), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 79, $this->source); })()), "telefonoMovil", [], "any", false, false, false, 79), "")))) {
-            // line 80
-            echo "            <input type=\"number\" id=\"telefonoMovil\" name=\"telefonoMovil\" value=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 80, $this->source); })()), "telefonoMovil", [], "any", false, false, false, 80), "html", null, true);
-            echo "\" />
+        // line 86
+        if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 86, $this->source); })()), "telefonoMovil", [], "any", false, false, false, 86), null)) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 86, $this->source); })()), "telefonoMovil", [], "any", false, false, false, 86), "")))) {
+            // line 87
+            echo "            <input type=\"tel\" id=\"telefonoMovil\" name=\"telefonoMovil\" value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 87, $this->source); })()), "telefonoMovil", [], "any", false, false, false, 87), "html", null, true);
+            echo "\" pattern=\"[0-9]{9}\" id=\"telefonoMovil\" />
         ";
         } else {
-            // line 82
-            echo "            <input type=\"number\" id=\"telefonoMovil\" name=\"telefonoMovil\" value=\"\" placeholder=\"Campo teléfono móvil sin rellenar\" />
+            // line 89
+            echo "            <input type=\"tel\" id=\"telefonoMovil\" name=\"telefonoMovil\" value=\"\" placeholder=\"123456789\" pattern=\"[0-9]{9}\" id=\"telefonoMovil\" />
         ";
         }
-        // line 84
+        // line 91
         echo "        <button onClick=\"modificar('telefonoMovil')\">Modificar</button>
     </div>
 
     <h1>Lista de vehículos mios:</h1>
     ";
-        // line 88
+        // line 95
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 88, $this->source); })()), "vehiculos", [], "any", false, false, false, 88));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 95, $this->source); })()), "vehiculos", [], "any", false, false, false, 95));
         foreach ($context['_seq'] as $context["_key"] => $context["vehiculo"]) {
-            // line 89
+            // line 96
             echo "        ";
-            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "eliminado", [], "any", false, false, false, 89), true))) {
-                // line 90
+            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "eliminado", [], "any", false, false, false, 96), true))) {
+                // line 97
                 echo "            <div class=\"vehicles\">
                 Marca: ";
-                // line 91
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "marca", [], "any", false, false, false, 91), "html", null, true);
+                // line 98
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "marca", [], "any", false, false, false, 98), "html", null, true);
                 echo "
                 <br/>
                 Modelo: ";
-                // line 93
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "modelo", [], "any", false, false, false, 93), "html", null, true);
+                // line 100
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "modelo", [], "any", false, false, false, 100), "html", null, true);
                 echo "
                 <br/>
                 Descripción: ";
-                // line 95
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "descripcion", [], "any", false, false, false, 95), "html", null, true);
+                // line 102
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "descripcion", [], "any", false, false, false, 102), "html", null, true);
                 echo "
                 <br/>
                 Precio: ";
-                // line 97
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "precio", [], "any", false, false, false, 97), "html", null, true);
+                // line 104
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "precio", [], "any", false, false, false, 104), "html", null, true);
                 echo " euros.
                 <br/>
                 ";
-                // line 99
-                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "venta", [], "any", false, false, false, 99), false))) {
-                    // line 100
+                // line 106
+                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "venta", [], "any", false, false, false, 106), false))) {
+                    // line 107
                     echo "                    <button onClick=\"addBuscador(";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "id", [], "any", false, false, false, 100), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "id", [], "any", false, false, false, 107), "html", null, true);
                     echo ");\">Añadir a venta</button>
                 ";
                 }
-                // line 102
+                // line 109
                 echo "            </div>
         ";
             }
-            // line 104
+            // line 111
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehiculo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 105
+        // line 112
         echo "
     <h1>Lista de vehículos en venta:</h1>
     ";
-        // line 107
+        // line 114
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 107, $this->source); })()), "vehiculos", [], "any", false, false, false, 107));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 114, $this->source); })()), "vehiculos", [], "any", false, false, false, 114));
         foreach ($context['_seq'] as $context["_key"] => $context["vehiculo"]) {
-            // line 108
+            // line 115
             echo "        ";
-            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "venta", [], "any", false, false, false, 108), true)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "eliminado", [], "any", false, false, false, 108), false)))) {
-                // line 109
+            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "venta", [], "any", false, false, false, 115), true)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "eliminado", [], "any", false, false, false, 115), false)))) {
+                // line 116
                 echo "            <div class=\"vehicles\">
                 Marca: ";
-                // line 110
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "marca", [], "any", false, false, false, 110), "html", null, true);
+                // line 117
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "marca", [], "any", false, false, false, 117), "html", null, true);
                 echo "
                 <br/>
                 Modelo: ";
-                // line 112
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "modelo", [], "any", false, false, false, 112), "html", null, true);
+                // line 119
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "modelo", [], "any", false, false, false, 119), "html", null, true);
                 echo "
                 <br/>
                 Descripción: ";
-                // line 114
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "descripcion", [], "any", false, false, false, 114), "html", null, true);
+                // line 121
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "descripcion", [], "any", false, false, false, 121), "html", null, true);
                 echo "
                 <br/>
                 Precio: ";
-                // line 116
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "precio", [], "any", false, false, false, 116), "html", null, true);
+                // line 123
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "precio", [], "any", false, false, false, 123), "html", null, true);
                 echo " euros.
                 <br/>
                 <button onClick=\"eliminarBuscador(";
-                // line 118
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "id", [], "any", false, false, false, 118), "html", null, true);
+                // line 125
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculo"], "id", [], "any", false, false, false, 125), "html", null, true);
                 echo ");\">Eliminar de venta</button>
             </div>
         ";
             }
-            // line 121
+            // line 128
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehiculo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 122
+        // line 129
         echo "
     <script>
         function modificar(id) {
 
+            // Validar dato antes de enviar al servidor
+            var comprobar = true;
+            var dato = \$(\"#\"+id).val();
+            if(id == \"nombre\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El nombre introducido es incorrecto.\");
+                    window.location.reload();
+                    if(dato != null) {
+                        \$(\"#nombre\").prop('value', \"";
+        // line 141
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 141, $this->source); })()), "nombre", [], "any", false, false, false, 141), "html", null, true);
+        echo "\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"primerApellido\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El primer apellido introducido es incorrecto.\");
+                    window.location.reload();
+                    if(dato != null) {
+                        \$(\"#primerApellido\").prop('value', \"";
+        // line 150
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 150, $this->source); })()), "primerApellido", [], "any", false, false, false, 150), "html", null, true);
+        echo "\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"segundoApellido\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El segundo apellido introducido es incorrecto.\");
+                    if(dato != null) {
+                        \$(\"#segundoApellido\").prop('value', \"";
+        // line 158
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 158, $this->source); })()), "segundoApellido", [], "any", false, false, false, 158), "html", null, true);
+        echo "\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"nick\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El nick introducido es incorrecto.\");
+                    window.location.reload();
+                    if(dato != null) {
+                        \$(\"#nick\").prop('value', \"";
+        // line 167
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 167, $this->source); })()), "nick", [], "any", false, false, false, 167), "html", null, true);
+        echo "\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"localidad\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El localidad introducida es incorrecto.\");
+                    if(dato != null) {
+                        \$(\"#localidad\").prop('value', \"";
+        // line 175
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 175, $this->source); })()), "localidad", [], "any", false, false, false, 175), "html", null, true);
+        echo "\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"provincia\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El provincia introducida es incorrecto.\");
+                    if(dato != null) {
+                        \$(\"#provincia\").prop('value', \"";
+        // line 183
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 183, $this->source); })()), "provincia", [], "any", false, false, false, 183), "html", null, true);
+        echo "\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"telefonoMovil\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == true) {
+                    alert(\"El teléfono móvil introducido es incorrecto.\");
+                    if(dato != null) {
+                        \$(\"#telefonoMovil\").prop('value', \"";
+        // line 191
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 191, $this->source); })()), "telefonoMovil", [], "any", false, false, false, 191), "html", null, true);
+        echo "\");
+                    }
+                    comprobar = false;
+                }
+            }
+
             var datos = {
-                'dato':\$(\"#\"+id).val(),
+                'dato':dato,
                 'condicion':id
             };
 
@@ -357,52 +449,17 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
                 alert(\"Error de AJAX: \" + data);
             }
 
-            \$.ajax({
-                type: \"GET\",
-                url: \"/modificar\",
-                data: datos,
-                success: function(data) {
-                    if(data == \"error\") {
-                        alert(\"Error\");
-                    }else if(data == \"nombre\") {
-                        \$(\"#nombreDiv\").val('";
-        // line 143
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 143, $this->source); })()), "nombre", [], "any", false, false, false, 143), "html", null, true);
-        echo "');
-                    }else if(data == \"primerApellido\") {
-                        \$(\"#primerApellidoDiv\").val('";
-        // line 145
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 145, $this->source); })()), "primerApellido", [], "any", false, false, false, 145), "html", null, true);
-        echo "');
-                    }else if(data == \"segundoApellido\") {
-                        \$(\"#segundoApellidoDiv\").val('";
-        // line 147
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 147, $this->source); })()), "segundoApellido", [], "any", false, false, false, 147), "html", null, true);
-        echo "');
-                    }else if(data == \"nick\") {
-                        \$(\"#nickDiv\").val('";
-        // line 149
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 149, $this->source); })()), "nick", [], "any", false, false, false, 149), "html", null, true);
-        echo "');
-                    }else if(data == \"localidad\") {
-                        \$(\"#localidadDiv\").val('";
-        // line 151
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 151, $this->source); })()), "localidad", [], "any", false, false, false, 151), "html", null, true);
-        echo "');
-                    }else if(data == \"provincia\") {
-                        \$(\"#provinciaDiv\").val('";
-        // line 153
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 153, $this->source); })()), "provincia", [], "any", false, false, false, 153), "html", null, true);
-        echo "');
-                    }else if(data == \"telefonoMovil\") {
-                        \$(\"#telefonoMovilDiv\").val('";
-        // line 155
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 155, $this->source); })()), "telefonoMovil", [], "any", false, false, false, 155), "html", null, true);
-        echo "');
-                    }
-                },
-                error: fail
-            });
+            if(comprobar == true) {
+                \$.ajax({
+                    type: \"GET\",
+                    url: \"/modificar\",
+                    data: datos,
+                    success: function(data) {
+                        window.location.reload();
+                    },
+                    error: fail
+                });
+            }
         }
 
         function eliminarBuscador(id) {
@@ -465,7 +522,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
 
     public function getDebugInfo()
     {
-        return array (  400 => 155,  395 => 153,  390 => 151,  385 => 149,  380 => 147,  375 => 145,  370 => 143,  347 => 122,  341 => 121,  335 => 118,  330 => 116,  325 => 114,  320 => 112,  315 => 110,  312 => 109,  309 => 108,  305 => 107,  301 => 105,  295 => 104,  291 => 102,  285 => 100,  283 => 99,  278 => 97,  273 => 95,  268 => 93,  263 => 91,  260 => 90,  257 => 89,  253 => 88,  247 => 84,  243 => 82,  237 => 80,  235 => 79,  229 => 75,  225 => 73,  219 => 71,  217 => 70,  211 => 66,  207 => 64,  201 => 62,  199 => 61,  193 => 57,  189 => 55,  183 => 53,  181 => 52,  175 => 48,  171 => 46,  165 => 44,  163 => 43,  157 => 39,  153 => 37,  147 => 35,  145 => 34,  139 => 30,  135 => 28,  129 => 26,  127 => 25,  120 => 21,  114 => 19,  110 => 17,  104 => 15,  102 => 14,  98 => 13,  91 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  436 => 191,  425 => 183,  414 => 175,  403 => 167,  391 => 158,  380 => 150,  368 => 141,  354 => 129,  348 => 128,  342 => 125,  337 => 123,  332 => 121,  327 => 119,  322 => 117,  319 => 116,  316 => 115,  312 => 114,  308 => 112,  302 => 111,  298 => 109,  292 => 107,  290 => 106,  285 => 104,  280 => 102,  275 => 100,  270 => 98,  267 => 97,  264 => 96,  260 => 95,  254 => 91,  250 => 89,  244 => 87,  242 => 86,  235 => 81,  231 => 79,  225 => 77,  223 => 76,  216 => 71,  212 => 69,  206 => 67,  204 => 66,  197 => 61,  193 => 59,  187 => 57,  185 => 56,  178 => 51,  174 => 49,  168 => 47,  166 => 46,  159 => 41,  155 => 39,  149 => 37,  147 => 36,  140 => 31,  136 => 29,  130 => 27,  128 => 26,  120 => 21,  114 => 19,  110 => 17,  104 => 15,  102 => 14,  98 => 13,  91 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -494,64 +551,71 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
     </div>
 
     <div id=\"nombreDiv\">
+        <label for=\"nombre\">Nombre:</label>
         {% if user.nombre != null or user.nombre != \"\" %}
-            <input type=\"text\" id=\"nombre\" name=\"nombre\" value=\"{{ user.nombre }}\" />
+            <input type=\"text\" id=\"nombre\" name=\"nombre\" value=\"{{ user.nombre }}\" id=\"nombre\" />
         {% else %}
-            <input type=\"text\" id=\"nombre\" name=\"nombre\" value=\"\" placeholder=\"Campo nombre sin rellenar\" />
+            <input type=\"text\" id=\"nombre\" name=\"nombre\" value=\"\" placeholder=\"Rellenar nombre\" id=\"nombre\" />
         {% endif %}
         <button onClick=\"modificar('nombre')\">Modificar</button>
     </div>
 
     <div id=\"primerApellidoDiv\">
+        <label for=\"primerApellido\">Primer apellido:</label>
         {% if user.primerApellido != null or user.primerApellido != \"\" %}
-            <input type=\"text\" id=\"primerApellido\" name=\"primerApellido\" value=\"{{ user.primerApellido }}\" />
+            <input type=\"text\" id=\"primerApellido\" name=\"primerApellido\" value=\"{{ user.primerApellido }}\" id=\"primerApellido\" />
         {% else %}
-            <input type=\"text\" id=\"primerApellido\" name=\"primerApellido\" value=\"\" placeholder=\"Campo primer apellido sin rellenar\" />
+            <input type=\"text\" id=\"primerApellido\" name=\"primerApellido\" value=\"\" placeholder=\"Rellenar primer apellido\" id=\"primerApellido\" />
         {% endif %}
         <button onClick=\"modificar('primerApellido')\">Modificar</button>
     </div>
 
     <div id=\"segundoApellidoDiv\">
+        <label for=\"segundoApellido\">Segundo apellido:</label>
         {% if user.segundoApellido != null or user.segundoApellido != \"\" %}
-            <input type=\"text\" id=\"segundoApellido\" name=\"segundoApellido\" value=\"{{ user.segundoApellido }}\" />
+            <input type=\"text\" id=\"segundoApellido\" name=\"segundoApellido\" value=\"{{ user.segundoApellido }}\" id=\"segundoApellido\" />
         {% else %}
-            <input type=\"text\" id=\"segundoApellido\" name=\"segundoApellido\" value=\"\" placeholder=\"Campo segundo apellido sin rellenar\" />
+            <input type=\"text\" id=\"segundoApellido\" name=\"segundoApellido\" value=\"\" placeholder=\"Rellenar segundo apellido\" id=\"segundoApellido\" />
         {% endif %}
         <button onClick=\"modificar('segundoApellido')\">Modificar</button>
     </div>
 
     <div id=\"nickDiv\">
+        <label for=\"nick\">Nick:</label>
         {% if user.nick != null or user.nick != \"\" %}
-            <input type=\"text\" id=\"nick\" name=\"nick\" value=\"{{ user.nick }}\" />
+            <input type=\"text\" id=\"nick\" name=\"nick\" value=\"{{ user.nick }}\" id=\"nick\" />
         {% else %}
-            <input type=\"text\" id=\"nick\" name=\"nick\" value=\"\" placeholder=\"Campo nick sin rellenar\" />
+            <input type=\"text\" id=\"nick\" name=\"nick\" value=\"\" placeholder=\"Rellenar nick\" id=\"nick\" />
         {% endif %}
         <button onClick=\"modificar('nick')\">Modificar</button>
     </div>
 
     <div id=\"localidadDiv\">
+        <label for=\"localidad\">Localidad:</label>
         {% if user.localidad != null or user.localidad != \"\" %}
-            <input type=\"text\" id=\"localidad\" name=\"localidad\" value=\"{{ user.localidad }}\" />
+            <input type=\"text\" id=\"localidad\" name=\"localidad\" value=\"{{ user.localidad }}\" id=\"localidad\" />
         {% else %}
-            <input type=\"text\" id=\"localidad\" name=\"localidad\" value=\"\" placeholder=\"Campo localidad sin rellenar\" />
+            <input type=\"text\" id=\"localidad\" name=\"localidad\" value=\"\" placeholder=\"Rellenar localidad\" id=\"localidad\" />
         {% endif %}
         <button onClick=\"modificar('localidad')\">Modificar</button>
     </div>
 
     <div id=\"provinciaDiv\">
+        <label for=\"provincia\">Provincia:</label>
         {% if user.provincia != null or user.provincia != \"\" %}
-            <input type=\"text\" id=\"provincia\" name=\"provincia\" value=\"{{ user.provincia }}\" />
+            <input type=\"text\" id=\"provincia\" name=\"provincia\" value=\"{{ user.provincia }}\" id=\"provincia\" />
         {% else %}
-            <input type=\"text\" id=\"provincia\" name=\"provincia\" value=\"\" placeholder=\"Campo provincia sin rellenar\" />
+            <input type=\"text\" id=\"provincia\" name=\"provincia\" value=\"\" placeholder=\"Rellenar provincia\" id=\"provincia\" />
         {% endif %}
         <button onClick=\"modificar('provincia')\">Modificar</button>
     </div>
 
     <div id=\"telefonoMovilDiv\">
+        <label for=\"telefonoMovil\">Teléfono móvil:</label>
         {% if user.telefonoMovil != null or user.telefonoMovil != \"\" %}
-            <input type=\"number\" id=\"telefonoMovil\" name=\"telefonoMovil\" value=\"{{ user.telefonoMovil }}\" />
+            <input type=\"tel\" id=\"telefonoMovil\" name=\"telefonoMovil\" value=\"{{ user.telefonoMovil }}\" pattern=\"[0-9]{9}\" id=\"telefonoMovil\" />
         {% else %}
-            <input type=\"number\" id=\"telefonoMovil\" name=\"telefonoMovil\" value=\"\" placeholder=\"Campo teléfono móvil sin rellenar\" />
+            <input type=\"tel\" id=\"telefonoMovil\" name=\"telefonoMovil\" value=\"\" placeholder=\"123456789\" pattern=\"[0-9]{9}\" id=\"telefonoMovil\" />
         {% endif %}
         <button onClick=\"modificar('telefonoMovil')\">Modificar</button>
     </div>
@@ -595,8 +659,72 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
     <script>
         function modificar(id) {
 
+            // Validar dato antes de enviar al servidor
+            var comprobar = true;
+            var dato = \$(\"#\"+id).val();
+            if(id == \"nombre\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El nombre introducido es incorrecto.\");
+                    window.location.reload();
+                    if(dato != null) {
+                        \$(\"#nombre\").prop('value', \"{{user.nombre}}\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"primerApellido\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El primer apellido introducido es incorrecto.\");
+                    window.location.reload();
+                    if(dato != null) {
+                        \$(\"#primerApellido\").prop('value', \"{{user.primerApellido}}\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"segundoApellido\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El segundo apellido introducido es incorrecto.\");
+                    if(dato != null) {
+                        \$(\"#segundoApellido\").prop('value', \"{{user.segundoApellido}}\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"nick\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El nick introducido es incorrecto.\");
+                    window.location.reload();
+                    if(dato != null) {
+                        \$(\"#nick\").prop('value', \"{{user.nick}}\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"localidad\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El localidad introducida es incorrecto.\");
+                    if(dato != null) {
+                        \$(\"#localidad\").prop('value', \"{{user.localidad}}\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"provincia\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == false) {
+                    alert(\"El provincia introducida es incorrecto.\");
+                    if(dato != null) {
+                        \$(\"#provincia\").prop('value', \"{{user.provincia}}\");
+                    }
+                    comprobar = false;
+                }
+            }else if(id == \"telefonoMovil\") {
+                if(dato.length == 0 && dato == \"\" || dato == null || dato == undefined || isNaN(dato) == true) {
+                    alert(\"El teléfono móvil introducido es incorrecto.\");
+                    if(dato != null) {
+                        \$(\"#telefonoMovil\").prop('value', \"{{user.telefonoMovil}}\");
+                    }
+                    comprobar = false;
+                }
+            }
+
             var datos = {
-                'dato':\$(\"#\"+id).val(),
+                'dato':dato,
                 'condicion':id
             };
 
@@ -604,31 +732,17 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
                 alert(\"Error de AJAX: \" + data);
             }
 
-            \$.ajax({
-                type: \"GET\",
-                url: \"/modificar\",
-                data: datos,
-                success: function(data) {
-                    if(data == \"error\") {
-                        alert(\"Error\");
-                    }else if(data == \"nombre\") {
-                        \$(\"#nombreDiv\").val('{{user.nombre}}');
-                    }else if(data == \"primerApellido\") {
-                        \$(\"#primerApellidoDiv\").val('{{user.primerApellido}}');
-                    }else if(data == \"segundoApellido\") {
-                        \$(\"#segundoApellidoDiv\").val('{{user.segundoApellido}}');
-                    }else if(data == \"nick\") {
-                        \$(\"#nickDiv\").val('{{user.nick}}');
-                    }else if(data == \"localidad\") {
-                        \$(\"#localidadDiv\").val('{{user.localidad}}');
-                    }else if(data == \"provincia\") {
-                        \$(\"#provinciaDiv\").val('{{user.provincia}}');
-                    }else if(data == \"telefonoMovil\") {
-                        \$(\"#telefonoMovilDiv\").val('{{user.telefonoMovil}}');
-                    }
-                },
-                error: fail
-            });
+            if(comprobar == true) {
+                \$.ajax({
+                    type: \"GET\",
+                    url: \"/modificar\",
+                    data: datos,
+                    success: function(data) {
+                        window.location.reload();
+                    },
+                    error: fail
+                });
+            }
         }
 
         function eliminarBuscador(id) {

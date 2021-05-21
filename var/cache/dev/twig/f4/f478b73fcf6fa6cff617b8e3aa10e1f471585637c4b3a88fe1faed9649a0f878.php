@@ -63,15 +63,12 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
             <div class=\"d-flex justify-content-center h-100\">
                 <div class=\"card\">
                     <div class=\"card-header\">
-                        <h3>Sign In</h3>
-                        <div class=\"d-flex justify-content-end social_icon\">
-                            <span><a href=\"https://es-es.facebook.com/\"><i class=\"fab fa-facebook-square\"></i></a></span>
-                            <span><a href=\"https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin\"><i class=\"fab fa-google-plus-square\"></i></a></span>
-                            <span><a href=\"https://twitter.com/?lang=es\"><i class=\"fab fa-twitter-square\"></i></a></span>
-                        </div>
-                    </div>
+                        <h3>Login</h3>
+                        ";
+        // line 30
+        echo "                    </div>
                     <div class=\"card-body\">
-                        <form method=\"post\">
+                        <form method=\"post\" onsubmit=\"return validar(this);\">
                             ";
         // line 33
         if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 33, $this->source); })())) {
@@ -110,13 +107,12 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                             </div>
                         </form>
 
-                        <div class=\"ml-3 d-flex justify-content-start\">
-                            <button class=\"btn float-right login_btn\" id=\"check\">Check</button>
-                        </div>
-                    </div>
+                        ";
+        // line 62
+        echo "                    </div>
                     <div class=\"card-footer\">
                         <div class=\"d-flex justify-content-center links\">
-                            Don't have an account?<a href=\"/register\">Sign Up</a>
+                            ¿No tienes cuenta?<a href=\"/register\">Registro</a>
                         </div>
                         ";
         // line 70
@@ -126,7 +122,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
         </div>
 
         <script type=\"text/javascript\">
-            \$(\"#check\").click(function(ev) {
+            function validar() {
                 // Variable comprobar para mensaje de correcta o incorrecta comprobación
                 var comprobar = true;
 
@@ -152,11 +148,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 \t\t\t\t\talert(\"Contraseña demasiado larga.\");
 \t\t\t\t\tcomprobar = false;
 \t\t\t\t}
-
-\t\t\t\tif(comprobar == true) {
-\t\t\t\t\talert(\"Puedes proceder a registrarte debido a que los datos introducidos son correctos.\");
-\t\t\t\t}
-            });
+            };
         </script>
     </body>
 </html>
@@ -182,7 +174,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 
     public function getDebugInfo()
     {
-        return array (  123 => 70,  105 => 52,  102 => 51,  91 => 40,  85 => 36,  79 => 34,  77 => 33,  43 => 1,);
+        return array (  119 => 70,  112 => 62,  102 => 52,  99 => 51,  88 => 40,  82 => 36,  76 => 34,  74 => 33,  69 => 30,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -210,15 +202,15 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
             <div class=\"d-flex justify-content-center h-100\">
                 <div class=\"card\">
                     <div class=\"card-header\">
-                        <h3>Sign In</h3>
-                        <div class=\"d-flex justify-content-end social_icon\">
+                        <h3>Login</h3>
+                        {# <div class=\"d-flex justify-content-end social_icon\">
                             <span><a href=\"https://es-es.facebook.com/\"><i class=\"fab fa-facebook-square\"></i></a></span>
                             <span><a href=\"https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin\"><i class=\"fab fa-google-plus-square\"></i></a></span>
                             <span><a href=\"https://twitter.com/?lang=es\"><i class=\"fab fa-twitter-square\"></i></a></span>
-                        </div>
+                        </div> #}
                     </div>
                     <div class=\"card-body\">
-                        <form method=\"post\">
+                        <form method=\"post\" onsubmit=\"return validar(this);\">
                             {% if error %}
                                 <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                             {% endif %}
@@ -245,13 +237,13 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                             </div>
                         </form>
 
-                        <div class=\"ml-3 d-flex justify-content-start\">
+                        {# <div class=\"ml-3 d-flex justify-content-start\">
                             <button class=\"btn float-right login_btn\" id=\"check\">Check</button>
-                        </div>
+                        </div> #}
                     </div>
                     <div class=\"card-footer\">
                         <div class=\"d-flex justify-content-center links\">
-                            Don't have an account?<a href=\"/register\">Sign Up</a>
+                            ¿No tienes cuenta?<a href=\"/register\">Registro</a>
                         </div>
                         {# <div class=\"d-flex justify-content-center\">
                             <a href=\"#\">Forgot your password?</a>
@@ -262,7 +254,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
         </div>
 
         <script type=\"text/javascript\">
-            \$(\"#check\").click(function(ev) {
+            function validar() {
                 // Variable comprobar para mensaje de correcta o incorrecta comprobación
                 var comprobar = true;
 
@@ -288,11 +280,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 \t\t\t\t\talert(\"Contraseña demasiado larga.\");
 \t\t\t\t\tcomprobar = false;
 \t\t\t\t}
-
-\t\t\t\tif(comprobar == true) {
-\t\t\t\t\talert(\"Puedes proceder a registrarte debido a que los datos introducidos son correctos.\");
-\t\t\t\t}
-            });
+            };
         </script>
     </body>
 </html>

@@ -55,7 +55,7 @@ class MessageController extends AbstractController
             $message->setReportado(false);
             $message->setUser($emisor);
             $message->setOculto(false);
-            $message->setLeido(false);
+            $message->setVisto(false);
             $message->setVehiculoMessage($this->getDoctrine()->getRepository(Vehiculo::class)->find($vehiculo));
             $entityManager->persist($message);
             $entityManager->flush();

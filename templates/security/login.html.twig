@@ -21,15 +21,15 @@
             <div class="d-flex justify-content-center h-100">
                 <div class="card">
                     <div class="card-header">
-                        <h3>Sign In</h3>
-                        <div class="d-flex justify-content-end social_icon">
+                        <h3>Login</h3>
+                        {# <div class="d-flex justify-content-end social_icon">
                             <span><a href="https://es-es.facebook.com/"><i class="fab fa-facebook-square"></i></a></span>
                             <span><a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><i class="fab fa-google-plus-square"></i></a></span>
                             <span><a href="https://twitter.com/?lang=es"><i class="fab fa-twitter-square"></i></a></span>
-                        </div>
+                        </div> #}
                     </div>
                     <div class="card-body">
-                        <form method="post">
+                        <form method="post" onsubmit="return validar(this);">
                             {% if error %}
                                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                             {% endif %}
@@ -56,13 +56,13 @@
                             </div>
                         </form>
 
-                        <div class="ml-3 d-flex justify-content-start">
+                        {# <div class="ml-3 d-flex justify-content-start">
                             <button class="btn float-right login_btn" id="check">Check</button>
-                        </div>
+                        </div> #}
                     </div>
                     <div class="card-footer">
                         <div class="d-flex justify-content-center links">
-                            Don't have an account?<a href="/register">Sign Up</a>
+                            ¿No tienes cuenta?<a href="/register">Registro</a>
                         </div>
                         {# <div class="d-flex justify-content-center">
                             <a href="#">Forgot your password?</a>
@@ -73,7 +73,7 @@
         </div>
 
         <script type="text/javascript">
-            $("#check").click(function(ev) {
+            function validar() {
                 // Variable comprobar para mensaje de correcta o incorrecta comprobación
                 var comprobar = true;
 
@@ -99,11 +99,7 @@
 					alert("Contraseña demasiado larga.");
 					comprobar = false;
 				}
-
-				if(comprobar == true) {
-					alert("Puedes proceder a registrarte debido a que los datos introducidos son correctos.");
-				}
-            });
+            };
         </script>
     </body>
 </html>

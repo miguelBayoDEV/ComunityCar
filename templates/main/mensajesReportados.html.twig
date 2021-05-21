@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Mensajes reportados:</h1>
     {% for message in messages %}
-        {% if  message.reportado == true and message.oculto != true %}
+        {% if  message.reportado == true and message.visto != true %}
             &#x1f6a9;&#xfe0e; {{ message.texto }} - Emisor: {{ message.user.email }} - {{ message.fechaEnvio|date("Y-m-d") }}
             <button><a href="/respuesta/{{ message.id }}">Ver mensaje</a></button>
             <br/>

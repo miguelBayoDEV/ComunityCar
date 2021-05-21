@@ -16,15 +16,20 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 // Para subir multiples archivos
 use Symfony\Component\Validator\Constraints\All;
 
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+
 class VehiculoType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('marca')
-            ->add('modelo')
-            ->add('descripcion')
-            ->add('precio')
+            ->add('marca', TextType::class)
+            ->add('modelo', TextType::class)
+            ->add('descripcion', TextareaType::class)
+            ->add('precio', NumberType::class)
             ->add('images', FileType::class, [
                 'label' => 'Imágenes',
 
