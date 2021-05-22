@@ -262,6 +262,15 @@ class MainController extends AbstractController
             'user' => $user
         ]);
     }
+
+    /**
+     * @Route("/anime", name="anime")
+     * @IsGranted("ROLE_USER")
+     */
+    public function anime(Request $request, SluggerInterface $slugger): Response
+    {
+        return $this->render('main/anime.html.twig');
+    }
     
     /**
      * @Route("/modificar", name="modificar")
@@ -344,9 +353,14 @@ class MainController extends AbstractController
     public function messagesReportados(): Response
     {
         $messages = $this->getDoctrine()->getRepository(Message::class)->findAll();
+        $id = $this->getUser()->getId();
+        $messagesRecibidos = $this->getDoctrine()->getRepository(Message::class)->findBy(array('receptor' => $id));
+        $messagesEnviados = $this->getDoctrine()->getRepository(Message::class)->findBy(array('emisor' => $id));
 
         return $this->render('main/mensajesReportados.html.twig', [
-            'messages' => $messages
+            'messages' => $messages,
+            'messagesRecibidos' => $messagesRecibidos,
+            'messagesEnviados' => $messagesEnviados
         ]);
     }
     
@@ -380,6 +394,7 @@ class MainController extends AbstractController
 
         $em = $this->getDoctrine()->getManager();
         $mensaje->setReportado(true);
+        $mensaje->setOculto(true);
         $em->flush();
 
               
@@ -491,7 +506,7 @@ class MainController extends AbstractController
         $correos = [];
 
         // Valores predeterminados
-        $valores = "Email,Password,,,Nombre,Primer apellido,Segundo apellido,Nick,Localidad,Provincia,Teléfono móvil,";
+        $valores = "Email,Nombre,Primer apellido,Segundo apellido,Nick,Localidad,Provincia,Teléfono móvil,";
         array_push($correos, $valores);
         
         foreach($users as $user) {
@@ -499,12 +514,6 @@ class MainController extends AbstractController
             // Comprobar si los datos son nulos o no
             if($user->getEmail() != null) {
                 $datos .= $user->getEmail().",";
-            }else {
-                $datos .= "null,";
-            }
-            
-            if($user->getPassword() != null) {
-                $datos .= $user->getPassword().",";
             }else {
                 $datos .= "null,";
             }

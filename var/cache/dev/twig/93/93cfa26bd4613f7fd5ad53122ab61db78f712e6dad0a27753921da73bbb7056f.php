@@ -76,7 +76,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         // line 23
         echo "        <div class=\"container\">
             <div class=\"d-flex justify-content-center h-100\">
-                <div class=\"card\">
+                <div class=\"card h-50\">
                     <div class=\"card-header pb-0\">
                         <h3>Registro</h3>
                         ";
@@ -96,31 +96,37 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         echo "
                                 </div>
                             </div>
-                            <div class=\"input-group form-group\">
+                            <div class=\"input-group form-group d-flex flex-column\">
                                 <div class=\"input-group-prepend text-white\">
                                     <span class=\"input-group-text\"><i class=\"fas fa-key\"></i></span>
                                     ";
         // line 45
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 45, $this->source); })()), "plainPassword", [], "any", false, false, false, 45), 'row', ["label" => "Password"]);
-        // line 47
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 45, $this->source); })()), "plainPassword", [], "any", false, false, false, 45), "first", [], "any", false, false, false, 45), 'row');
+        echo "
+                                </div>
+                                <div class=\"input-group-prepend text-white mt-3\">
+                                    <span class=\"input-group-text\"><i class=\"fas fa-key\"></i></span>
+                                    ";
+        // line 49
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 49, $this->source); })()), "plainPassword", [], "any", false, false, false, 49), "second", [], "any", false, false, false, 49), 'row');
         echo "
                                 </div>
                             </div>
                             <div class=\"text-white text-white\">
                                 ";
-        // line 51
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 51, $this->source); })()), "agreeTerms", [], "any", false, false, false, 51), 'row');
+        // line 53
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 53, $this->source); })()), "agreeTerms", [], "any", false, false, false, 53), 'row');
         echo "
                             </div>
                             <div class=\"form-group\">
                                 <input type=\"submit\" value=\"Register\" class=\"btn float-right login_btn\">
                             </div>
                         ";
-        // line 56
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 56, $this->source); })()), 'form_end');
+        // line 58
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 58, $this->source); })()), 'form_end');
         echo "
                         ";
-        // line 60
+        // line 62
         echo "                    </div>
                     <div class=\"card-footer\">
                         <div class=\"d-flex justify-content-center links\">
@@ -132,7 +138,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         </div>
 
         ";
-        // line 110
+        // line 112
         echo "    </body>
 </html>
 
@@ -157,7 +163,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
 
     public function getDebugInfo()
     {
-        return array (  136 => 110,  124 => 60,  120 => 56,  112 => 51,  106 => 47,  104 => 45,  95 => 39,  88 => 35,  84 => 33,  77 => 23,  68 => 21,  64 => 20,  43 => 1,);
+        return array (  142 => 112,  130 => 62,  126 => 58,  118 => 53,  111 => 49,  104 => 45,  95 => 39,  88 => 35,  84 => 33,  77 => 23,  68 => 21,  64 => 20,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -186,7 +192,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         {% endfor %}
         <div class=\"container\">
             <div class=\"d-flex justify-content-center h-100\">
-                <div class=\"card\">
+                <div class=\"card h-50\">
                     <div class=\"card-header pb-0\">
                         <h3>Registro</h3>
                         {# <div class=\"d-flex justify-content-end social_icon\">
@@ -203,12 +209,14 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
                                     {{ form_row(registrationForm.email) }}
                                 </div>
                             </div>
-                            <div class=\"input-group form-group\">
+                            <div class=\"input-group form-group d-flex flex-column\">
                                 <div class=\"input-group-prepend text-white\">
                                     <span class=\"input-group-text\"><i class=\"fas fa-key\"></i></span>
-                                    {{ form_row(registrationForm.plainPassword, {
-                                        label: 'Password'
-                                    }) }}
+                                    {{ form_row(registrationForm.plainPassword.first) }}
+                                </div>
+                                <div class=\"input-group-prepend text-white mt-3\">
+                                    <span class=\"input-group-text\"><i class=\"fas fa-key\"></i></span>
+                                    {{ form_row(registrationForm.plainPassword.second) }}
                                 </div>
                             </div>
                             <div class=\"text-white text-white\">

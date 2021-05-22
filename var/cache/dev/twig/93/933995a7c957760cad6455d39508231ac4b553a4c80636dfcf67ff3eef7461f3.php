@@ -53,16 +53,16 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
             // line 10
             echo "\t\t\t<li class=\"navbar-item\">
-\t\t\t\t<a class=\"nav-link active barra\" aria-current=\"page\" href=\"/\">Buscador</a>
+\t\t\t\t<a class=\"nav-link barra\" aria-current=\"page\" href=\"/\">Buscador</a>
 \t\t\t</li>
 \t\t\t<li class=\"navbar-item\">
-\t\t\t\t<a class=\"nav-link barra\" href=\"/messagesReportados\">Mensajes reportados</a>
+\t\t\t\t<a class=\"nav-link barra\" href=\"/messagesReportados\">Mensajes</a>
 \t\t\t</li>
 \t\t\t<li class=\"navbar-item\">
 \t\t\t\t<a class=\"nav-link barra\" href=\"/usuarios\">Exportar usuarios</a>
 \t\t\t</li>
 \t\t\t<li class=\"nav-item dropdown\">
-\t\t\t\t<a class=\"nav-link dropdown-toggle barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t\t<a class=\"nav-link active dropdown-toggle barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\tAdmin - ";
             // line 21
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "email", [], "any", false, false, false, 21), "html", null, true);
@@ -80,13 +80,13 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
         } elseif ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
             // line 32
             echo "\t\t\t<li class=\"navbar-item\">
-\t\t\t\t<a class=\"nav-link active barra\" aria-current=\"page\" href=\"/\">Buscador</a>
+\t\t\t\t<a class=\"nav-link barra\" aria-current=\"page\" href=\"/\">Buscador</a>
 \t\t\t</li>\t
 \t\t\t<li class=\"navbar-item\">
 \t\t\t\t<a class=\"nav-link barra\" href=\"/message\">Mensajes</a>
 \t\t\t</li>
 \t\t\t<li class=\"nav-item dropdown\">
-\t\t\t\t<a class=\"nav-link dropdown-toggle barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t\t<a class=\"nav-link dropdown-toggle active barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\t";
             // line 40
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40), "email", [], "any", false, false, false, 40), "html", null, true);
@@ -141,16 +141,16 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
     <ul class=\"navbar-nav mr-auto\">
       {% if is_granted(\"ROLE_ADMIN\") %}
 \t\t\t<li class=\"navbar-item\">
-\t\t\t\t<a class=\"nav-link active barra\" aria-current=\"page\" href=\"/\">Buscador</a>
+\t\t\t\t<a class=\"nav-link barra\" aria-current=\"page\" href=\"/\">Buscador</a>
 \t\t\t</li>
 \t\t\t<li class=\"navbar-item\">
-\t\t\t\t<a class=\"nav-link barra\" href=\"/messagesReportados\">Mensajes reportados</a>
+\t\t\t\t<a class=\"nav-link barra\" href=\"/messagesReportados\">Mensajes</a>
 \t\t\t</li>
 \t\t\t<li class=\"navbar-item\">
 \t\t\t\t<a class=\"nav-link barra\" href=\"/usuarios\">Exportar usuarios</a>
 \t\t\t</li>
 \t\t\t<li class=\"nav-item dropdown\">
-\t\t\t\t<a class=\"nav-link dropdown-toggle barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t\t<a class=\"nav-link active dropdown-toggle barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\tAdmin - {{ app.user.email }}
 \t\t\t\t</a>
 \t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
@@ -163,13 +163,13 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
 \t\t\t</li>
 \t\t{% elseif is_granted(\"ROLE_USER\") %}
 \t\t\t<li class=\"navbar-item\">
-\t\t\t\t<a class=\"nav-link active barra\" aria-current=\"page\" href=\"/\">Buscador</a>
+\t\t\t\t<a class=\"nav-link barra\" aria-current=\"page\" href=\"/\">Buscador</a>
 \t\t\t</li>\t
 \t\t\t<li class=\"navbar-item\">
 \t\t\t\t<a class=\"nav-link barra\" href=\"/message\">Mensajes</a>
 \t\t\t</li>
 \t\t\t<li class=\"nav-item dropdown\">
-\t\t\t\t<a class=\"nav-link dropdown-toggle barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+\t\t\t\t<a class=\"nav-link dropdown-toggle active barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\t{{ app.user.email }}
 \t\t\t\t</a>
 \t\t\t\t<div class=\"dropdown-menu bg-dark\" aria-labelledby=\"navbarDropdown\">

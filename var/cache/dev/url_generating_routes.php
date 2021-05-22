@@ -19,6 +19,7 @@ return [
     'buscador' => [[], ['_controller' => 'App\\Controller\\MainController::buscador'], [], [['text', '/buscador']], [], []],
     'page' => [['contador'], ['_controller' => 'App\\Controller\\MainController::page'], [], [['variable', '/', '[^/]++', 'contador', true], ['text', '/page']], [], []],
     'perfil' => [[], ['_controller' => 'App\\Controller\\MainController::perfil'], [], [['text', '/perfil']], [], []],
+    'anime' => [[], ['_controller' => 'App\\Controller\\MainController::anime'], [], [['text', '/anime']], [], []],
     'modificar' => [[], ['_controller' => 'App\\Controller\\MainController::modificar'], [], [['text', '/modificar']], [], []],
     'message' => [[], ['_controller' => 'App\\Controller\\MainController::message'], [], [['text', '/message']], [], []],
     'messageVisto' => [['id'], ['_controller' => 'App\\Controller\\MainController::messageVisto'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/messageVisto']], [], []],

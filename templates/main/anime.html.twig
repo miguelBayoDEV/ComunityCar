@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vídeo y animación{% endblock %}
+
+{% block body %}
+    <div class="row d-flex justify-content-center mt-5">
+        <div class="col-lg-6 col-md-2 col-sm-0 col-xs-0">
+            <h3 class="pb-4 text-center">Vídeo con audio y animación:</h3>
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-video-tab" data-toggle="pill" href="#v-pills-video" role="tab" aria-controls="v-pills-video" aria-selected="true">Vídeo</a>
+                    <a class="nav-link" id="v-pills-anime-tab" data-toggle="pill" href="#v-pills-anime" role="tab" aria-controls="v-pills-anime" aria-selected="false">Animación</a>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-video" role="tabpanel" aria-labelledby="v-pills-video-tab">
+                        <div class="m-4 ml-5">
+                            <video loop="true" autoplay="true" width="100%" hight="100%">
+                                <source src="/comunes/header/videoHeader.ogv" type="video/ogg" />
+                                <source src="/comunes/header/videoHeader.mp4" type="video/mp4" />
+                            </video>
+                            <img id="volumen" src="/comunes/header/sonido.png" data-toggle="tooltip" title="Estado del sonido" />
+                            <audio loop="true" autoplay="true" id="sonido">
+                                <source src="/comunes/header/carrera.mp3"  type="audio/mp3">
+                                <source src="/comunes/header/carrera.ogg"  type="audio/ogg">
+                                <source src="/comunes/header/carrera.wav"  type="audio/wav">
+                                Este es un elemento de audio no soportado por tu navegador, prueba con otro.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-anime" role="tabpanel" aria-labelledby="v-pills-anime-tab">
+                        <aside class="anime">
+                            <img id="carAnime" src="/comunes/anime/img/coche.png" />
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Animación del coche
+        $("#carAnime").click(function() {
+            $(this).animate({
+                right:'1vh',
+            }, 2700);
+            
+            $(this).animate({
+                right:'68vh'
+            }, 1);
+        });
+
+        // Sonido
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $("#volumen").click(function() {
+            var video = document.querySelector("#sonido");
+
+            if(video.muted == true) {
+                video.muted = false;
+                $(this).attr("src", "/comunes/header/sonido.png");
+                $(this).attr("title", "Volumen");
+            }else {
+                video.muted = true;
+                $(this).attr("src", "/comunes/header/muted.png");
+                $(this).attr("title", "Muted");
+            }
+        });
+    </script>
+{% endblock %}

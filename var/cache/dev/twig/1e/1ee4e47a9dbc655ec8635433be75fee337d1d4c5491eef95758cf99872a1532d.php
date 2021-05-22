@@ -130,18 +130,31 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
         echo "    ";
         if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 18, $this->source); })()), "oculto", [], "any", false, false, false, 18), false))) {
             // line 19
-            echo "        <button onClick=\"comprar(";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 19, $this->source); })()), "id", [], "any", false, false, false, 19), "html", null, true);
-            echo ", ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 19, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 19), "id", [], "any", false, false, false, 19), "html", null, true);
-            echo ");\">Comprar</button>
-        <button onClick=\"reportar(";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 20, $this->source); })()), "id", [], "any", false, false, false, 20), "html", null, true);
+            echo "        ";
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 19, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 19), "propietario", [], "any", false, false, false, 19), "email", [], "any", false, false, false, 19), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "email", [], "any", false, false, false, 19)))) {
+                // line 20
+                echo "            <button onClick=\"comprar(";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 20, $this->source); })()), "id", [], "any", false, false, false, 20), "html", null, true);
+                echo ", ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 20, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20), "html", null, true);
+                echo ");\">Comprar</button>
+        ";
+            }
+            // line 22
+            echo "    ";
+        }
+        // line 23
+        echo "
+    ";
+        // line 24
+        if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 24, $this->source); })()), "reportado", [], "any", false, false, false, 24), false))) {
+            // line 25
+            echo "        <button onClick=\"reportar(";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 25, $this->source); })()), "id", [], "any", false, false, false, 25), "html", null, true);
             echo ");\">Reportar</button>
     ";
         }
-        // line 22
+        // line 27
         echo "
     <script>
         function reportar(message) {
@@ -157,6 +170,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                 success: function(data) {
                     if(data == \"1\") {
                         alert(\"Mensaje reportado correctamente.\");
+                        window.location.reload();
                     }
                 },
                 error: fail
@@ -181,6 +195,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                 success: function(data) {
                     if(data == \"1\") {
                         alert(\"Mensaje y vehículo eliminados correctamente debido a que se ha comprobado el reporte.\");
+                        window.location.reload();
                     }
                 },
                 error: fail
@@ -234,7 +249,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
 
     public function getDebugInfo()
     {
-        return array (  145 => 22,  140 => 20,  133 => 19,  130 => 18,  122 => 16,  120 => 15,  116 => 14,  113 => 13,  104 => 10,  100 => 9,  96 => 8,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  158 => 27,  152 => 25,  150 => 24,  147 => 23,  144 => 22,  136 => 20,  133 => 19,  130 => 18,  122 => 16,  120 => 15,  116 => 14,  113 => 13,  104 => 10,  100 => 9,  96 => 8,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -257,7 +272,12 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
         <button onClick=\"eliminar({{ message.id }}, {{message.vehiculoMessage.id}});\">Eliminar</button>
     {% endif %}
     {% if message.oculto == false %}
-        <button onClick=\"comprar({{ message.id }}, {{message.vehiculoMessage.id}});\">Comprar</button>
+        {% if message.vehiculoMessage.propietario.email == app.user.email %}
+            <button onClick=\"comprar({{ message.id }}, {{message.vehiculoMessage.id}});\">Comprar</button>
+        {% endif %}
+    {% endif %}
+
+    {% if message.reportado == false %}
         <button onClick=\"reportar({{ message.id }});\">Reportar</button>
     {% endif %}
 
@@ -275,6 +295,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                 success: function(data) {
                     if(data == \"1\") {
                         alert(\"Mensaje reportado correctamente.\");
+                        window.location.reload();
                     }
                 },
                 error: fail
@@ -299,6 +320,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                 success: function(data) {
                     if(data == \"1\") {
                         alert(\"Mensaje y vehículo eliminados correctamente debido a que se ha comprobado el reporte.\");
+                        window.location.reload();
                     }
                 },
                 error: fail

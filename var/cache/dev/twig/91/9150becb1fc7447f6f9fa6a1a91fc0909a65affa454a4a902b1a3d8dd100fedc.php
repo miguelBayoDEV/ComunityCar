@@ -85,93 +85,98 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "
-<div class=\"d-flex align-items-start\">
-  <div class=\"nav flex-column nav-pills me-3\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
-    <button class=\"nav-link active\" id=\"v-pills-home-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-home\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-home\" aria-selected=\"true\">Home</button>
-    <button class=\"nav-link\" id=\"v-pills-profile-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-profile\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-profile\" aria-selected=\"false\">Profile</button>
-    <button class=\"nav-link\" id=\"v-pills-messages-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-messages\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-messages\" aria-selected=\"false\">Messages</button>
-    <button class=\"nav-link\" id=\"v-pills-settings-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-settings\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-settings\" aria-selected=\"false\">Settings</button>
-  </div>
-  <div class=\"tab-content\" id=\"v-pills-tabContent\">
-    <div class=\"tab-pane fade show active\" id=\"v-pills-home\" role=\"tabpanel\" aria-labelledby=\"v-pills-home-tab\">...</div>
-    <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">...</div>
-    <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">...</div>
-    <div class=\"tab-pane fade\" id=\"v-pills-settings\" role=\"tabpanel\" aria-labelledby=\"v-pills-settings-tab\">...</div>
-  </div>
-</div>
-
-
-    <h1>Usuarios:</h1>
-    <ol>
-        ";
-        // line 25
+        echo "    <div class=\"row d-flex justify-content-center mt-5 mb-5 exportar\">
+        <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\">
+            <h3 class=\"pb-5 text-center\">Exportación de datos:</h3>
+            <div class=\"d-flex align-items-start\">
+                <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
+                    <a class=\"nav-link active\" id=\"v-pills-usuarios-tab\" data-toggle=\"pill\" href=\"#v-pills-usuarios\" role=\"tab\" aria-controls=\"v-pills-usuarios\" aria-selected=\"true\">Usuarios</a>
+                    <a class=\"nav-link\" id=\"v-pills-mensajesReportados-tab\" data-toggle=\"pill\" href=\"#v-pills-mensajesReportados\" role=\"tab\" aria-controls=\"v-pills-mensajesReportados\" aria-selected=\"false\">Mensajes reportados</a>
+                    <a class=\"nav-link\" id=\"v-pills-vehiculosReportados-tab\" data-toggle=\"pill\" href=\"#v-pills-vehiculosReportados\" role=\"tab\" aria-controls=\"v-pills-vehiculosReportados\" aria-selected=\"true\">Vehiculos reportados</a>
+                </div>
+                <div class=\"tab-content\" id=\"v-pills-tabContent\">
+                    <div class=\"tab-pane fade show active\" id=\"v-pills-usuarios\" role=\"tabpanel\" aria-labelledby=\"v-pills-usuarios-tab\">
+                        <div class=\"usuarios\">
+                            <ol>
+                                ";
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 25, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 19, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 26
-            echo "            ";
-            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 26), "root@gmail.com"))) {
-                // line 27
-                echo "                <li>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 27), "html", null, true);
+            // line 20
+            echo "                                    ";
+            if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 20), "root@gmail.com"))) {
+                // line 21
+                echo "                                        <li>";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 21), "html", null, true);
                 echo "</li>
-            ";
+                                    ";
             }
-            // line 29
-            echo "        ";
+            // line 23
+            echo "                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
-        echo "    </ol>
-    <button class=\"btn btn-primary\" onClick=\"exportarCorreos();\">Exportar correos</button>
-    <h1>Mensajes reportados:</h1>
-    <ol>
-        ";
-        // line 34
+        // line 24
+        echo "                            </ol>
+                            <button class=\"btn btn-primary\" onClick=\"exportarCorreos();\">Exportar correos</button>
+                        </div>
+                    </div>
+                    <div class=\"tab-pane fade\" id=\"v-pills-mensajesReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesReportados-tab\">
+                        <div class=\"mensajesReportados\">
+                            <ol>
+                                ";
+        // line 31
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["mensajesReportados"]) || array_key_exists("mensajesReportados", $context) ? $context["mensajesReportados"] : (function () { throw new RuntimeError('Variable "mensajesReportados" does not exist.', 34, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["mensajesReportados"]) || array_key_exists("mensajesReportados", $context) ? $context["mensajesReportados"] : (function () { throw new RuntimeError('Variable "mensajesReportados" does not exist.', 31, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["mensajeReportado"]) {
-            // line 35
-            echo "            <li>";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mensajeReportado"], "texto", [], "any", false, false, false, 35), "html", null, true);
+            // line 32
+            echo "                                    <li>";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mensajeReportado"], "texto", [], "any", false, false, false, 32), "html", null, true);
             echo " - ";
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mensajeReportado"], "fechaEnvio", [], "any", false, false, false, 35), "Y-m-d"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["mensajeReportado"], "fechaEnvio", [], "any", false, false, false, 32), "Y-m-d"), "html", null, true);
             echo "</li>
-        ";
+                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['mensajeReportado'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
-        echo "    </ol>
-    <button class=\"btn btn-primary\" onClick=\"exportarMensajesReportados();\">Exportar mensajes reportados</button>
-
-    <h1>Vehículos reportados:</h1>
-    <ol>
-        ";
-        // line 42
+        // line 34
+        echo "                            </ol>
+                            <button class=\"btn btn-primary\" onClick=\"exportarMensajesReportados();\">Exportar mensajes reportados</button>
+                        </div>
+                    </div>
+                    <div class=\"tab-pane fade\" id=\"v-pills-vehiculosReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-vehiculosReportados-tab\">
+                        <div class=\"vehiculosReportados\">
+                            <ol>
+                                ";
+        // line 41
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["vehiculosReportados"]) || array_key_exists("vehiculosReportados", $context) ? $context["vehiculosReportados"] : (function () { throw new RuntimeError('Variable "vehiculosReportados" does not exist.', 42, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["vehiculosReportados"]) || array_key_exists("vehiculosReportados", $context) ? $context["vehiculosReportados"] : (function () { throw new RuntimeError('Variable "vehiculosReportados" does not exist.', 41, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["vehiculoReportado"]) {
-            // line 43
-            echo "            <li>Marca: ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculoReportado"], "marca", [], "any", false, false, false, 43), "html", null, true);
+            // line 42
+            echo "                                    <li>Marca: ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculoReportado"], "marca", [], "any", false, false, false, 42), "html", null, true);
             echo " - Modelo: ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculoReportado"], "modelo", [], "any", false, false, false, 43), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehiculoReportado"], "modelo", [], "any", false, false, false, 42), "html", null, true);
             echo " - Propietario: ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehiculoReportado"], "propietario", [], "any", false, false, false, 43), "email", [], "any", false, false, false, 43), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehiculoReportado"], "propietario", [], "any", false, false, false, 42), "email", [], "any", false, false, false, 42), "html", null, true);
             echo "</li>
-        ";
+                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehiculoReportado'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
-        echo "    </ol>
-    <button class=\"btn btn-primary\" onClick=\"exportarVehiculosReportados();\">Exportar vehiculos reportados</button>
+        // line 44
+        echo "                            </ol>
+                            <button class=\"btn btn-primary\" onClick=\"exportarVehiculosReportados();\">Exportar vehiculos reportados</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         function exportarCorreos() {
@@ -255,7 +260,7 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
 
     public function getDebugInfo()
     {
-        return array (  173 => 45,  160 => 43,  156 => 42,  149 => 37,  138 => 35,  134 => 34,  128 => 30,  122 => 29,  116 => 27,  113 => 26,  109 => 25,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  172 => 44,  159 => 42,  155 => 41,  146 => 34,  135 => 32,  131 => 31,  122 => 24,  116 => 23,  110 => 21,  107 => 20,  103 => 19,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -265,47 +270,52 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
 {% block title %}Exportar usuarios{% endblock %}
 
 {% block body %}
-
-<div class=\"d-flex align-items-start\">
-  <div class=\"nav flex-column nav-pills me-3\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
-    <button class=\"nav-link active\" id=\"v-pills-home-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-home\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-home\" aria-selected=\"true\">Home</button>
-    <button class=\"nav-link\" id=\"v-pills-profile-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-profile\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-profile\" aria-selected=\"false\">Profile</button>
-    <button class=\"nav-link\" id=\"v-pills-messages-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-messages\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-messages\" aria-selected=\"false\">Messages</button>
-    <button class=\"nav-link\" id=\"v-pills-settings-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-settings\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-settings\" aria-selected=\"false\">Settings</button>
-  </div>
-  <div class=\"tab-content\" id=\"v-pills-tabContent\">
-    <div class=\"tab-pane fade show active\" id=\"v-pills-home\" role=\"tabpanel\" aria-labelledby=\"v-pills-home-tab\">...</div>
-    <div class=\"tab-pane fade\" id=\"v-pills-profile\" role=\"tabpanel\" aria-labelledby=\"v-pills-profile-tab\">...</div>
-    <div class=\"tab-pane fade\" id=\"v-pills-messages\" role=\"tabpanel\" aria-labelledby=\"v-pills-messages-tab\">...</div>
-    <div class=\"tab-pane fade\" id=\"v-pills-settings\" role=\"tabpanel\" aria-labelledby=\"v-pills-settings-tab\">...</div>
-  </div>
-</div>
-
-
-    <h1>Usuarios:</h1>
-    <ol>
-        {% for user in users %}
-            {% if user.email != \"root@gmail.com\" %}
-                <li>{{ user.email }}</li>
-            {% endif %}
-        {% endfor %}
-    </ol>
-    <button class=\"btn btn-primary\" onClick=\"exportarCorreos();\">Exportar correos</button>
-    <h1>Mensajes reportados:</h1>
-    <ol>
-        {% for mensajeReportado in mensajesReportados %}
-            <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date(\"Y-m-d\") }}</li>
-        {% endfor %}
-    </ol>
-    <button class=\"btn btn-primary\" onClick=\"exportarMensajesReportados();\">Exportar mensajes reportados</button>
-
-    <h1>Vehículos reportados:</h1>
-    <ol>
-        {% for vehiculoReportado in vehiculosReportados %}
-            <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>
-        {% endfor %}
-    </ol>
-    <button class=\"btn btn-primary\" onClick=\"exportarVehiculosReportados();\">Exportar vehiculos reportados</button>
+    <div class=\"row d-flex justify-content-center mt-5 mb-5 exportar\">
+        <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\">
+            <h3 class=\"pb-5 text-center\">Exportación de datos:</h3>
+            <div class=\"d-flex align-items-start\">
+                <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
+                    <a class=\"nav-link active\" id=\"v-pills-usuarios-tab\" data-toggle=\"pill\" href=\"#v-pills-usuarios\" role=\"tab\" aria-controls=\"v-pills-usuarios\" aria-selected=\"true\">Usuarios</a>
+                    <a class=\"nav-link\" id=\"v-pills-mensajesReportados-tab\" data-toggle=\"pill\" href=\"#v-pills-mensajesReportados\" role=\"tab\" aria-controls=\"v-pills-mensajesReportados\" aria-selected=\"false\">Mensajes reportados</a>
+                    <a class=\"nav-link\" id=\"v-pills-vehiculosReportados-tab\" data-toggle=\"pill\" href=\"#v-pills-vehiculosReportados\" role=\"tab\" aria-controls=\"v-pills-vehiculosReportados\" aria-selected=\"true\">Vehiculos reportados</a>
+                </div>
+                <div class=\"tab-content\" id=\"v-pills-tabContent\">
+                    <div class=\"tab-pane fade show active\" id=\"v-pills-usuarios\" role=\"tabpanel\" aria-labelledby=\"v-pills-usuarios-tab\">
+                        <div class=\"usuarios\">
+                            <ol>
+                                {% for user in users %}
+                                    {% if user.email != \"root@gmail.com\" %}
+                                        <li>{{ user.email }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ol>
+                            <button class=\"btn btn-primary\" onClick=\"exportarCorreos();\">Exportar correos</button>
+                        </div>
+                    </div>
+                    <div class=\"tab-pane fade\" id=\"v-pills-mensajesReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesReportados-tab\">
+                        <div class=\"mensajesReportados\">
+                            <ol>
+                                {% for mensajeReportado in mensajesReportados %}
+                                    <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date(\"Y-m-d\") }}</li>
+                                {% endfor %}
+                            </ol>
+                            <button class=\"btn btn-primary\" onClick=\"exportarMensajesReportados();\">Exportar mensajes reportados</button>
+                        </div>
+                    </div>
+                    <div class=\"tab-pane fade\" id=\"v-pills-vehiculosReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-vehiculosReportados-tab\">
+                        <div class=\"vehiculosReportados\">
+                            <ol>
+                                {% for vehiculoReportado in vehiculosReportados %}
+                                    <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>
+                                {% endfor %}
+                            </ol>
+                            <button class=\"btn btn-primary\" onClick=\"exportarVehiculosReportados();\">Exportar vehiculos reportados</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         function exportarCorreos() {

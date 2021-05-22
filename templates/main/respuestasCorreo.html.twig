@@ -3,6 +3,8 @@
 {% block title %}Respuestas Correo{% endblock %}
 
 {% block body %}
+    
+
     {% for respuesta in message.respuestas %}
         <div>
             {{ respuesta.texto }}
@@ -16,7 +18,12 @@
         <button onClick="eliminar({{ message.id }}, {{message.vehiculoMessage.id}});">Eliminar</button>
     {% endif %}
     {% if message.oculto == false %}
-        <button onClick="comprar({{ message.id }}, {{message.vehiculoMessage.id}});">Comprar</button>
+        {% if message.vehiculoMessage.propietario.email == app.user.email %}
+            <button onClick="comprar({{ message.id }}, {{message.vehiculoMessage.id}});">Comprar</button>
+        {% endif %}
+    {% endif %}
+
+    {% if message.reportado == false %}
         <button onClick="reportar({{ message.id }});">Reportar</button>
     {% endif %}
 
@@ -34,6 +41,7 @@
                 success: function(data) {
                     if(data == "1") {
                         alert("Mensaje reportado correctamente.");
+                        window.location.reload();
                     }
                 },
                 error: fail
@@ -58,6 +66,7 @@
                 success: function(data) {
                     if(data == "1") {
                         alert("Mensaje y vehículo eliminados correctamente debido a que se ha comprobado el reporte.");
+                        window.location.reload();
                     }
                 },
                 error: fail

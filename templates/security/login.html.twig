@@ -15,10 +15,41 @@
 
         <!-- Enlace a CDN JQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <style type="text/css">
+            img#car:hover {
+                transform: rotate(-10deg);
+            }
+
+            div.hidden {
+                visibility: hidden;
+            }
+
+            div.circular {
+                background-color: #f5bf62;
+                border-radius: 50%;
+                padding: 2%;
+                margin-right: 1%;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
             <div class="d-flex justify-content-center h-100">
+                <div class="text-white text-center card mr-5">
+                    <div class="card-header">
+                        <h1>ComunityCar</h1>
+                    </div>
+                    <div class="card-body">
+                        <p>Bienvenidos a la aplicación web orientada a venta de vehiculos mediante anuncios.</p>
+
+                        <p>¡¡¡No puerdas el tiempo pon un anuncio, busca, contacta y llega a un acuerdo!!!</p>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center align-items-center">
+                        <div class="promotion-promo hidden circular" id="vender">Sold!!</div>
+						<img id="car" src="/comunes/anime/img/coche.png" width="30%" height="85%" data-toggle="tooltip" title="Clik aquí!!!" />
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-header">
                         <h3>Login</h3>
@@ -100,6 +131,34 @@
 					comprobar = false;
 				}
             };
+
+            // Efecto ocultar Sold!!!
+            $("#car").click(function() {
+                $("#vender").removeClass("hidden");
+                $("#vender").animate({
+                    visibility: 'visible',
+                    fontSize: "18px"
+                }, 300);
+                $("#vender").animate({
+                    fontSize: "15px"
+                }, 300);
+                $("#vender").animate({
+                    fontSize: "18px"
+                }, 300);
+                $("#vender").animate({
+                    fontSize: "15px"
+                }, 300);
+                $("#vender").animate({
+                    fontSize: "18px"
+                }, 300);
+                $("#vender").animate({
+                    fontSize: "15px"
+                }, 300);
+                $("#vender").animate({
+                    visibility: 'hidden'
+                }, 10);
+            });
+
         </script>
     </body>
 </html>

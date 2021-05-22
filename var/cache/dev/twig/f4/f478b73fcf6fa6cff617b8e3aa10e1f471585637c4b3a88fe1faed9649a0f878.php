@@ -57,35 +57,66 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 
         <!-- Enlace a CDN JQuery -->
         <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+
+        <style type=\"text/css\">
+            img#car:hover {
+                transform: rotate(-10deg);
+            }
+
+            div.hidden {
+                visibility: hidden;
+            }
+
+            div.circular {
+                background-color: #f5bf62;
+                border-radius: 50%;
+                padding: 2%;
+                margin-right: 1%;
+            }
+        </style>
     </head>
     <body>
         <div class=\"container\">
             <div class=\"d-flex justify-content-center h-100\">
+                <div class=\"text-white text-center card mr-5\">
+                    <div class=\"card-header\">
+                        <h1>ComunityCar</h1>
+                    </div>
+                    <div class=\"card-body\">
+                        <p>Bienvenidos a la aplicación web orientada a venta de vehiculos mediante anuncios.</p>
+
+                        <p>¡¡¡No puerdas el tiempo pon un anuncio, busca, contacta y llega a un acuerdo!!!</p>
+                    </div>
+                    <div class=\"card-footer d-flex justify-content-center align-items-center\">
+                        <div class=\"promotion-promo hidden circular\" id=\"vender\">Sold!!</div>
+\t\t\t\t\t\t<img id=\"car\" src=\"/comunes/anime/img/coche.png\" width=\"30%\" height=\"85%\" data-toggle=\"tooltip\" title=\"Clik aquí!!!\" />
+                    </div>
+                </div>
                 <div class=\"card\">
                     <div class=\"card-header\">
                         <h3>Login</h3>
                         ";
-        // line 30
+        // line 61
         echo "                    </div>
                     <div class=\"card-body\">
                         <form method=\"post\" onsubmit=\"return validar(this);\">
                             ";
-        // line 33
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 33, $this->source); })())) {
-            // line 34
+        // line 64
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 64, $this->source); })())) {
+            // line 65
             echo "                                <div class=\"alert alert-danger\">";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 34, $this->source); })()), "messageKey", [], "any", false, false, false, 34), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 34, $this->source); })()), "messageData", [], "any", false, false, false, 34), "security"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 65, $this->source); })()), "messageKey", [], "any", false, false, false, 65), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 65, $this->source); })()), "messageData", [], "any", false, false, false, 65), "security"), "html", null, true);
             echo "</div>
                             ";
         }
-        // line 36
+        // line 67
         echo "                            <div class=\"input-group form-group\">
                                 <div class=\"input-group-prepend\">
                                     <span class=\"input-group-text\"><i class=\"fas fa-user\"></i></span>
                                 </div>
                                 <input type=\"email\" name=\"email\" value=\"";
-        // line 40
-        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 40, $this->source); })()), "html", null, true);
+        // line 71
+        echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 71, $this->source); })()), "html", null, true);
         echo "\" class=\"form-control\" placeholder=\"email\" id=\"email\">
                             </div>
                             <div class=\"input-group form-group\">
@@ -95,10 +126,10 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                                 <input type=\"password\" name=\"password\" class=\"form-control\" placeholder=\"password\" id=\"password\">
                             </div>
                             ";
-        // line 51
+        // line 82
         echo "                            <input type=\"hidden\" name=\"_csrf_token\"
                                 value=\"";
-        // line 52
+        // line 83
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\"
                             >
@@ -108,14 +139,14 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                         </form>
 
                         ";
-        // line 62
+        // line 93
         echo "                    </div>
                     <div class=\"card-footer\">
                         <div class=\"d-flex justify-content-center links\">
                             ¿No tienes cuenta?<a href=\"/register\">Registro</a>
                         </div>
                         ";
-        // line 70
+        // line 101
         echo "                    </div>
                 </div>
             </div>
@@ -149,6 +180,34 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 \t\t\t\t\tcomprobar = false;
 \t\t\t\t}
             };
+
+            // Efecto ocultar Sold!!!
+            \$(\"#car\").click(function() {
+                \$(\"#vender\").removeClass(\"hidden\");
+                \$(\"#vender\").animate({
+                    visibility: 'visible',
+                    fontSize: \"18px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"15px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"18px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"15px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"18px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"15px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    visibility: 'hidden'
+                }, 10);
+            });
+
         </script>
     </body>
 </html>
@@ -174,7 +233,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 
     public function getDebugInfo()
     {
-        return array (  119 => 70,  112 => 62,  102 => 52,  99 => 51,  88 => 40,  82 => 36,  76 => 34,  74 => 33,  69 => 30,  43 => 1,);
+        return array (  150 => 101,  143 => 93,  133 => 83,  130 => 82,  119 => 71,  113 => 67,  107 => 65,  105 => 64,  100 => 61,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -196,10 +255,41 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 
         <!-- Enlace a CDN JQuery -->
         <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
+
+        <style type=\"text/css\">
+            img#car:hover {
+                transform: rotate(-10deg);
+            }
+
+            div.hidden {
+                visibility: hidden;
+            }
+
+            div.circular {
+                background-color: #f5bf62;
+                border-radius: 50%;
+                padding: 2%;
+                margin-right: 1%;
+            }
+        </style>
     </head>
     <body>
         <div class=\"container\">
             <div class=\"d-flex justify-content-center h-100\">
+                <div class=\"text-white text-center card mr-5\">
+                    <div class=\"card-header\">
+                        <h1>ComunityCar</h1>
+                    </div>
+                    <div class=\"card-body\">
+                        <p>Bienvenidos a la aplicación web orientada a venta de vehiculos mediante anuncios.</p>
+
+                        <p>¡¡¡No puerdas el tiempo pon un anuncio, busca, contacta y llega a un acuerdo!!!</p>
+                    </div>
+                    <div class=\"card-footer d-flex justify-content-center align-items-center\">
+                        <div class=\"promotion-promo hidden circular\" id=\"vender\">Sold!!</div>
+\t\t\t\t\t\t<img id=\"car\" src=\"/comunes/anime/img/coche.png\" width=\"30%\" height=\"85%\" data-toggle=\"tooltip\" title=\"Clik aquí!!!\" />
+                    </div>
+                </div>
                 <div class=\"card\">
                     <div class=\"card-header\">
                         <h3>Login</h3>
@@ -281,6 +371,34 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 \t\t\t\t\tcomprobar = false;
 \t\t\t\t}
             };
+
+            // Efecto ocultar Sold!!!
+            \$(\"#car\").click(function() {
+                \$(\"#vender\").removeClass(\"hidden\");
+                \$(\"#vender\").animate({
+                    visibility: 'visible',
+                    fontSize: \"18px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"15px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"18px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"15px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"18px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    fontSize: \"15px\"
+                }, 300);
+                \$(\"#vender\").animate({
+                    visibility: 'hidden'
+                }, 10);
+            });
+
         </script>
     </body>
 </html>

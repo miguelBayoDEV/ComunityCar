@@ -57,12 +57,12 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         ";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 22
+        // line 21
         echo "
         ";
-        // line 23
+        // line 22
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 32
+        // line 31
         echo "
         <style type=\"text/css\">
 
@@ -121,48 +121,38 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 height: 10vh;
             }
 
-            .cabecera {
-                background: linear-gradient(#161381, #130f9e);
+            div.exportar {
+                min-height: 500px;
+            }
+
+            input, textarea {
+                border-radius: 10%;
+            }
+
+            input:focus, textarea:focus {
+                border: 3px dotted #f91818;
+            }
+
+            label {
+                margin-right: 1%;
             }
         </style>
     </head>
     <body class=\"container-fluid\">
-        <div class=\"row cabecera sinpadding\" id=\"cabeceraHidden\">
-            <div class=\"col-lg-6 col-md-10 col-sm-12 col-xs-12\">
-                <header class=\"m-4 ml-5\">
-                    <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
-                        <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
-                        <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
-                    </video>
-                    <img id=\"volumen\" src=\"/comunes/header/sonido.png\" data-toggle=\"tooltip\" title=\"Estado del sonido\" />
-                    <audio loop=\"true\" autoplay=\"true\" id=\"sonido\">
-                        <source src=\"/comunes/header/carrera.mp3\"  type=\"audio/mp3\">
-                        <source src=\"/comunes/header/carrera.ogg\"  type=\"audio/ogg\">
-                        <source src=\"/comunes/header/carrera.wav\"  type=\"audio/wav\">
-                        Este es un elemento de audio no soportado por tu navegador, prueba con otro.
-                    </audio>
-                </header>
-            </div>
-            <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\" id=\"animeHidden\">
-                <aside class=\"anime\">
-                    <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
-                </aside>
-            </div>
-        </div>
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 120
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 120)->display($context);
-        // line 121
+        // line 109
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 109)->display($context);
+        // line 110
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 125
+        // line 114
         $this->displayBlock('body', $context, $blocks);
-        // line 126
+        // line 115
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -196,6 +186,8 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                     </li>
                                     <li>
                                         <a href=\"/perfil\" id=\"perfil\">Mi perfil</a>
+                                        <br/>
+                                        <a href=\"/anime\" id=\"anime\">Video y animación</a>
                                     </li>
                                 </ul>
                             </div>
@@ -241,43 +233,27 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 comprobarAncho();
             });
 
-            // Animación del coche
-            \$(\"#carAnime\").click(function() {
-                \$(this).animate({
-                    right:'1vh',
-                }, 2700);
-                
-                \$(this).animate({
-                    right:'68vh'
-                }, 1);
-            });
-
-            // Sonido
-            \$('[data-toggle=\"tooltip\"]').tooltip();
-
-            \$(\"#volumen\").click(function() {
-                var video = document.querySelector(\"#sonido\");
-
-                if(video.muted == true) {
-                    video.muted = false;
-                    \$(this).attr(\"src\", \"/comunes/header/sonido.png\");
-                    \$(this).attr(\"title\", \"Volumen\");
-                }else {
-                    video.muted = true;
-                    \$(this).attr(\"src\", \"/comunes/header/muted.png\");
-                    \$(this).attr(\"title\", \"Muted\");
-                }
-            });
-
             // Efecto x2 de enlace mi perfil
             \$(\"#perfil\").hover(function() {
                 \$(this).css({
-                    fontSize: \"2.2vw\",
+                    fontSize: \"18px\",
                     color: \"#28eec7\"
                 });
             }, function() {
                 \$(this).css({
-                    fontSize: \"0.8vw\",
+                    fontSize: \"15px\",
+                    color: \"#ffffff\"
+                });
+            });
+
+            \$(\"#anime\").hover(function() {
+                \$(this).css({
+                    fontSize: \"18px\",
+                    color: \"#f03bca\"
+                });
+            }, function() {
+                \$(this).css({
+                    fontSize: \"15px\",
                     color: \"#ffffff\"
                 });
             });
@@ -294,7 +270,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                     color: \"#cdcccc\"
                 });
             });
-
         </script>
     </body>
 </html>
@@ -352,7 +327,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         // line 15
         echo "            <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
-            <link href=\"/comunes/main.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
             <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
             <link rel=\"shortcut icon\" href=\"#\" />
@@ -365,7 +339,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 23
+    // line 22
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -375,7 +349,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 24
+        // line 23
         echo "            <!-- Enlace a CDN JQuery -->
             <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
 
@@ -392,7 +366,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 125
+    // line 114
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -422,7 +396,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  396 => 125,  379 => 24,  369 => 23,  353 => 15,  349 => 13,  345 => 11,  343 => 10,  340 => 9,  330 => 8,  311 => 6,  166 => 126,  164 => 125,  158 => 121,  156 => 120,  66 => 32,  64 => 23,  61 => 22,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  370 => 114,  353 => 23,  343 => 22,  328 => 15,  324 => 13,  320 => 11,  318 => 10,  315 => 9,  305 => 8,  286 => 6,  156 => 115,  154 => 114,  148 => 110,  146 => 109,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -443,7 +417,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             {% endif %}
             <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
-            <link href=\"/comunes/main.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
             <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
             <link rel=\"shortcut icon\" href=\"#\" />
@@ -516,34 +489,24 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 height: 10vh;
             }
 
-            .cabecera {
-                background: linear-gradient(#161381, #130f9e);
+            div.exportar {
+                min-height: 500px;
+            }
+
+            input, textarea {
+                border-radius: 10%;
+            }
+
+            input:focus, textarea:focus {
+                border: 3px dotted #f91818;
+            }
+
+            label {
+                margin-right: 1%;
             }
         </style>
     </head>
     <body class=\"container-fluid\">
-        <div class=\"row cabecera sinpadding\" id=\"cabeceraHidden\">
-            <div class=\"col-lg-6 col-md-10 col-sm-12 col-xs-12\">
-                <header class=\"m-4 ml-5\">
-                    <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
-                        <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
-                        <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
-                    </video>
-                    <img id=\"volumen\" src=\"/comunes/header/sonido.png\" data-toggle=\"tooltip\" title=\"Estado del sonido\" />
-                    <audio loop=\"true\" autoplay=\"true\" id=\"sonido\">
-                        <source src=\"/comunes/header/carrera.mp3\"  type=\"audio/mp3\">
-                        <source src=\"/comunes/header/carrera.ogg\"  type=\"audio/ogg\">
-                        <source src=\"/comunes/header/carrera.wav\"  type=\"audio/wav\">
-                        Este es un elemento de audio no soportado por tu navegador, prueba con otro.
-                    </audio>
-                </header>
-            </div>
-            <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\" id=\"animeHidden\">
-                <aside class=\"anime\">
-                    <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
-                </aside>
-            </div>
-        </div>
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 {% include 'navbar/navbar.html.twig' %}
@@ -585,6 +548,8 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                     </li>
                                     <li>
                                         <a href=\"/perfil\" id=\"perfil\">Mi perfil</a>
+                                        <br/>
+                                        <a href=\"/anime\" id=\"anime\">Video y animación</a>
                                     </li>
                                 </ul>
                             </div>
@@ -630,43 +595,27 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 comprobarAncho();
             });
 
-            // Animación del coche
-            \$(\"#carAnime\").click(function() {
-                \$(this).animate({
-                    right:'1vh',
-                }, 2700);
-                
-                \$(this).animate({
-                    right:'68vh'
-                }, 1);
-            });
-
-            // Sonido
-            \$('[data-toggle=\"tooltip\"]').tooltip();
-
-            \$(\"#volumen\").click(function() {
-                var video = document.querySelector(\"#sonido\");
-
-                if(video.muted == true) {
-                    video.muted = false;
-                    \$(this).attr(\"src\", \"/comunes/header/sonido.png\");
-                    \$(this).attr(\"title\", \"Volumen\");
-                }else {
-                    video.muted = true;
-                    \$(this).attr(\"src\", \"/comunes/header/muted.png\");
-                    \$(this).attr(\"title\", \"Muted\");
-                }
-            });
-
             // Efecto x2 de enlace mi perfil
             \$(\"#perfil\").hover(function() {
                 \$(this).css({
-                    fontSize: \"2.2vw\",
+                    fontSize: \"18px\",
                     color: \"#28eec7\"
                 });
             }, function() {
                 \$(this).css({
-                    fontSize: \"0.8vw\",
+                    fontSize: \"15px\",
+                    color: \"#ffffff\"
+                });
+            });
+
+            \$(\"#anime\").hover(function() {
+                \$(this).css({
+                    fontSize: \"18px\",
+                    color: \"#f03bca\"
+                });
+            }, function() {
+                \$(this).css({
+                    fontSize: \"15px\",
                     color: \"#ffffff\"
                 });
             });
@@ -683,7 +632,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                     color: \"#cdcccc\"
                 });
             });
-
         </script>
     </body>
 </html>

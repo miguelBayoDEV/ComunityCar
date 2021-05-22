@@ -3,47 +3,52 @@
 {% block title %}Exportar usuarios{% endblock %}
 
 {% block body %}
-
-<div class="d-flex align-items-start">
-  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>
-    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
-  </div>
-  <div class="tab-content" id="v-pills-tabContent">
-    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-  </div>
-</div>
-
-
-    <h1>Usuarios:</h1>
-    <ol>
-        {% for user in users %}
-            {% if user.email != "root@gmail.com" %}
-                <li>{{ user.email }}</li>
-            {% endif %}
-        {% endfor %}
-    </ol>
-    <button class="btn btn-primary" onClick="exportarCorreos();">Exportar correos</button>
-    <h1>Mensajes reportados:</h1>
-    <ol>
-        {% for mensajeReportado in mensajesReportados %}
-            <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date("Y-m-d") }}</li>
-        {% endfor %}
-    </ol>
-    <button class="btn btn-primary" onClick="exportarMensajesReportados();">Exportar mensajes reportados</button>
-
-    <h1>Vehículos reportados:</h1>
-    <ol>
-        {% for vehiculoReportado in vehiculosReportados %}
-            <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>
-        {% endfor %}
-    </ol>
-    <button class="btn btn-primary" onClick="exportarVehiculosReportados();">Exportar vehiculos reportados</button>
+    <div class="row d-flex justify-content-center mt-5 mb-5 exportar">
+        <div class="col-lg-6 col-md-2 col-sm-0 col-xs-0">
+            <h3 class="pb-5 text-center">Exportación de datos:</h3>
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-usuarios-tab" data-toggle="pill" href="#v-pills-usuarios" role="tab" aria-controls="v-pills-usuarios" aria-selected="true">Usuarios</a>
+                    <a class="nav-link" id="v-pills-mensajesReportados-tab" data-toggle="pill" href="#v-pills-mensajesReportados" role="tab" aria-controls="v-pills-mensajesReportados" aria-selected="false">Mensajes reportados</a>
+                    <a class="nav-link" id="v-pills-vehiculosReportados-tab" data-toggle="pill" href="#v-pills-vehiculosReportados" role="tab" aria-controls="v-pills-vehiculosReportados" aria-selected="true">Vehiculos reportados</a>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-usuarios" role="tabpanel" aria-labelledby="v-pills-usuarios-tab">
+                        <div class="usuarios">
+                            <ol>
+                                {% for user in users %}
+                                    {% if user.email != "root@gmail.com" %}
+                                        <li>{{ user.email }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ol>
+                            <button class="btn btn-primary" onClick="exportarCorreos();">Exportar correos</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-mensajesReportados" role="tabpanel" aria-labelledby="v-pills-mensajesReportados-tab">
+                        <div class="mensajesReportados">
+                            <ol>
+                                {% for mensajeReportado in mensajesReportados %}
+                                    <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date("Y-m-d") }}</li>
+                                {% endfor %}
+                            </ol>
+                            <button class="btn btn-primary" onClick="exportarMensajesReportados();">Exportar mensajes reportados</button>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-vehiculosReportados" role="tabpanel" aria-labelledby="v-pills-vehiculosReportados-tab">
+                        <div class="vehiculosReportados">
+                            <ol>
+                                {% for vehiculoReportado in vehiculosReportados %}
+                                    <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>
+                                {% endfor %}
+                            </ol>
+                            <button class="btn btn-primary" onClick="exportarVehiculosReportados();">Exportar vehiculos reportados</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
         function exportarCorreos() {

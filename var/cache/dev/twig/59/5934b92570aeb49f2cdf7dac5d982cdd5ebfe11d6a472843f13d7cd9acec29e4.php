@@ -65,7 +65,7 @@ class __TwigTemplate_7f8635ff5e87fd9ca1456d5a349b75779cdc22a9649d782c6255cdbd02f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "New Vehiculo";
+        echo "Crear vehículo";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -85,17 +85,18 @@ class __TwigTemplate_7f8635ff5e87fd9ca1456d5a349b75779cdc22a9649d782c6255cdbd02f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Create new Vehiculo</h1>
-
-    ";
-        // line 8
+        echo "    <div class=\"row d-flex align-items-center mt-5 mb-5 exportar\">
+        <div class=\"col-lg-4 col-md-3 col-sm-2 col-xs-0\"></div>
+        <div class=\"col-lg-4 col-md-6 col-sm-8 col-xs-12 border border-success rounded\">
+            <h1 class=\"text-center\">Crear vehículo:</h1>
+            
+            ";
+        // line 11
         echo twig_include($this->env, $context, "vehiculo/_form.html.twig");
         echo "
-
-    <a href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("vehiculo_index");
-        echo "\">back to list</a>
+        </div>
+        <div class=\"col-lg-4 col-md-3 col-sm-2 col-xs-0\"></div>
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,21 +118,25 @@ class __TwigTemplate_7f8635ff5e87fd9ca1456d5a349b75779cdc22a9649d782c6255cdbd02f
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  95 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}New Vehiculo{% endblock %}
+{% block title %}Crear vehículo{% endblock %}
 
 {% block body %}
-    <h1>Create new Vehiculo</h1>
-
-    {{ include('vehiculo/_form.html.twig') }}
-
-    <a href=\"{{ path('vehiculo_index') }}\">back to list</a>
+    <div class=\"row d-flex align-items-center mt-5 mb-5 exportar\">
+        <div class=\"col-lg-4 col-md-3 col-sm-2 col-xs-0\"></div>
+        <div class=\"col-lg-4 col-md-6 col-sm-8 col-xs-12 border border-success rounded\">
+            <h1 class=\"text-center\">Crear vehículo:</h1>
+            
+            {{ include('vehiculo/_form.html.twig') }}
+        </div>
+        <div class=\"col-lg-4 col-md-3 col-sm-2 col-xs-0\"></div>
+    </div>
 {% endblock %}
 ", "vehiculo/new.html.twig", "/home/bayo/proyectos/ComunityCar/templates/vehiculo/new.html.twig");
     }

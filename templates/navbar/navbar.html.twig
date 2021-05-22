@@ -8,16 +8,16 @@
     <ul class="navbar-nav mr-auto">
       {% if is_granted("ROLE_ADMIN") %}
 			<li class="navbar-item">
-				<a class="nav-link active barra" aria-current="page" href="/">Buscador</a>
+				<a class="nav-link barra" aria-current="page" href="/">Buscador</a>
 			</li>
 			<li class="navbar-item">
-				<a class="nav-link barra" href="/messagesReportados">Mensajes reportados</a>
+				<a class="nav-link barra" href="/messagesReportados">Mensajes</a>
 			</li>
 			<li class="navbar-item">
 				<a class="nav-link barra" href="/usuarios">Exportar usuarios</a>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle barra" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="nav-link active dropdown-toggle barra" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					Admin - {{ app.user.email }}
 				</a>
 				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -30,13 +30,13 @@
 			</li>
 		{% elseif is_granted("ROLE_USER") %}
 			<li class="navbar-item">
-				<a class="nav-link active barra" aria-current="page" href="/">Buscador</a>
+				<a class="nav-link barra" aria-current="page" href="/">Buscador</a>
 			</li>	
 			<li class="navbar-item">
 				<a class="nav-link barra" href="/message">Mensajes</a>
 			</li>
 			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle barra" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<a class="nav-link dropdown-toggle active barra" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					{{ app.user.email }}
 				</a>
 				<div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
