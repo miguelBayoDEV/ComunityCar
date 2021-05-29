@@ -86,7 +86,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
 
         // line 6
         echo "    <div class=\"row d-flex justify-content-center mt-5\">
-        <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\">
+        <div class=\"col-lg-6 col-md-0 col-sm-0 col-xs-0\">
             <h3 class=\"pb-4 text-center\">Vídeo con audio y animación:</h3>
             <div class=\"d-flex align-items-start\">
                 <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
@@ -95,12 +95,11 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                 </div>
                 <div class=\"tab-content\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-video\" role=\"tabpanel\" aria-labelledby=\"v-pills-video-tab\">
-                        <div class=\"m-4 ml-5\">
+                        <div class=\"m-4 ml-5 w-100 h-100\">
                             <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
                                 <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
-                                ";
-        // line 20
-        echo "                            </video>
+                                <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
+                            </video>
                             <img id=\"volumen\" src=\"/comunes/header/sonido.png\" data-toggle=\"tooltip\" title=\"Estado del sonido\" />
                             <audio loop=\"true\" autoplay=\"true\" id=\"sonido\">
                                 <source src=\"/comunes/header/carrera.mp3\"  type=\"audio/mp3\">
@@ -110,10 +109,10 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                             </audio>
                         </div>
                     </div>
-                    <div class=\"tab-pane fade\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
-                        <aside class=\"anime\">
+                    <div class=\"tab-pane fade p-2 h-100 w-100\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
+                        <div class=\"anime\">
                             <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
-                        </aside>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -121,14 +120,15 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
     </div>
 
     <script type=\"text/javascript\">
+
         // Animación del coche
-        \$(\"#carAnime\").click(function() {
+        \$(\"img#carAnime\").click(function() {
             \$(this).animate({
-                right:'1vh',
+                right:'1%',
             }, 2700);
 
             \$(this).animate({
-                right:'68vh'
+                right:'68%'
             }, 1);
         });
 
@@ -170,7 +170,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
 
     public function getDebugInfo()
     {
-        return array (  103 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -181,7 +181,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
 
 {% block body %}
     <div class=\"row d-flex justify-content-center mt-5\">
-        <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\">
+        <div class=\"col-lg-6 col-md-0 col-sm-0 col-xs-0\">
             <h3 class=\"pb-4 text-center\">Vídeo con audio y animación:</h3>
             <div class=\"d-flex align-items-start\">
                 <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
@@ -190,10 +190,10 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                 </div>
                 <div class=\"tab-content\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-video\" role=\"tabpanel\" aria-labelledby=\"v-pills-video-tab\">
-                        <div class=\"m-4 ml-5\">
+                        <div class=\"m-4 ml-5 w-100 h-100\">
                             <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
                                 <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
-                                {# <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" /> #}
+                                <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
                             </video>
                             <img id=\"volumen\" src=\"/comunes/header/sonido.png\" data-toggle=\"tooltip\" title=\"Estado del sonido\" />
                             <audio loop=\"true\" autoplay=\"true\" id=\"sonido\">
@@ -204,10 +204,10 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                             </audio>
                         </div>
                     </div>
-                    <div class=\"tab-pane fade\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
-                        <aside class=\"anime\">
+                    <div class=\"tab-pane fade p-2 h-100 w-100\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
+                        <div class=\"anime\">
                             <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
-                        </aside>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -215,14 +215,15 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
     </div>
 
     <script type=\"text/javascript\">
+
         // Animación del coche
-        \$(\"#carAnime\").click(function() {
+        \$(\"img#carAnime\").click(function() {
             \$(this).animate({
-                right:'1vh',
+                right:'1%',
             }, 2700);
 
             \$(this).animate({
-                right:'68vh'
+                right:'68%'
             }, 1);
         });
 

@@ -98,27 +98,20 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             }
 
             div.anime {
-                height: 100vh;
-                width: 100%;
-            }
-
-            aside.anime {
                 position: relative;
-                border: 2px solid black;
-                width: 45vw;
-                height: 50vh;
-                margin-top: 2%;
+                height: 300px;
+                width: 700px;
                 background-image: url(\"/comunes/anime/img/carretera.png\");
                 background-repeat: no-repeat;
                 background-size: cover;
             }
 
-            aside.anime > img {
+            div.anime > img {
                 position: absolute;
-                top: 30vh;
-                right: 68vh;
-                width: 10vw;
-                height: 10vh;
+                top: 60%;
+                right: 68%;
+                width: 30%;
+                height: 20%;
             }
 
             div.exportar {
@@ -140,23 +133,38 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             label {
                 margin-right: 1%;
             }
+
+            div.pildora-content {
+                min-width: 600px;
+                min-height: 600px;
+            }
+
+            div.border-message {
+                border: 2px dashed black;
+                box-shadow: 2px 2px 5px 20px #888888;
+            }
+
+            .round {
+                border-radius:50%;
+                border: 3px solid #666;
+            }
         </style>
     </head>
     <body class=\"container-fluid\">
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 113
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 113)->display($context);
-        // line 114
+        // line 121
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 121)->display($context);
+        // line 122
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 118
+        // line 126
         $this->displayBlock('body', $context, $blocks);
-        // line 119
+        // line 127
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -184,6 +192,9 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                     <span>Contacto:</span>
                                     <li>
                                         <p>miguelpuerta@gmail.com</p>
+                                    </li>
+                                    <li>
+                                        <p><div>Iconos diseñados por <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">www.flaticon.es</a></div></p>
                                     </li>
                                     <li>
                                         <hr />
@@ -214,7 +225,17 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                             <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x hover\"></i></a>
                                     </li>
                                 </ul>
-                            </div>
+                                <div>
+                                    Iconos diseñados por 
+                                        <a href=\"https://www.freepik.com\" title=\"Freepik\">
+                                            Freepik
+                                        </a> 
+                                    from 
+                                    <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">
+                                        www.flaticon.es
+                                    </a>
+                                </div>
+                            </div>   
                         </div>
                     </div>
                 </footer>
@@ -355,7 +376,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 118
+    // line 126
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -385,7 +406,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  359 => 118,  342 => 23,  332 => 22,  317 => 15,  313 => 13,  309 => 11,  307 => 10,  304 => 9,  294 => 8,  275 => 6,  160 => 119,  158 => 118,  152 => 114,  150 => 113,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  380 => 126,  363 => 23,  353 => 22,  338 => 15,  334 => 13,  330 => 11,  328 => 10,  325 => 9,  315 => 8,  296 => 6,  168 => 127,  166 => 126,  160 => 122,  158 => 121,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -455,27 +476,20 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             }
 
             div.anime {
-                height: 100vh;
-                width: 100%;
-            }
-
-            aside.anime {
                 position: relative;
-                border: 2px solid black;
-                width: 45vw;
-                height: 50vh;
-                margin-top: 2%;
+                height: 300px;
+                width: 700px;
                 background-image: url(\"/comunes/anime/img/carretera.png\");
                 background-repeat: no-repeat;
                 background-size: cover;
             }
 
-            aside.anime > img {
+            div.anime > img {
                 position: absolute;
-                top: 30vh;
-                right: 68vh;
-                width: 10vw;
-                height: 10vh;
+                top: 60%;
+                right: 68%;
+                width: 30%;
+                height: 20%;
             }
 
             div.exportar {
@@ -496,6 +510,21 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
             label {
                 margin-right: 1%;
+            }
+
+            div.pildora-content {
+                min-width: 600px;
+                min-height: 600px;
+            }
+
+            div.border-message {
+                border: 2px dashed black;
+                box-shadow: 2px 2px 5px 20px #888888;
+            }
+
+            .round {
+                border-radius:50%;
+                border: 3px solid #666;
             }
         </style>
     </head>
@@ -537,6 +566,9 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                         <p>miguelpuerta@gmail.com</p>
                                     </li>
                                     <li>
+                                        <p><div>Iconos diseñados por <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">www.flaticon.es</a></div></p>
+                                    </li>
+                                    <li>
                                         <hr />
                                     </li>
                                     <li>
@@ -565,7 +597,17 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                             <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x hover\"></i></a>
                                     </li>
                                 </ul>
-                            </div>
+                                <div>
+                                    Iconos diseñados por 
+                                        <a href=\"https://www.freepik.com\" title=\"Freepik\">
+                                            Freepik
+                                        </a> 
+                                    from 
+                                    <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">
+                                        www.flaticon.es
+                                    </a>
+                                </div>
+                            </div>   
                         </div>
                     </div>
                 </footer>

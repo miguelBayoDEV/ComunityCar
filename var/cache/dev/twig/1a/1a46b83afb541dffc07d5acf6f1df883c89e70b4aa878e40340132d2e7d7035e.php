@@ -175,30 +175,42 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['foto'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
                 // line 36
-                echo "                <button><a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 36, $this->source); })()), "id", [], "any", false, false, false, 36), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 36), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 36)]), "html", null, true);
-                echo "\">Enviar mensaje</a></button>
-            </div>
+                echo "                ";
+                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36)))) {
+                    // line 37
+                    echo "                    <button><a href=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 37), "id", [], "any", false, false, false, 37), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "id", [], "any", false, false, false, 37), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 37), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 37)]), "html", null, true);
+                    echo "\">Enviar mensaje</a></button>
+                ";
+                } else {
+                    // line 39
+                    echo "                    <button><a href=\"/vehiculo/";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 39), "html", null, true);
+                    echo "/edit\">Editar anuncio vehículo</a></button>
+                ";
+                }
+                // line 41
+                echo "            </div>
         ";
             }
-            // line 39
+            // line 43
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehicle'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 44
         echo "
     ";
-        // line 42
+        // line 46
         echo "    <div class=\"page\">
         <button><a href=\"/page/first\"><<</a></button>
         ";
-        // line 44
+        // line 48
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 44, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 48, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
-            // line 45
+            // line 49
             echo "            <button><a href=\"/page/";
             echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
             echo "\">";
@@ -209,7 +221,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 51
         echo "        <button><a href=\"/page/last\">>></a></button>
     </div>
 ";
@@ -233,7 +245,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     public function getDebugInfo()
     {
-        return array (  213 => 47,  202 => 45,  198 => 44,  194 => 42,  191 => 40,  185 => 39,  178 => 36,  169 => 34,  165 => 33,  159 => 30,  155 => 29,  151 => 28,  147 => 27,  144 => 26,  141 => 25,  136 => 24,  130 => 19,  119 => 17,  115 => 16,  110 => 13,  99 => 11,  95 => 10,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  225 => 51,  214 => 49,  210 => 48,  206 => 46,  203 => 44,  197 => 43,  193 => 41,  187 => 39,  181 => 37,  178 => 36,  169 => 34,  165 => 33,  159 => 30,  155 => 29,  151 => 28,  147 => 27,  144 => 26,  141 => 25,  136 => 24,  130 => 19,  119 => 17,  115 => 16,  110 => 13,  99 => 11,  95 => 10,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -273,7 +285,11 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                 {% for foto in vehicle.images %}
                     <img src=\"/img/{{ foto }}\" />
                 {% endfor %}
-                <button><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}\">Enviar mensaje</a></button>
+                {% if vehicle.propietario.id != app.user.id %}
+                    <button><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}\">Enviar mensaje</a></button>
+                {% else %}
+                    <button><a href=\"/vehiculo/{{ vehicle.id }}/edit\">Editar anuncio vehículo</a></button>
+                {% endif %}
             </div>
         {% endif %}
     {% endfor %}
@@ -287,6 +303,6 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         <button><a href=\"/page/last\">>></a></button>
     </div>
 {% endblock %}
-", "main/buscador.html.twig", "/home/bayo/proyectos/ComunityCar/templates/main/buscador.html.twig");
+", "main/buscador.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/main/buscador.html.twig");
     }
 }

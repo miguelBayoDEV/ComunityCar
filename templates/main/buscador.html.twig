@@ -33,7 +33,11 @@
                 {% for foto in vehicle.images %}
                     <img src="/img/{{ foto }}" />
                 {% endfor %}
-                <button><a href="{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}">Enviar mensaje</a></button>
+                {% if vehicle.propietario.id != app.user.id %}
+                    <button><a href="{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}">Enviar mensaje</a></button>
+                {% else %}
+                    <button><a href="/vehiculo/{{ vehicle.id }}/edit">Editar anuncio vehículo</a></button>
+                {% endif %}
             </div>
         {% endif %}
     {% endfor %}

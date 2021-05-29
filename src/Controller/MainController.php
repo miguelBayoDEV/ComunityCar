@@ -417,9 +417,7 @@ class MainController extends AbstractController
         $resultado = "1";
 
         $em = $this->getDoctrine()->getManager();
-        foreach($mensajes as $mensaje) {
-            $mensaje->setOculto(true);
-        }
+        
         $vehiculo->setVenta(false);
         $vehiculo->setPropietario($propietario);
         $em->flush();
@@ -460,9 +458,7 @@ class MainController extends AbstractController
         $resultado = "1";
 
         $em = $this->getDoctrine()->getManager();
-        foreach($mensajes as $mensaje) {
-            $mensaje->setOculto(false);
-        }
+        
         $vehiculo->setVenta(true);
         $em->flush();
               

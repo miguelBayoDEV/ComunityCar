@@ -3,11 +3,13 @@
 {% block title %}Edit Vehiculo{% endblock %}
 
 {% block body %}
-    <h1>Edit Vehiculo</h1>
-
-    {{ include('vehiculo/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('vehiculo_index') }}">back to list</a>
-
-    {{ include('vehiculo/_delete_form.html.twig') }}
+    <div class="row d-flex align-items-center mt-5 mb-5 exportar">
+        <div class="col-lg-4 col-md-3 col-sm-2 col-xs-0"></div>
+        <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 border border-success rounded">
+            <h1 class="text-center">Editar anuncio vehículo:</h1>
+            
+            {{ include('vehiculo/_form.html.twig', {'button_label': 'Editar'}) }}
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-2 col-xs-0"></div>
+    </div>
 {% endblock %}

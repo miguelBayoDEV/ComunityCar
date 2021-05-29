@@ -120,7 +120,7 @@ class VehiculoController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('vehiculo_index');
+            return $this->redirectToRoute('main');
         }
 
         return $this->render('vehiculo/edit.html.twig', [
