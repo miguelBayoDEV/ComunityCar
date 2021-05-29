@@ -94,9 +94,9 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                     <a class=\"nav-link\" id=\"v-pills-mensajesReportados-tab\" data-toggle=\"pill\" href=\"#v-pills-mensajesReportados\" role=\"tab\" aria-controls=\"v-pills-mensajesReportados\" aria-selected=\"false\">Mensajes reportados</a>
                     <a class=\"nav-link\" id=\"v-pills-vehiculosReportados-tab\" data-toggle=\"pill\" href=\"#v-pills-vehiculosReportados\" role=\"tab\" aria-controls=\"v-pills-vehiculosReportados\" aria-selected=\"true\">Vehiculos reportados</a>
                 </div>
-                <div class=\"tab-content\" id=\"v-pills-tabContent\">
+                <div class=\"tab-content pildora-content pl-4\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-usuarios\" role=\"tabpanel\" aria-labelledby=\"v-pills-usuarios-tab\">
-                        <div class=\"usuarios\">
+                        <div class=\"usuarios border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
                             <ol>
                                 ";
         // line 19
@@ -124,7 +124,7 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                         </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"v-pills-mensajesReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesReportados-tab\">
-                        <div class=\"mensajesReportados\">
+                        <div class=\"mensajesReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
                             <ol>
                                 ";
         // line 31
@@ -148,7 +148,7 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                         </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"v-pills-vehiculosReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-vehiculosReportados-tab\">
-                        <div class=\"vehiculosReportados\">
+                        <div class=\"vehiculosReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
                             <ol>
                                 ";
         // line 41
@@ -279,9 +279,9 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                     <a class=\"nav-link\" id=\"v-pills-mensajesReportados-tab\" data-toggle=\"pill\" href=\"#v-pills-mensajesReportados\" role=\"tab\" aria-controls=\"v-pills-mensajesReportados\" aria-selected=\"false\">Mensajes reportados</a>
                     <a class=\"nav-link\" id=\"v-pills-vehiculosReportados-tab\" data-toggle=\"pill\" href=\"#v-pills-vehiculosReportados\" role=\"tab\" aria-controls=\"v-pills-vehiculosReportados\" aria-selected=\"true\">Vehiculos reportados</a>
                 </div>
-                <div class=\"tab-content\" id=\"v-pills-tabContent\">
+                <div class=\"tab-content pildora-content pl-4\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-usuarios\" role=\"tabpanel\" aria-labelledby=\"v-pills-usuarios-tab\">
-                        <div class=\"usuarios\">
+                        <div class=\"usuarios border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
                             <ol>
                                 {% for user in users %}
                                     {% if user.email != \"root@gmail.com\" %}
@@ -293,7 +293,7 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                         </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"v-pills-mensajesReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesReportados-tab\">
-                        <div class=\"mensajesReportados\">
+                        <div class=\"mensajesReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
                             <ol>
                                 {% for mensajeReportado in mensajesReportados %}
                                     <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date(\"Y-m-d\") }}</li>
@@ -303,7 +303,7 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                         </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"v-pills-vehiculosReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-vehiculosReportados-tab\">
-                        <div class=\"vehiculosReportados\">
+                        <div class=\"vehiculosReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
                             <ol>
                                 {% for vehiculoReportado in vehiculosReportados %}
                                     <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>
@@ -378,6 +378,6 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
             });
         }
     </script>
-{% endblock %}", "main/mostrarUsuarios.html.twig", "/home/bayo/proyectos/ComunityCar/templates/main/mostrarUsuarios.html.twig");
+{% endblock %}", "main/mostrarUsuarios.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/main/mostrarUsuarios.html.twig");
     }
 }

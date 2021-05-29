@@ -104,19 +104,19 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             <div class=\"row mt-5\">
                 <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>
                 <div class=\"col-lg-10 col-md-8 col-sm-0 col-xs-0 d-flex justify-content-center\">
-                    <button class=\"btn btn-info mr-3\"><a href=\"/respuesta/new/";
+                    <a class=\"mr-3\" href=\"/respuesta/new/";
         // line 22
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 22, $this->source); })()), "id", [], "any", false, false, false, 22), "html", null, true);
-        echo "\"><img src=\"\" /></a></button>
+        echo "\"><img src=\"/comunes/icon/mensaje-de-respuesta.png\" width=\"50px\" height=\"50px\" /></a>
                     ";
         // line 23
-        if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 23, $this->source); })()), "reportado", [], "any", false, false, false, 23), true)) && $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
+        if ((((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 23, $this->source); })()), "reportado", [], "any", false, false, false, 23), true)) && $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) && (0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 23, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 23), "eliminado", [], "any", false, false, false, 23), true)))) {
             // line 24
-            echo "                        <button class=\"btn btn-info mr-3\" onClick=\"eliminar(";
+            echo "                        <img src=\"/comunes/icon/basura.png\" class=\"mr-3\" onClick=\"eliminar(";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 24, $this->source); })()), "id", [], "any", false, false, false, 24), "html", null, true);
             echo ", ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 24, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 24), "id", [], "any", false, false, false, 24), "html", null, true);
-            echo ");\">Eliminar</button>
+            echo ");\" width=\"50px\" height=\"50px\" />
                     ";
         }
         // line 26
@@ -126,11 +126,11 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             echo "                        ";
             if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 27, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 27), "propietario", [], "any", false, false, false, 27), "email", [], "any", false, false, false, 27), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "user", [], "any", false, false, false, 27), "email", [], "any", false, false, false, 27)))) {
                 // line 28
-                echo "                            <button class=\"btn btn-info mr-3\" onClick=\"comprar(";
+                echo "                            <img src=\"/comunes/icon/metodo-de-pago.png\" class=\"mr-3\" onClick=\"comprar(";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 28, $this->source); })()), "id", [], "any", false, false, false, 28), "html", null, true);
                 echo ", ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 28, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 28), "id", [], "any", false, false, false, 28), "html", null, true);
-                echo ");\">Comprar</button>
+                echo ");\" width=\"50px\" height=\"50px\" />
                         ";
             }
             // line 30
@@ -142,9 +142,9 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
         // line 32
         if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 32, $this->source); })()), "reportado", [], "any", false, false, false, 32), false))) {
             // line 33
-            echo "                        <button class=\"btn btn-info mr-3\" onClick=\"reportar(";
+            echo "                        <img src=\"/comunes/icon/notificacion.png\" class=\"mr-3\" onClick=\"reportar(";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 33, $this->source); })()), "id", [], "any", false, false, false, 33), "html", null, true);
-            echo ");\">Reportar</button>
+            echo ");\" width=\"50px\" height=\"50px\" />
                     ";
         }
         // line 35
@@ -153,7 +153,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             </div>
 
             <div class=\"row mt-5\">
-                <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\">
+                <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0\">
                     ";
         // line 41
         $context['_parent'] = $context;
@@ -163,7 +163,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             echo "                        ";
             if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 42, $this->source); })()), "user", [], "any", false, false, false, 42), "email", [], "any", false, false, false, 42), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 42)))) {
                 // line 43
-                echo "                            <div class=\"text-left d-flex mb-3\">
+                echo "                            <div class=\"d-flex justify-content-start mb-3\">
                                 ";
                 // line 44
                 if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 44, $this->source); })()), "email", [], "any", false, false, false, 44), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 44)))) {
@@ -175,103 +175,119 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 46, $this->source); })()), "avatar", [], "any", false, false, false, 46), "html", null, true);
                         echo "\" width=\"70px\" height=\"70px\" class=\"round\" />
                                     ";
-                    }
-                    // line 48
-                    echo "                                ";
-                } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 48, $this->source); })()), "email", [], "any", false, false, false, 48), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 48)))) {
-                    // line 49
-                    echo "                                    ";
-                    if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 49, $this->source); })()), "avatar", [], "any", false, false, false, 49), null))) {
-                        // line 50
-                        echo "                                        <img src=\"/avatar/";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 50, $this->source); })()), "avatar", [], "any", false, false, false, 50), "html", null, true);
-                        echo "\" width=\"70px\" height=\"70px\" class=\"round\" />
+                    } else {
+                        // line 48
+                        echo "                                        <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
                                     ";
                     }
-                    // line 52
+                    // line 50
+                    echo "                                ";
+                } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 50, $this->source); })()), "email", [], "any", false, false, false, 50), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 50)))) {
+                    // line 51
+                    echo "                                    ";
+                    if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 51, $this->source); })()), "avatar", [], "any", false, false, false, 51), null))) {
+                        // line 52
+                        echo "                                        <img src=\"/avatar/";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 52, $this->source); })()), "avatar", [], "any", false, false, false, 52), "html", null, true);
+                        echo "\" width=\"70px\" height=\"70px\" class=\"round\" />
+                                    ";
+                    } else {
+                        // line 54
+                        echo "                                        <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
+                                    ";
+                    }
+                    // line 56
                     echo "                                ";
                 }
-                // line 53
-                echo "                                <div class=\"d-flex flex-column border border-dark bg-white ml-2 p-2\">
-                                    <div>
-                                        ";
-                // line 55
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "texto", [], "any", false, false, false, 55), "html", null, true);
-                echo "
-                                    </div>
-                                    <div>
-                                        ";
-                // line 58
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "fecha", [], "any", false, false, false, 58), "Y-m-d"), "html", null, true);
-                echo "
-                                        ";
+                // line 57
+                echo "                                <div class=\"d-flex flex-column border border-dark bg-white ml-2 p-2 border-message1\">
+                                    <div class=\"d-flex justify-content-start\">
+                                        <p>";
                 // line 59
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 59), "html", null, true);
-                echo "
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "texto", [], "any", false, false, false, 59), "html", null, true);
+                echo "</p>
+                                    </div>
+                                    <div class=\"d-flex justify-content-around\">
+                                        <p>";
+                // line 62
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "fecha", [], "any", false, false, false, 62), "Y-m-d"), "html", null, true);
+                echo "</p>
+                                        <p>";
+                // line 63
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 63), "html", null, true);
+                echo "</p>
                                     </div>
                                 </div>
                             </div>
                         ";
-            } elseif ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source,             // line 63
-(isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "user", [], "any", false, false, false, 63), "email", [], "any", false, false, false, 63), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 63)))) {
-                // line 64
-                echo "                            <div class=\"text-right d-flex\">
+            } elseif ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source,             // line 67
+(isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 67, $this->source); })()), "user", [], "any", false, false, false, 67), "email", [], "any", false, false, false, 67), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 67)))) {
+                // line 68
+                echo "                            <div class=\"d-flex justify-content-end mb-3\">
                                 ";
-                // line 65
-                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 65, $this->source); })()), "email", [], "any", false, false, false, 65), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 65)))) {
-                    // line 66
-                    echo "                                    ";
-                    if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 66, $this->source); })()), "avatar", [], "any", false, false, false, 66), null))) {
-                        // line 67
-                        echo "                                        <img src=\"/avatar/";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 67, $this->source); })()), "avatar", [], "any", false, false, false, 67), "html", null, true);
-                        echo "\" width=\"70px\" height=\"70px\" class=\"round\" />
-                                    ";
-                    }
-                    // line 69
-                    echo "                                ";
-                } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 69, $this->source); })()), "email", [], "any", false, false, false, 69), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 69)))) {
+                // line 69
+                if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 69, $this->source); })()), "email", [], "any", false, false, false, 69), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 69)))) {
                     // line 70
                     echo "                                    ";
-                    if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 70, $this->source); })()), "avatar", [], "any", false, false, false, 70), null))) {
+                    if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 70, $this->source); })()), "avatar", [], "any", false, false, false, 70), null))) {
                         // line 71
                         echo "                                        <img src=\"/avatar/";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 71, $this->source); })()), "avatar", [], "any", false, false, false, 71), "html", null, true);
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["emisor"]) || array_key_exists("emisor", $context) ? $context["emisor"] : (function () { throw new RuntimeError('Variable "emisor" does not exist.', 71, $this->source); })()), "avatar", [], "any", false, false, false, 71), "html", null, true);
                         echo "\" width=\"70px\" height=\"70px\" class=\"round\" />
                                     ";
+                    } else {
+                        // line 73
+                        echo "                                        <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
+                                    ";
                     }
-                    // line 73
+                    // line 75
+                    echo "                                ";
+                } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 75, $this->source); })()), "email", [], "any", false, false, false, 75), twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 75)))) {
+                    // line 76
+                    echo "                                    ";
+                    if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 76, $this->source); })()), "avatar", [], "any", false, false, false, 76), null))) {
+                        // line 77
+                        echo "                                        <img src=\"/avatar/";
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["receptor"]) || array_key_exists("receptor", $context) ? $context["receptor"] : (function () { throw new RuntimeError('Variable "receptor" does not exist.', 77, $this->source); })()), "avatar", [], "any", false, false, false, 77), "html", null, true);
+                        echo "\" width=\"70px\" height=\"70px\" class=\"round\" />
+                                    ";
+                    } else {
+                        // line 79
+                        echo "                                        <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
+                                    ";
+                    }
+                    // line 81
                     echo "                                ";
                 }
-                // line 74
-                echo "                                <div class=\"d-flex flex-column border border-dark bg-success ml-2 p-2\">
-                                    <div>
-                                        ";
-                // line 76
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "texto", [], "any", false, false, false, 76), "html", null, true);
-                echo "
+                // line 82
+                echo "                                <div class=\"d-flex flex-column border border-dark bg-success ml-2 p-2 border-message2\">
+                                    <div class=\"d-flex justify-content-start\">
+                                        <p>";
+                // line 84
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "texto", [], "any", false, false, false, 84), "html", null, true);
+                echo "</p>
                                     </div>
-                                    <div>
-                                        ";
-                // line 79
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "fecha", [], "any", false, false, false, 79), "Y-m-d"), "html", null, true);
-                echo "
-                                        ";
-                // line 80
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 80), "html", null, true);
-                echo "
+                                    <div class=\"d-flex justify-content-around\">
+                                        <p>";
+                // line 87
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "fecha", [], "any", false, false, false, 87), "Y-m-d"), "html", null, true);
+                echo "</p>
+                                        <p>";
+                // line 88
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["respuesta"], "autor", [], "any", false, false, false, 88), "html", null, true);
+                echo "</p>
                                     </div>
                                 </div>
                             </div>
                         ";
             }
-            // line 85
+            // line 93
             echo "                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['respuesta'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 86
+        // line 94
         echo "                </div>
             </div>
         </div>
@@ -370,7 +386,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
 
     public function getDebugInfo()
     {
-        return array (  275 => 86,  269 => 85,  261 => 80,  257 => 79,  251 => 76,  247 => 74,  244 => 73,  238 => 71,  235 => 70,  232 => 69,  226 => 67,  223 => 66,  221 => 65,  218 => 64,  216 => 63,  209 => 59,  205 => 58,  199 => 55,  195 => 53,  192 => 52,  186 => 50,  183 => 49,  180 => 48,  174 => 46,  171 => 45,  169 => 44,  166 => 43,  163 => 42,  159 => 41,  151 => 35,  145 => 33,  143 => 32,  140 => 31,  137 => 30,  129 => 28,  126 => 27,  123 => 26,  115 => 24,  113 => 23,  109 => 22,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  291 => 94,  285 => 93,  277 => 88,  273 => 87,  267 => 84,  263 => 82,  260 => 81,  256 => 79,  250 => 77,  247 => 76,  244 => 75,  240 => 73,  234 => 71,  231 => 70,  229 => 69,  226 => 68,  224 => 67,  217 => 63,  213 => 62,  207 => 59,  203 => 57,  200 => 56,  196 => 54,  190 => 52,  187 => 51,  184 => 50,  180 => 48,  174 => 46,  171 => 45,  169 => 44,  166 => 43,  163 => 42,  159 => 41,  151 => 35,  145 => 33,  143 => 32,  140 => 31,  137 => 30,  129 => 28,  126 => 27,  123 => 26,  115 => 24,  113 => 23,  109 => 22,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -396,65 +412,73 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             <div class=\"row mt-5\">
                 <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>
                 <div class=\"col-lg-10 col-md-8 col-sm-0 col-xs-0 d-flex justify-content-center\">
-                    <button class=\"btn btn-info mr-3\"><a href=\"/respuesta/new/{{ message.id }}\"><img src=\"\" /></a></button>
-                    {% if message.reportado == true and is_granted(\"ROLE_ADMIN\") %}
-                        <button class=\"btn btn-info mr-3\" onClick=\"eliminar({{ message.id }}, {{message.vehiculoMessage.id}});\">Eliminar</button>
+                    <a class=\"mr-3\" href=\"/respuesta/new/{{ message.id }}\"><img src=\"/comunes/icon/mensaje-de-respuesta.png\" width=\"50px\" height=\"50px\" /></a>
+                    {% if message.reportado == true and is_granted(\"ROLE_ADMIN\") and message.vehiculoMessage.eliminado != true %}
+                        <img src=\"/comunes/icon/basura.png\" class=\"mr-3\" onClick=\"eliminar({{ message.id }}, {{message.vehiculoMessage.id}});\" width=\"50px\" height=\"50px\" />
                     {% endif %}
                     {% if message.oculto == false %}
                         {% if message.vehiculoMessage.propietario.email == app.user.email %}
-                            <button class=\"btn btn-info mr-3\" onClick=\"comprar({{ message.id }}, {{message.vehiculoMessage.id}});\">Comprar</button>
+                            <img src=\"/comunes/icon/metodo-de-pago.png\" class=\"mr-3\" onClick=\"comprar({{ message.id }}, {{message.vehiculoMessage.id}});\" width=\"50px\" height=\"50px\" />
                         {% endif %}
                     {% endif %}
 
                     {% if message.reportado == false %}
-                        <button class=\"btn btn-info mr-3\" onClick=\"reportar({{ message.id }});\">Reportar</button>
+                        <img src=\"/comunes/icon/notificacion.png\" class=\"mr-3\" onClick=\"reportar({{ message.id }});\" width=\"50px\" height=\"50px\" />
                     {% endif %}
                 </div>
                 <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>
             </div>
 
             <div class=\"row mt-5\">
-                <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\">
+                <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0\">
                     {% for respuesta in message.respuestas %}
                         {% if app.user.email == respuesta.autor %}
-                            <div class=\"text-left d-flex mb-3\">
+                            <div class=\"d-flex justify-content-start mb-3\">
                                 {% if emisor.email == respuesta.autor %}
                                     {% if emisor.avatar != null %}
                                         <img src=\"/avatar/{{ emisor.avatar }}\" width=\"70px\" height=\"70px\" class=\"round\" />
+                                    {% else %}
+                                        <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
                                     {% endif %}
                                 {% elseif receptor.email == respuesta.autor %}
                                     {% if receptor.avatar != null %}
                                         <img src=\"/avatar/{{ receptor.avatar }}\" width=\"70px\" height=\"70px\" class=\"round\" />
+                                    {% else %}
+                                        <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
                                     {% endif %}
                                 {% endif %}
-                                <div class=\"d-flex flex-column border border-dark bg-white ml-2 p-2\">
-                                    <div>
-                                        {{ respuesta.texto }}
+                                <div class=\"d-flex flex-column border border-dark bg-white ml-2 p-2 border-message1\">
+                                    <div class=\"d-flex justify-content-start\">
+                                        <p>{{ respuesta.texto }}</p>
                                     </div>
-                                    <div>
-                                        {{ respuesta.fecha|date(\"Y-m-d\") }}
-                                        {{ respuesta.autor }}
+                                    <div class=\"d-flex justify-content-around\">
+                                        <p>{{ respuesta.fecha|date(\"Y-m-d\") }}</p>
+                                        <p>{{ respuesta.autor }}</p>
                                     </div>
                                 </div>
                             </div>
                         {% elseif app.user.email != respuesta.autor  %}
-                            <div class=\"text-right d-flex\">
+                            <div class=\"d-flex justify-content-end mb-3\">
                                 {% if emisor.email == respuesta.autor %}
                                     {% if emisor.avatar != null %}
                                         <img src=\"/avatar/{{ emisor.avatar }}\" width=\"70px\" height=\"70px\" class=\"round\" />
+                                    {% else %}
+                                        <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
                                     {% endif %}
-                                {% elseif emisor.email == respuesta.autor %}
+                                {% elseif receptor.email == respuesta.autor %}
                                     {% if receptor.avatar != null %}
                                         <img src=\"/avatar/{{ receptor.avatar }}\" width=\"70px\" height=\"70px\" class=\"round\" />
+                                    {% else %}
+                                        <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
                                     {% endif %}
                                 {% endif %}
-                                <div class=\"d-flex flex-column border border-dark bg-success ml-2 p-2\">
-                                    <div>
-                                        {{ respuesta.texto }}
+                                <div class=\"d-flex flex-column border border-dark bg-success ml-2 p-2 border-message2\">
+                                    <div class=\"d-flex justify-content-start\">
+                                        <p>{{ respuesta.texto }}</p>
                                     </div>
-                                    <div>
-                                        {{ respuesta.fecha|date(\"Y-m-d\") }}
-                                        {{ respuesta.autor }}
+                                    <div class=\"d-flex justify-content-around\">
+                                        <p>{{ respuesta.fecha|date(\"Y-m-d\") }}</p>
+                                        <p>{{ respuesta.autor }}</p>
                                     </div>
                                 </div>
                             </div>

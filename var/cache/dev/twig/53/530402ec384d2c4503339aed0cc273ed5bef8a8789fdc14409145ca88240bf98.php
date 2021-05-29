@@ -97,7 +97,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                         <a class=\"nav-link\" id=\"v-pills-mensajesRecibidos-tab\" data-toggle=\"pill\" href=\"#v-pills-mensajesRecibidos\" role=\"tab\" aria-controls=\"v-pills-mensajesRecibidos\" aria-selected=\"false\">Mensajes recibidos</a>
                         <a class=\"nav-link\" id=\"v-pills-mensajesEnviados-tab\" data-toggle=\"pill\" href=\"#v-pills-mensajesEnviados\" role=\"tab\" aria-controls=\"v-pills-mensajesEnviados\" aria-selected=\"true\">Mensajes enviados</a>
                     </div>
-                    <div class=\"tab-content\" id=\"v-pills-tabContent\">
+                    <div class=\"tab-content pildora-content pl-4\" id=\"v-pills-tabContent\">
                         <div class=\"tab-pane fade show active\" id=\"v-pills-mensajesReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesReportados-tab\">
                             <div class=\"mensajesReportados\">
                                 ";
@@ -107,139 +107,174 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
             foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
                 // line 20
                 echo "                                    ";
-                if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "reportado", [], "any", false, false, false, 20), true)) && (0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "visto", [], "any", false, false, false, 20), true)))) {
+                if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "reportado", [], "any", false, false, false, 20), true)) && (0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "oculto", [], "any", false, false, false, 20), true)))) {
                     // line 21
-                    echo "                                        &#x1f6a9;&#xfe0e; ";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "texto", [], "any", false, false, false, 21), "html", null, true);
-                    echo " - Emisor: ";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["message"], "user", [], "any", false, false, false, 21), "email", [], "any", false, false, false, 21), "html", null, true);
-                    echo " - ";
-                    echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "fechaEnvio", [], "any", false, false, false, 21), "Y-m-d"), "html", null, true);
+                    echo "                                        <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                            <div class=\"d-flex flex-start\">
+                                                &#x1f6a9;&#xfe0e; ";
+                    // line 23
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "texto", [], "any", false, false, false, 23), "html", null, true);
                     echo "
-                                        <button><a href=\"/respuesta/";
-                    // line 22
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "id", [], "any", false, false, false, 22), "html", null, true);
+                                            </div>
+                                            <div class=\"d-flex justify-content-around align-items-center\">
+                                                <p>";
+                    // line 26
+                    echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "fechaEnvio", [], "any", false, false, false, 26), "Y-m-d"), "html", null, true);
+                    echo "</p>
+                                                <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/";
+                    // line 27
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "id", [], "any", false, false, false, 27), "html", null, true);
                     echo "\">Ver mensaje</a></button>
+                                            </div>
+                                        </div>
                                         <br/>
                                     ";
                 }
-                // line 25
+                // line 32
                 echo "                                ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 26
+            // line 33
             echo "                            </div>
                         </div>
                         <div class=\"tab-pane fade\" id=\"v-pills-mensajesRecibidos\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesRecibidos-tab\">
                             <div class=\"mensajesRecibidos\">
                                 ";
-            // line 30
+            // line 37
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["messagesRecibidos"]) || array_key_exists("messagesRecibidos", $context) ? $context["messagesRecibidos"] : (function () { throw new RuntimeError('Variable "messagesRecibidos" does not exist.', 30, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["messagesRecibidos"]) || array_key_exists("messagesRecibidos", $context) ? $context["messagesRecibidos"] : (function () { throw new RuntimeError('Variable "messagesRecibidos" does not exist.', 37, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["messageRecibido"]) {
-                // line 31
+                // line 38
                 echo "                                    ";
-                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "oculto", [], "any", false, false, false, 31), true))) {
-                    // line 32
+                if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "oculto", [], "any", false, false, false, 38), true)) && (0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "user", [], "any", false, false, false, 38), "id", [], "any", false, false, false, 38), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "user", [], "any", false, false, false, 38), "id", [], "any", false, false, false, 38))))) {
+                    // line 39
                     echo "                                        ";
-                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "visto", [], "any", false, false, false, 32), false))) {
-                        // line 33
-                        echo "                                            &#x1f4ec;&#xfe0e; ";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "texto", [], "any", false, false, false, 33), "html", null, true);
-                        echo " - Emisor: ";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "emisor", [], "any", false, false, false, 33), "html", null, true);
-                        echo " - ";
-                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "fechaEnvio", [], "any", false, false, false, 33), "Y-m-d"), "html", null, true);
+                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "visto", [], "any", false, false, false, 39), false))) {
+                        // line 40
+                        echo "                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                                <div class=\"d-flex flex-start\">
+                                                    &#x1f4ec;&#xfe0e; ";
+                        // line 42
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "texto", [], "any", false, false, false, 42), "html", null, true);
                         echo "
-                                            <button><a href=\"/messageVisto/";
-                        // line 34
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "id", [], "any", false, false, false, 34), "html", null, true);
+                                                </div>
+                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                    <p>";
+                        // line 45
+                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "fechaEnvio", [], "any", false, false, false, 45), "Y-m-d"), "html", null, true);
+                        echo "</p>
+                                                    <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/";
+                        // line 46
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "id", [], "any", false, false, false, 46), "html", null, true);
                         echo "\">Ver mensaje</a></button>
+                                                </div>
+                                            </div>
                                             <br/>
                                         ";
                     } else {
-                        // line 37
-                        echo "                                            &#x1f4ed;&#xfe0e; ";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "texto", [], "any", false, false, false, 37), "html", null, true);
-                        echo " - Emisor: ";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "emisor", [], "any", false, false, false, 37), "html", null, true);
-                        echo " - ";
-                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "fechaLectura", [], "any", false, false, false, 37), "Y-m-d"), "html", null, true);
+                        // line 51
+                        echo "                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                                <div class=\"d-flex flex-start\">
+                                                    &#x1f4ed;&#xfe0e; ";
+                        // line 53
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "texto", [], "any", false, false, false, 53), "html", null, true);
                         echo "
-                                            <button><a href=\"/messageVisto/";
-                        // line 38
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "id", [], "any", false, false, false, 38), "html", null, true);
+                                                </div>
+                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                    <p>";
+                        // line 56
+                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "fechaLectura", [], "any", false, false, false, 56), "Y-m-d"), "html", null, true);
+                        echo "</p>
+                                                    <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/";
+                        // line 57
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "id", [], "any", false, false, false, 57), "html", null, true);
                         echo "\">Ver mensaje</a></button>
+                                                </div>
+                                            </div>
                                             <br/>
                                         ";
                     }
-                    // line 41
+                    // line 62
                     echo "                                    ";
                 }
-                // line 42
+                // line 63
                 echo "                                ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['messageRecibido'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 43
+            // line 64
             echo "                            </div>
                         </div>
                         <div class=\"tab-pane fade\" id=\"v-pills-mensajesEnviados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesEnviados-tab\">
                             <div class=\"mensajesEnviados\">
                                 ";
-            // line 47
+            // line 68
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable((isset($context["messagesEnviados"]) || array_key_exists("messagesEnviados", $context) ? $context["messagesEnviados"] : (function () { throw new RuntimeError('Variable "messagesEnviados" does not exist.', 47, $this->source); })()));
+            $context['_seq'] = twig_ensure_traversable((isset($context["messagesEnviados"]) || array_key_exists("messagesEnviados", $context) ? $context["messagesEnviados"] : (function () { throw new RuntimeError('Variable "messagesEnviados" does not exist.', 68, $this->source); })()));
             foreach ($context['_seq'] as $context["_key"] => $context["messageEnviado"]) {
-                // line 48
+                // line 69
                 echo "                                    ";
-                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "oculto", [], "any", false, false, false, 48), true))) {
-                    // line 49
+                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "oculto", [], "any", false, false, false, 69), true))) {
+                    // line 70
                     echo "                                        ";
-                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "visto", [], "any", false, false, false, 49), false))) {
-                        // line 50
-                        echo "                                            &#x1f4ec;&#xfe0e; ";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "texto", [], "any", false, false, false, 50), "html", null, true);
-                        echo " - Receptor: ";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "receptor", [], "any", false, false, false, 50), "html", null, true);
-                        echo " - ";
-                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "fechaEnvio", [], "any", false, false, false, 50), "Y-m-d"), "html", null, true);
+                    if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "visto", [], "any", false, false, false, 70), false))) {
+                        // line 71
+                        echo "                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                                <div class=\"d-flex flex-start\">
+                                                    &#x1f4ec;&#xfe0e; ";
+                        // line 73
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "texto", [], "any", false, false, false, 73), "html", null, true);
                         echo "
-                                            <button><a href=\"/messageVisto/";
-                        // line 51
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "id", [], "any", false, false, false, 51), "html", null, true);
+                                                </div>
+                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                    <p>";
+                        // line 76
+                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "fechaEnvio", [], "any", false, false, false, 76), "Y-m-d"), "html", null, true);
+                        echo "</p>
+                                                    <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/";
+                        // line 77
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "id", [], "any", false, false, false, 77), "html", null, true);
                         echo "\">Ver mensaje</a></button>
+                                                </div>
+                                            </div>
                                             <br/>
                                         ";
                     } else {
-                        // line 54
-                        echo "                                            &#x1f4ed;&#xfe0e; ";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "texto", [], "any", false, false, false, 54), "html", null, true);
-                        echo " - Receptor: ";
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "receptor", [], "any", false, false, false, 54), "html", null, true);
-                        echo " - ";
-                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "fechaLectura", [], "any", false, false, false, 54), "Y-m-d"), "html", null, true);
+                        // line 82
+                        echo "                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                                <div class=\"d-flex flex-start\">
+                                                    &#x1f4ed;&#xfe0e; ";
+                        // line 84
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "texto", [], "any", false, false, false, 84), "html", null, true);
                         echo "
-                                            <button><a href=\"/messageVisto/";
-                        // line 55
-                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "id", [], "any", false, false, false, 55), "html", null, true);
+                                                </div>
+                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                    <p>";
+                        // line 87
+                        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "fechaLectura", [], "any", false, false, false, 87), "Y-m-d"), "html", null, true);
+                        echo "</p>
+                                                    <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/";
+                        // line 88
+                        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "id", [], "any", false, false, false, 88), "html", null, true);
                         echo "\">Ver mensaje</a></button>
+                                                </div>
+                                            </div>
                                             <br/>
                                         ";
                     }
-                    // line 58
+                    // line 93
                     echo "                                    ";
                 }
-                // line 59
+                // line 94
                 echo "                                ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['messageEnviado'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 60
+            // line 95
             echo "                            </div>
                         </div>
                     </div>
@@ -268,7 +303,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
 
     public function getDebugInfo()
     {
-        return array (  243 => 60,  237 => 59,  234 => 58,  228 => 55,  219 => 54,  213 => 51,  204 => 50,  201 => 49,  198 => 48,  194 => 47,  188 => 43,  182 => 42,  179 => 41,  173 => 38,  164 => 37,  158 => 34,  149 => 33,  146 => 32,  143 => 31,  139 => 30,  133 => 26,  127 => 25,  121 => 22,  112 => 21,  109 => 20,  105 => 19,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  278 => 95,  272 => 94,  269 => 93,  261 => 88,  257 => 87,  251 => 84,  247 => 82,  239 => 77,  235 => 76,  229 => 73,  225 => 71,  222 => 70,  219 => 69,  215 => 68,  209 => 64,  203 => 63,  200 => 62,  192 => 57,  188 => 56,  182 => 53,  178 => 51,  170 => 46,  166 => 45,  160 => 42,  156 => 40,  153 => 39,  150 => 38,  146 => 37,  140 => 33,  134 => 32,  126 => 27,  122 => 26,  116 => 23,  112 => 21,  109 => 20,  105 => 19,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -288,13 +323,20 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                         <a class=\"nav-link\" id=\"v-pills-mensajesRecibidos-tab\" data-toggle=\"pill\" href=\"#v-pills-mensajesRecibidos\" role=\"tab\" aria-controls=\"v-pills-mensajesRecibidos\" aria-selected=\"false\">Mensajes recibidos</a>
                         <a class=\"nav-link\" id=\"v-pills-mensajesEnviados-tab\" data-toggle=\"pill\" href=\"#v-pills-mensajesEnviados\" role=\"tab\" aria-controls=\"v-pills-mensajesEnviados\" aria-selected=\"true\">Mensajes enviados</a>
                     </div>
-                    <div class=\"tab-content\" id=\"v-pills-tabContent\">
+                    <div class=\"tab-content pildora-content pl-4\" id=\"v-pills-tabContent\">
                         <div class=\"tab-pane fade show active\" id=\"v-pills-mensajesReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesReportados-tab\">
                             <div class=\"mensajesReportados\">
                                 {% for message in messages %}
-                                    {% if  message.reportado == true and message.visto != true %}
-                                        &#x1f6a9;&#xfe0e; {{ message.texto }} - Emisor: {{ message.user.email }} - {{ message.fechaEnvio|date(\"Y-m-d\") }}
-                                        <button><a href=\"/respuesta/{{ message.id }}\">Ver mensaje</a></button>
+                                    {% if  message.reportado == true and message.oculto != true %}
+                                        <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                            <div class=\"d-flex flex-start\">
+                                                &#x1f6a9;&#xfe0e; {{ message.texto }}
+                                            </div>
+                                            <div class=\"d-flex justify-content-around align-items-center\">
+                                                <p>{{ message.fechaEnvio|date(\"Y-m-d\") }}</p>
+                                                <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/{{ message.id }}\">Ver mensaje</a></button>
+                                            </div>
+                                        </div>
                                         <br/>
                                     {% endif %}
                                 {% endfor %}
@@ -303,14 +345,28 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                         <div class=\"tab-pane fade\" id=\"v-pills-mensajesRecibidos\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesRecibidos-tab\">
                             <div class=\"mensajesRecibidos\">
                                 {% for messageRecibido in messagesRecibidos %}
-                                    {% if messageRecibido.oculto != true %}
+                                    {% if messageRecibido.oculto != true and messageRecibido.user.id != app.user.id %}
                                         {% if messageRecibido.visto == false %}
-                                            &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaEnvio|date(\"Y-m-d\") }}
-                                            <button><a href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
+                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                                <div class=\"d-flex flex-start\">
+                                                    &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }}
+                                                </div>
+                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                    <p>{{ messageRecibido.fechaEnvio|date(\"Y-m-d\") }}</p>
+                                                    <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
+                                                </div>
+                                            </div>
                                             <br/>
                                         {% else %}
-                                            &#x1f4ed;&#xfe0e; {{ messageRecibido.texto }} - Emisor: {{ messageRecibido.emisor }} - {{ messageRecibido.fechaLectura|date(\"Y-m-d\") }}
-                                            <button><a href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
+                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                                <div class=\"d-flex flex-start\">
+                                                    &#x1f4ed;&#xfe0e; {{ messageRecibido.texto }}
+                                                </div>
+                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                    <p>{{ messageRecibido.fechaLectura|date(\"Y-m-d\") }}</p>
+                                                    <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
+                                                </div>
+                                            </div>
                                             <br/>
                                         {% endif %}
                                     {% endif %}
@@ -322,12 +378,26 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                                 {% for messageEnviado in messagesEnviados %}
                                     {% if messageEnviado.oculto != true %}
                                         {% if messageEnviado.visto == false %}
-                                            &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaEnvio|date(\"Y-m-d\") }}
-                                            <button><a href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
+                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                                <div class=\"d-flex flex-start\">
+                                                    &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }}
+                                                </div>
+                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                    <p>{{ messageEnviado.fechaEnvio|date(\"Y-m-d\") }}</p>
+                                                    <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
+                                                </div>
+                                            </div>
                                             <br/>
                                         {% else %}
-                                            &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }} - Receptor: {{ messageEnviado.receptor }} - {{ messageEnviado.fechaLectura|date(\"Y-m-d\") }}
-                                            <button><a href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
+                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                                <div class=\"d-flex flex-start\">
+                                                    &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }}
+                                                </div>
+                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                    <p>{{ messageEnviado.fechaLectura|date(\"Y-m-d\") }}</p>
+                                                    <button class=\"btn btn-primary\"><a class=\"enlace\" href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
+                                                </div>
+                                            </div>
                                             <br/>
                                         {% endif %}
                                     {% endif %}
@@ -339,6 +409,6 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
             </div>
         </div>
     {% endif %}
-{% endblock %}", "main/mensajesReportados.html.twig", "/home/bayo/proyectos/ComunityCar/templates/main/mensajesReportados.html.twig");
+{% endblock %}", "main/mensajesReportados.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/main/mensajesReportados.html.twig");
     }
 }

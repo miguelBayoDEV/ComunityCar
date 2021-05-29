@@ -139,14 +139,32 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 min-height: 600px;
             }
 
-            div.border-message {
+            div.border-message1 {
                 border: 2px dashed black;
-                box-shadow: 2px 2px 5px 20px #888888;
+                box-shadow: 2px -2px 5px 5px #888888;
+                margin-bottom: 2%;
+                border-radius:10px;
+                min-width: 375px;
+                overflow: auto;
+            }
+
+            div.border-message2 {
+                border: 2px dashed black;
+                box-shadow: 2px -2px 5px 5px #FB876E;
+                margin-bottom: 2%;
+                border-radius:10px;
+                min-width: 375px;
+                overflow: auto;
             }
 
             .round {
                 border-radius:50%;
                 border: 3px solid #666;
+            }
+
+            .enlace {
+                text-decoration: none;
+                color: black;
             }
         </style>
     </head>
@@ -154,17 +172,17 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 121
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 121)->display($context);
-        // line 122
+        // line 139
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 139)->display($context);
+        // line 140
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 126
+        // line 144
         $this->displayBlock('body', $context, $blocks);
-        // line 127
+        // line 145
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -376,7 +394,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 126
+    // line 144
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -406,7 +424,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  380 => 126,  363 => 23,  353 => 22,  338 => 15,  334 => 13,  330 => 11,  328 => 10,  325 => 9,  315 => 8,  296 => 6,  168 => 127,  166 => 126,  160 => 122,  158 => 121,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  398 => 144,  381 => 23,  371 => 22,  356 => 15,  352 => 13,  348 => 11,  346 => 10,  343 => 9,  333 => 8,  314 => 6,  186 => 145,  184 => 144,  178 => 140,  176 => 139,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -517,14 +535,32 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 min-height: 600px;
             }
 
-            div.border-message {
+            div.border-message1 {
                 border: 2px dashed black;
-                box-shadow: 2px 2px 5px 20px #888888;
+                box-shadow: 2px -2px 5px 5px #888888;
+                margin-bottom: 2%;
+                border-radius:10px;
+                min-width: 375px;
+                overflow: auto;
+            }
+
+            div.border-message2 {
+                border: 2px dashed black;
+                box-shadow: 2px -2px 5px 5px #FB876E;
+                margin-bottom: 2%;
+                border-radius:10px;
+                min-width: 375px;
+                overflow: auto;
             }
 
             .round {
                 border-radius:50%;
                 border: 3px solid #666;
+            }
+
+            .enlace {
+                text-decoration: none;
+                color: black;
             }
         </style>
     </head>

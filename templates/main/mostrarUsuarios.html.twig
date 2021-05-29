@@ -12,9 +12,9 @@
                     <a class="nav-link" id="v-pills-mensajesReportados-tab" data-toggle="pill" href="#v-pills-mensajesReportados" role="tab" aria-controls="v-pills-mensajesReportados" aria-selected="false">Mensajes reportados</a>
                     <a class="nav-link" id="v-pills-vehiculosReportados-tab" data-toggle="pill" href="#v-pills-vehiculosReportados" role="tab" aria-controls="v-pills-vehiculosReportados" aria-selected="true">Vehiculos reportados</a>
                 </div>
-                <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-content pildora-content pl-4" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-usuarios" role="tabpanel" aria-labelledby="v-pills-usuarios-tab">
-                        <div class="usuarios">
+                        <div class="usuarios border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between">
                             <ol>
                                 {% for user in users %}
                                     {% if user.email != "root@gmail.com" %}
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-mensajesReportados" role="tabpanel" aria-labelledby="v-pills-mensajesReportados-tab">
-                        <div class="mensajesReportados">
+                        <div class="mensajesReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between">
                             <ol>
                                 {% for mensajeReportado in mensajesReportados %}
                                     <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date("Y-m-d") }}</li>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-vehiculosReportados" role="tabpanel" aria-labelledby="v-pills-vehiculosReportados-tab">
-                        <div class="vehiculosReportados">
+                        <div class="vehiculosReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between">
                             <ol>
                                 {% for vehiculoReportado in vehiculosReportados %}
                                     <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>
