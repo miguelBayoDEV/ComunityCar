@@ -482,6 +482,6 @@ class __TwigTemplate_4124d9b078b04e38c6fba2ad0b43dab158cf38467cc770fd218ec13f5fc
         {% endfor %}
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/events.html.twig", "/home/bayo/proyectos/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
+", "@WebProfiler/Collector/events.html.twig", "/home/miguel/Escritorio/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/events.html.twig");
     }
 }

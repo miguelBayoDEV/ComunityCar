@@ -332,6 +332,8 @@ class MainController extends AbstractController
     public function messageVisto($id): Response
     {
         $message = $this->getDoctrine()->getRepository(Message::class)->find($id);
+        $emisor = $this->getDoctrine()->getRepository(User::class)->find($message->getEmisor());
+        $receptor = $this->getDoctrine()->getRepository(User::class)->find($message->getReceptor());
 
         // Comprobar si el mensaje está leido o no
         $entityManager = $this->getDoctrine()->getManager();
@@ -342,7 +344,9 @@ class MainController extends AbstractController
         $entityManager->flush();
 
         return $this->render('main/respuestasCorreo.html.twig', [
-            'message' => $message
+            'message' => $message,
+            'emisor' => $emisor,
+            'receptor' => $receptor
         ]);
     }
 

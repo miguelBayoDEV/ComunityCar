@@ -900,6 +900,6 @@ class __TwigTemplate_7ef5314ef260faf526ff75cf6c391e1f69a8c4bfeb352df8a3853b8ec3d
         {% endautoescape %}</script>
     </div>
 {% endmacro %}
-", "@WebProfiler/Collector/time.html.twig", "/home/bayo/proyectos/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.html.twig");
+", "@WebProfiler/Collector/time.html.twig", "/home/miguel/Escritorio/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/time.html.twig");
     }
 }

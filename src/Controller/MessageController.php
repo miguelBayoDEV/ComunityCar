@@ -75,8 +75,12 @@ class MessageController extends AbstractController
     public function show(Message $message, $id): Response
     {
         $message = $this->getDoctrine()->getRepository(Message::class)->find($id);
+        $emisor = $this->getDoctrine()->getRepository(User::class)->find($message->getEmisor());
+        $receptor = $this->getDoctrine()->getRepository(User::class)->find($message->getReceptor());
         return $this->render('main/respuestasCorreo.html.twig', [
-            'message' => $message
+            'message' => $message,
+            'emisor' => $emisor,
+            'receptor' => $receptor
         ]);
     }
 

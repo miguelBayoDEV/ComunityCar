@@ -803,6 +803,6 @@ class __TwigTemplate_5a0840fcf301c0be657b6ab5aee33afc0477e46bd84259fb6badad389e1
         </table>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/config.html.twig", "/home/bayo/proyectos/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
+", "@WebProfiler/Collector/config.html.twig", "/home/miguel/Escritorio/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/config.html.twig");
     }
 }

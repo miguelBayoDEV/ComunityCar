@@ -193,6 +193,6 @@ class __TwigTemplate_e61ba4b071177550f365452a16577fad10e671ffdda37da5feb21408c94
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "/home/bayo/proyectos/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "/home/miguel/Escritorio/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/base.html.twig");
     }
 }

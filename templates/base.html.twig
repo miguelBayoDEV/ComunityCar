@@ -90,6 +90,10 @@
                 min-height: 500px;
             }
 
+            div.mensaje {
+                min-height: 600px;
+            }
+
             input, textarea {
                 border-radius: 10%;
             }
@@ -176,21 +180,6 @@
             </div>
         </div>
         <script>
-
-            function comprobarAncho(){
-                var altoContenido=window.innerHeight-50;
-                if(altoContenido>600){
-                    $('footer').css("position","relative");
-                }else{
-                    $('footer').css("position","fixed");
-                }
-            }
-
-            comprobarAncho();    
-
-            $(window).resize(function() {
-                comprobarAncho();
-            });
 
             // Efecto x2 de enlace mi perfil
             $("#perfil").hover(function() {

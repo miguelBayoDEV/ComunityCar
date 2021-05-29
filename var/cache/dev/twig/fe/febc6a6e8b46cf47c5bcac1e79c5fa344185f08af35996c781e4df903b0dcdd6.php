@@ -413,6 +413,6 @@ class __TwigTemplate_fac8e57d6fb98dde7b02e8a753045d0a988ddf6497cc878941414f9d29f
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/home/bayo/proyectos/ComunityCar/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/home/miguel/Escritorio/ComunityCar/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

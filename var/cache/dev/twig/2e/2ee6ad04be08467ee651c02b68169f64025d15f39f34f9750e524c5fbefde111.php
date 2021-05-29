@@ -1671,6 +1671,6 @@ class __TwigTemplate_b7e9126015d23bb66fadfcca172ad9960b2af2030a56924277cf61ec91f
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/home/bayo/proyectos/ComunityCar/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/home/miguel/Escritorio/ComunityCar/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

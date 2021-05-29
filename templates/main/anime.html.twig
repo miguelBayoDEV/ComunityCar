@@ -16,7 +16,7 @@
                         <div class="m-4 ml-5">
                             <video loop="true" autoplay="true" width="100%" hight="100%">
                                 <source src="/comunes/header/videoHeader.ogv" type="video/ogg" />
-                                <source src="/comunes/header/videoHeader.mp4" type="video/mp4" />
+                                {# <source src="/comunes/header/videoHeader.mp4" type="video/mp4" /> #}
                             </video>
                             <img id="volumen" src="/comunes/header/sonido.png" data-toggle="tooltip" title="Estado del sonido" />
                             <audio loop="true" autoplay="true" id="sonido">
@@ -43,7 +43,7 @@
             $(this).animate({
                 right:'1vh',
             }, 2700);
-            
+
             $(this).animate({
                 right:'68vh'
             }, 1);

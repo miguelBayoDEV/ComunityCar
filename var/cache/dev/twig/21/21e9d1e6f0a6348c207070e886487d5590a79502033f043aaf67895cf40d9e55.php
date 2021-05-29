@@ -125,6 +125,10 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 min-height: 500px;
             }
 
+            div.mensaje {
+                min-height: 600px;
+            }
+
             input, textarea {
                 border-radius: 10%;
             }
@@ -142,17 +146,17 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 109
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 109)->display($context);
-        // line 110
+        // line 113
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 113)->display($context);
+        // line 114
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 114
+        // line 118
         $this->displayBlock('body', $context, $blocks);
-        // line 115
+        // line 119
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -217,21 +221,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             </div>
         </div>
         <script>
-
-            function comprobarAncho(){
-                var altoContenido=window.innerHeight-50;
-                if(altoContenido>600){
-                    \$('footer').css(\"position\",\"relative\");
-                }else{
-                    \$('footer').css(\"position\",\"fixed\");
-                }
-            }
-
-            comprobarAncho();    
-
-            \$(window).resize(function() {
-                comprobarAncho();
-            });
 
             // Efecto x2 de enlace mi perfil
             \$(\"#perfil\").hover(function() {
@@ -366,7 +355,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 114
+    // line 118
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -396,7 +385,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  370 => 114,  353 => 23,  343 => 22,  328 => 15,  324 => 13,  320 => 11,  318 => 10,  315 => 9,  305 => 8,  286 => 6,  156 => 115,  154 => 114,  148 => 110,  146 => 109,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  359 => 118,  342 => 23,  332 => 22,  317 => 15,  313 => 13,  309 => 11,  307 => 10,  304 => 9,  294 => 8,  275 => 6,  160 => 119,  158 => 118,  152 => 114,  150 => 113,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -493,6 +482,10 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 min-height: 500px;
             }
 
+            div.mensaje {
+                min-height: 600px;
+            }
+
             input, textarea {
                 border-radius: 10%;
             }
@@ -580,21 +573,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         </div>
         <script>
 
-            function comprobarAncho(){
-                var altoContenido=window.innerHeight-50;
-                if(altoContenido>600){
-                    \$('footer').css(\"position\",\"relative\");
-                }else{
-                    \$('footer').css(\"position\",\"fixed\");
-                }
-            }
-
-            comprobarAncho();    
-
-            \$(window).resize(function() {
-                comprobarAncho();
-            });
-
             // Efecto x2 de enlace mi perfil
             \$(\"#perfil\").hover(function() {
                 \$(this).css({
@@ -635,6 +613,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         </script>
     </body>
 </html>
-", "base.html.twig", "/home/bayo/proyectos/ComunityCar/templates/base.html.twig");
+", "base.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/base.html.twig");
     }
 }

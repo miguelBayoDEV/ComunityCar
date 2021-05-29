@@ -98,8 +98,9 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                         <div class=\"m-4 ml-5\">
                             <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
                                 <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
-                                <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
-                            </video>
+                                ";
+        // line 20
+        echo "                            </video>
                             <img id=\"volumen\" src=\"/comunes/header/sonido.png\" data-toggle=\"tooltip\" title=\"Estado del sonido\" />
                             <audio loop=\"true\" autoplay=\"true\" id=\"sonido\">
                                 <source src=\"/comunes/header/carrera.mp3\"  type=\"audio/mp3\">
@@ -125,7 +126,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
             \$(this).animate({
                 right:'1vh',
             }, 2700);
-            
+
             \$(this).animate({
                 right:'68vh'
             }, 1);
@@ -169,7 +170,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -192,7 +193,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                         <div class=\"m-4 ml-5\">
                             <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
                                 <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
-                                <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
+                                {# <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" /> #}
                             </video>
                             <img id=\"volumen\" src=\"/comunes/header/sonido.png\" data-toggle=\"tooltip\" title=\"Estado del sonido\" />
                             <audio loop=\"true\" autoplay=\"true\" id=\"sonido\">
@@ -219,7 +220,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
             \$(this).animate({
                 right:'1vh',
             }, 2700);
-            
+
             \$(this).animate({
                 right:'68vh'
             }, 1);
@@ -242,6 +243,6 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
             }
         });
     </script>
-{% endblock %}", "main/anime.html.twig", "/home/bayo/proyectos/ComunityCar/templates/main/anime.html.twig");
+{% endblock %}", "main/anime.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/main/anime.html.twig");
     }
 }

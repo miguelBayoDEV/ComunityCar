@@ -227,6 +227,6 @@ class __TwigTemplate_fc250c7ab55d54c830331f66ed588e944310670a004a6293c6eebd5458e
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/exception.html.twig", "/home/bayo/proyectos/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
+", "@WebProfiler/Collector/exception.html.twig", "/home/miguel/Escritorio/ComunityCar/vendor/symfony/web-profiler-bundle/Resources/views/Collector/exception.html.twig");
     }
 }
