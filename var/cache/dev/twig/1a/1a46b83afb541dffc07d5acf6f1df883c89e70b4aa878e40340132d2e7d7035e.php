@@ -85,144 +85,172 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    ";
-        // line 7
-        echo "    <form action=\"/buscador\" method=\"post\">
-        <select name=\"marcas\" id=\"marcas\">
-            <option value=\"\" selected>Seleccionar</option>
+        echo "    <div class=\"row mt-5\">
+        <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0 d-flex justify-content-around\">
+            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" /></a>
             ";
         // line 10
+        echo "            <form action=\"/buscador\" method=\"post\" class=\"form-group d-flex justify-content-between align-items-center buscador\">
+                <label for=\"marcas\">Marca:</label>
+                <select name=\"marcas\" id=\"marcas\" class=\"form-control border border-success mr-4\">
+                    <option value=\"\" selected>Seleccionar</option>
+                    ";
+        // line 14
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["marcas"]) || array_key_exists("marcas", $context) ? $context["marcas"] : (function () { throw new RuntimeError('Variable "marcas" does not exist.', 10, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["marcas"]) || array_key_exists("marcas", $context) ? $context["marcas"] : (function () { throw new RuntimeError('Variable "marcas" does not exist.', 14, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["marca"]) {
-            // line 11
-            echo "                <option value=\"";
+            // line 15
+            echo "                        <option value=\"";
             echo twig_escape_filter($this->env, $context["marca"], "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_upper_filter($this->env, $context["marca"]), "html", null, true);
             echo "</option>
-            ";
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['marca'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 13
-        echo "        </select>
-        <select name=\"modelos\" id=\"modelos\">
-            <option value=\"\" selected>Seleccionar</option>
-            ";
-        // line 16
+        // line 17
+        echo "                </select>
+                <label for=\"modelos\">Modelos:</label>
+                <select name=\"modelos\" id=\"modelos\" class=\"form-control border border-success mr-4\">
+                    <option value=\"\" selected>Seleccionar</option>
+                    ";
+        // line 21
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["modelos"]) || array_key_exists("modelos", $context) ? $context["modelos"] : (function () { throw new RuntimeError('Variable "modelos" does not exist.', 16, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["modelos"]) || array_key_exists("modelos", $context) ? $context["modelos"] : (function () { throw new RuntimeError('Variable "modelos" does not exist.', 21, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["modelo"]) {
-            // line 17
-            echo "                <option value=\"";
+            // line 22
+            echo "                        <option value=\"";
             echo twig_escape_filter($this->env, $context["modelo"], "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_upper_filter($this->env, $context["modelo"]), "html", null, true);
             echo "</option>
-            ";
+                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['modelo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 19
-        echo "        </select>
-        <input type=\"submit\" name=\"buscar\" />
-    </form>
-
-    ";
         // line 24
-        echo "    ";
+        echo "                </select>
+                <input class=\"btn btn-success\" type=\"submit\" name=\"buscar\" />
+            </form>
+        </div>
+    </div>
+
+    <hr class=\"bg-dark\" />
+
+    <div class=\"row mt-5\">
+        <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0 d-flex flex-column justify-content-around\">
+            ";
+        // line 35
+        echo "            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 24, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 35, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["vehicle"]) {
-            // line 25
-            echo "        ";
-            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "eliminado", [], "any", false, false, false, 25), false)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "venta", [], "any", false, false, false, 25), true)))) {
-                // line 26
-                echo "            <div class=\"vehicles\">
-                Marca: ";
-                // line 27
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "marca", [], "any", false, false, false, 27), "html", null, true);
+            // line 36
+            echo "                ";
+            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "eliminado", [], "any", false, false, false, 36), false)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "venta", [], "any", false, false, false, 36), true)))) {
+                // line 37
+                echo "                    <div class=\"vehicles\">
+                        Marca: ";
+                // line 38
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "marca", [], "any", false, false, false, 38), "html", null, true);
                 echo "
-                Modelo: ";
-                // line 28
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "modelo", [], "any", false, false, false, 28), "html", null, true);
+                        Modelo: ";
+                // line 39
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "modelo", [], "any", false, false, false, 39), "html", null, true);
                 echo "
-                ";
-                // line 29
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 29), "email", [], "any", false, false, false, 29), "html", null, true);
+                        ";
+                // line 40
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 40), "email", [], "any", false, false, false, 40), "html", null, true);
                 echo "
-                ";
-                // line 30
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 30), "Y-m-d H:i:s"), "html", null, true);
+                        ";
+                // line 41
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 41), "Y-m-d H:i:s"), "html", null, true);
                 echo "
-                Fotos:
-                <br/>
-                ";
-                // line 33
+                        Fotos:
+                        <br/>
+                        ";
+                // line 44
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 33));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 44));
                 foreach ($context['_seq'] as $context["_key"] => $context["foto"]) {
-                    // line 34
-                    echo "                    <img src=\"/img/";
+                    // line 45
+                    echo "                            <img src=\"/img/";
                     echo twig_escape_filter($this->env, $context["foto"], "html", null, true);
                     echo "\" />
-                ";
+                        ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['foto'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 36
-                echo "                ";
-                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", [], "any", false, false, false, 36), "id", [], "any", false, false, false, 36)))) {
-                    // line 37
-                    echo "                    <button><a href=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 37), "id", [], "any", false, false, false, 37), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "id", [], "any", false, false, false, 37), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 37), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 37)]), "html", null, true);
+                // line 47
+                echo "                        ";
+                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 47), "id", [], "any", false, false, false, 47), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "user", [], "any", false, false, false, 47), "id", [], "any", false, false, false, 47)))) {
+                    // line 48
+                    echo "                            <button><a href=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 48), "id", [], "any", false, false, false, 48), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 48, $this->source); })()), "id", [], "any", false, false, false, 48), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 48), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 48)]), "html", null, true);
                     echo "\">Enviar mensaje</a></button>
-                ";
+                        ";
                 } else {
-                    // line 39
-                    echo "                    <button><a href=\"/vehiculo/";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 39), "html", null, true);
+                    // line 50
+                    echo "                            <button><a href=\"/vehiculo/";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 50), "html", null, true);
                     echo "/edit\">Editar anuncio vehículo</a></button>
-                ";
+                        ";
                 }
-                // line 41
-                echo "            </div>
-        ";
+                // line 52
+                echo "                    </div>
+                ";
             }
-            // line 43
-            echo "    ";
+            // line 54
+            echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehicle'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 44
+        // line 55
         echo "
-    ";
-        // line 46
-        echo "    <div class=\"page\">
-        <button><a href=\"/page/first\"><<</a></button>
-        ";
-        // line 48
+            ";
+        // line 57
+        echo "            
+            <div class=\"d-flex justify-content-center align items-center mb-2\">
+                <nav aria-label=\"page\">
+                    <ul class=\"pagination\">
+                        <li class=\"page-item\">
+                            <a class=\"page-link pulsar\" href=\"/page/first\"><<</a>
+                        </li>
+                        ";
+        // line 64
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 48, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 64, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
-            // line 49
-            echo "            <button><a href=\"/page/";
+            // line 65
+            echo "                            <li class=\"page-item\">
+                                <a class=\"page-link pulsar\" href=\"/page/";
+            // line 66
             echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
-            echo "\">";
+            echo "\">
+                                    ";
+            // line 67
             echo twig_escape_filter($this->env, ($context["contador"] + 1), "html", null, true);
-            echo "</a></button>
-        ";
+            echo "
+                                </a>
+                            </li>
+                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 51
-        echo "        <button><a href=\"/page/last\">>></a></button>
+        // line 71
+        echo "                        <li class=\"page-item\">
+                            <a class=\"page-link pulsar\" href=\"/page/last\">>></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 ";
         
@@ -245,7 +273,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     public function getDebugInfo()
     {
-        return array (  225 => 51,  214 => 49,  210 => 48,  206 => 46,  203 => 44,  197 => 43,  193 => 41,  187 => 39,  181 => 37,  178 => 36,  169 => 34,  165 => 33,  159 => 30,  155 => 29,  151 => 28,  147 => 27,  144 => 26,  141 => 25,  136 => 24,  130 => 19,  119 => 17,  115 => 16,  110 => 13,  99 => 11,  95 => 10,  90 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  247 => 71,  237 => 67,  233 => 66,  230 => 65,  226 => 64,  217 => 57,  214 => 55,  208 => 54,  204 => 52,  198 => 50,  192 => 48,  189 => 47,  180 => 45,  176 => 44,  170 => 41,  166 => 40,  162 => 39,  158 => 38,  155 => 37,  152 => 36,  147 => 35,  135 => 24,  124 => 22,  120 => 21,  114 => 17,  103 => 15,  99 => 14,  93 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -255,52 +283,78 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 {% block title %}Search{% endblock %}
 
 {% block body %}
-    {# Mostrar opciones de busqueda #}
-    <form action=\"/buscador\" method=\"post\">
-        <select name=\"marcas\" id=\"marcas\">
-            <option value=\"\" selected>Seleccionar</option>
-            {% for marca in marcas %}
-                <option value=\"{{ marca }}\">{{ marca|upper }}</option>
-            {% endfor %}
-        </select>
-        <select name=\"modelos\" id=\"modelos\">
-            <option value=\"\" selected>Seleccionar</option>
-            {% for modelo in modelos %}
-                <option value=\"{{ modelo }}\">{{ modelo|upper }}</option>
-            {% endfor %}
-        </select>
-        <input type=\"submit\" name=\"buscar\" />
-    </form>
+    <div class=\"row mt-5\">
+        <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0 d-flex justify-content-around\">
+            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" /></a>
+            {# Mostrar opciones de busqueda #}
+            <form action=\"/buscador\" method=\"post\" class=\"form-group d-flex justify-content-between align-items-center buscador\">
+                <label for=\"marcas\">Marca:</label>
+                <select name=\"marcas\" id=\"marcas\" class=\"form-control border border-success mr-4\">
+                    <option value=\"\" selected>Seleccionar</option>
+                    {% for marca in marcas %}
+                        <option value=\"{{ marca }}\">{{ marca|upper }}</option>
+                    {% endfor %}
+                </select>
+                <label for=\"modelos\">Modelos:</label>
+                <select name=\"modelos\" id=\"modelos\" class=\"form-control border border-success mr-4\">
+                    <option value=\"\" selected>Seleccionar</option>
+                    {% for modelo in modelos %}
+                        <option value=\"{{ modelo }}\">{{ modelo|upper }}</option>
+                    {% endfor %}
+                </select>
+                <input class=\"btn btn-success\" type=\"submit\" name=\"buscar\" />
+            </form>
+        </div>
+    </div>
 
-    {# Mostrar vehículos #}
-    {% for vehicle in vehicles %}
-        {% if vehicle.eliminado == false and vehicle.venta == true %}
-            <div class=\"vehicles\">
-                Marca: {{ vehicle.marca }}
-                Modelo: {{ vehicle.modelo }}
-                {{ vehicle.propietario.email }}
-                {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}
-                Fotos:
-                <br/>
-                {% for foto in vehicle.images %}
-                    <img src=\"/img/{{ foto }}\" />
-                {% endfor %}
-                {% if vehicle.propietario.id != app.user.id %}
-                    <button><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}\">Enviar mensaje</a></button>
-                {% else %}
-                    <button><a href=\"/vehiculo/{{ vehicle.id }}/edit\">Editar anuncio vehículo</a></button>
+    <hr class=\"bg-dark\" />
+
+    <div class=\"row mt-5\">
+        <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0 d-flex flex-column justify-content-around\">
+            {# Mostrar vehículos #}
+            {% for vehicle in vehicles %}
+                {% if vehicle.eliminado == false and vehicle.venta == true %}
+                    <div class=\"vehicles\">
+                        Marca: {{ vehicle.marca }}
+                        Modelo: {{ vehicle.modelo }}
+                        {{ vehicle.propietario.email }}
+                        {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}
+                        Fotos:
+                        <br/>
+                        {% for foto in vehicle.images %}
+                            <img src=\"/img/{{ foto }}\" />
+                        {% endfor %}
+                        {% if vehicle.propietario.id != app.user.id %}
+                            <button><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}\">Enviar mensaje</a></button>
+                        {% else %}
+                            <button><a href=\"/vehiculo/{{ vehicle.id }}/edit\">Editar anuncio vehículo</a></button>
+                        {% endif %}
+                    </div>
                 {% endif %}
-            </div>
-        {% endif %}
-    {% endfor %}
+            {% endfor %}
 
-    {# Paginación #}
-    <div class=\"page\">
-        <button><a href=\"/page/first\"><<</a></button>
-        {% for contador in 0 .. contadorTotal %}
-            <button><a href=\"/page/{{contador}}\">{{ contador + 1 }}</a></button>
-        {% endfor %}
-        <button><a href=\"/page/last\">>></a></button>
+            {# Paginación #}
+            
+            <div class=\"d-flex justify-content-center align items-center mb-2\">
+                <nav aria-label=\"page\">
+                    <ul class=\"pagination\">
+                        <li class=\"page-item\">
+                            <a class=\"page-link pulsar\" href=\"/page/first\"><<</a>
+                        </li>
+                        {% for contador in 0 .. contadorTotal %}
+                            <li class=\"page-item\">
+                                <a class=\"page-link pulsar\" href=\"/page/{{contador}}\">
+                                    {{ contador + 1 }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        <li class=\"page-item\">
+                            <a class=\"page-link pulsar\" href=\"/page/last\">>></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 {% endblock %}
 ", "main/buscador.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/main/buscador.html.twig");

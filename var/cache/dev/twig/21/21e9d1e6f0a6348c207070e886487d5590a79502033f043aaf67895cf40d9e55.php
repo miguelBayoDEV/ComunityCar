@@ -166,23 +166,41 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 text-decoration: none;
                 color: black;
             }
+
+            .buscador {
+                border-radius: 7px;
+                padding: 2%;
+                border: 3px dashed #5CE640;
+            }
+
+            .pulsar {
+                background-color: #A5F70E;
+                color: #2283E4;
+                border: 2px dashed #E42234;
+            }
+
+            .pulsar:hover {
+                background-color: #43BFF8;
+                color: #F70E6F;
+                border: 5px dashed #E42234;
+            }
         </style>
     </head>
     <body class=\"container-fluid\">
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 139
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 139)->display($context);
-        // line 140
+        // line 157
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 157)->display($context);
+        // line 158
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 144
+        // line 162
         $this->displayBlock('body', $context, $blocks);
-        // line 145
+        // line 163
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -394,7 +412,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 144
+    // line 162
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -424,7 +442,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  398 => 144,  381 => 23,  371 => 22,  356 => 15,  352 => 13,  348 => 11,  346 => 10,  343 => 9,  333 => 8,  314 => 6,  186 => 145,  184 => 144,  178 => 140,  176 => 139,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  416 => 162,  399 => 23,  389 => 22,  374 => 15,  370 => 13,  366 => 11,  364 => 10,  361 => 9,  351 => 8,  332 => 6,  204 => 163,  202 => 162,  196 => 158,  194 => 157,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -561,6 +579,24 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             .enlace {
                 text-decoration: none;
                 color: black;
+            }
+
+            .buscador {
+                border-radius: 7px;
+                padding: 2%;
+                border: 3px dashed #5CE640;
+            }
+
+            .pulsar {
+                background-color: #A5F70E;
+                color: #2283E4;
+                border: 2px dashed #E42234;
+            }
+
+            .pulsar:hover {
+                background-color: #43BFF8;
+                color: #F70E6F;
+                border: 5px dashed #E42234;
             }
         </style>
     </head>

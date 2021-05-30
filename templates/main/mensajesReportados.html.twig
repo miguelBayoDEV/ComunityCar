@@ -35,7 +35,7 @@
                         <div class="tab-pane fade" id="v-pills-mensajesRecibidos" role="tabpanel" aria-labelledby="v-pills-mensajesRecibidos-tab">
                             <div class="mensajesRecibidos">
                                 {% for messageRecibido in messagesRecibidos %}
-                                    {% if messageRecibido.oculto != true and messageRecibido.user.id != app.user.id %}
+                                    {% if messageRecibido.user.id != app.user.id %}
                                         {% if messageRecibido.visto == false %}
                                             <div class="d-flex flex-column border border-dark pl-1 pt-1">
                                                 <div class="d-flex flex-start">
@@ -66,30 +66,28 @@
                         <div class="tab-pane fade" id="v-pills-mensajesEnviados" role="tabpanel" aria-labelledby="v-pills-mensajesEnviados-tab">
                             <div class="mensajesEnviados">
                                 {% for messageEnviado in messagesEnviados %}
-                                    {% if messageEnviado.oculto != true %}
-                                        {% if messageEnviado.visto == false %}
-                                            <div class="d-flex flex-column border border-dark pl-1 pt-1">
-                                                <div class="d-flex flex-start">
-                                                    &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }}
-                                                </div>
-                                                <div class="d-flex justify-content-around align-items-center">
-                                                    <p>{{ messageEnviado.fechaEnvio|date("Y-m-d") }}</p>
-                                                    <button class="btn btn-primary"><a class="enlace" href="/messageVisto/{{ messageEnviado.id }}">Ver mensaje</a></button>
-                                                </div>
+                                    {% if messageEnviado.visto == false %}
+                                        <div class="d-flex flex-column border border-dark pl-1 pt-1">
+                                            <div class="d-flex flex-start">
+                                                &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }}
                                             </div>
-                                            <br/>
-                                        {% else %}
-                                            <div class="d-flex flex-column border border-dark pl-1 pt-1">
-                                                <div class="d-flex flex-start">
-                                                    &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }}
-                                                </div>
-                                                <div class="d-flex justify-content-around align-items-center">
-                                                    <p>{{ messageEnviado.fechaLectura|date("Y-m-d") }}</p>
-                                                    <button class="btn btn-primary"><a class="enlace" href="/messageVisto/{{ messageEnviado.id }}">Ver mensaje</a></button>
-                                                </div>
+                                            <div class="d-flex justify-content-around align-items-center">
+                                                <p>{{ messageEnviado.fechaEnvio|date("Y-m-d") }}</p>
+                                                <button class="btn btn-primary"><a class="enlace" href="/messageVisto/{{ messageEnviado.id }}">Ver mensaje</a></button>
                                             </div>
-                                            <br/>
-                                        {% endif %}
+                                        </div>
+                                        <br/>
+                                    {% else %}
+                                        <div class="d-flex flex-column border border-dark pl-1 pt-1">
+                                            <div class="d-flex flex-start">
+                                                &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }}
+                                            </div>
+                                            <div class="d-flex justify-content-around align-items-center">
+                                                <p>{{ messageEnviado.fechaLectura|date("Y-m-d") }}</p>
+                                                <button class="btn btn-primary"><a class="enlace" href="/messageVisto/{{ messageEnviado.id }}">Ver mensaje</a></button>
+                                            </div>
+                                        </div>
+                                        <br/>
                                     {% endif %}
                                 {% endfor %}
                             </div>
