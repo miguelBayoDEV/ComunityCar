@@ -196,7 +196,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                                             <img class=\"d-block w-100\" src=\"/img/";
                         // line 53
                         echo twig_escape_filter($this->env, $context["image"], "html", null, true);
-                        echo "\" alt=\"Imagen del anuncio del vehículo\" height=\"120px\" />
+                        echo "\" alt=\"Imagen del anuncio del vehículo\" height=\"190px\" />
                                         </div>
                                     ";
                     }
@@ -206,7 +206,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                                         <img class=\"d-block w-100\" src=\"/img/";
                     // line 58
                     echo twig_escape_filter($this->env, $context["image"], "html", null, true);
-                    echo "\" alt=\"Imagen del anuncio del vehículo\" height=\"120px\" />
+                    echo "\" alt=\"Imagen del anuncio del vehículo\" height=\"190px\" />
                                     </div>
                                 ";
                 }
@@ -399,12 +399,12 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                                 {% for image in vehicle.images %}
                                     {% if image == vehicle.images[0] %}
                                         <div class=\"carousel-item active\">
-                                            <img class=\"d-block w-100\" src=\"/img/{{ image }}\" alt=\"Imagen del anuncio del vehículo\" height=\"120px\" />
+                                            <img class=\"d-block w-100\" src=\"/img/{{ image }}\" alt=\"Imagen del anuncio del vehículo\" height=\"190px\" />
                                         </div>
                                     {% endif %}
 
                                     <div class=\"carousel-item\">
-                                        <img class=\"d-block w-100\" src=\"/img/{{ image }}\" alt=\"Imagen del anuncio del vehículo\" height=\"120px\" />
+                                        <img class=\"d-block w-100\" src=\"/img/{{ image }}\" alt=\"Imagen del anuncio del vehículo\" height=\"190px\" />
                                     </div>
                                 {% endfor %}
                             </div>
