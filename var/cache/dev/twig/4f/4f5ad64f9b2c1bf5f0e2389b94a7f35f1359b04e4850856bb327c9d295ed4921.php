@@ -88,7 +88,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
         echo "    <div class=\"row mt-5\">
         <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>
         <div class=\"col-lg-10 col-md-8 col-sm-0 col-xs-0 d-flex justify-content-center\">
-            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" /></a>
+            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Crear anuncio vehículo\" /></a>
         </div>
         <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>
     </div>
@@ -551,7 +551,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
     <div class=\"row mt-5\">
         <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>
         <div class=\"col-lg-10 col-md-8 col-sm-0 col-xs-0 d-flex justify-content-center\">
-            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" /></a>
+            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Crear anuncio vehículo\" /></a>
         </div>
         <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>
     </div>

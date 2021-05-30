@@ -19,18 +19,18 @@
             <div class="row mt-5">
                 <div class="col-lg-1 col-md-2 col-sm-0 col-xs-0"></div>
                 <div class="col-lg-10 col-md-8 col-sm-0 col-xs-0 d-flex justify-content-center">
-                    <a class="mr-3" href="/respuesta/new/{{ message.id }}"><img src="/comunes/icon/mensaje-de-respuesta.png" width="50px" height="50px" /></a>
+                    <a class="mr-3" href="/respuesta/new/{{ message.id }}"><img src="/comunes/icon/mensaje-de-respuesta.png" width="50px" height="50px" data-toggle="tooltip" title="Responder a mensaje" /></a>
                     {% if message.reportado == true and is_granted("ROLE_ADMIN") and message.vehiculoMessage.eliminado != true %}
-                        <img src="/comunes/icon/basura.png" class="mr-3" onClick="eliminar({{ message.id }}, {{message.vehiculoMessage.id}});" width="50px" height="50px" />
+                        <img src="/comunes/icon/basura.png" class="mr-3" onClick="eliminar({{ message.id }}, {{message.vehiculoMessage.id}});" width="50px" height="50px" data-toggle="tooltip" title="Eliminar vehículo buscador y perfil usuario" />
                     {% endif %}
                     {% if message.oculto == false %}
                         {% if message.vehiculoMessage.propietario.email == app.user.email %}
-                            <img src="/comunes/icon/metodo-de-pago.png" class="mr-3" onClick="comprar({{ message.id }}, {{message.vehiculoMessage.id}});" width="50px" height="50px" />
+                            <img src="/comunes/icon/metodo-de-pago.png" class="mr-3" onClick="comprar({{ message.id }}, {{message.vehiculoMessage.id}});" width="50px" height="50px" data-toggle="tooltip" title="Comprar vehículo y apartar de buscador" />
                         {% endif %}
                     {% endif %}
 
                     {% if message.reportado == false %}
-                        <img src="/comunes/icon/notificacion.png" class="mr-3" onClick="reportar({{ message.id }});" width="50px" height="50px" />
+                        <img src="/comunes/icon/notificacion.png" class="mr-3" onClick="reportar({{ message.id }});" width="50px" height="50px" data-toggle="tooltip" title="Reportar anuncio de vehículo" />
                     {% endif %}
                 </div>
                 <div class="col-lg-1 col-md-2 col-sm-0 col-xs-0"></div>

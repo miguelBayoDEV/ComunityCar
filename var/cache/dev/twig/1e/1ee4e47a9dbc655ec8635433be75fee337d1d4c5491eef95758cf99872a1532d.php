@@ -107,7 +107,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                     <a class=\"mr-3\" href=\"/respuesta/new/";
         // line 22
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 22, $this->source); })()), "id", [], "any", false, false, false, 22), "html", null, true);
-        echo "\"><img src=\"/comunes/icon/mensaje-de-respuesta.png\" width=\"50px\" height=\"50px\" /></a>
+        echo "\"><img src=\"/comunes/icon/mensaje-de-respuesta.png\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Responder a mensaje\" /></a>
                     ";
         // line 23
         if ((((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 23, $this->source); })()), "reportado", [], "any", false, false, false, 23), true)) && $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) && (0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 23, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 23), "eliminado", [], "any", false, false, false, 23), true)))) {
@@ -116,7 +116,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 24, $this->source); })()), "id", [], "any", false, false, false, 24), "html", null, true);
             echo ", ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 24, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 24), "id", [], "any", false, false, false, 24), "html", null, true);
-            echo ");\" width=\"50px\" height=\"50px\" />
+            echo ");\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Eliminar vehículo buscador y perfil usuario\" />
                     ";
         }
         // line 26
@@ -130,7 +130,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 28, $this->source); })()), "id", [], "any", false, false, false, 28), "html", null, true);
                 echo ", ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 28, $this->source); })()), "vehiculoMessage", [], "any", false, false, false, 28), "id", [], "any", false, false, false, 28), "html", null, true);
-                echo ");\" width=\"50px\" height=\"50px\" />
+                echo ");\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Comprar vehículo y apartar de buscador\" />
                         ";
             }
             // line 30
@@ -144,7 +144,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             // line 33
             echo "                        <img src=\"/comunes/icon/notificacion.png\" class=\"mr-3\" onClick=\"reportar(";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["message"]) || array_key_exists("message", $context) ? $context["message"] : (function () { throw new RuntimeError('Variable "message" does not exist.', 33, $this->source); })()), "id", [], "any", false, false, false, 33), "html", null, true);
-            echo ");\" width=\"50px\" height=\"50px\" />
+            echo ");\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Reportar anuncio de vehículo\" />
                     ";
         }
         // line 35
@@ -412,18 +412,18 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
             <div class=\"row mt-5\">
                 <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>
                 <div class=\"col-lg-10 col-md-8 col-sm-0 col-xs-0 d-flex justify-content-center\">
-                    <a class=\"mr-3\" href=\"/respuesta/new/{{ message.id }}\"><img src=\"/comunes/icon/mensaje-de-respuesta.png\" width=\"50px\" height=\"50px\" /></a>
+                    <a class=\"mr-3\" href=\"/respuesta/new/{{ message.id }}\"><img src=\"/comunes/icon/mensaje-de-respuesta.png\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Responder a mensaje\" /></a>
                     {% if message.reportado == true and is_granted(\"ROLE_ADMIN\") and message.vehiculoMessage.eliminado != true %}
-                        <img src=\"/comunes/icon/basura.png\" class=\"mr-3\" onClick=\"eliminar({{ message.id }}, {{message.vehiculoMessage.id}});\" width=\"50px\" height=\"50px\" />
+                        <img src=\"/comunes/icon/basura.png\" class=\"mr-3\" onClick=\"eliminar({{ message.id }}, {{message.vehiculoMessage.id}});\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Eliminar vehículo buscador y perfil usuario\" />
                     {% endif %}
                     {% if message.oculto == false %}
                         {% if message.vehiculoMessage.propietario.email == app.user.email %}
-                            <img src=\"/comunes/icon/metodo-de-pago.png\" class=\"mr-3\" onClick=\"comprar({{ message.id }}, {{message.vehiculoMessage.id}});\" width=\"50px\" height=\"50px\" />
+                            <img src=\"/comunes/icon/metodo-de-pago.png\" class=\"mr-3\" onClick=\"comprar({{ message.id }}, {{message.vehiculoMessage.id}});\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Comprar vehículo y apartar de buscador\" />
                         {% endif %}
                     {% endif %}
 
                     {% if message.reportado == false %}
-                        <img src=\"/comunes/icon/notificacion.png\" class=\"mr-3\" onClick=\"reportar({{ message.id }});\" width=\"50px\" height=\"50px\" />
+                        <img src=\"/comunes/icon/notificacion.png\" class=\"mr-3\" onClick=\"reportar({{ message.id }});\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Reportar anuncio de vehículo\" />
                     {% endif %}
                 </div>
                 <div class=\"col-lg-1 col-md-2 col-sm-0 col-xs-0\"></div>

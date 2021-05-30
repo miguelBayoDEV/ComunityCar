@@ -111,7 +111,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                     </div>
                     <div class=\"tab-pane fade p-2 h-100 w-100\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
                         <div class=\"anime\">
-                            <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
+                            <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" data-toggle=\"tooltip\" title=\"Dale click\" />
                         </div>
                     </div>
                 </div>
@@ -206,7 +206,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                     </div>
                     <div class=\"tab-pane fade p-2 h-100 w-100\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
                         <div class=\"anime\">
-                            <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" />
+                            <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" data-toggle=\"tooltip\" title=\"Dale click\" />
                         </div>
                     </div>
                 </div>

@@ -184,23 +184,33 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 color: #F70E6F;
                 border: 5px dashed #E42234;
             }
+
+            .anuncio {
+                min-height: 200px;
+                border-radius: 25px;
+            }
+
+            .carusel {
+                border-radius: 15px;
+                border: 7px dotted #E42234;
+            }
         </style>
     </head>
     <body class=\"container-fluid\">
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 157
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 157)->display($context);
-        // line 158
+        // line 167
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 167)->display($context);
+        // line 168
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 162
+        // line 172
         $this->displayBlock('body', $context, $blocks);
-        // line 163
+        // line 173
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -230,7 +240,16 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                         <p>miguelpuerta@gmail.com</p>
                                     </li>
                                     <li>
-                                        <p><div>Iconos diseñados por <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">www.flaticon.es</a></div></p>
+                                        <div>
+                                            Iconos diseñados por 
+                                                <a href=\"https://www.freepik.com\" title=\"Freepik\">
+                                                    Freepik
+                                                </a> 
+                                            from 
+                                            <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">
+                                                www.flaticon.es
+                                            </a>
+                                        </div>
                                     </li>
                                     <li>
                                         <hr />
@@ -261,16 +280,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                             <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x hover\"></i></a>
                                     </li>
                                 </ul>
-                                <div>
-                                    Iconos diseñados por 
-                                        <a href=\"https://www.freepik.com\" title=\"Freepik\">
-                                            Freepik
-                                        </a> 
-                                    from 
-                                    <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">
-                                        www.flaticon.es
-                                    </a>
-                                </div>
                             </div>   
                         </div>
                     </div>
@@ -412,7 +421,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 162
+    // line 172
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -442,7 +451,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  416 => 162,  399 => 23,  389 => 22,  374 => 15,  370 => 13,  366 => 11,  364 => 10,  361 => 9,  351 => 8,  332 => 6,  204 => 163,  202 => 162,  196 => 158,  194 => 157,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  425 => 172,  408 => 23,  398 => 22,  383 => 15,  379 => 13,  375 => 11,  373 => 10,  370 => 9,  360 => 8,  341 => 6,  214 => 173,  212 => 172,  206 => 168,  204 => 167,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -598,6 +607,16 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 color: #F70E6F;
                 border: 5px dashed #E42234;
             }
+
+            .anuncio {
+                min-height: 200px;
+                border-radius: 25px;
+            }
+
+            .carusel {
+                border-radius: 15px;
+                border: 7px dotted #E42234;
+            }
         </style>
     </head>
     <body class=\"container-fluid\">
@@ -638,7 +657,16 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                         <p>miguelpuerta@gmail.com</p>
                                     </li>
                                     <li>
-                                        <p><div>Iconos diseñados por <a href=\"https://www.freepik.com\" title=\"Freepik\">Freepik</a> from <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">www.flaticon.es</a></div></p>
+                                        <div>
+                                            Iconos diseñados por 
+                                                <a href=\"https://www.freepik.com\" title=\"Freepik\">
+                                                    Freepik
+                                                </a> 
+                                            from 
+                                            <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">
+                                                www.flaticon.es
+                                            </a>
+                                        </div>
                                     </li>
                                     <li>
                                         <hr />
@@ -669,16 +697,6 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                             <a href=\"https://www.youtube.com/\"><i class=\"fa fa-youtube fa-2x hover\"></i></a>
                                     </li>
                                 </ul>
-                                <div>
-                                    Iconos diseñados por 
-                                        <a href=\"https://www.freepik.com\" title=\"Freepik\">
-                                            Freepik
-                                        </a> 
-                                    from 
-                                    <a href=\"https://www.flaticon.es/\" title=\"Flaticon\">
-                                        www.flaticon.es
-                                    </a>
-                                </div>
                             </div>   
                         </div>
                     </div>

@@ -87,7 +87,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         // line 6
         echo "    <div class=\"row mt-5\">
         <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0 d-flex justify-content-around\">
-            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" /></a>
+            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Crear anuncio vehículo\" /></a>
             ";
         // line 10
         echo "            <form action=\"/buscador\" method=\"post\" class=\"form-group d-flex justify-content-between align-items-center buscador\">
@@ -141,99 +141,168 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
     <hr class=\"bg-dark\" />
 
     <div class=\"row mt-5\">
-        <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0 d-flex flex-column justify-content-around\">
+        <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0\">
+            <h2 class=\"text-center\">Buscador: </h2>
             ";
-        // line 35
+        // line 36
         echo "            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 35, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 36, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["vehicle"]) {
-            // line 36
+            // line 37
             echo "                ";
-            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "eliminado", [], "any", false, false, false, 36), false)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "venta", [], "any", false, false, false, 36), true)))) {
-                // line 37
-                echo "                    <div class=\"vehicles\">
-                        Marca: ";
+            if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "eliminado", [], "any", false, false, false, 37), false)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehicle"], "venta", [], "any", false, false, false, 37), true)))) {
                 // line 38
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "marca", [], "any", false, false, false, 38), "html", null, true);
-                echo "
-                        Modelo: ";
-                // line 39
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "modelo", [], "any", false, false, false, 39), "html", null, true);
-                echo "
-                        ";
-                // line 40
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 40), "email", [], "any", false, false, false, 40), "html", null, true);
-                echo "
-                        ";
+                echo "                    <div class=\"vehicles d-flex justify-content-between m-5 anuncio buscador\">
+                        <div id=\"carouselExampleIndicators\" class=\"carousel slide carusel w-25 mr-3 bg-dark\" data-ride=\"carousel\">
+                            <ol class=\"carousel-indicators\">
+                                ";
                 // line 41
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 41), "Y-m-d H:i:s"), "html", null, true);
-                echo "
-                        Fotos:
-                        <br/>
-                        ";
-                // line 44
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 44));
-                foreach ($context['_seq'] as $context["_key"] => $context["foto"]) {
-                    // line 45
-                    echo "                            <img src=\"/img/";
-                    echo twig_escape_filter($this->env, $context["foto"], "html", null, true);
-                    echo "\" />
-                        ";
+                $context['_seq'] = twig_ensure_traversable(range(0, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 41))));
+                foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
+                    // line 42
+                    echo "                                    ";
+                    if ((0 === twig_compare($context["contador"], 0))) {
+                        // line 43
+                        echo "                                        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>
+                                    ";
+                    } else {
+                        // line 45
+                        echo "                                        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"";
+                        echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
+                        echo "\"></li>
+                                    ";
+                    }
+                    // line 47
+                    echo "                                ";
                 }
                 $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['foto'], $context['_parent'], $context['loop']);
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contador'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 47
-                echo "                        ";
-                if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 47), "id", [], "any", false, false, false, 47), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "user", [], "any", false, false, false, 47), "id", [], "any", false, false, false, 47)))) {
-                    // line 48
-                    echo "                            <button><a href=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 48), "id", [], "any", false, false, false, 48), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 48, $this->source); })()), "id", [], "any", false, false, false, 48), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 48), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 48)]), "html", null, true);
-                    echo "\">Enviar mensaje</a></button>
-                        ";
-                } else {
-                    // line 50
-                    echo "                            <button><a href=\"/vehiculo/";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 50), "html", null, true);
-                    echo "/edit\">Editar anuncio vehículo</a></button>
-                        ";
+                // line 48
+                echo "                            </ol>
+                            <div class=\"carousel-inner\">
+                                ";
+                // line 50
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 50));
+                foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
+                    // line 51
+                    echo "                                    ";
+                    if ((0 === twig_compare($context["image"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 51), 0, [], "array", false, false, false, 51)))) {
+                        // line 52
+                        echo "                                        <div class=\"carousel-item active\">
+                                            <img class=\"d-block w-100\" src=\"/img/";
+                        // line 53
+                        echo twig_escape_filter($this->env, $context["image"], "html", null, true);
+                        echo "\" alt=\"Imagen del anuncio del vehículo\" height=\"120px\" />
+                                        </div>
+                                    ";
+                    }
+                    // line 56
+                    echo "
+                                    <div class=\"carousel-item\">
+                                        <img class=\"d-block w-100\" src=\"/img/";
+                    // line 58
+                    echo twig_escape_filter($this->env, $context["image"], "html", null, true);
+                    echo "\" alt=\"Imagen del anuncio del vehículo\" height=\"120px\" />
+                                    </div>
+                                ";
                 }
-                // line 52
-                echo "                    </div>
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 61
+                echo "                            </div>
+                            <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
+                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+                                <span class=\"sr-only\">Anterior</span>
+                            </a>
+                            <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">
+                                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+                                <span class=\"sr-only\">Siguiente</span>
+                            </a>
+                        </div>
+                        <div class=\"d-flex flex-column w-75\">
+                            <div class=\"d-flex justify-content-around mt-3 border-bottom border-dark mr-3\">
+                                <p><strong>Marca:</strong> ";
+                // line 73
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "marca", [], "any", false, false, false, 73), "html", null, true);
+                echo "</p>
+                                <p><strong>Modelo:</strong> ";
+                // line 74
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "modelo", [], "any", false, false, false, 74), "html", null, true);
+                echo "</p>
+                            </div>
+                            <div class=\"d-flex justify-content-start mt-3 border-bottom border-dark mr-3\">
+                                <p><strong>Descripción:</strong> ";
+                // line 77
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "descripcion", [], "any", false, false, false, 77), "html", null, true);
+                echo "</p>
+                            </div>
+                            <div class=\"d-flex justify-content-around mt-3 border-bottom border-dark mr-3\">
+                                <p><strong>Autor:</strong> ";
+                // line 80
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 80), "email", [], "any", false, false, false, 80), "html", null, true);
+                echo "</p>
+                                <p><strong>Fecha creación:</strong> ";
+                // line 81
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 81), "Y-m-d H:i:s"), "html", null, true);
+                echo "</p>
+                            </div>
+                            <div class=\"d-flex justify-content-center\">
+                                ";
+                // line 84
+                if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 84), "email", [], "any", false, false, false, 84), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 84, $this->source); })()), "user", [], "any", false, false, false, 84), "email", [], "any", false, false, false, 84))) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 84), "id", [], "any", false, false, false, 84), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 84, $this->source); })()), "user", [], "any", false, false, false, 84), "id", [], "any", false, false, false, 84))))) {
+                    // line 85
+                    echo "                                    <button class=\"btn btn-success\"><a href=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 85), "id", [], "any", false, false, false, 85), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 85, $this->source); })()), "id", [], "any", false, false, false, 85), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 85), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 85)]), "html", null, true);
+                    echo "\" class=\"enlace\">Enviar mensaje</a></button>
+                                ";
+                } else {
+                    // line 87
+                    echo "                                    <button class=\"btn btn-success\"><a href=\"/vehiculo/";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 87), "html", null, true);
+                    echo "/edit\" class=\"enlace\">Editar anuncio vehículo</a></button>
+                                ";
+                }
+                // line 89
+                echo "                            </div>
+                        </div>
+                        <br/>
+                    </div>
                 ";
             }
-            // line 54
+            // line 94
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehicle'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 55
+        // line 95
         echo "
             ";
-        // line 57
-        echo "            
-            <div class=\"d-flex justify-content-center align items-center mb-2\">
+        // line 97
+        echo "            <div class=\"d-flex justify-content-center align items-center mb-2\">
                 <nav aria-label=\"page\">
                     <ul class=\"pagination\">
                         <li class=\"page-item\">
                             <a class=\"page-link pulsar\" href=\"/page/first\"><<</a>
                         </li>
                         ";
-        // line 64
+        // line 103
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 64, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 103, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
-            // line 65
+            // line 104
             echo "                            <li class=\"page-item\">
                                 <a class=\"page-link pulsar\" href=\"/page/";
-            // line 66
+            // line 105
             echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
             echo "\">
                                     ";
-            // line 67
+            // line 106
             echo twig_escape_filter($this->env, ($context["contador"] + 1), "html", null, true);
             echo "
                                 </a>
@@ -243,7 +312,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 71
+        // line 110
         echo "                        <li class=\"page-item\">
                             <a class=\"page-link pulsar\" href=\"/page/last\">>></a>
                         </li>
@@ -273,7 +342,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     public function getDebugInfo()
     {
-        return array (  247 => 71,  237 => 67,  233 => 66,  230 => 65,  226 => 64,  217 => 57,  214 => 55,  208 => 54,  204 => 52,  198 => 50,  192 => 48,  189 => 47,  180 => 45,  176 => 44,  170 => 41,  166 => 40,  162 => 39,  158 => 38,  155 => 37,  152 => 36,  147 => 35,  135 => 24,  124 => 22,  120 => 21,  114 => 17,  103 => 15,  99 => 14,  93 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  316 => 110,  306 => 106,  302 => 105,  299 => 104,  295 => 103,  287 => 97,  284 => 95,  278 => 94,  271 => 89,  265 => 87,  259 => 85,  257 => 84,  251 => 81,  247 => 80,  241 => 77,  235 => 74,  231 => 73,  217 => 61,  208 => 58,  204 => 56,  198 => 53,  195 => 52,  192 => 51,  188 => 50,  184 => 48,  178 => 47,  172 => 45,  168 => 43,  165 => 42,  161 => 41,  156 => 38,  153 => 37,  148 => 36,  135 => 24,  124 => 22,  120 => 21,  114 => 17,  103 => 15,  99 => 14,  93 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -285,7 +354,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 {% block body %}
     <div class=\"row mt-5\">
         <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0 d-flex justify-content-around\">
-            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" /></a>
+            <a class=\"mr-3\" href=\"/vehiculo/new\"><img src=\"/comunes/icon/anadir.png\" width=\"50px\" height=\"50px\" data-toggle=\"tooltip\" title=\"Crear anuncio vehículo\" /></a>
             {# Mostrar opciones de busqueda #}
             <form action=\"/buscador\" method=\"post\" class=\"form-group d-flex justify-content-between align-items-center buscador\">
                 <label for=\"marcas\">Marca:</label>
@@ -310,31 +379,70 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
     <hr class=\"bg-dark\" />
 
     <div class=\"row mt-5\">
-        <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0 d-flex flex-column justify-content-around\">
+        <div class=\"col-lg-12 col-md-0 col-sm-0 col-xs-0\">
+            <h2 class=\"text-center\">Buscador: </h2>
             {# Mostrar vehículos #}
             {% for vehicle in vehicles %}
                 {% if vehicle.eliminado == false and vehicle.venta == true %}
-                    <div class=\"vehicles\">
-                        Marca: {{ vehicle.marca }}
-                        Modelo: {{ vehicle.modelo }}
-                        {{ vehicle.propietario.email }}
-                        {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}
-                        Fotos:
+                    <div class=\"vehicles d-flex justify-content-between m-5 anuncio buscador\">
+                        <div id=\"carouselExampleIndicators\" class=\"carousel slide carusel w-25 mr-3 bg-dark\" data-ride=\"carousel\">
+                            <ol class=\"carousel-indicators\">
+                                {% for contador in 0..vehicle.images|length %}
+                                    {% if contador == 0 %}
+                                        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>
+                                    {% else %}
+                                        <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"{{ contador }}\"></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ol>
+                            <div class=\"carousel-inner\">
+                                {% for image in vehicle.images %}
+                                    {% if image == vehicle.images[0] %}
+                                        <div class=\"carousel-item active\">
+                                            <img class=\"d-block w-100\" src=\"/img/{{ image }}\" alt=\"Imagen del anuncio del vehículo\" height=\"120px\" />
+                                        </div>
+                                    {% endif %}
+
+                                    <div class=\"carousel-item\">
+                                        <img class=\"d-block w-100\" src=\"/img/{{ image }}\" alt=\"Imagen del anuncio del vehículo\" height=\"120px\" />
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">
+                                <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+                                <span class=\"sr-only\">Anterior</span>
+                            </a>
+                            <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">
+                                <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+                                <span class=\"sr-only\">Siguiente</span>
+                            </a>
+                        </div>
+                        <div class=\"d-flex flex-column w-75\">
+                            <div class=\"d-flex justify-content-around mt-3 border-bottom border-dark mr-3\">
+                                <p><strong>Marca:</strong> {{ vehicle.marca }}</p>
+                                <p><strong>Modelo:</strong> {{ vehicle.modelo }}</p>
+                            </div>
+                            <div class=\"d-flex justify-content-start mt-3 border-bottom border-dark mr-3\">
+                                <p><strong>Descripción:</strong> {{ vehicle.descripcion }}</p>
+                            </div>
+                            <div class=\"d-flex justify-content-around mt-3 border-bottom border-dark mr-3\">
+                                <p><strong>Autor:</strong> {{ vehicle.propietario.email }}</p>
+                                <p><strong>Fecha creación:</strong> {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}</p>
+                            </div>
+                            <div class=\"d-flex justify-content-center\">
+                                {% if vehicle.propietario.email != app.user.email or vehicle.propietario.id != app.user.id %}
+                                    <button class=\"btn btn-success\"><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}\" class=\"enlace\">Enviar mensaje</a></button>
+                                {% else %}
+                                    <button class=\"btn btn-success\"><a href=\"/vehiculo/{{ vehicle.id }}/edit\" class=\"enlace\">Editar anuncio vehículo</a></button>
+                                {% endif %}
+                            </div>
+                        </div>
                         <br/>
-                        {% for foto in vehicle.images %}
-                            <img src=\"/img/{{ foto }}\" />
-                        {% endfor %}
-                        {% if vehicle.propietario.id != app.user.id %}
-                            <button><a href=\"{{ path('message_new', {'receptor': vehicle.propietario.id, 'emisor': user.id, 'id': vehicle.id, 'vehiculo': vehicle.id}) }}\">Enviar mensaje</a></button>
-                        {% else %}
-                            <button><a href=\"/vehiculo/{{ vehicle.id }}/edit\">Editar anuncio vehículo</a></button>
-                        {% endif %}
                     </div>
                 {% endif %}
             {% endfor %}
 
             {# Paginación #}
-            
             <div class=\"d-flex justify-content-center align items-center mb-2\">
                 <nav aria-label=\"page\">
                     <ul class=\"pagination\">
