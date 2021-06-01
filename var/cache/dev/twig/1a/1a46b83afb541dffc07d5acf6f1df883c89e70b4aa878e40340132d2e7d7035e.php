@@ -242,81 +242,103 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                 echo "</p>
                             </div>
                             <div class=\"d-flex justify-content-around mt-3 border-bottom border-dark mr-3\">
-                                <p><strong>Autor:</strong> ";
+                                <p><strong>Precio:</strong> ";
                 // line 80
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 80), "email", [], "any", false, false, false, 80), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "precio", [], "any", false, false, false, 80), "html", null, true);
+                echo "</p>
+                                <p><strong>Autor:</strong> ";
+                // line 81
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 81), "email", [], "any", false, false, false, 81), "html", null, true);
                 echo "</p>
                                 <p><strong>Fecha creación:</strong> ";
-                // line 81
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 81), "Y-m-d H:i:s"), "html", null, true);
+                // line 82
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 82), "Y-m-d H:i:s"), "html", null, true);
                 echo "</p>
                             </div>
                             <div class=\"d-flex justify-content-center\">
                                 ";
-                // line 84
-                if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 84), "email", [], "any", false, false, false, 84), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 84, $this->source); })()), "user", [], "any", false, false, false, 84), "email", [], "any", false, false, false, 84))) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 84), "id", [], "any", false, false, false, 84), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 84, $this->source); })()), "user", [], "any", false, false, false, 84), "id", [], "any", false, false, false, 84))))) {
-                    // line 85
+                // line 85
+                if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 85), "email", [], "any", false, false, false, 85), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 85, $this->source); })()), "user", [], "any", false, false, false, 85), "email", [], "any", false, false, false, 85))) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 85), "id", [], "any", false, false, false, 85), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 85, $this->source); })()), "user", [], "any", false, false, false, 85), "id", [], "any", false, false, false, 85))))) {
+                    // line 86
                     echo "                                    <button class=\"btn btn-success\"><a href=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 85), "id", [], "any", false, false, false, 85), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 85, $this->source); })()), "id", [], "any", false, false, false, 85), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 85), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 85)]), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 86), "id", [], "any", false, false, false, 86), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 86, $this->source); })()), "id", [], "any", false, false, false, 86), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 86), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 86)]), "html", null, true);
                     echo "\" class=\"enlace\">Enviar mensaje</a></button>
                                 ";
                 } else {
-                    // line 87
+                    // line 88
                     echo "                                    <button class=\"btn btn-success\"><a href=\"/vehiculo/";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 87), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 88), "html", null, true);
                     echo "/edit\" class=\"enlace\">Editar anuncio vehículo</a></button>
                                 ";
                 }
-                // line 89
+                // line 90
                 echo "                            </div>
                         </div>
                         <br/>
                     </div>
                 ";
             }
-            // line 94
+            // line 95
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehicle'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 95
+        // line 96
         echo "
             ";
-        // line 97
+        // line 98
         echo "            <div class=\"d-flex justify-content-center align items-center mb-2\">
                 <nav aria-label=\"page\">
                     <ul class=\"pagination\">
-                        <li class=\"page-item\">
-                            <a class=\"page-link pulsar\" href=\"/page/first\"><<</a>
-                        </li>
                         ";
-        // line 103
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 103, $this->source); })())));
-        foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
-            // line 104
+        // line 101
+        if (((-1 === twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 101, $this->source); })())), 10)) && (0 <= twig_compare((isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 101, $this->source); })()), 1)))) {
+            // line 102
             echo "                            <li class=\"page-item\">
-                                <a class=\"page-link pulsar\" href=\"/page/";
-            // line 105
-            echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
-            echo "\">
-                                    ";
-            // line 106
-            echo twig_escape_filter($this->env, ($context["contador"] + 1), "html", null, true);
-            echo "
-                                </a>
+                                <a class=\"page-link pulsar\" href=\"/page/first\"><<</a>
                             </li>
                         ";
+        }
+        // line 106
+        echo "                        ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 106, $this->source); })())));
+        foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
+            // line 107
+            echo "                            ";
+            if ((0 !== twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 107, $this->source); })())), 0))) {
+                // line 108
+                echo "                                <li class=\"page-item\">
+                                    <a class=\"page-link pulsar\" href=\"/page/";
+                // line 109
+                echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
+                echo "\">
+                                        ";
+                // line 110
+                echo twig_escape_filter($this->env, ($context["contador"] + 1), "html", null, true);
+                echo "
+                                    </a>
+                                </li>
+                            ";
+            }
+            // line 114
+            echo "                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 110
-        echo "                        <li class=\"page-item\">
-                            <a class=\"page-link pulsar\" href=\"/page/last\">>></a>
-                        </li>
-                    </ul>
+        // line 115
+        echo "                        ";
+        if ((0 <= twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 115, $this->source); })())), 10))) {
+            // line 116
+            echo "                            <li class=\"page-item\">
+                                <a class=\"page-link pulsar\" href=\"/page/last\">>></a>
+                            </li>
+                        ";
+        }
+        // line 120
+        echo "                    </ul>
                 </nav>
             </div>
         </div>
@@ -342,7 +364,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     public function getDebugInfo()
     {
-        return array (  316 => 110,  306 => 106,  302 => 105,  299 => 104,  295 => 103,  287 => 97,  284 => 95,  278 => 94,  271 => 89,  265 => 87,  259 => 85,  257 => 84,  251 => 81,  247 => 80,  241 => 77,  235 => 74,  231 => 73,  217 => 61,  208 => 58,  204 => 56,  198 => 53,  195 => 52,  192 => 51,  188 => 50,  184 => 48,  178 => 47,  172 => 45,  168 => 43,  165 => 42,  161 => 41,  156 => 38,  153 => 37,  148 => 36,  135 => 24,  124 => 22,  120 => 21,  114 => 17,  103 => 15,  99 => 14,  93 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  341 => 120,  335 => 116,  332 => 115,  326 => 114,  319 => 110,  315 => 109,  312 => 108,  309 => 107,  304 => 106,  298 => 102,  296 => 101,  291 => 98,  288 => 96,  282 => 95,  275 => 90,  269 => 88,  263 => 86,  261 => 85,  255 => 82,  251 => 81,  247 => 80,  241 => 77,  235 => 74,  231 => 73,  217 => 61,  208 => 58,  204 => 56,  198 => 53,  195 => 52,  192 => 51,  188 => 50,  184 => 48,  178 => 47,  172 => 45,  168 => 43,  165 => 42,  161 => 41,  156 => 38,  153 => 37,  148 => 36,  135 => 24,  124 => 22,  120 => 21,  114 => 17,  103 => 15,  99 => 14,  93 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -426,6 +448,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                                 <p><strong>Descripción:</strong> {{ vehicle.descripcion }}</p>
                             </div>
                             <div class=\"d-flex justify-content-around mt-3 border-bottom border-dark mr-3\">
+                                <p><strong>Precio:</strong> {{ vehicle.precio }}</p>
                                 <p><strong>Autor:</strong> {{ vehicle.propietario.email }}</p>
                                 <p><strong>Fecha creación:</strong> {{ vehicle.fechaModificacion|date('Y-m-d H:i:s') }}</p>
                             </div>
@@ -446,19 +469,25 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
             <div class=\"d-flex justify-content-center align items-center mb-2\">
                 <nav aria-label=\"page\">
                     <ul class=\"pagination\">
-                        <li class=\"page-item\">
-                            <a class=\"page-link pulsar\" href=\"/page/first\"><<</a>
-                        </li>
-                        {% for contador in 0 .. contadorTotal %}
+                        {% if vehicles|length < 10 and contadorTotal >= 1 %}
                             <li class=\"page-item\">
-                                <a class=\"page-link pulsar\" href=\"/page/{{contador}}\">
-                                    {{ contador + 1 }}
-                                </a>
+                                <a class=\"page-link pulsar\" href=\"/page/first\"><<</a>
                             </li>
+                        {% endif %}
+                        {% for contador in 0 .. contadorTotal %}
+                            {% if vehicles|length != 0 %}
+                                <li class=\"page-item\">
+                                    <a class=\"page-link pulsar\" href=\"/page/{{contador}}\">
+                                        {{ contador + 1 }}
+                                    </a>
+                                </li>
+                            {% endif %}
                         {% endfor %}
-                        <li class=\"page-item\">
-                            <a class=\"page-link pulsar\" href=\"/page/last\">>></a>
-                        </li>
+                        {% if vehicles|length >= 10 %}
+                            <li class=\"page-item\">
+                                <a class=\"page-link pulsar\" href=\"/page/last\">>></a>
+                            </li>
+                        {% endif %}
                     </ul>
                 </nav>
             </div>

@@ -58,7 +58,7 @@ class MainController extends AbstractController
         $v10 = array_slice($v, 0, 10);
         
 
-        $total = round(count($v) / 10);
+        $total = floor(count($v) / 10);
 
         return $this->render('main/buscador.html.twig', [
             'controller_name' => 'MainController',
@@ -80,7 +80,16 @@ class MainController extends AbstractController
         $user = $this->getUser();
 
         // Conseguir marcas y modelos sin repetir
-        $vehiclesFiltro = $this->getDoctrine()->getRepository(Vehiculo::class)->findBy(array("marca" => $request->request->get('marcas'), "modelo" => $request->request->get('modelos')));
+        $vehiclesFiltro = "";
+        if($request->request->get('marcas') != null && $request->request->get('modelos') != null) {
+            $vehiclesFiltro = $this->getDoctrine()->getRepository(Vehiculo::class)->findBy(array("marca" => $request->request->get('marcas'), "modelo" => $request->request->get('modelos')));
+        }else if($request->request->get('marcas') != null) {
+            $vehiclesFiltro = $this->getDoctrine()->getRepository(Vehiculo::class)->findBy(array("marca" => $request->request->get('marcas')));
+        }else if($request->request->get('modelos') != null) {
+            $vehiclesFiltro = $this->getDoctrine()->getRepository(Vehiculo::class)->findBy(array("modelo" => $request->request->get('modelos')));
+        }else {
+            $vehiclesFiltro = $this->getDoctrine()->getRepository(Vehiculo::class)->findAll();
+        }
         
         $vehicles = $this->getDoctrine()->getRepository(Vehiculo::class)->findAll();
         // Arrays de marcas y modelos
@@ -103,11 +112,12 @@ class MainController extends AbstractController
                 array_push($v, $vehicle);
             }
         }
+        
 
         // Coger solo los primeros 10 coches
         $v10 = array_slice($v, 0, 10);
 
-        $total = round(count($v) / 10);
+        $total = floor(count($v) / 10);
 
         return $this->render('main/buscador.html.twig', [
             'controller_name' => 'MainController',
@@ -153,7 +163,7 @@ class MainController extends AbstractController
         // Vehículos a enseñar
         $v10 = array();
 
-        $total = round(count($v) / 10);
+        $total = floor(count($v) / 10);
 
         // Condicionales de paginación
         if($contador == "first") {

@@ -43,7 +43,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
         echo "<!DOCTYPE html>
 <html>
     <head>
-        <title>Login Page</title>
+        <title>Inicio sesión</title>
         <!--Made with love by Mutiullah Samim -->
     
         <!--Bootsrap 4 CDN-->
@@ -241,7 +241,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
         return new Source("<!DOCTYPE html>
 <html>
     <head>
-        <title>Login Page</title>
+        <title>Inicio sesión</title>
         <!--Made with love by Mutiullah Samim -->
     
         <!--Bootsrap 4 CDN-->
@@ -441,6 +441,6 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
     </button>
 </form>
 {% endblock %} #}
-", "security/login.html.twig", "/home/bayo/proyectos/ComunityCar/templates/security/login.html.twig");
+", "security/login.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/security/login.html.twig");
     }
 }
