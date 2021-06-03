@@ -1,0 +1,436 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* main/privacidad.html.twig */
+class __TwigTemplate_99e5be3dd0b551296dc5a08af5c7b290ff219189991129ba6f911649482033a5 extends Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "main/privacidad.html.twig"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "main/privacidad.html.twig"));
+
+        // line 1
+        echo "<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=\"UTF-8\" />
+        <title>Política de privacidad e información legal</title>
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
+        <style>
+            body {
+                background-color: #E5E2E6;
+            }
+        </style>
+    </head>
+    <body>
+        <div class=\"row d-flex justify-content-center mt-5\">
+            <div class=\"col-lg-10 col-md-0 col-sm-0 col-xs-0\">
+                <article class=\"l-container\">
+                    <header class=\"text-center\">
+                        <h1>
+                            <span>Política de privacidad</span>
+                        </h1>
+                    </header>
+                    <section>
+                        <h2>
+                        <span>Responsable</span>
+                        </h2>
+                        <p>¿Quién es el responsable del tratamiento de tus datos?</p>
+                        <p>Email de contacto: miguelpuerta@gmail.com</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Finalidades</span>
+                        </h2>
+                        <p>¿Con qué finalidad tratamos tus datos personales?</p>
+                        <p>En cumplimiento de lo dispuesto en el Reglamento Europeo 2016/679 General de Protección de Datos, te informamos de que, tanto si eres anunciante como usuario, en Adevinta Spain S.L.U. tratamos los datos que nos facilitas para las siguientes finalidades:</p>
+                        <ol>
+                            <li>Realizar una correcta gestión de la publicación de tu anuncio. Este servicio incluye que tratemos tus datos para:<ul>
+                            <li>Crearte una cuenta de usuario en el momento de la publicación del primer anuncio, la cual es necesaria para que puedas gestionar los anuncios que publiques y los contactos que recibas. Así, si en el momento de publicar tu primer anuncio no eres un usuario registrado, automáticamente te crearemos una cuenta. Desde allí podrás gestionar y configurar tus opciones de privacidad.</li>
+                            <li>Gestionar nuestros servicios, incluyendo recordatorios, avisos técnicos, actualizaciones, alertas de seguridad, mensajes de soporte, entre otros.</li>
+                            <li>Proporcionar el servicio de mensajería instantánea entre usuarios para facilitar la transacción y comunicación entre estos; al usar el formulario de contacto o el chat en el área de usuario, estarás utilizando nuestro servicio de mensajería. Los mensajes y anuncios son revisados por un proceso automático. Lo hacemos para prevenir el fraude o un uso abusivo o inadecuado de nuestros servicios, incluyendo la venta de bienes ilegales, tales como falsificaciones o bienes robados. Si detectamos una actividad o comportamiento sospechoso o ilegal, nuestro equipo de seguridad podrá revisar los mensajes enviados y recibidos. Del mismo modo, podremos acceder a los mensajes enviados y recibidos de forma agregada para mejorar y desarrollar nuestros servicios.</li>
+                            <li>Posibilitar el contacto con los anunciantes. Cuando contactes con los anunciantes, les enviaremos los datos personales y la información que incluyas en el formulario de contacto. Asimismo, cuando uses el formulario de contacto, estarás utilizando nuestro servicio de mensajería. Los mensajes y anuncios son revisados por un proceso automático. Lo hacemos para prevenir el fraude o un uso abusivo o inadecuado de nuestros servicios, incluyendo la venta de bienes ilegales, tales como falsificaciones o bienes robados. Si detectamos una actividad o comportamiento sospechoso o ilegal, nuestro equipo de seguridad podrá revisar los mensajes enviados y recibidos. Del mismo modo, podremos acceder a los mensajes enviados y recibidos de forma agregada para mejorar, desarrollar nuestros servicios y para ofrecerte una mejor experiencia.</li>
+                            <li>Elaborar un perfil comercial. Al navegar por nuestro site, y siempre que contemos con tu consentimiento, tanto si eres anunciante como usuario, podremos elaborar un perfil comercial en base a la información facilitada por ti para mostrarte publicidad personalizada perfilada. No se tomarán decisiones automatizadas en base a dicho perfil que produzcan efectos jurídicos o significativos para ti. El perfil comercial que se elabore.</li>
+                            <li>Prevenir abusos y fraudes en el uso de nuestros servicios (por ejemplo, actividades fraudulentas, ataques de denegación de servicios, entre otros).</li>
+                            <li>Ceder datos a organismos públicos y autoridades, siempre y cuando sean requeridos de conformidad con las disposiciones legales y reglamentarias.</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Plazo de conservación de los datos</span>
+                        </h2>
+                        <p>¿Por cuánto tiempo conservaremos tus datos?</p>
+                        <p>Si eres un anunciante, tus datos serán conservados mientras dure la relación contractual y comercial con nosotros, solicites su supresión, así como el tiempo necesario para cumplir las obligaciones legales.</p>
+                        <p>Si has contactado con algún anunciante, tus datos se conservarán durante el tiempo necesario para posibilitar el contacto con cada uno de los anunciantes con los que contactes. En todo caso, conservaremos tus datos durante el tiempo necesario para cumplir las obligaciones legales.</p>
+                        <p>Independientemente de si eres un anunciante o un usuario, conservaremos tus datos de navegación durante un plazo máximo de 12 meses.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Legitimación</span>
+                        </h2>
+                        <p>¿Cuál es la legitimación para el tratamiento de tus datos?</p>
+                        <p>La base legal para el tratamiento de tus datos radica en:</p>
+                        <ul>
+                            <li>El <strong>consentimiento del usuario</strong> en relación con las finalidades indicadas en los apartados 3 y 4 anteriores.</li>
+                            <li>El <strong>interés legítimo del responsable del tratamiento</strong> para la finalidad indicada en el apartado 5 anterior. El interés legítimo consiste en proteger a los usuarios de abusos y fraudes en el uso de nuestros servicios.</li>
+                            <li>El <strong>cumplimiento de obligaciones</strong> legales para la finalidad indicada en el apartado 6.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Destinatarios</span>
+                        </h2>
+                        <p>¿A qué destinatarios se comunicarán tus datos?</p>
+                        <p>Tus datos personales serán comunicados a terceros en los siguientes supuestos:</p>
+                        <ul>
+                            <li>Tus datos personales se comunicarán al anunciante que se indique en el detalle de cada anuncio para posibilitar el contacto con este último.</li>
+                            <li>Tus datos personales también podrán ser cedidos a las autoridades competentes en los casos que exista una obligación legal.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Derechos</span>
+                        </h2>
+                        <p>¿Cuáles son tus derechos cuando nos facilitas tus datos y cómo puedes ejercerlos?</p>
+                        <p>Tenes derecho a acceder a tus datos personales, así como a solicitar la rectificación de los datos inexactos o, en su caso, solicitar su supresión cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos.</p>
+                        <p>En determinadas circunstancias, podrás solicitar la limitación del tratamiento de tus datos, en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de reclamaciones.</p>
+                        <p>En determinadas circunstancias y por motivos relacionados con tu situación particular, podrás oponerte al tratamiento de tus datos. Excepto por motivos legítimos imperiosos, o el ejercicio o la defensa de posibles reclamaciones.</p>
+                        <p>Puedes ejercer el derecho a la portabilidad de los datos, así como retirar los consentimientos facilitados en cualquier momento, sin que ello afecte a la licitud del tratamiento basado en el consentimiento previo a su retirada.</p>
+                        <p>Si deseas hacer uso de cualquiera de tus derechos puedes dirigirte a nosotros mediante el correo electrónico indicado en el apartado 1, a través de la sección del pie de página de contacto. Recuerda facilitar la mayor información posible sobre tu solicitud: Nombre y apellidos, dirección de correo electrónico que utilizas para la cuenta o portal objeto de tu solicitud.</p>
+                        <p>Por último, te informamos que puedes dirigirte ante la Agencia Española de Protección de Datos y demás organismos públicos competentes para cualquier reclamación derivada del tratamiento de tus datos personales.</p>
+                        <p>En relación a los datos facilitados a los anunciantes con los que hayas contactado, puedes ejercer tus derechos frente al anunciante como usuario, dirigiéndote a la dirección del anunciante que figura consignada en la parte inferior del anuncio. Se entiende, en este caso, por anunciante toda aquella persona física o jurídica que oferte todo tipo de anuncios en nuestros Portales.</p>
+                    </section>
+                </article>
+                <br/>
+                <br/>
+                <article class=\"l-container\">
+                    <header class=\"text-center\">
+                        <h1>
+                            <span>Información legal</span>
+                        </h1>
+                    </header>
+                    <section>
+                        <h2>
+                        <span>Objeto</span>
+                        </h2>
+                        <p>El presente aviso legal regula el uso del Portal de Internet \"comunitycar.ddns.net\", o cualquier otro que en el futuro le sustituyese, que ComunityCar pone a disposición de los usuarios, constituyendo un punto de encuentro de información, anuncios relacionados con los la compraventa de vehículos.</p>
+                        <p>ComunityCar, para comunicaciones legales y organismos e instituciones públicas, contactar con miguelpuerta@gmail.com. Para cualquier consulta, duda o incidencia relacionada en ComunityCar, contactar con miguelpuerta@gmail.com.</p>
+                        <p>De conformidad con lo previsto en el Reglamento UE 524/2013, de 21 de mayo de 2013 y de la Ley 7/2017, de 2 de noviembre sobre resolución de litigios en línea en materia de consumo se inserta a continuación enlace a la plataforma de resolución de litigios en línea puesta en marcha por la Comisión Europea a la que podrán recurrir los clientes para resolver cualquier discrepancia o controversia con relación a los servicios prestados por ComunityCar en su web: <a class=\"a\" href=\"https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.show&amp;lng=ES\">https://ec.europa.eu/</a></p>
+                        <p>La utilización del Portal atribuye la condición de Usuario, lo cual implica la adhesión a las presentes condiciones en la versión publicada en el momento en que se acceda al mismo. ComunityCar se reserva el derecho a modificar, en cualquier momento, la presentación y configuración del Portal, así como las Condiciones Generales de Acceso y Utilización del mismo. Por ello, ComunityCar recomienda al Usuario leer estas Condiciones Generales atentamente cada vez que acceda a cualquiera de los Portales.</p>
+                        <p>El acceso a determinados Contenidos ofrecidos a través del Portal puede encontrarse sometido a ciertas condiciones particulares propias que, según los casos, sustituyen, completan y/o modifican estas Condiciones Generales. Por tanto, con anterioridad al acceso y/o utilización de dichos Contenidos, el Usuario ha de leer atentamente también las correspondientes condiciones particulares.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Acceso y seguridad</span>
+                        </h2>
+                        <p>Con carácter general, los Usuarios podrán acceder al Portal de forma gratuita, tras el correspondiente registro solicitado por ComunityCar. Una vez solicitado el registro, y con independencia de que provisionalmente se comiencen a prestar los servicios incluidos en el Portal, ComunityCar dispondrá de un plazo de un mes para verificar que los datos introducidos por el Usuario son correctos, completos, lícitos, no son ilegales ni irrespetuosos, y que permiten la correcta identificación del usuario.</p>
+                        <p>Con independencia de las posibles acciones de verificación que llevará a cabo ComunityCar, la aceptación del registro no supone en absoluto la asunción por parte de ComunityCar de que dicha información es correcta, completa, lícita ni legal, sino que la misma va a ser empleada a los meros efectos de proceder con el Registro. Por lo tanto, el usuario responderá, el cualquier caso, de la veracidad y licitud de los datos facilitados, eximiendo expresamente a ComunityCar de cualquier responsabilidad por la inclusión de dichos datos, y reservándose el derecho a no aceptar la solicitud de registro en función de las circunstancias descritas en el párrafo anterior, sin perjuicio de las demás acciones que pudieran proceder en Derecho.</p>
+                        <p>El \"Público destinatario del Portal\" son persona que quieren poner anuncios para vender sus vehículos y otras que los compran si están interesados. En cualquier caso, ComunityCar podrá denegar el registro a todos aquellos solicitantes que no sean considerados como \"Publico destinatario del Portal.</p>
+                        <p>La denegación del registro implica automáticamente la cesación en la consideración de Usuario y, por tanto, la denegación de acceso al Portal y la terminación de los servicios y contenidos recogidos en el Portal.</p>
+                        <p>El uso de la contraseña es personal e intransferible, no estando permitida la cesión, ni siquiera temporal, a terceros. En tal sentido, el Usuario se compromete a hacer un uso diligente de la contraseña y a mantener en secreto la misma, asumiendo toda responsabilidad por las consecuencias de su divulgación a terceros.</p>
+                        <p>En el supuesto de que el Usuario conozca o sospeche que terceros puedan conocer o pudiesen estar haciendo uso de su contraseña, deberá poner tal circunstancia en conocimiento de ComunityCar con la mayor brevedad.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Carácter y utilización correcta de los contenidos y servicios</span>
+                        </h2>
+                        <p>El Usuario se compromete a utilizar los Contenidos de conformidad con la ley, con estas Condiciones Generales, así como con la moral y buenas costumbres generalmente aceptadas y el orden público.</p>
+                        <p>El Usuario se obliga a usar los Contenidos de forma diligente, legal, correcta y lícita y, en particular, se compromete a título meramente enunciativo y no exhaustivo a abstenerse de:</p>
+                        <ol>
+                        <li>
+                            <span>Utilizar los Contenidos de forma y con fines contrarios a la ley, a la moral y a las buenas costumbres generalmente aceptadas o al orden público.</span>
+                        </li>
+                        <li>
+                            <span>Transmitir o difundir información, datos, contenidos, mensajes, gráficos, dibujos, archivos de sonido y/o imagen, fotografías, grabaciones, software, y en general, cualquier material obsceno, ofensivo, vulgar o que induzca actuaciones delictivas, denigratorias, difamatorias, infamantes, violentas o, en general, contrarias a la ley, a la moral y buenas costumbres generalmente aceptadas o al orden público.</span>
+                        </li>
+                        <li>
+                            <span>Reproducir, copiar, o distribuir los Contenidos, así como permitir el acceso del público a los mismos a través de cualquier modalidad de comunicación pública, o transformarlos o modificarlos, a menos que se cuente con la autorización del titular de los correspondientes derechos o ello resulte legalmente permitido.</span>
+                        </li>
+                        <li>
+                            <span>Vulnerar derechos de propiedad intelectual o industrial pertenecientes a ComunityCar o a terceros, en especial los correspondientes a la marca \"ComunityCar\", así como el nombre de dominio \"comunitycar.ddns.net\".</span>
+                        </li>
+                        <li>
+                            <span>Emplear los Contenidos y, en particular, la información de cualquier clase obtenida a través del Portal con cualquier tipo de finalidad publicitaria y, en especial, para remitir publicidad, comunicaciones con fines de venta directa o con cualquier otra clase de finalidad comercial, mensajes no solicitados individualizados o dirigidos a una pluralidad de personas, así como de comercializar o divulgar de cualquier modo dicha información.</span>
+                        </li>
+                        </ol>
+                        <p>El Usuario responderá por los daños y perjuicios de toda naturaleza que ComunityCar pueda sufrir, directa o indirectamente, como consecuencia del incumplimiento de cualquiera de las obligaciones derivadas de estas Condiciones Generales o de la ley en relación con la utilización del Portal.</p>
+                        <p>ComunityCar velará en todo momento por el respeto del ordenamiento jurídico vigente, y estará legitimada para interrumpir, a su entera discreción, los Contenidos o excluir al Usuario del Portal en su conjunto o de alguno de los servicios y/ o contenidos incluidos en el mismo, en caso de (i) la presunta comisión por su parte de cualquier infracción, ya sea por acción u omisión, tipificada en cualquier norma, sea civil, penal, administrativa o de cualquier otra índole, (ii) en caso de que se observase cualesquiera conductas que, a juicio de ComunityCar, que puedan perturbar el buen funcionamiento, imagen, credibilidad y/o prestigio de ComunityCar.</p>
+                        <p>Asimismo, para hacer uso de los Contenidos del Portal los menores de edad deben obtener previamente permiso de sus padres, tutores o representantes legales, quienes serán considerados responsables de todos los actos realizados por los menores a su cargo. La plena responsabilidad en la determinación de los concretos contenidos y servicios a los que acceden los menores de edad corresponde a los mayores a cuyo cargo se encuentran.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Exclusión de Garantías y Responsabilidad</span>
+                        </h2>
+                        <p>ComunityCar se reserva el derecho a interrumpir el acceso al Portal, así como la prestación de cualquiera o de todos los Contenidos que se prestan a través del mismo en cualquier momento y sin previo aviso, ya sea por motivos de seguridad o por cualquier otra causa.</p>
+                        <p>En consecuencia, ComunityCar no garantiza la fiabilidad, la disponibilidad ni la continuidad de su Portal ni de los Contenidos, por lo que la utilización de los mismos por parte del Usuario se lleva a cabo por su propia cuenta y riesgo, sin que, en ningún momento puedan exigirse responsabilidades a ComunityCar en este sentido.</p>
+                        <p>ComunityCar no será responsable en caso de que existan interrupciones del servicio, demoras, errores, mal funcionamiento del mismo y, en general, demás inconvenientes que tengan su origen en causas que escapan del control de ComunityCar, y/o debidas a una actuación dolosa o culposa del Usuario y/o tengan por origen causas de Fuerza Mayor. Sin perjuicio de lo establecido en el artículo 1105 del Código Civil, se entenderán incluidos en el concepto de Fuerza Mayor, además, y a los efectos de las presentes condiciones generales, todos aquellos acontecimientos acaecidos fuera del control de ComunityCar. En cualquier caso, sea cual fuere su causa, ComunityCar no asumirá responsabilidad alguna ya sea por estafa o mala gestión de la compra-venta del vehículo.</p>
+                        <p>ComunityCar excluye cualquier responsabilidad por los daños y perjuicios de toda naturaleza que puedan deberse a la falta de veracidad, exactitud, exhaustividad y/o actualidad de los Contenidos transmitidos, difundidos, almacenados, puestos a disposición o recibidos, obtenidos o a los que se haya accedido a través del Portal, ni tampoco por los Contenidos prestados u ofertados por terceras personas o entidades. ComunityCar tratará en la medida de lo posible de actualizar y rectificar aquella información alojada en su Portal que no cumpla con las mínimas garantías de veracidad. No obstante quedará exonerada de responsabilidad por su no actualización o rectificación así como por los contenidos e informaciones vertidos en la misma.</p>
+                        <p>ComunityCar no se responsabiliza por el contenido de la información recogida en su portal, así como por aquellas opiniones, comentarios, apreciaciones o cualquier otra manifestación recogida en el mismo que no sean emitidas directamente por ComunityCar.</p>
+                        <p>ComunityCar no garantiza ni asume ningún tipo de responsabilidad por los daños y perjuicios sufridos por el acceso a Contenidos de terceros a través de conexiones, vínculos o links de los sitios enlazados. La función de los enlaces que aparecen en el Portal es exclusivamente la de informar al Usuario sobre la existencia de otras fuentes de información u otros contenidos y servicios en Internet. ComunityCar no será en ningún caso responsable del resultado obtenido a través de dichos enlaces o de las consecuencias que se deriven del acceso por los Usuarios a los mismos. Estos Contenidos de terceros son proporcionados por éstos, por lo que ComunityCar no puede controlar y no controla la licitud de los Contenidos ni la calidad de los servicios ofrecidos. En consecuencia, el Usuario debe extremar la prudencia en la valoración y utilización de la información y servicios existentes en los contenidos de terceros.</p>
+                        <p>ComunityCar excluye cualquier responsabilidad por los daños y perjuicios de toda clase que puedan deberse a la presencia de virus o a la presencia de otros elementos lesivos en los contenidos que puedan producir alteración en los sistemas informáticos, así como en los documentos o sistemas almacenados en los mismos.</p>
+                        <p>ComunityCar no se hace responsable de los contenidos, cualesquiera que sean los mismos, que los Usuarios envíen a ComunityCar por medio del portal, por medio del servicio de correo electrónico o por cualquier otro medio, siendo por tanto imputable a los Usuarios cualquier responsabilidad de los contenidos enviados por los mismos.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Derechos de Propiedad del Contenido</span>
+                        </h2>
+                        <p>Todos los Contenidos incluidos en el portal, tales como textos, gráficos, fotografías, logotipos, iconos, imágenes, así como el diseño gráfico, código fuente y software, la marca \"ComunityCar\" y el dominio \"comunitycar.ddns.net\" son de la exclusiva propiedad de ComunityCar o de terceros, cuyos derechos en su caso reconoce ComunityCar, y están sujetos a derechos de propiedad intelectual e industrial protegidos por la legislación nacional e internacional.</p>
+                        <p>Queda estrictamente prohibido cualquier utilización de cualquiera de los elementos objeto de propiedad industrial e intelectual con cualquier tipo de finalidad, en especial comercial, así como su distribución, comunicación pública, modificación, alteración, transformación o descompilación, salvo autorización expresa por escrito por parte del titular de los mismos.</p>
+                        <p>La infracción de cualquiera de los citados derechos puede constituir una vulneración de las presentes disposiciones, así como una acción constitutiva de delito tipificada en los artículos 270 y siguientes del Código Penal.</p>
+                        <p>Aquellos Usuarios que envíen por medio del Portal observaciones, informaciones, opiniones, comentarios o cualquier tipo de contenidos por medio del servicio de correo electrónico o por cualquier otro medio, en los casos en los que por la naturaleza de los servicios o contenidos ello sea posible, se entiende que autorizan a ComunityCar para la reproducción, distribución, comunicación pública, transformación, y el ejercicio de cualquier otro derecho de explotación, de tales contenidos, por todo el tiempo de protección de derecho de autor que esté previsto legalmente y sin limitación territorial, salvo mención expresa del Usuario en contrario. Asimismo, se entiende que esta autorización se hace a título gratuito.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Ley aplicable</span>
+                        </h2>
+                        <p>Para toda cuestión litigiosa o que incumba a los Portales, será de aplicación la legislación española, siendo competentes para la resolución de todos los conflictos derivados o relacionados con el uso de los Portales, los Juzgados y Tribunales.</p>
+                    </section>
+                </article>
+            </div>
+        </div>
+
+        <script>
+            <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
+            <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
+        </script>
+    </body>
+</html>";
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "main/privacidad.html.twig";
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  43 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=\"UTF-8\" />
+        <title>Política de privacidad e información legal</title>
+        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
+        <style>
+            body {
+                background-color: #E5E2E6;
+            }
+        </style>
+    </head>
+    <body>
+        <div class=\"row d-flex justify-content-center mt-5\">
+            <div class=\"col-lg-10 col-md-0 col-sm-0 col-xs-0\">
+                <article class=\"l-container\">
+                    <header class=\"text-center\">
+                        <h1>
+                            <span>Política de privacidad</span>
+                        </h1>
+                    </header>
+                    <section>
+                        <h2>
+                        <span>Responsable</span>
+                        </h2>
+                        <p>¿Quién es el responsable del tratamiento de tus datos?</p>
+                        <p>Email de contacto: miguelpuerta@gmail.com</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Finalidades</span>
+                        </h2>
+                        <p>¿Con qué finalidad tratamos tus datos personales?</p>
+                        <p>En cumplimiento de lo dispuesto en el Reglamento Europeo 2016/679 General de Protección de Datos, te informamos de que, tanto si eres anunciante como usuario, en Adevinta Spain S.L.U. tratamos los datos que nos facilitas para las siguientes finalidades:</p>
+                        <ol>
+                            <li>Realizar una correcta gestión de la publicación de tu anuncio. Este servicio incluye que tratemos tus datos para:<ul>
+                            <li>Crearte una cuenta de usuario en el momento de la publicación del primer anuncio, la cual es necesaria para que puedas gestionar los anuncios que publiques y los contactos que recibas. Así, si en el momento de publicar tu primer anuncio no eres un usuario registrado, automáticamente te crearemos una cuenta. Desde allí podrás gestionar y configurar tus opciones de privacidad.</li>
+                            <li>Gestionar nuestros servicios, incluyendo recordatorios, avisos técnicos, actualizaciones, alertas de seguridad, mensajes de soporte, entre otros.</li>
+                            <li>Proporcionar el servicio de mensajería instantánea entre usuarios para facilitar la transacción y comunicación entre estos; al usar el formulario de contacto o el chat en el área de usuario, estarás utilizando nuestro servicio de mensajería. Los mensajes y anuncios son revisados por un proceso automático. Lo hacemos para prevenir el fraude o un uso abusivo o inadecuado de nuestros servicios, incluyendo la venta de bienes ilegales, tales como falsificaciones o bienes robados. Si detectamos una actividad o comportamiento sospechoso o ilegal, nuestro equipo de seguridad podrá revisar los mensajes enviados y recibidos. Del mismo modo, podremos acceder a los mensajes enviados y recibidos de forma agregada para mejorar y desarrollar nuestros servicios.</li>
+                            <li>Posibilitar el contacto con los anunciantes. Cuando contactes con los anunciantes, les enviaremos los datos personales y la información que incluyas en el formulario de contacto. Asimismo, cuando uses el formulario de contacto, estarás utilizando nuestro servicio de mensajería. Los mensajes y anuncios son revisados por un proceso automático. Lo hacemos para prevenir el fraude o un uso abusivo o inadecuado de nuestros servicios, incluyendo la venta de bienes ilegales, tales como falsificaciones o bienes robados. Si detectamos una actividad o comportamiento sospechoso o ilegal, nuestro equipo de seguridad podrá revisar los mensajes enviados y recibidos. Del mismo modo, podremos acceder a los mensajes enviados y recibidos de forma agregada para mejorar, desarrollar nuestros servicios y para ofrecerte una mejor experiencia.</li>
+                            <li>Elaborar un perfil comercial. Al navegar por nuestro site, y siempre que contemos con tu consentimiento, tanto si eres anunciante como usuario, podremos elaborar un perfil comercial en base a la información facilitada por ti para mostrarte publicidad personalizada perfilada. No se tomarán decisiones automatizadas en base a dicho perfil que produzcan efectos jurídicos o significativos para ti. El perfil comercial que se elabore.</li>
+                            <li>Prevenir abusos y fraudes en el uso de nuestros servicios (por ejemplo, actividades fraudulentas, ataques de denegación de servicios, entre otros).</li>
+                            <li>Ceder datos a organismos públicos y autoridades, siempre y cuando sean requeridos de conformidad con las disposiciones legales y reglamentarias.</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Plazo de conservación de los datos</span>
+                        </h2>
+                        <p>¿Por cuánto tiempo conservaremos tus datos?</p>
+                        <p>Si eres un anunciante, tus datos serán conservados mientras dure la relación contractual y comercial con nosotros, solicites su supresión, así como el tiempo necesario para cumplir las obligaciones legales.</p>
+                        <p>Si has contactado con algún anunciante, tus datos se conservarán durante el tiempo necesario para posibilitar el contacto con cada uno de los anunciantes con los que contactes. En todo caso, conservaremos tus datos durante el tiempo necesario para cumplir las obligaciones legales.</p>
+                        <p>Independientemente de si eres un anunciante o un usuario, conservaremos tus datos de navegación durante un plazo máximo de 12 meses.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Legitimación</span>
+                        </h2>
+                        <p>¿Cuál es la legitimación para el tratamiento de tus datos?</p>
+                        <p>La base legal para el tratamiento de tus datos radica en:</p>
+                        <ul>
+                            <li>El <strong>consentimiento del usuario</strong> en relación con las finalidades indicadas en los apartados 3 y 4 anteriores.</li>
+                            <li>El <strong>interés legítimo del responsable del tratamiento</strong> para la finalidad indicada en el apartado 5 anterior. El interés legítimo consiste en proteger a los usuarios de abusos y fraudes en el uso de nuestros servicios.</li>
+                            <li>El <strong>cumplimiento de obligaciones</strong> legales para la finalidad indicada en el apartado 6.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Destinatarios</span>
+                        </h2>
+                        <p>¿A qué destinatarios se comunicarán tus datos?</p>
+                        <p>Tus datos personales serán comunicados a terceros en los siguientes supuestos:</p>
+                        <ul>
+                            <li>Tus datos personales se comunicarán al anunciante que se indique en el detalle de cada anuncio para posibilitar el contacto con este último.</li>
+                            <li>Tus datos personales también podrán ser cedidos a las autoridades competentes en los casos que exista una obligación legal.</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Derechos</span>
+                        </h2>
+                        <p>¿Cuáles son tus derechos cuando nos facilitas tus datos y cómo puedes ejercerlos?</p>
+                        <p>Tenes derecho a acceder a tus datos personales, así como a solicitar la rectificación de los datos inexactos o, en su caso, solicitar su supresión cuando, entre otros motivos, los datos ya no sean necesarios para los fines que fueron recogidos.</p>
+                        <p>En determinadas circunstancias, podrás solicitar la limitación del tratamiento de tus datos, en cuyo caso únicamente los conservaremos para el ejercicio o la defensa de reclamaciones.</p>
+                        <p>En determinadas circunstancias y por motivos relacionados con tu situación particular, podrás oponerte al tratamiento de tus datos. Excepto por motivos legítimos imperiosos, o el ejercicio o la defensa de posibles reclamaciones.</p>
+                        <p>Puedes ejercer el derecho a la portabilidad de los datos, así como retirar los consentimientos facilitados en cualquier momento, sin que ello afecte a la licitud del tratamiento basado en el consentimiento previo a su retirada.</p>
+                        <p>Si deseas hacer uso de cualquiera de tus derechos puedes dirigirte a nosotros mediante el correo electrónico indicado en el apartado 1, a través de la sección del pie de página de contacto. Recuerda facilitar la mayor información posible sobre tu solicitud: Nombre y apellidos, dirección de correo electrónico que utilizas para la cuenta o portal objeto de tu solicitud.</p>
+                        <p>Por último, te informamos que puedes dirigirte ante la Agencia Española de Protección de Datos y demás organismos públicos competentes para cualquier reclamación derivada del tratamiento de tus datos personales.</p>
+                        <p>En relación a los datos facilitados a los anunciantes con los que hayas contactado, puedes ejercer tus derechos frente al anunciante como usuario, dirigiéndote a la dirección del anunciante que figura consignada en la parte inferior del anuncio. Se entiende, en este caso, por anunciante toda aquella persona física o jurídica que oferte todo tipo de anuncios en nuestros Portales.</p>
+                    </section>
+                </article>
+                <br/>
+                <br/>
+                <article class=\"l-container\">
+                    <header class=\"text-center\">
+                        <h1>
+                            <span>Información legal</span>
+                        </h1>
+                    </header>
+                    <section>
+                        <h2>
+                        <span>Objeto</span>
+                        </h2>
+                        <p>El presente aviso legal regula el uso del Portal de Internet \"comunitycar.ddns.net\", o cualquier otro que en el futuro le sustituyese, que ComunityCar pone a disposición de los usuarios, constituyendo un punto de encuentro de información, anuncios relacionados con los la compraventa de vehículos.</p>
+                        <p>ComunityCar, para comunicaciones legales y organismos e instituciones públicas, contactar con miguelpuerta@gmail.com. Para cualquier consulta, duda o incidencia relacionada en ComunityCar, contactar con miguelpuerta@gmail.com.</p>
+                        <p>De conformidad con lo previsto en el Reglamento UE 524/2013, de 21 de mayo de 2013 y de la Ley 7/2017, de 2 de noviembre sobre resolución de litigios en línea en materia de consumo se inserta a continuación enlace a la plataforma de resolución de litigios en línea puesta en marcha por la Comisión Europea a la que podrán recurrir los clientes para resolver cualquier discrepancia o controversia con relación a los servicios prestados por ComunityCar en su web: <a class=\"a\" href=\"https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.show&amp;lng=ES\">https://ec.europa.eu/</a></p>
+                        <p>La utilización del Portal atribuye la condición de Usuario, lo cual implica la adhesión a las presentes condiciones en la versión publicada en el momento en que se acceda al mismo. ComunityCar se reserva el derecho a modificar, en cualquier momento, la presentación y configuración del Portal, así como las Condiciones Generales de Acceso y Utilización del mismo. Por ello, ComunityCar recomienda al Usuario leer estas Condiciones Generales atentamente cada vez que acceda a cualquiera de los Portales.</p>
+                        <p>El acceso a determinados Contenidos ofrecidos a través del Portal puede encontrarse sometido a ciertas condiciones particulares propias que, según los casos, sustituyen, completan y/o modifican estas Condiciones Generales. Por tanto, con anterioridad al acceso y/o utilización de dichos Contenidos, el Usuario ha de leer atentamente también las correspondientes condiciones particulares.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Acceso y seguridad</span>
+                        </h2>
+                        <p>Con carácter general, los Usuarios podrán acceder al Portal de forma gratuita, tras el correspondiente registro solicitado por ComunityCar. Una vez solicitado el registro, y con independencia de que provisionalmente se comiencen a prestar los servicios incluidos en el Portal, ComunityCar dispondrá de un plazo de un mes para verificar que los datos introducidos por el Usuario son correctos, completos, lícitos, no son ilegales ni irrespetuosos, y que permiten la correcta identificación del usuario.</p>
+                        <p>Con independencia de las posibles acciones de verificación que llevará a cabo ComunityCar, la aceptación del registro no supone en absoluto la asunción por parte de ComunityCar de que dicha información es correcta, completa, lícita ni legal, sino que la misma va a ser empleada a los meros efectos de proceder con el Registro. Por lo tanto, el usuario responderá, el cualquier caso, de la veracidad y licitud de los datos facilitados, eximiendo expresamente a ComunityCar de cualquier responsabilidad por la inclusión de dichos datos, y reservándose el derecho a no aceptar la solicitud de registro en función de las circunstancias descritas en el párrafo anterior, sin perjuicio de las demás acciones que pudieran proceder en Derecho.</p>
+                        <p>El \"Público destinatario del Portal\" son persona que quieren poner anuncios para vender sus vehículos y otras que los compran si están interesados. En cualquier caso, ComunityCar podrá denegar el registro a todos aquellos solicitantes que no sean considerados como \"Publico destinatario del Portal.</p>
+                        <p>La denegación del registro implica automáticamente la cesación en la consideración de Usuario y, por tanto, la denegación de acceso al Portal y la terminación de los servicios y contenidos recogidos en el Portal.</p>
+                        <p>El uso de la contraseña es personal e intransferible, no estando permitida la cesión, ni siquiera temporal, a terceros. En tal sentido, el Usuario se compromete a hacer un uso diligente de la contraseña y a mantener en secreto la misma, asumiendo toda responsabilidad por las consecuencias de su divulgación a terceros.</p>
+                        <p>En el supuesto de que el Usuario conozca o sospeche que terceros puedan conocer o pudiesen estar haciendo uso de su contraseña, deberá poner tal circunstancia en conocimiento de ComunityCar con la mayor brevedad.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Carácter y utilización correcta de los contenidos y servicios</span>
+                        </h2>
+                        <p>El Usuario se compromete a utilizar los Contenidos de conformidad con la ley, con estas Condiciones Generales, así como con la moral y buenas costumbres generalmente aceptadas y el orden público.</p>
+                        <p>El Usuario se obliga a usar los Contenidos de forma diligente, legal, correcta y lícita y, en particular, se compromete a título meramente enunciativo y no exhaustivo a abstenerse de:</p>
+                        <ol>
+                        <li>
+                            <span>Utilizar los Contenidos de forma y con fines contrarios a la ley, a la moral y a las buenas costumbres generalmente aceptadas o al orden público.</span>
+                        </li>
+                        <li>
+                            <span>Transmitir o difundir información, datos, contenidos, mensajes, gráficos, dibujos, archivos de sonido y/o imagen, fotografías, grabaciones, software, y en general, cualquier material obsceno, ofensivo, vulgar o que induzca actuaciones delictivas, denigratorias, difamatorias, infamantes, violentas o, en general, contrarias a la ley, a la moral y buenas costumbres generalmente aceptadas o al orden público.</span>
+                        </li>
+                        <li>
+                            <span>Reproducir, copiar, o distribuir los Contenidos, así como permitir el acceso del público a los mismos a través de cualquier modalidad de comunicación pública, o transformarlos o modificarlos, a menos que se cuente con la autorización del titular de los correspondientes derechos o ello resulte legalmente permitido.</span>
+                        </li>
+                        <li>
+                            <span>Vulnerar derechos de propiedad intelectual o industrial pertenecientes a ComunityCar o a terceros, en especial los correspondientes a la marca \"ComunityCar\", así como el nombre de dominio \"comunitycar.ddns.net\".</span>
+                        </li>
+                        <li>
+                            <span>Emplear los Contenidos y, en particular, la información de cualquier clase obtenida a través del Portal con cualquier tipo de finalidad publicitaria y, en especial, para remitir publicidad, comunicaciones con fines de venta directa o con cualquier otra clase de finalidad comercial, mensajes no solicitados individualizados o dirigidos a una pluralidad de personas, así como de comercializar o divulgar de cualquier modo dicha información.</span>
+                        </li>
+                        </ol>
+                        <p>El Usuario responderá por los daños y perjuicios de toda naturaleza que ComunityCar pueda sufrir, directa o indirectamente, como consecuencia del incumplimiento de cualquiera de las obligaciones derivadas de estas Condiciones Generales o de la ley en relación con la utilización del Portal.</p>
+                        <p>ComunityCar velará en todo momento por el respeto del ordenamiento jurídico vigente, y estará legitimada para interrumpir, a su entera discreción, los Contenidos o excluir al Usuario del Portal en su conjunto o de alguno de los servicios y/ o contenidos incluidos en el mismo, en caso de (i) la presunta comisión por su parte de cualquier infracción, ya sea por acción u omisión, tipificada en cualquier norma, sea civil, penal, administrativa o de cualquier otra índole, (ii) en caso de que se observase cualesquiera conductas que, a juicio de ComunityCar, que puedan perturbar el buen funcionamiento, imagen, credibilidad y/o prestigio de ComunityCar.</p>
+                        <p>Asimismo, para hacer uso de los Contenidos del Portal los menores de edad deben obtener previamente permiso de sus padres, tutores o representantes legales, quienes serán considerados responsables de todos los actos realizados por los menores a su cargo. La plena responsabilidad en la determinación de los concretos contenidos y servicios a los que acceden los menores de edad corresponde a los mayores a cuyo cargo se encuentran.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Exclusión de Garantías y Responsabilidad</span>
+                        </h2>
+                        <p>ComunityCar se reserva el derecho a interrumpir el acceso al Portal, así como la prestación de cualquiera o de todos los Contenidos que se prestan a través del mismo en cualquier momento y sin previo aviso, ya sea por motivos de seguridad o por cualquier otra causa.</p>
+                        <p>En consecuencia, ComunityCar no garantiza la fiabilidad, la disponibilidad ni la continuidad de su Portal ni de los Contenidos, por lo que la utilización de los mismos por parte del Usuario se lleva a cabo por su propia cuenta y riesgo, sin que, en ningún momento puedan exigirse responsabilidades a ComunityCar en este sentido.</p>
+                        <p>ComunityCar no será responsable en caso de que existan interrupciones del servicio, demoras, errores, mal funcionamiento del mismo y, en general, demás inconvenientes que tengan su origen en causas que escapan del control de ComunityCar, y/o debidas a una actuación dolosa o culposa del Usuario y/o tengan por origen causas de Fuerza Mayor. Sin perjuicio de lo establecido en el artículo 1105 del Código Civil, se entenderán incluidos en el concepto de Fuerza Mayor, además, y a los efectos de las presentes condiciones generales, todos aquellos acontecimientos acaecidos fuera del control de ComunityCar. En cualquier caso, sea cual fuere su causa, ComunityCar no asumirá responsabilidad alguna ya sea por estafa o mala gestión de la compra-venta del vehículo.</p>
+                        <p>ComunityCar excluye cualquier responsabilidad por los daños y perjuicios de toda naturaleza que puedan deberse a la falta de veracidad, exactitud, exhaustividad y/o actualidad de los Contenidos transmitidos, difundidos, almacenados, puestos a disposición o recibidos, obtenidos o a los que se haya accedido a través del Portal, ni tampoco por los Contenidos prestados u ofertados por terceras personas o entidades. ComunityCar tratará en la medida de lo posible de actualizar y rectificar aquella información alojada en su Portal que no cumpla con las mínimas garantías de veracidad. No obstante quedará exonerada de responsabilidad por su no actualización o rectificación así como por los contenidos e informaciones vertidos en la misma.</p>
+                        <p>ComunityCar no se responsabiliza por el contenido de la información recogida en su portal, así como por aquellas opiniones, comentarios, apreciaciones o cualquier otra manifestación recogida en el mismo que no sean emitidas directamente por ComunityCar.</p>
+                        <p>ComunityCar no garantiza ni asume ningún tipo de responsabilidad por los daños y perjuicios sufridos por el acceso a Contenidos de terceros a través de conexiones, vínculos o links de los sitios enlazados. La función de los enlaces que aparecen en el Portal es exclusivamente la de informar al Usuario sobre la existencia de otras fuentes de información u otros contenidos y servicios en Internet. ComunityCar no será en ningún caso responsable del resultado obtenido a través de dichos enlaces o de las consecuencias que se deriven del acceso por los Usuarios a los mismos. Estos Contenidos de terceros son proporcionados por éstos, por lo que ComunityCar no puede controlar y no controla la licitud de los Contenidos ni la calidad de los servicios ofrecidos. En consecuencia, el Usuario debe extremar la prudencia en la valoración y utilización de la información y servicios existentes en los contenidos de terceros.</p>
+                        <p>ComunityCar excluye cualquier responsabilidad por los daños y perjuicios de toda clase que puedan deberse a la presencia de virus o a la presencia de otros elementos lesivos en los contenidos que puedan producir alteración en los sistemas informáticos, así como en los documentos o sistemas almacenados en los mismos.</p>
+                        <p>ComunityCar no se hace responsable de los contenidos, cualesquiera que sean los mismos, que los Usuarios envíen a ComunityCar por medio del portal, por medio del servicio de correo electrónico o por cualquier otro medio, siendo por tanto imputable a los Usuarios cualquier responsabilidad de los contenidos enviados por los mismos.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Derechos de Propiedad del Contenido</span>
+                        </h2>
+                        <p>Todos los Contenidos incluidos en el portal, tales como textos, gráficos, fotografías, logotipos, iconos, imágenes, así como el diseño gráfico, código fuente y software, la marca \"ComunityCar\" y el dominio \"comunitycar.ddns.net\" son de la exclusiva propiedad de ComunityCar o de terceros, cuyos derechos en su caso reconoce ComunityCar, y están sujetos a derechos de propiedad intelectual e industrial protegidos por la legislación nacional e internacional.</p>
+                        <p>Queda estrictamente prohibido cualquier utilización de cualquiera de los elementos objeto de propiedad industrial e intelectual con cualquier tipo de finalidad, en especial comercial, así como su distribución, comunicación pública, modificación, alteración, transformación o descompilación, salvo autorización expresa por escrito por parte del titular de los mismos.</p>
+                        <p>La infracción de cualquiera de los citados derechos puede constituir una vulneración de las presentes disposiciones, así como una acción constitutiva de delito tipificada en los artículos 270 y siguientes del Código Penal.</p>
+                        <p>Aquellos Usuarios que envíen por medio del Portal observaciones, informaciones, opiniones, comentarios o cualquier tipo de contenidos por medio del servicio de correo electrónico o por cualquier otro medio, en los casos en los que por la naturaleza de los servicios o contenidos ello sea posible, se entiende que autorizan a ComunityCar para la reproducción, distribución, comunicación pública, transformación, y el ejercicio de cualquier otro derecho de explotación, de tales contenidos, por todo el tiempo de protección de derecho de autor que esté previsto legalmente y sin limitación territorial, salvo mención expresa del Usuario en contrario. Asimismo, se entiende que esta autorización se hace a título gratuito.</p>
+                    </section>
+                    <section>
+                        <h2>
+                            <span>Ley aplicable</span>
+                        </h2>
+                        <p>Para toda cuestión litigiosa o que incumba a los Portales, será de aplicación la legislación española, siendo competentes para la resolución de todos los conflictos derivados o relacionados con el uso de los Portales, los Juzgados y Tribunales.</p>
+                    </section>
+                </article>
+            </div>
+        </div>
+
+        <script>
+            <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
+            <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>
+            <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>
+        </script>
+    </body>
+</html>", "main/privacidad.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/main/privacidad.html.twig");
+    }
+}

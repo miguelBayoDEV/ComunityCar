@@ -15,6 +15,22 @@
 
         <!-- Enlace a CDN JQuery -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <style>
+            .redondear {
+                border-top-left-radius: 3px !important;
+                border-bottom-left-radius: 3px !important;
+            }
+
+            .redondearInput {
+                border-radius: 5px !important;
+                border-color: gray;
+            }
+
+            .separar {
+                display: flex !important;
+                justify-content: space-between !important;
+            }
+        </style>
     </head>
     <body>
         {% for flashError in app.flashes('verify_email_error') %}
@@ -33,7 +49,7 @@
                     </div>
                     <div class="card-body pb-0">
                         {{ form_start(registrationForm) }}
-                            <div class="input-group form-group">
+                            <div class="input-group form-group d-flex flex-column">
                                 <div class="input-group-prepend text-white">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                     {{ form_row(registrationForm.email) }}
@@ -45,12 +61,13 @@
                                     {{ form_row(registrationForm.plainPassword.first) }}
                                 </div>
                                 <div class="input-group-prepend text-white mt-3">
-                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    <span class="input-group-text redondear"><i class="fas fa-key"></i></span>
                                     {{ form_row(registrationForm.plainPassword.second) }}
                                 </div>
                             </div>
-                            <div class="text-white text-white">
+                            <div class="text-white text-white d-flex justify-content-start">
                                 {{ form_row(registrationForm.agreeTerms) }}
+                                <a href="/privacidad" target="_blank" class="ml-2">Política privacidad</a>
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Registro" class="btn float-right login_btn">

@@ -142,11 +142,12 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
         // line 93
         echo "                    </div>
                     <div class=\"card-footer\">
-                        <div class=\"d-flex justify-content-center links\">
+                        <a href=\"/privacidad\" target=\"_blank\" class=\"ml-4\">Política privacidad</a>
+                        <div class=\"d-flex justify-content-center links mt-3\">
                             ¿No tienes cuenta?<a href=\"/register\">Registro</a>
                         </div>
                         ";
-        // line 101
+        // line 102
         echo "                    </div>
                 </div>
             </div>
@@ -233,7 +234,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 
     public function getDebugInfo()
     {
-        return array (  150 => 101,  143 => 93,  133 => 83,  130 => 82,  119 => 71,  113 => 67,  107 => 65,  105 => 64,  100 => 61,  43 => 1,);
+        return array (  151 => 102,  143 => 93,  133 => 83,  130 => 82,  119 => 71,  113 => 67,  107 => 65,  105 => 64,  100 => 61,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -332,7 +333,8 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                         </div> #}
                     </div>
                     <div class=\"card-footer\">
-                        <div class=\"d-flex justify-content-center links\">
+                        <a href=\"/privacidad\" target=\"_blank\" class=\"ml-4\">Política privacidad</a>
+                        <div class=\"d-flex justify-content-center links mt-3\">
                             ¿No tienes cuenta?<a href=\"/register\">Registro</a>
                         </div>
                         {# <div class=\"d-flex justify-content-center\">

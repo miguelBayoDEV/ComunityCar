@@ -281,6 +281,14 @@ class MainController extends AbstractController
     {
         return $this->render('main/anime.html.twig');
     }
+
+    /**
+     * @Route("/privacidad", name="privacidad")
+     */
+    public function privacidad(Request $request, SluggerInterface $slugger): Response
+    {
+        return $this->render('main/privacidad.html.twig');
+    }
     
     /**
      * @Route("/modificar", name="modificar")

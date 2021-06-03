@@ -17,6 +17,7 @@ return [
         '/buscador' => [[['_route' => 'buscador', '_controller' => 'App\\Controller\\MainController::buscador'], null, null, null, false, false, null]],
         '/perfil' => [[['_route' => 'perfil', '_controller' => 'App\\Controller\\MainController::perfil'], null, null, null, false, false, null]],
         '/anime' => [[['_route' => 'anime', '_controller' => 'App\\Controller\\MainController::anime'], null, null, null, false, false, null]],
+        '/privacidad' => [[['_route' => 'privacidad', '_controller' => 'App\\Controller\\MainController::privacidad'], null, null, null, false, false, null]],
         '/modificar' => [[['_route' => 'modificar', '_controller' => 'App\\Controller\\MainController::modificar'], null, null, null, false, false, null]],
         '/message' => [
             [['_route' => 'message', '_controller' => 'App\\Controller\\MainController::message'], null, null, null, false, false, null],

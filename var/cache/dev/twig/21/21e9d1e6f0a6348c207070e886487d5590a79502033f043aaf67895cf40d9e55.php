@@ -258,6 +258,8 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                         <a href=\"/perfil\" id=\"perfil\">Mi perfil</a>
                                         <br/>
                                         <a href=\"/anime\" id=\"anime\">Video y animación</a>
+                                        <br/>
+                                        <a href=\"/privacidad\" target=\"_blank\" id=\"privacidad\">Política de privacidad e información legal</a>
                                     </li>
                                 </ul>
                             </div>
@@ -313,6 +315,18 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 });
             });
 
+            \$(\"#privacidad\").hover(function() {
+                \$(this).css({
+                    fontSize: \"18px\",
+                    color: \"#9D22E4\"
+                });
+            }, function() {
+                \$(this).css({
+                    fontSize: \"15px\",
+                    color: \"#ffffff\"
+                });
+            });
+
             // Efecto iconos
             \$(\".hover\").hover(function() {
                 \$(this).css({
@@ -347,7 +361,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Política de privacidad e información legal";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -451,7 +465,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  425 => 172,  408 => 23,  398 => 22,  383 => 15,  379 => 13,  375 => 11,  373 => 10,  370 => 9,  360 => 8,  341 => 6,  214 => 173,  212 => 172,  206 => 168,  204 => 167,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  439 => 172,  422 => 23,  412 => 22,  397 => 15,  393 => 13,  389 => 11,  387 => 10,  384 => 9,  374 => 8,  355 => 6,  214 => 173,  212 => 172,  206 => 168,  204 => 167,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -461,7 +475,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
     <head>
         <meta charset=\"UTF-8\"/>
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/>
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Política de privacidad e información legal{% endblock %}</title>
 
         {% block stylesheets %}
             <!-- Enlace CSS Bootstrap4 -->
@@ -675,6 +689,8 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                                         <a href=\"/perfil\" id=\"perfil\">Mi perfil</a>
                                         <br/>
                                         <a href=\"/anime\" id=\"anime\">Video y animación</a>
+                                        <br/>
+                                        <a href=\"/privacidad\" target=\"_blank\" id=\"privacidad\">Política de privacidad e información legal</a>
                                     </li>
                                 </ul>
                             </div>
@@ -722,6 +738,18 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 \$(this).css({
                     fontSize: \"18px\",
                     color: \"#f03bca\"
+                });
+            }, function() {
+                \$(this).css({
+                    fontSize: \"15px\",
+                    color: \"#ffffff\"
+                });
+            });
+
+            \$(\"#privacidad\").hover(function() {
+                \$(this).css({
+                    fontSize: \"18px\",
+                    color: \"#9D22E4\"
                 });
             }, function() {
                 \$(this).css({
