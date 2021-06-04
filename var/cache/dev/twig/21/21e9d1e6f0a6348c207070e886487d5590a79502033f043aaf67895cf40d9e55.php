@@ -57,12 +57,12 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         ";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 21
+        // line 22
         echo "
         ";
-        // line 22
+        // line 23
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 31
+        // line 32
         echo "
         <style type=\"text/css\">
 
@@ -74,17 +74,21 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 font-size: 30px;
             }
 
-            a.barraInferior {
-                font-size: 10px;
-                color: #a311d6;
-            }
-
             a.barra:hover {
                 font-size: 15px;
             }
 
+            a.barraInferior {
+                font-size: 13px;
+                color: #a311d6;
+            }
+
+            a.barra:hover {
+                font-size: 20px;
+            }
+
             a.barraInferior:hover {
-                font-size: 14px;
+                font-size: 18px;
                 color: #a311d6;
             }
 
@@ -139,20 +143,34 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 min-height: 600px;
             }
 
+            .mediaBuscador {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            div.pildora-border {
+                border-radius: 15px;
+                border: 2px solid black;
+                box-shadow: 5px 5px 5px 5px #888888;
+                background-color: #F1A760;
+            }
+
             div.border-message1 {
-                border: 2px dashed black;
-                box-shadow: 2px -2px 5px 5px #888888;
+                border: 2px solid black;
+                box-shadow: -2px 2px 2px 2px #888888;
                 margin-bottom: 2%;
                 border-radius:10px;
+                background-color: #D589F3;
                 min-width: 375px;
                 overflow: auto;
             }
 
             div.border-message2 {
-                border: 2px dashed black;
-                box-shadow: 2px -2px 5px 5px #FB876E;
+                border: 2px solid black;
+                box-shadow: 2px 2px 2px 2px #FB876E;
                 margin-bottom: 2%;
                 border-radius:10px;
+                background-color: #9AFD7B;
                 min-width: 375px;
                 overflow: auto;
             }
@@ -188,11 +206,19 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             .anuncio {
                 min-height: 200px;
                 border-radius: 25px;
+                box-shadow: 5px 5px 5px 5px #888888;
+                border: 5px solid #5CE640;
+                background-color: #FAB867;
             }
 
             .carusel {
+                width: 30%;
                 border-radius: 15px;
                 border: 7px dotted #E42234;
+            }
+
+            .infoVehiculo {
+                width: 70%;
             }
         </style>
     </head>
@@ -200,17 +226,17 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 167
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 167)->display($context);
-        // line 168
+        // line 194
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 194)->display($context);
+        // line 195
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 172
+        // line 199
         $this->displayBlock('body', $context, $blocks);
-        // line 173
+        // line 200
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -396,6 +422,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         // line 15
         echo "            <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
+            <link href=\"/comunes/css/mediaQuery.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
             <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
             <link rel=\"shortcut icon\" href=\"#\" />
@@ -408,7 +435,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 22
+    // line 23
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -418,7 +445,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 23
+        // line 24
         echo "            <!-- Enlace a CDN JQuery -->
             <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
 
@@ -435,7 +462,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 172
+    // line 199
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -465,7 +492,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  439 => 172,  422 => 23,  412 => 22,  397 => 15,  393 => 13,  389 => 11,  387 => 10,  384 => 9,  374 => 8,  355 => 6,  214 => 173,  212 => 172,  206 => 168,  204 => 167,  66 => 31,  64 => 22,  61 => 21,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  466 => 199,  449 => 24,  439 => 23,  423 => 15,  419 => 13,  415 => 11,  413 => 10,  410 => 9,  400 => 8,  381 => 6,  240 => 200,  238 => 199,  232 => 195,  230 => 194,  66 => 32,  64 => 23,  61 => 22,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -486,6 +513,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             {% endif %}
             <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
+            <link href=\"/comunes/css/mediaQuery.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
             <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
             <link rel=\"shortcut icon\" href=\"#\" />
@@ -511,17 +539,21 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 font-size: 30px;
             }
 
-            a.barraInferior {
-                font-size: 10px;
-                color: #a311d6;
-            }
-
             a.barra:hover {
                 font-size: 15px;
             }
 
+            a.barraInferior {
+                font-size: 13px;
+                color: #a311d6;
+            }
+
+            a.barra:hover {
+                font-size: 20px;
+            }
+
             a.barraInferior:hover {
-                font-size: 14px;
+                font-size: 18px;
                 color: #a311d6;
             }
 
@@ -576,20 +608,34 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
                 min-height: 600px;
             }
 
+            .mediaBuscador {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            div.pildora-border {
+                border-radius: 15px;
+                border: 2px solid black;
+                box-shadow: 5px 5px 5px 5px #888888;
+                background-color: #F1A760;
+            }
+
             div.border-message1 {
-                border: 2px dashed black;
-                box-shadow: 2px -2px 5px 5px #888888;
+                border: 2px solid black;
+                box-shadow: -2px 2px 2px 2px #888888;
                 margin-bottom: 2%;
                 border-radius:10px;
+                background-color: #D589F3;
                 min-width: 375px;
                 overflow: auto;
             }
 
             div.border-message2 {
-                border: 2px dashed black;
-                box-shadow: 2px -2px 5px 5px #FB876E;
+                border: 2px solid black;
+                box-shadow: 2px 2px 2px 2px #FB876E;
                 margin-bottom: 2%;
                 border-radius:10px;
+                background-color: #9AFD7B;
                 min-width: 375px;
                 overflow: auto;
             }
@@ -625,11 +671,19 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             .anuncio {
                 min-height: 200px;
                 border-radius: 25px;
+                box-shadow: 5px 5px 5px 5px #888888;
+                border: 5px solid #5CE640;
+                background-color: #FAB867;
             }
 
             .carusel {
+                width: 30%;
                 border-radius: 15px;
                 border: 7px dotted #E42234;
+            }
+
+            .infoVehiculo {
+                width: 70%;
             }
         </style>
     </head>

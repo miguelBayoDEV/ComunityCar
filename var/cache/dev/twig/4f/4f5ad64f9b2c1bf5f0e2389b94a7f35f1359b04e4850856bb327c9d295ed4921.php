@@ -104,7 +104,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
                 </div>
                 <div class=\"tab-content pildora-content pl-4\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-perfil\" role=\"tabpanel\" aria-labelledby=\"v-pills-perfil-tab\">
-                        <div class=\"perfil border border-dark pl-1 pt-1 pr-2 d-flex flex-column\">
+                        <div class=\"perfil pildora-border pl-1 pt-1 pr-2 d-flex flex-column\">
                             <div id=\"avatar\">
                                 ";
         // line 27
@@ -286,7 +286,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
             echo "                                ";
             if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "eliminado", [], "any", false, false, false, 118), true))) {
                 // line 119
-                echo "                                    <div class=\"vehicles border border-dark mb-3 pl-1 pt-1 pr-2 d-flex justify-content-between\">
+                echo "                                    <div class=\"vehicles pildora-border mb-3 pl-1 pt-1 pr-2 d-flex justify-content-between\">
                                         <div class=\"d-flex flex-column pl-3\">
                                             <p>Marca: ";
                 // line 121
@@ -333,7 +333,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
             if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "venta", [], "any", false, false, false, 135), true)) && (0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["vehiculo"], "eliminado", [], "any", false, false, false, 135), false)))) {
                 // line 136
                 echo "                                    <div class=\"vehicles\">
-                                        <div class=\"vehicles border border-dark mb-3 pl-1 pt-1 pr-2 d-flex justify-content-between\">
+                                        <div class=\"vehicles pildora-border mb-3 pl-1 pt-1 pr-2 d-flex justify-content-between\">
                                             <div class=\"d-flex flex-column pl-3\">
                                                 <p>Marca: ";
                 // line 139
@@ -567,7 +567,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
                 </div>
                 <div class=\"tab-content pildora-content pl-4\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-perfil\" role=\"tabpanel\" aria-labelledby=\"v-pills-perfil-tab\">
-                        <div class=\"perfil border border-dark pl-1 pt-1 pr-2 d-flex flex-column\">
+                        <div class=\"perfil pildora-border pl-1 pt-1 pr-2 d-flex flex-column\">
                             <div id=\"avatar\">
                                 {{ form_start(avatarForm) }}
                                     {% if user.avatar != null %}
@@ -661,7 +661,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
                         <div class=\"vehiculosMios\">
                             {% for vehiculo in user.vehiculos %}
                                 {% if vehiculo.eliminado != true %}
-                                    <div class=\"vehicles border border-dark mb-3 pl-1 pt-1 pr-2 d-flex justify-content-between\">
+                                    <div class=\"vehicles pildora-border mb-3 pl-1 pt-1 pr-2 d-flex justify-content-between\">
                                         <div class=\"d-flex flex-column pl-3\">
                                             <p>Marca: {{ vehiculo.marca }} - Modelo: {{ vehiculo.modelo }}</p>
                                             <p>Precio: <strong>{{ vehiculo.precio }}</strong> euros.</p>
@@ -679,7 +679,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
                             {% for vehiculo in user.vehiculos %}
                                 {% if vehiculo.venta == true and vehiculo.eliminado == false %}
                                     <div class=\"vehicles\">
-                                        <div class=\"vehicles border border-dark mb-3 pl-1 pt-1 pr-2 d-flex justify-content-between\">
+                                        <div class=\"vehicles pildora-border mb-3 pl-1 pt-1 pr-2 d-flex justify-content-between\">
                                             <div class=\"d-flex flex-column pl-3\">
                                                 <p>Marca: {{ vehiculo.marca }} - Modelo: {{ vehiculo.modelo }}</p>
                                                 <p>Precio: <strong>{{ vehiculo.precio }}</strong> euros.</p>

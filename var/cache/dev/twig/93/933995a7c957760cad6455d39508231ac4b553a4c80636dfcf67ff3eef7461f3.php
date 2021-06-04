@@ -68,7 +68,7 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "email", [], "any", false, false, false, 21), "html", null, true);
             echo "
 \t\t\t\t</a>
-\t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+\t\t\t\t<div class=\"dropdown-menu bg-dark\" aria-labelledby=\"navbarDropdown\">
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/perfil\">Perfil</a>
 \t\t\t\t\t<div class=\"dropdown-divider\"></div>
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Login</a>
@@ -153,7 +153,7 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
 \t\t\t\t<a class=\"nav-link active dropdown-toggle barra\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
 \t\t\t\t\tAdmin - {{ app.user.email }}
 \t\t\t\t</a>
-\t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+\t\t\t\t<div class=\"dropdown-menu bg-dark\" aria-labelledby=\"navbarDropdown\">
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/perfil\">Perfil</a>
 \t\t\t\t\t<div class=\"dropdown-divider\"></div>
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Login</a>
@@ -183,6 +183,6 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
 \t\t{% endif %}
     </ul>
   </div>
-</nav>", "navbar/navbar.html.twig", "/home/bayo/proyectos/ComunityCar/templates/navbar/navbar.html.twig");
+</nav>", "navbar/navbar.html.twig", "/home/miguel/Escritorio/ComunityCar/templates/navbar/navbar.html.twig");
     }
 }

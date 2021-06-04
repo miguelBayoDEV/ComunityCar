@@ -200,7 +200,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                     echo "                                ";
                 }
                 // line 57
-                echo "                                <div class=\"d-flex flex-column border border-dark bg-white ml-2 p-2 border-message1\">
+                echo "                                <div class=\"d-flex flex-column ml-2 p-2 border-message1\">
                                     <div class=\"d-flex justify-content-start\">
                                         <p>";
                 // line 59
@@ -260,7 +260,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                     echo "                                ";
                 }
                 // line 82
-                echo "                                <div class=\"d-flex flex-column border border-dark bg-success ml-2 p-2 border-message2\">
+                echo "                                <div class=\"d-flex flex-column ml-2 p-2 border-message2\">
                                     <div class=\"d-flex justify-content-start\">
                                         <p>";
                 // line 84
@@ -447,7 +447,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                                         <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
                                     {% endif %}
                                 {% endif %}
-                                <div class=\"d-flex flex-column border border-dark bg-white ml-2 p-2 border-message1\">
+                                <div class=\"d-flex flex-column ml-2 p-2 border-message1\">
                                     <div class=\"d-flex justify-content-start\">
                                         <p>{{ respuesta.texto }}</p>
                                     </div>
@@ -472,7 +472,7 @@ class __TwigTemplate_080790bb487e38962b17c78bb79987e86ae489e92dd5eda1b647b821213
                                         <img src=\"/comunes/icon/avatar.png\" width=\"70px\" height=\"70px\" />
                                     {% endif %}
                                 {% endif %}
-                                <div class=\"d-flex flex-column border border-dark bg-success ml-2 p-2 border-message2\">
+                                <div class=\"d-flex flex-column ml-2 p-2 border-message2\">
                                     <div class=\"d-flex justify-content-start\">
                                         <p>{{ respuesta.texto }}</p>
                                     </div>

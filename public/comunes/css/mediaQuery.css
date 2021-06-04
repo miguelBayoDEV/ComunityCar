@@ -1,0 +1,33 @@
+@media screen and (max-width: 1000px) {
+    .pildora-content {
+        min-width: 300px !important;
+        min-height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mediaBuscador {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .infoVehiculo {
+        width: 100% !important;
+    }
+
+    .carusel {
+        margin-left: 10%;
+        width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .infoVehiculo {
+        width: 100% !important;
+    }
+
+    .carusel {
+        margin-left: 0px;
+        width: 100% !important;
+    }
+}

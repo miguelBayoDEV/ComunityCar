@@ -96,7 +96,7 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                 </div>
                 <div class=\"tab-content pildora-content pl-4\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-usuarios\" role=\"tabpanel\" aria-labelledby=\"v-pills-usuarios-tab\">
-                        <div class=\"usuarios border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
+                        <div class=\"usuarios pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between\">
                             <ol>
                                 ";
         // line 19
@@ -120,11 +120,11 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 24
         echo "                            </ol>
-                            <button class=\"btn btn-primary\" onClick=\"exportarCorreos();\">Exportar correos</button>
+                            <button class=\"btn btn-primary d-flex align-self-center\" onClick=\"exportarCorreos();\">Exportar correos</button>
                         </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"v-pills-mensajesReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesReportados-tab\">
-                        <div class=\"mensajesReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
+                        <div class=\"mensajesReportados pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between\">
                             <ol>
                                 ";
         // line 31
@@ -144,11 +144,11 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 34
         echo "                            </ol>
-                            <button class=\"btn btn-primary\" onClick=\"exportarMensajesReportados();\">Exportar mensajes reportados</button>
+                            <button class=\"btn btn-primary d-flex align-self-center\" onClick=\"exportarMensajesReportados();\">Exportar mensajes reportados</button>
                         </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"v-pills-vehiculosReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-vehiculosReportados-tab\">
-                        <div class=\"vehiculosReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
+                        <div class=\"vehiculosReportados pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between\">
                             <ol>
                                 ";
         // line 41
@@ -170,7 +170,7 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 44
         echo "                            </ol>
-                            <button class=\"btn btn-primary\" onClick=\"exportarVehiculosReportados();\">Exportar vehiculos reportados</button>
+                            <button class=\"btn btn-primary d-flex align-self-center\" onClick=\"exportarVehiculosReportados();\">Exportar vehiculos reportados</button>
                         </div>
                     </div>
                 </div>
@@ -281,7 +281,7 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                 </div>
                 <div class=\"tab-content pildora-content pl-4\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-usuarios\" role=\"tabpanel\" aria-labelledby=\"v-pills-usuarios-tab\">
-                        <div class=\"usuarios border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
+                        <div class=\"usuarios pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between\">
                             <ol>
                                 {% for user in users %}
                                     {% if user.email != \"root@gmail.com\" %}
@@ -289,27 +289,27 @@ class __TwigTemplate_528464a34766fadedf0b5d65f8c8e75a764721ba34ba8f0b246e7a7c6d6
                                     {% endif %}
                                 {% endfor %}
                             </ol>
-                            <button class=\"btn btn-primary\" onClick=\"exportarCorreos();\">Exportar correos</button>
+                            <button class=\"btn btn-primary d-flex align-self-center\" onClick=\"exportarCorreos();\">Exportar correos</button>
                         </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"v-pills-mensajesReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-mensajesReportados-tab\">
-                        <div class=\"mensajesReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
+                        <div class=\"mensajesReportados pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between\">
                             <ol>
                                 {% for mensajeReportado in mensajesReportados %}
                                     <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date(\"Y-m-d\") }}</li>
                                 {% endfor %}
                             </ol>
-                            <button class=\"btn btn-primary\" onClick=\"exportarMensajesReportados();\">Exportar mensajes reportados</button>
+                            <button class=\"btn btn-primary d-flex align-self-center\" onClick=\"exportarMensajesReportados();\">Exportar mensajes reportados</button>
                         </div>
                     </div>
                     <div class=\"tab-pane fade\" id=\"v-pills-vehiculosReportados\" role=\"tabpanel\" aria-labelledby=\"v-pills-vehiculosReportados-tab\">
-                        <div class=\"vehiculosReportados border border-dark pl-1 pt-1 pr-2 text-danger d-flex justify-content-between\">
+                        <div class=\"vehiculosReportados pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between\">
                             <ol>
                                 {% for vehiculoReportado in vehiculosReportados %}
                                     <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>
                                 {% endfor %}
                             </ol>
-                            <button class=\"btn btn-primary\" onClick=\"exportarVehiculosReportados();\">Exportar vehiculos reportados</button>
+                            <button class=\"btn btn-primary d-flex align-self-center\" onClick=\"exportarVehiculosReportados();\">Exportar vehiculos reportados</button>
                         </div>
                     </div>
                 </div>

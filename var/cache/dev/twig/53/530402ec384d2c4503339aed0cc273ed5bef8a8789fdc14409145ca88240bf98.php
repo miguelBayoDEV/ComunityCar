@@ -109,7 +109,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                 echo "                                    ";
                 if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "reportado", [], "any", false, false, false, 20), true)) && (0 !== twig_compare(twig_get_attribute($this->env, $this->source, $context["message"], "oculto", [], "any", false, false, false, 20), true)))) {
                     // line 21
-                    echo "                                        <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                    echo "                                        <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
                                             <div class=\"d-flex flex-start\">
                                                 &#x1f6a9;&#xfe0e; ";
                     // line 23
@@ -153,7 +153,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                     echo "                                        ";
                     if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "visto", [], "any", false, false, false, 39), false))) {
                         // line 40
-                        echo "                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                        echo "                                            <div class=\"d-flex flex-column  pildora-border pl-1 pt-1\">
                                                 <div class=\"d-flex flex-start\">
                                                     &#x1f4ec;&#xfe0e; ";
                         // line 42
@@ -175,7 +175,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                                         ";
                     } else {
                         // line 51
-                        echo "                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                        echo "                                            <div class=\"d-flex flex-column  pildora-border pl-1 pt-1\">
                                                 <div class=\"d-flex flex-start\">
                                                     &#x1f4ed;&#xfe0e; ";
                         // line 53
@@ -219,7 +219,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                 echo "                                    ";
                 if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "visto", [], "any", false, false, false, 69), false))) {
                     // line 70
-                    echo "                                        <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                    echo "                                        <div class=\"d-flex flex-column  pildora-border pl-1 pt-1\">
                                             <div class=\"d-flex flex-start\">
                                                 &#x1f4ec;&#xfe0e; ";
                     // line 72
@@ -241,7 +241,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                                     ";
                 } else {
                     // line 81
-                    echo "                                        <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                    echo "                                        <div class=\"d-flex flex-column  pildora-border pl-1 pt-1\">
                                             <div class=\"d-flex flex-start\">
                                                 &#x1f4ed;&#xfe0e; ";
                     // line 83
@@ -322,7 +322,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                             <div class=\"mensajesReportados\">
                                 {% for message in messages %}
                                     {% if  message.reportado == true and message.oculto != true %}
-                                        <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                        <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
                                             <div class=\"d-flex flex-start\">
                                                 &#x1f6a9;&#xfe0e; {{ message.texto }}
                                             </div>
@@ -341,7 +341,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                                 {% for messageRecibido in messagesRecibidos %}
                                     {% if messageRecibido.user.id != app.user.id %}
                                         {% if messageRecibido.visto == false %}
-                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                            <div class=\"d-flex flex-column  pildora-border pl-1 pt-1\">
                                                 <div class=\"d-flex flex-start\">
                                                     &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }}
                                                 </div>
@@ -352,7 +352,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                                             </div>
                                             <br/>
                                         {% else %}
-                                            <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                            <div class=\"d-flex flex-column  pildora-border pl-1 pt-1\">
                                                 <div class=\"d-flex flex-start\">
                                                     &#x1f4ed;&#xfe0e; {{ messageRecibido.texto }}
                                                 </div>
@@ -371,7 +371,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                             <div class=\"mensajesEnviados\">
                                 {% for messageEnviado in messagesEnviados %}
                                     {% if messageEnviado.visto == false %}
-                                        <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                        <div class=\"d-flex flex-column  pildora-border pl-1 pt-1\">
                                             <div class=\"d-flex flex-start\">
                                                 &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }}
                                             </div>
@@ -382,7 +382,7 @@ class __TwigTemplate_4f955a697ce1f855d6df04789d9d4a7a9f1ae518a459e4f8f0577a3cf16
                                         </div>
                                         <br/>
                                     {% else %}
-                                        <div class=\"d-flex flex-column border border-dark pl-1 pt-1\">
+                                        <div class=\"d-flex flex-column  pildora-border pl-1 pt-1\">
                                             <div class=\"d-flex flex-start\">
                                                 &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }}
                                             </div>

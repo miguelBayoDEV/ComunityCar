@@ -18,7 +18,7 @@
                                 {% for messageRecibido in messagesRecibidos %}
                                     {% if messageRecibido.user.id != app.user.id %}
                                         {% if messageRecibido.visto == false %}
-                                            <div class="d-flex flex-column border border-dark pl-1 pt-1">
+                                            <div class="d-flex flex-column pildora-border pl-1 pt-1">
                                                 <div class="d-flex flex-start">
                                                     &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }}
                                                 </div>
@@ -29,7 +29,7 @@
                                             </div>
                                             <br/>
                                         {% else %}
-                                            <div class="d-flex flex-column border border-dark pl-1 pt-1">
+                                            <div class="d-flex flex-column pildora-border pl-1 pt-1">
                                                 <div class="d-flex flex-start">
                                                     &#x1f4ed;&#xfe0e; {{ messageRecibido.texto }}
                                                 </div>
@@ -48,7 +48,7 @@
                             <div class="mensajesEnviados">
                                 {% for messageEnviado in messagesEnviados %}
                                     {% if messageEnviado.visto == false %}
-                                        <div class="d-flex flex-column border border-dark pl-1 pt-1">
+                                        <div class="d-flex flex-column pildora-border pl-1 pt-1">
                                             <div class="d-flex flex-start">
                                                 &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }}
                                             </div>
@@ -59,7 +59,7 @@
                                         </div>
                                         <br/>
                                     {% else %}
-                                        <div class="d-flex flex-column border border-dark pl-1 pt-1">
+                                        <div class="d-flex flex-column pildora-border pl-1 pt-1">
                                             <div class="d-flex flex-start">
                                                 &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }}
                                             </div>
