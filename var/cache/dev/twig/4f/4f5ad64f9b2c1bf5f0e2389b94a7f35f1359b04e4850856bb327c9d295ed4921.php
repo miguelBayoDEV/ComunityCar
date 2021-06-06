@@ -94,7 +94,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
     </div>
 
     <div class=\"row d-flex justify-content-center mt-5 mb-5 exportar\">
-        <div class=\"col-lg-6 col-md-0 col-sm-0 col-xs-0\">
+        <div class=\"col-lg-6 col-md-6 col-sm-0 col-xs-0\">
             <h3 class=\"pb-5 text-center\">Perfil usuario:</h3>
             <div class=\"d-flex align-items-start\">
                 <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
@@ -114,7 +114,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
         // line 28
         if ((0 !== twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 28, $this->source); })()), "avatar", [], "any", false, false, false, 28), null))) {
             // line 29
-            echo "                                        <div class=\"d-flex justify-content-center\">
+            echo "                                        <div class=\"d-flex flex-wrap justify-content-center\">
                                             <img src=\"/avatar/";
             // line 30
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 30, $this->source); })()), "avatar", [], "any", false, false, false, 30), "html", null, true);
@@ -557,7 +557,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
     </div>
 
     <div class=\"row d-flex justify-content-center mt-5 mb-5 exportar\">
-        <div class=\"col-lg-6 col-md-0 col-sm-0 col-xs-0\">
+        <div class=\"col-lg-6 col-md-6 col-sm-0 col-xs-0\">
             <h3 class=\"pb-5 text-center\">Perfil usuario:</h3>
             <div class=\"d-flex align-items-start\">
                 <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
@@ -571,7 +571,7 @@ class __TwigTemplate_91b0809e64c2ea1ead84bb5347e8bf420223d3c5bc42ec0d142cc8c9099
                             <div id=\"avatar\">
                                 {{ form_start(avatarForm) }}
                                     {% if user.avatar != null %}
-                                        <div class=\"d-flex justify-content-center\">
+                                        <div class=\"d-flex flex-wrap justify-content-center\">
                                             <img src=\"/avatar/{{ user.avatar }}\" width=\"150px\" height=\"150px\" class=\"round\" />
                                         </div>
                                     {% else %}

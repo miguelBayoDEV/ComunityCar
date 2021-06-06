@@ -89,7 +89,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_USER")) {
             // line 7
             echo "        <div class=\"row d-flex justify-content-center mt-5 mb-5 exportar\">
-            <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\">
+            <div class=\"col-lg-6 col-md-6 col-sm-0 col-xs-0\">
                 <h3 class=\"pb-5 text-center\">Mensajes:</h3>
                 <div class=\"d-flex align-items-start\">
                     <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
@@ -111,19 +111,19 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                     echo "                                        ";
                     if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "visto", [], "any", false, false, false, 20), false))) {
                         // line 21
-                        echo "                                            <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
-                                                <div class=\"d-flex flex-start\">
+                        echo "                                            <div class=\"d-flex flex-wrap flex-column pildora-border pl-1 pt-1\">
+                                                <div class=\"d-flex flex-wrap flex-start\">
                                                     &#x1f4ec;&#xfe0e; ";
                         // line 23
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "texto", [], "any", false, false, false, 23), "html", null, true);
                         echo "
                                                 </div>
-                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                <div class=\"d-flex flex-wrap justify-content-around align-items-center\">
                                                     <p>";
                         // line 26
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "fechaEnvio", [], "any", false, false, false, 26), "Y-m-d"), "html", null, true);
                         echo "</p>
-                                                    <button class=\"btn btn-primary\"><a href=\"/messageVisto/";
+                                                    <button class=\"btn btn-primary mt-0\"><a href=\"/messageVisto/";
                         // line 27
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "id", [], "any", false, false, false, 27), "html", null, true);
                         echo "\">Ver mensaje</a></button>
@@ -133,19 +133,19 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                                         ";
                     } else {
                         // line 32
-                        echo "                                            <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
-                                                <div class=\"d-flex flex-start\">
+                        echo "                                            <div class=\"d-flex flex-wrap flex-column pildora-border pl-1 pt-1\">
+                                                <div class=\"d-flex flex-wrap flex-start\">
                                                     &#x1f4ed;&#xfe0e; ";
                         // line 34
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "texto", [], "any", false, false, false, 34), "html", null, true);
                         echo "
                                                 </div>
-                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                <div class=\"d-flex flex-wrap justify-content-around align-items-center\">
                                                     <p>";
                         // line 37
                         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "fechaLectura", [], "any", false, false, false, 37), "Y-m-d"), "html", null, true);
                         echo "</p>
-                                                    <button class=\"btn btn-primary\"><a href=\"/messageVisto/";
+                                                    <button class=\"btn btn-primary mt-0\"><a href=\"/messageVisto/";
                         // line 38
                         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageRecibido"], "id", [], "any", false, false, false, 38), "html", null, true);
                         echo "\">Ver mensaje</a></button>
@@ -177,19 +177,19 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                 echo "                                    ";
                 if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "visto", [], "any", false, false, false, 50), false))) {
                     // line 51
-                    echo "                                        <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
-                                            <div class=\"d-flex flex-start\">
+                    echo "                                        <div class=\"d-flex flex-wrap flex-column pildora-border pl-1 pt-1\">
+                                            <div class=\"d-flex flex-wrap flex-start\">
                                                 &#x1f4ec;&#xfe0e; ";
                     // line 53
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "texto", [], "any", false, false, false, 53), "html", null, true);
                     echo "
                                             </div>
-                                            <div class=\"d-flex justify-content-around align-items-center\">
+                                            <div class=\"d-flex flex-wrap justify-content-around align-items-center\">
                                                 <p>";
                     // line 56
                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "fechaEnvio", [], "any", false, false, false, 56), "Y-m-d"), "html", null, true);
                     echo "</p>
-                                                <button class=\"btn btn-primary\"><a href=\"/messageVisto/";
+                                                <button class=\"btn btn-primary mt-0\"><a href=\"/messageVisto/";
                     // line 57
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "id", [], "any", false, false, false, 57), "html", null, true);
                     echo "\">Ver mensaje</a></button>
@@ -199,19 +199,19 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                                     ";
                 } else {
                     // line 62
-                    echo "                                        <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
-                                            <div class=\"d-flex flex-start\">
+                    echo "                                        <div class=\"d-flex flex-wrap flex-column pildora-border pl-1 pt-1\">
+                                            <div class=\"d-flex flex-wrap flex-start\">
                                                 &#x1f4ed;&#xfe0e; ";
                     // line 64
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "texto", [], "any", false, false, false, 64), "html", null, true);
                     echo "
                                             </div>
-                                            <div class=\"d-flex justify-content-around align-items-center\">
+                                            <div class=\"d-flex flex-wrap justify-content-around align-items-center\">
                                                 <p>";
                     // line 67
                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "fechaLectura", [], "any", false, false, false, 67), "Y-m-d"), "html", null, true);
                     echo "</p>
-                                                <button class=\"btn btn-primary\"><a href=\"/messageVisto/";
+                                                <button class=\"btn btn-primary mt-0\"><a href=\"/messageVisto/";
                     // line 68
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messageEnviado"], "id", [], "any", false, false, false, 68), "html", null, true);
                     echo "\">Ver mensaje</a></button>
@@ -267,7 +267,7 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
 {% block body %}
     {% if is_granted(\"ROLE_USER\") %}
         <div class=\"row d-flex justify-content-center mt-5 mb-5 exportar\">
-            <div class=\"col-lg-6 col-md-2 col-sm-0 col-xs-0\">
+            <div class=\"col-lg-6 col-md-6 col-sm-0 col-xs-0\">
                 <h3 class=\"pb-5 text-center\">Mensajes:</h3>
                 <div class=\"d-flex align-items-start\">
                     <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
@@ -280,24 +280,24 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                                 {% for messageRecibido in messagesRecibidos %}
                                     {% if messageRecibido.user.id != app.user.id %}
                                         {% if messageRecibido.visto == false %}
-                                            <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
-                                                <div class=\"d-flex flex-start\">
+                                            <div class=\"d-flex flex-wrap flex-column pildora-border pl-1 pt-1\">
+                                                <div class=\"d-flex flex-wrap flex-start\">
                                                     &#x1f4ec;&#xfe0e; {{ messageRecibido.texto }}
                                                 </div>
-                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                <div class=\"d-flex flex-wrap justify-content-around align-items-center\">
                                                     <p>{{ messageRecibido.fechaEnvio|date(\"Y-m-d\") }}</p>
-                                                    <button class=\"btn btn-primary\"><a href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
+                                                    <button class=\"btn btn-primary mt-0\"><a href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
                                                 </div>
                                             </div>
                                             <br/>
                                         {% else %}
-                                            <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
-                                                <div class=\"d-flex flex-start\">
+                                            <div class=\"d-flex flex-wrap flex-column pildora-border pl-1 pt-1\">
+                                                <div class=\"d-flex flex-wrap flex-start\">
                                                     &#x1f4ed;&#xfe0e; {{ messageRecibido.texto }}
                                                 </div>
-                                                <div class=\"d-flex justify-content-around align-items-center\">
+                                                <div class=\"d-flex flex-wrap justify-content-around align-items-center\">
                                                     <p>{{ messageRecibido.fechaLectura|date(\"Y-m-d\") }}</p>
-                                                    <button class=\"btn btn-primary\"><a href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
+                                                    <button class=\"btn btn-primary mt-0\"><a href=\"/messageVisto/{{ messageRecibido.id }}\">Ver mensaje</a></button>
                                                 </div>
                                             </div>
                                             <br/>
@@ -310,24 +310,24 @@ class __TwigTemplate_0e024707e48bf5b984415caa60e0c288459a63d5bde4154f9fe93f44146
                             <div class=\"mensajesEnviados\">
                                 {% for messageEnviado in messagesEnviados %}
                                     {% if messageEnviado.visto == false %}
-                                        <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
-                                            <div class=\"d-flex flex-start\">
+                                        <div class=\"d-flex flex-wrap flex-column pildora-border pl-1 pt-1\">
+                                            <div class=\"d-flex flex-wrap flex-start\">
                                                 &#x1f4ec;&#xfe0e; {{ messageEnviado.texto }}
                                             </div>
-                                            <div class=\"d-flex justify-content-around align-items-center\">
+                                            <div class=\"d-flex flex-wrap justify-content-around align-items-center\">
                                                 <p>{{ messageEnviado.fechaEnvio|date(\"Y-m-d\") }}</p>
-                                                <button class=\"btn btn-primary\"><a href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
+                                                <button class=\"btn btn-primary mt-0\"><a href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
                                             </div>
                                         </div>
                                         <br/>
                                     {% else %}
-                                        <div class=\"d-flex flex-column pildora-border pl-1 pt-1\">
-                                            <div class=\"d-flex flex-start\">
+                                        <div class=\"d-flex flex-wrap flex-column pildora-border pl-1 pt-1\">
+                                            <div class=\"d-flex flex-wrap flex-start\">
                                                 &#x1f4ed;&#xfe0e; {{ messageEnviado.texto }}
                                             </div>
-                                            <div class=\"d-flex justify-content-around align-items-center\">
+                                            <div class=\"d-flex flex-wrap justify-content-around align-items-center\">
                                                 <p>{{ messageEnviado.fechaLectura|date(\"Y-m-d\") }}</p>
-                                                <button class=\"btn btn-primary\"><a href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
+                                                <button class=\"btn btn-primary mt-0\"><a href=\"/messageVisto/{{ messageEnviado.id }}\">Ver mensaje</a></button>
                                             </div>
                                         </div>
                                         <br/>

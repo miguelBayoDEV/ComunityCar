@@ -16,7 +16,12 @@
             <link href="/comunes/footer/css/footer.css" rel="stylesheet">
             <link href="/comunes/css/mediaQuery.css" rel="stylesheet">
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+            <!-- Fuente para texto cabeceras -->
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+            <!-- Fuente para texto p y por defecto -->
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
             <link rel="shortcut icon" href="#" />
         {% endblock %}
 
@@ -31,6 +36,14 @@
         {% endblock %}
 
         <style type="text/css">
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Odibee Sans', cursive;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+            }
 
             hr {
                 background-color: white;
@@ -105,7 +118,7 @@
             }
 
             div.pildora-content {
-                min-width: 600px;
+                min-width: 100%;
                 min-height: 600px;
             }
 

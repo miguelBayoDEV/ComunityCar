@@ -1,11 +1,17 @@
-@media screen and (max-width: 1000px) {
-    .pildora-content {
-        min-width: 300px !important;
-        min-height: 300px !important;
-    }
-}
-
 @media screen and (max-width: 768px) {
+    .pildora-content {
+        min-width: 50% !important;
+    }
+
+    .anime {
+        height: 150px !important;
+        width: 300px !important;
+    }
+
+    .border-message1, .border-message2 {
+        min-width: 10% !important;
+    }
+
     .mediaBuscador {
         display: flex;
         flex-direction: column;

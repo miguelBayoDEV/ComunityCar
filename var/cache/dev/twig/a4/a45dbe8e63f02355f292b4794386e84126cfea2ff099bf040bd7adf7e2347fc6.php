@@ -86,7 +86,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
 
         // line 6
         echo "    <div class=\"row d-flex justify-content-center mt-5\">
-        <div class=\"col-lg-6 col-md-0 col-sm-0 col-xs-0\">
+        <div class=\"col-lg-12 col-md-12 col-sm-0 col-xs-0\">
             <h3 class=\"pb-4 text-center\">Vídeo con audio y animación:</h3>
             <div class=\"d-flex align-items-start\">
                 <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
@@ -95,7 +95,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                 </div>
                 <div class=\"tab-content\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-video\" role=\"tabpanel\" aria-labelledby=\"v-pills-video-tab\">
-                        <div class=\"m-4 ml-5 w-100 h-100\">
+                        <div class=\"ml-5 w-75 h-75\">
                             <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
                                 <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
                                 <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
@@ -109,7 +109,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                             </audio>
                         </div>
                     </div>
-                    <div class=\"tab-pane fade p-2 h-100 w-100\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
+                    <div class=\"tab-pane fade p-2 h-75 w-75\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
                         <div class=\"anime\">
                             <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" data-toggle=\"tooltip\" title=\"Dale click\" />
                         </div>
@@ -181,7 +181,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
 
 {% block body %}
     <div class=\"row d-flex justify-content-center mt-5\">
-        <div class=\"col-lg-6 col-md-0 col-sm-0 col-xs-0\">
+        <div class=\"col-lg-12 col-md-12 col-sm-0 col-xs-0\">
             <h3 class=\"pb-4 text-center\">Vídeo con audio y animación:</h3>
             <div class=\"d-flex align-items-start\">
                 <div class=\"nav flex-column nav-pills\" id=\"v-pills-tab\" role=\"tablist\" aria-orientation=\"vertical\">
@@ -190,7 +190,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                 </div>
                 <div class=\"tab-content\" id=\"v-pills-tabContent\">
                     <div class=\"tab-pane fade show active\" id=\"v-pills-video\" role=\"tabpanel\" aria-labelledby=\"v-pills-video-tab\">
-                        <div class=\"m-4 ml-5 w-100 h-100\">
+                        <div class=\"ml-5 w-75 h-75\">
                             <video loop=\"true\" autoplay=\"true\" width=\"100%\" hight=\"100%\">
                                 <source src=\"/comunes/header/videoHeader.ogv\" type=\"video/ogg\" />
                                 <source src=\"/comunes/header/videoHeader.mp4\" type=\"video/mp4\" />
@@ -204,7 +204,7 @@ class __TwigTemplate_f9f149f9dcf415eeb8129855d489d7257a308e86e2a7f34a7d72b420ce1
                             </audio>
                         </div>
                     </div>
-                    <div class=\"tab-pane fade p-2 h-100 w-100\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
+                    <div class=\"tab-pane fade p-2 h-75 w-75\" id=\"v-pills-anime\" role=\"tabpanel\" aria-labelledby=\"v-pills-anime-tab\">
                         <div class=\"anime\">
                             <img id=\"carAnime\" src=\"/comunes/anime/img/coche.png\" data-toggle=\"tooltip\" title=\"Dale click\" />
                         </div>

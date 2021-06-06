@@ -14,7 +14,7 @@
                 </div>
                 <div class="tab-content pildora-content pl-4" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-usuarios" role="tabpanel" aria-labelledby="v-pills-usuarios-tab">
-                        <div class="usuarios pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between">
+                        <div class="usuarios pildora-border pl-1 pt-1 pr-2 text-dark d-flex flex-wrap justify-content-between">
                             <ol>
                                 {% for user in users %}
                                     {% if user.email != "root@gmail.com" %}
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-mensajesReportados" role="tabpanel" aria-labelledby="v-pills-mensajesReportados-tab">
-                        <div class="mensajesReportados pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between">
+                        <div class="mensajesReportados pildora-border pl-1 pt-1 pr-2 text-dark d-flex flex-wrap justify-content-between">
                             <ol>
                                 {% for mensajeReportado in mensajesReportados %}
                                     <li>{{ mensajeReportado.texto }} - {{ mensajeReportado.fechaEnvio|date("Y-m-d") }}</li>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-vehiculosReportados" role="tabpanel" aria-labelledby="v-pills-vehiculosReportados-tab">
-                        <div class="vehiculosReportados pildora-border pl-1 pt-1 pr-2 text-dark d-flex justify-content-between">
+                        <div class="vehiculosReportados pildora-border pl-1 pt-1 pr-2 text-dark d-flex flex-wrap justify-content-between">
                             <ol>
                                 {% for vehiculoReportado in vehiculosReportados %}
                                     <li>Marca: {{ vehiculoReportado.marca }} - Modelo: {{ vehiculoReportado.modelo }} - Propietario: {{ vehiculoReportado.propietario.email }}</li>

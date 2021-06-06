@@ -57,14 +57,22 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         ";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 22
+        // line 27
         echo "
         ";
-        // line 23
+        // line 28
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 32
+        // line 37
         echo "
         <style type=\"text/css\">
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Odibee Sans', cursive;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+            }
 
             hr {
                 background-color: white;
@@ -139,7 +147,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             }
 
             div.pildora-content {
-                min-width: 600px;
+                min-width: 100%;
                 min-height: 600px;
             }
 
@@ -226,17 +234,17 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 194
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 194)->display($context);
-        // line 195
+        // line 207
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 207)->display($context);
+        // line 208
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 199
+        // line 212
         $this->displayBlock('body', $context, $blocks);
-        // line 200
+        // line 213
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -424,7 +432,12 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
             <link href=\"/comunes/css/mediaQuery.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
-            <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
+            <!-- Fuente para texto cabeceras -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap\" rel=\"stylesheet\">
+            <!-- Fuente para texto p y por defecto -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
             <link rel=\"shortcut icon\" href=\"#\" />
         ";
         
@@ -435,7 +448,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 23
+    // line 28
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -445,7 +458,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 24
+        // line 29
         echo "            <!-- Enlace a CDN JQuery -->
             <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\" integrity=\"sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=\" crossorigin=\"anonymous\"></script>
 
@@ -462,7 +475,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 199
+    // line 212
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -492,7 +505,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  466 => 199,  449 => 24,  439 => 23,  423 => 15,  419 => 13,  415 => 11,  413 => 10,  410 => 9,  400 => 8,  381 => 6,  240 => 200,  238 => 199,  232 => 195,  230 => 194,  66 => 32,  64 => 23,  61 => 22,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  479 => 212,  462 => 29,  452 => 28,  431 => 15,  427 => 13,  423 => 11,  421 => 10,  418 => 9,  408 => 8,  389 => 6,  248 => 213,  246 => 212,  240 => 208,  238 => 207,  66 => 37,  64 => 28,  61 => 27,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -515,7 +528,12 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             <link href=\"/comunes/footer/css/footer.css\" rel=\"stylesheet\">
             <link href=\"/comunes/css/mediaQuery.css\" rel=\"stylesheet\">
             <link href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css\" rel=\"stylesheet\">
-            <link href=\"https://fonts.googleapis.com/css?family=Roboto\" rel=\"stylesheet\">
+            <!-- Fuente para texto cabeceras -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap\" rel=\"stylesheet\">
+            <!-- Fuente para texto p y por defecto -->
+            <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+            <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
             <link rel=\"shortcut icon\" href=\"#\" />
         {% endblock %}
 
@@ -530,6 +548,14 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         {% endblock %}
 
         <style type=\"text/css\">
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Odibee Sans', cursive;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
+            }
 
             hr {
                 background-color: white;
@@ -604,7 +630,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
             }
 
             div.pildora-content {
-                min-width: 600px;
+                min-width: 100%;
                 min-height: 600px;
             }
 

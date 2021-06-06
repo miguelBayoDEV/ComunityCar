@@ -78,7 +78,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
     <body>
         <div class=\"container\">
             <div class=\"d-flex justify-content-center h-100\">
-                <div class=\"text-white text-center card mr-5\">
+                <div class=\"text-white text-center card mr-5 h-75\">
                     <div class=\"card-header\">
                         <h1>ComunityCar</h1>
                     </div>
@@ -92,13 +92,13 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 \t\t\t\t\t\t<img id=\"car\" src=\"/comunes/anime/img/coche.png\" width=\"30%\" height=\"85%\" data-toggle=\"tooltip\" title=\"Clik aquí!!!\" />
                     </div>
                 </div>
-                <div class=\"card\">
-                    <div class=\"card-header\">
+                <div class=\"card h-75\">
+                    <div class=\"card-header text-center h-25\">
                         <h3>Login</h3>
                         ";
         // line 61
         echo "                    </div>
-                    <div class=\"card-body\">
+                    <div class=\"card-body h-50\">
                         <form method=\"post\" onsubmit=\"return validar(this);\">
                             ";
         // line 64
@@ -141,9 +141,9 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                         ";
         // line 93
         echo "                    </div>
-                    <div class=\"card-footer\">
-                        <a href=\"/privacidad\" target=\"_blank\" class=\"ml-4\">Política privacidad</a>
-                        <div class=\"d-flex justify-content-center links mt-3\">
+                    <div class=\"card-footer h-25\">
+                        <a href=\"/privacidad\" target=\"_blank\" class=\"d-flex flex-wrap justify-content-center\">Política privacidad</a>
+                        <div class=\"d-flex flex-wrap justify-content-center links mt-3\">
                             ¿No tienes cuenta?<a href=\"/register\">Registro</a>
                         </div>
                         ";
@@ -277,7 +277,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
     <body>
         <div class=\"container\">
             <div class=\"d-flex justify-content-center h-100\">
-                <div class=\"text-white text-center card mr-5\">
+                <div class=\"text-white text-center card mr-5 h-75\">
                     <div class=\"card-header\">
                         <h1>ComunityCar</h1>
                     </div>
@@ -291,8 +291,8 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
 \t\t\t\t\t\t<img id=\"car\" src=\"/comunes/anime/img/coche.png\" width=\"30%\" height=\"85%\" data-toggle=\"tooltip\" title=\"Clik aquí!!!\" />
                     </div>
                 </div>
-                <div class=\"card\">
-                    <div class=\"card-header\">
+                <div class=\"card h-75\">
+                    <div class=\"card-header text-center h-25\">
                         <h3>Login</h3>
                         {# <div class=\"d-flex justify-content-end social_icon\">
                             <span><a href=\"https://es-es.facebook.com/\"><i class=\"fab fa-facebook-square\"></i></a></span>
@@ -300,7 +300,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                             <span><a href=\"https://twitter.com/?lang=es\"><i class=\"fab fa-twitter-square\"></i></a></span>
                         </div> #}
                     </div>
-                    <div class=\"card-body\">
+                    <div class=\"card-body h-50\">
                         <form method=\"post\" onsubmit=\"return validar(this);\">
                             {% if error %}
                                 <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -332,9 +332,9 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                             <button class=\"btn float-right login_btn\" id=\"check\">Check</button>
                         </div> #}
                     </div>
-                    <div class=\"card-footer\">
-                        <a href=\"/privacidad\" target=\"_blank\" class=\"ml-4\">Política privacidad</a>
-                        <div class=\"d-flex justify-content-center links mt-3\">
+                    <div class=\"card-footer h-25\">
+                        <a href=\"/privacidad\" target=\"_blank\" class=\"d-flex flex-wrap justify-content-center\">Política privacidad</a>
+                        <div class=\"d-flex flex-wrap justify-content-center links mt-3\">
                             ¿No tienes cuenta?<a href=\"/register\">Registro</a>
                         </div>
                         {# <div class=\"d-flex justify-content-center\">

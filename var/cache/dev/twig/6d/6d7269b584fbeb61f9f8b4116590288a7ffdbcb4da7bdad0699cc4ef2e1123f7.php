@@ -46,9 +46,24 @@ class __TwigTemplate_99e5be3dd0b551296dc5a08af5c7b290ff219189991129ba6f911649482
         <meta charset=\"UTF-8\" />
         <title>Política de privacidad e información legal</title>
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
+        <!-- Fuente para texto cabeceras -->
+        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+        <link href=\"https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap\" rel=\"stylesheet\">
+        <!-- Fuente para texto p y por defecto -->
+        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+        <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
         <style>
             body {
                 background-color: #E5E2E6;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Odibee Sans', cursive;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
             }
         </style>
     </head>
@@ -252,9 +267,24 @@ class __TwigTemplate_99e5be3dd0b551296dc5a08af5c7b290ff219189991129ba6f911649482
         <meta charset=\"UTF-8\" />
         <title>Política de privacidad e información legal</title>
         <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css\" integrity=\"sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO\" crossorigin=\"anonymous\">
+        <!-- Fuente para texto cabeceras -->
+        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+        <link href=\"https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap\" rel=\"stylesheet\">
+        <!-- Fuente para texto p y por defecto -->
+        <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\">
+        <link href=\"https://fonts.googleapis.com/css2?family=Roboto&display=swap\" rel=\"stylesheet\">
         <style>
             body {
                 background-color: #E5E2E6;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Odibee Sans', cursive;
+            }
+
+            p {
+                font-family: 'Roboto', sans-serif;
+                font-size: 15px;
             }
         </style>
     </head>

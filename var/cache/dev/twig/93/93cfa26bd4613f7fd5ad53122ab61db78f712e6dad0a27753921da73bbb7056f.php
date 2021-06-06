@@ -92,13 +92,13 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         // line 39
         echo "        <div class=\"container\">
             <div class=\"d-flex justify-content-center h-100\">
-                <div class=\"card h-50\">
-                    <div class=\"card-header pb-0\">
+                <div class=\"card h-75\">
+                    <div class=\"card-header text-center h-25 pb-0\">
                         <h3>Registro</h3>
                         ";
         // line 49
         echo "                    </div>
-                    <div class=\"card-body pb-0\">
+                    <div class=\"card-body h-50 pb-0\">
                         ";
         // line 51
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 51, $this->source); })()), 'form_start');
@@ -145,7 +145,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
                         ";
         // line 79
         echo "                    </div>
-                    <div class=\"card-footer\">
+                    <div class=\"card-footer h-25\">
                         <div class=\"d-flex justify-content-center links\">
                             ¿Tienes cuenta?<a href=\"/login\">Inicio sesión</a>
                         </div>
@@ -225,8 +225,8 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
         {% endfor %}
         <div class=\"container\">
             <div class=\"d-flex justify-content-center h-100\">
-                <div class=\"card h-50\">
-                    <div class=\"card-header pb-0\">
+                <div class=\"card h-75\">
+                    <div class=\"card-header text-center h-25 pb-0\">
                         <h3>Registro</h3>
                         {# <div class=\"d-flex justify-content-end social_icon\">
                             <span><a href=\"https://es-es.facebook.com/\"><i class=\"fab fa-facebook-square\"></i></a></span>
@@ -234,7 +234,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
                             <span><a href=\"https://twitter.com/?lang=es\"><i class=\"fab fa-twitter-square\"></i></a></span>
                         </div> #}
                     </div>
-                    <div class=\"card-body pb-0\">
+                    <div class=\"card-body h-50 pb-0\">
                         {{ form_start(registrationForm) }}
                             <div class=\"input-group form-group d-flex flex-column\">
                                 <div class=\"input-group-prepend text-white\">
@@ -264,7 +264,7 @@ class __TwigTemplate_8bfc21328f5c059c792b39d7b32b0976681a8c0f3d174dea7d179123674
                             <button class=\"btn float-right login_btn\" id=\"check\">Check</button>
                         </div> #}
                     </div>
-                    <div class=\"card-footer\">
+                    <div class=\"card-footer h-25\">
                         <div class=\"d-flex justify-content-center links\">
                             ¿Tienes cuenta?<a href=\"/login\">Inicio sesión</a>
                         </div>
