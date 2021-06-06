@@ -22,13 +22,17 @@
     }
 
     .img {
-        width: 50%;
-        height: 50%;
+        width: 50% !important;
+        height: 50% !important;
     }
 
     .carusel {
         margin-left: 10%;
         width: 80% !important;
+    }
+
+    .imgContainer {
+        width: 100% !important;
     }
 }
 
@@ -40,10 +44,5 @@
     .carusel {
         margin-left: 0px;
         width: 100% !important;
-    }
-
-    .img {
-        width: 25% !important;
-        height: 25% !important;
     }
 }

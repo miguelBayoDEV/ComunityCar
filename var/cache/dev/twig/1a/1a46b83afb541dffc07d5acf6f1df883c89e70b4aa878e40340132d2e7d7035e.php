@@ -166,7 +166,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                                     ";
                     // line 42
                     $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(range(0, twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 42))));
+                    $context['_seq'] = twig_ensure_traversable(range(0, (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "images", [], "any", false, false, false, 42)) - 1)));
                     foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
                         // line 43
                         echo "                                        ";
@@ -246,8 +246,8 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                         ";
                 } else {
                     // line 73
-                    echo "                            <div class=\"d-flex justify-content-center align-items-center mr-5\">
-                                <img class=\"d-block img\" src=\"/comunes/icon/sin-fotos.png\" alt=\"Imagen por defecto del anuncio del vehículo\" width=\"60%\" height=\"60%\" />
+                    echo "                            <div class=\"d-flex justify-content-center align-items-center imgContainer mr-5\">
+                                <img class=\"d-block img\" src=\"/comunes/icon/sin-fotos.png\" alt=\"Imagen por defecto del anuncio del vehículo\" width=\"80%\" height=\"60%\" />
                             </div>
                         ";
                 }
@@ -438,7 +438,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                         {% if vehicle.images|length != 0 %}    
                             <div id=\"carouselExampleIndicators{{ vehicle.id }}\" class=\"carousel slide carusel bg-dark mr-5\" data-ride=\"carousel\">
                                 <ol class=\"carousel-indicators\">
-                                    {% for contador in 0 .. vehicle.images|length %}
+                                    {% for contador in 0 .. vehicle.images|length-1 %}
                                         {% if contador == 0 %}
                                             <li data-target=\"#carouselExampleIndicators{{ vehicle.id }}\" data-slide-to=\"0\" class=\"active\"></li>
                                         {% else %}
@@ -469,8 +469,8 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                                 </a>
                             </div>
                         {% else %}
-                            <div class=\"d-flex justify-content-center align-items-center mr-5\">
-                                <img class=\"d-block img\" src=\"/comunes/icon/sin-fotos.png\" alt=\"Imagen por defecto del anuncio del vehículo\" width=\"60%\" height=\"60%\" />
+                            <div class=\"d-flex justify-content-center align-items-center imgContainer mr-5\">
+                                <img class=\"d-block img\" src=\"/comunes/icon/sin-fotos.png\" alt=\"Imagen por defecto del anuncio del vehículo\" width=\"80%\" height=\"60%\" />
                             </div>
                         {% endif %}
                         <div class=\"d-flex flex-column infoVehiculo\">

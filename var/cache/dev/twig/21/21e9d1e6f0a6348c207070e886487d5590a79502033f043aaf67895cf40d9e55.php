@@ -65,6 +65,10 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         // line 37
         echo "
         <style type=\"text/css\">
+            .imgContainer {
+                width: 25%;
+            }
+
             h1, h2, h3, h4, h5, h6 {
                 font-family: 'Odibee Sans', cursive;
             }
@@ -234,17 +238,17 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         <div class=\"row sinpadding\">
             <div class=\"col-12\">
                 ";
-        // line 207
-        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 207)->display($context);
-        // line 208
+        // line 211
+        $this->loadTemplate("navbar/navbar.html.twig", "base.html.twig", 211)->display($context);
+        // line 212
         echo "            </div>
         </div>
         <div class=\"row\">
             <div class=\"col-12\" id=\"main\">
                 ";
-        // line 212
+        // line 216
         $this->displayBlock('body', $context, $blocks);
-        // line 213
+        // line 217
         echo "            </div>
         </div>
         <div class=\"row pie sinpadding\">
@@ -475,7 +479,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     }
 
-    // line 212
+    // line 216
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -505,7 +509,7 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
 
     public function getDebugInfo()
     {
-        return array (  479 => 212,  462 => 29,  452 => 28,  431 => 15,  427 => 13,  423 => 11,  421 => 10,  418 => 9,  408 => 8,  389 => 6,  248 => 213,  246 => 212,  240 => 208,  238 => 207,  66 => 37,  64 => 28,  61 => 27,  59 => 8,  54 => 6,  47 => 1,);
+        return array (  483 => 216,  466 => 29,  456 => 28,  435 => 15,  431 => 13,  427 => 11,  425 => 10,  422 => 9,  412 => 8,  393 => 6,  252 => 217,  250 => 216,  244 => 212,  242 => 211,  66 => 37,  64 => 28,  61 => 27,  59 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -548,6 +552,10 @@ class __TwigTemplate_61d2aac208ca8b4b978a87882347313500fe929228a3c8af81283450823
         {% endblock %}
 
         <style type=\"text/css\">
+            .imgContainer {
+                width: 25%;
+            }
+
             h1, h2, h3, h4, h5, h6 {
                 font-family: 'Odibee Sans', cursive;
             }
