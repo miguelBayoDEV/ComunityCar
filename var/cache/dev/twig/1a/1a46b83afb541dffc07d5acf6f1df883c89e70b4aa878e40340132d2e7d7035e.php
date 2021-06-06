@@ -246,124 +246,126 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                         ";
                 } else {
                     // line 73
-                    echo "                            <img class=\"d-block mr-5\" src=\"/comunes/icon/sin-fotos.png\" alt=\"Imagen por defecto del anuncio del vehículo\" width=\"250px\" height=\"250px\" />
+                    echo "                            <div class=\"d-flex justify-content-center align-items-center mr-5\">
+                                <img class=\"d-block img\" src=\"/comunes/icon/sin-fotos.png\" alt=\"Imagen por defecto del anuncio del vehículo\" width=\"60%\" height=\"60%\" />
+                            </div>
                         ";
                 }
-                // line 75
+                // line 77
                 echo "                        <div class=\"d-flex flex-column infoVehiculo\">
                             <div class=\"d-flex justify-content-around mt-3 border-bottom border-dark mr-3\">
                                 <p><strong>Marca:</strong> ";
-                // line 77
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "marca", [], "any", false, false, false, 77), "html", null, true);
+                // line 79
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "marca", [], "any", false, false, false, 79), "html", null, true);
                 echo "</p>
                                 <p><strong>Modelo:</strong> ";
-                // line 78
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "modelo", [], "any", false, false, false, 78), "html", null, true);
+                // line 80
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "modelo", [], "any", false, false, false, 80), "html", null, true);
                 echo "</p>
                             </div>
                             <div class=\"d-flex justify-content-start mt-3 border-bottom border-dark mr-3\">
                                 <p><strong>Descripción:</strong> ";
-                // line 81
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "descripcion", [], "any", false, false, false, 81), "html", null, true);
+                // line 83
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "descripcion", [], "any", false, false, false, 83), "html", null, true);
                 echo "</p>
                             </div>
                             <div class=\"d-flex justify-content-around flex-wrap mt-3 border-bottom border-dark mr-3\">
                                 <p><strong>Precio:</strong> ";
-                // line 84
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "precio", [], "any", false, false, false, 84), "html", null, true);
+                // line 86
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "precio", [], "any", false, false, false, 86), "html", null, true);
                 echo "</p>
                                 <p><strong>Autor:</strong> ";
-                // line 85
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 85), "email", [], "any", false, false, false, 85), "html", null, true);
+                // line 87
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 87), "email", [], "any", false, false, false, 87), "html", null, true);
                 echo "</p>
                                 <p><strong>Fecha creación:</strong> ";
-                // line 86
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 86), "Y-m-d H:i:s"), "html", null, true);
+                // line 88
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "fechaModificacion", [], "any", false, false, false, 88), "Y-m-d H:i:s"), "html", null, true);
                 echo "</p>
                             </div>
                             <div class=\"d-flex justify-content-center\">
                                 ";
-                // line 89
-                if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 89), "email", [], "any", false, false, false, 89), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 89, $this->source); })()), "user", [], "any", false, false, false, 89), "email", [], "any", false, false, false, 89))) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 89), "id", [], "any", false, false, false, 89), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 89, $this->source); })()), "user", [], "any", false, false, false, 89), "id", [], "any", false, false, false, 89))))) {
-                    // line 90
+                // line 91
+                if (((0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 91), "email", [], "any", false, false, false, 91), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 91, $this->source); })()), "user", [], "any", false, false, false, 91), "email", [], "any", false, false, false, 91))) || (0 !== twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 91), "id", [], "any", false, false, false, 91), twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 91, $this->source); })()), "user", [], "any", false, false, false, 91), "id", [], "any", false, false, false, 91))))) {
+                    // line 92
                     echo "                                    <button class=\"btn btn-success\"><a href=\"";
-                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 90), "id", [], "any", false, false, false, 90), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 90, $this->source); })()), "id", [], "any", false, false, false, 90), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 90), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 90)]), "html", null, true);
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message_new", ["receptor" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["vehicle"], "propietario", [], "any", false, false, false, 92), "id", [], "any", false, false, false, 92), "emisor" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 92, $this->source); })()), "id", [], "any", false, false, false, 92), "id" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 92), "vehiculo" => twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 92)]), "html", null, true);
                     echo "\" class=\"enlace\">Enviar mensaje</a></button>
                                 ";
                 } else {
-                    // line 92
+                    // line 94
                     echo "                                    <button class=\"btn btn-success\"><a href=\"/vehiculo/";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 92), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["vehicle"], "id", [], "any", false, false, false, 94), "html", null, true);
                     echo "/edit\" class=\"enlace\">Editar anuncio vehículo</a></button>
                                 ";
                 }
-                // line 94
+                // line 96
                 echo "                            </div>
                         </div>
                         <br/>
                     </div>
                 ";
             }
-            // line 99
+            // line 101
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['vehicle'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 100
+        // line 102
         echo "
             ";
-        // line 102
+        // line 104
         echo "            <div class=\"d-flex justify-content-center align items-center mb-2\">
                 <nav aria-label=\"page\">
                     <ul class=\"pagination\">
                         ";
-        // line 105
-        if (((-1 === twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 105, $this->source); })())), 10)) && (0 <= twig_compare((isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 105, $this->source); })()), 1)))) {
-            // line 106
+        // line 107
+        if (((-1 === twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 107, $this->source); })())), 10)) && (0 <= twig_compare((isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 107, $this->source); })()), 1)))) {
+            // line 108
             echo "                            <li class=\"page-item\">
                                 <a class=\"page-link pulsar\" href=\"/page/first\"><<</a>
                             </li>
                         ";
         }
-        // line 110
+        // line 112
         echo "                        ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 110, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["contadorTotal"]) || array_key_exists("contadorTotal", $context) ? $context["contadorTotal"] : (function () { throw new RuntimeError('Variable "contadorTotal" does not exist.', 112, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["contador"]) {
-            // line 111
+            // line 113
             echo "                            ";
-            if ((0 !== twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 111, $this->source); })())), 0))) {
-                // line 112
+            if ((0 !== twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 113, $this->source); })())), 0))) {
+                // line 114
                 echo "                                <li class=\"page-item\">
                                     <a class=\"page-link pulsar\" href=\"/page/";
-                // line 113
+                // line 115
                 echo twig_escape_filter($this->env, $context["contador"], "html", null, true);
                 echo "\">
                                         ";
-                // line 114
+                // line 116
                 echo twig_escape_filter($this->env, ($context["contador"] + 1), "html", null, true);
                 echo "
                                     </a>
                                 </li>
                             ";
             }
-            // line 118
+            // line 120
             echo "                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['contador'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 119
+        // line 121
         echo "                        ";
-        if ((0 <= twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 119, $this->source); })())), 10))) {
-            // line 120
+        if ((0 <= twig_compare(twig_length_filter($this->env, (isset($context["vehicles"]) || array_key_exists("vehicles", $context) ? $context["vehicles"] : (function () { throw new RuntimeError('Variable "vehicles" does not exist.', 121, $this->source); })())), 10))) {
+            // line 122
             echo "                            <li class=\"page-item\">
                                 <a class=\"page-link pulsar\" href=\"/page/last\">>></a>
                             </li>
                         ";
         }
-        // line 124
+        // line 126
         echo "                    </ul>
                 </nav>
             </div>
@@ -390,7 +392,7 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
 
     public function getDebugInfo()
     {
-        return array (  367 => 124,  361 => 120,  358 => 119,  352 => 118,  345 => 114,  341 => 113,  338 => 112,  335 => 111,  330 => 110,  324 => 106,  322 => 105,  317 => 102,  314 => 100,  308 => 99,  301 => 94,  295 => 92,  289 => 90,  287 => 89,  281 => 86,  277 => 85,  273 => 84,  267 => 81,  261 => 78,  257 => 77,  253 => 75,  249 => 73,  240 => 67,  233 => 63,  230 => 62,  224 => 61,  218 => 58,  215 => 57,  209 => 54,  206 => 53,  203 => 52,  199 => 51,  195 => 49,  189 => 48,  181 => 46,  175 => 44,  172 => 43,  168 => 42,  163 => 40,  159 => 39,  156 => 38,  153 => 37,  148 => 36,  135 => 24,  124 => 22,  120 => 21,  114 => 17,  103 => 15,  99 => 14,  93 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  369 => 126,  363 => 122,  360 => 121,  354 => 120,  347 => 116,  343 => 115,  340 => 114,  337 => 113,  332 => 112,  326 => 108,  324 => 107,  319 => 104,  316 => 102,  310 => 101,  303 => 96,  297 => 94,  291 => 92,  289 => 91,  283 => 88,  279 => 87,  275 => 86,  269 => 83,  263 => 80,  259 => 79,  255 => 77,  249 => 73,  240 => 67,  233 => 63,  230 => 62,  224 => 61,  218 => 58,  215 => 57,  209 => 54,  206 => 53,  203 => 52,  199 => 51,  195 => 49,  189 => 48,  181 => 46,  175 => 44,  172 => 43,  168 => 42,  163 => 40,  159 => 39,  156 => 38,  153 => 37,  148 => 36,  135 => 24,  124 => 22,  120 => 21,  114 => 17,  103 => 15,  99 => 14,  93 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -467,7 +469,9 @@ class __TwigTemplate_c8ed7e16b2bd4d313e038b2dadee3883e93e07ff7ca231c192ed3aca85e
                                 </a>
                             </div>
                         {% else %}
-                            <img class=\"d-block mr-5\" src=\"/comunes/icon/sin-fotos.png\" alt=\"Imagen por defecto del anuncio del vehículo\" width=\"250px\" height=\"250px\" />
+                            <div class=\"d-flex justify-content-center align-items-center mr-5\">
+                                <img class=\"d-block img\" src=\"/comunes/icon/sin-fotos.png\" alt=\"Imagen por defecto del anuncio del vehículo\" width=\"60%\" height=\"60%\" />
+                            </div>
                         {% endif %}
                         <div class=\"d-flex flex-column infoVehiculo\">
                             <div class=\"d-flex justify-content-around mt-3 border-bottom border-dark mr-3\">
