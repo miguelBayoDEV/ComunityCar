@@ -71,9 +71,9 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
 \t\t\t\t<div class=\"dropdown-menu bg-dark\" aria-labelledby=\"navbarDropdown\">
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/perfil\">Perfil</a>
 \t\t\t\t\t<div class=\"dropdown-divider\"></div>
-\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Login</a>
+\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Inicio sesión</a>
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/register\">Registro</a>
-\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/logout\">Logout</a>
+\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/logout\">Cierre sesión</a>
 \t\t\t\t</div>
 \t\t\t</li>
 \t\t";
@@ -95,9 +95,9 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
 \t\t\t\t<div class=\"dropdown-menu bg-dark\" aria-labelledby=\"navbarDropdown\">
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/perfil\">Perfil</a>
 \t\t\t\t\t<div class=\"dropdown-divider\"></div>
-\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Login</a>
+\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Inicio sesión</a>
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/register\">Registro</a>
-\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/logout\">Logout</a>
+\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/logout\">Cierre sesión</a>
 \t\t\t\t</div>
 \t\t\t</li>
 \t\t";
@@ -156,9 +156,9 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
 \t\t\t\t<div class=\"dropdown-menu bg-dark\" aria-labelledby=\"navbarDropdown\">
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/perfil\">Perfil</a>
 \t\t\t\t\t<div class=\"dropdown-divider\"></div>
-\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Login</a>
+\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Inicio sesión</a>
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/register\">Registro</a>
-\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/logout\">Logout</a>
+\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/logout\">Cierre sesión</a>
 \t\t\t\t</div>
 \t\t\t</li>
 \t\t{% elseif is_granted(\"ROLE_USER\") %}
@@ -175,9 +175,9 @@ class __TwigTemplate_d7f9159e4a93a3400f8d64ff6b6e4919a97527b85e4168ff91fb3f5719f
 \t\t\t\t<div class=\"dropdown-menu bg-dark\" aria-labelledby=\"navbarDropdown\">
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/perfil\">Perfil</a>
 \t\t\t\t\t<div class=\"dropdown-divider\"></div>
-\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Login</a>
+\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/login\">Inicio sesión</a>
 \t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/register\">Registro</a>
-\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/logout\">Logout</a>
+\t\t\t\t\t<a class=\"dropdown-item barraInferior\" href=\"/logout\">Cierre sesión</a>
 \t\t\t\t</div>
 \t\t\t</li>
 \t\t{% endif %}

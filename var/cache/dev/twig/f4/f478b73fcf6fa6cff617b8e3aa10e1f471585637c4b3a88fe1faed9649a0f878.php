@@ -94,7 +94,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                 </div>
                 <div class=\"card h-75\">
                     <div class=\"card-header text-center h-25\">
-                        <h3>Login</h3>
+                        <h3>Inicio sesión</h3>
                         ";
         // line 61
         echo "                    </div>
@@ -293,7 +293,7 @@ class __TwigTemplate_0de958300d9757686251a0d9de2b8ee8ba68c13c9794054618bd35c6a84
                 </div>
                 <div class=\"card h-75\">
                     <div class=\"card-header text-center h-25\">
-                        <h3>Login</h3>
+                        <h3>Inicio sesión</h3>
                         {# <div class=\"d-flex justify-content-end social_icon\">
                             <span><a href=\"https://es-es.facebook.com/\"><i class=\"fab fa-facebook-square\"></i></a></span>
                             <span><a href=\"https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin\"><i class=\"fab fa-google-plus-square\"></i></a></span>
